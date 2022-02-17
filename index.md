@@ -16,7 +16,7 @@ e non dal latino "mentŭla".
   dell'epoca, che non credo giocasse attivamente a Minchiate, ma decisamente
   ne apprezzava la dinamica, o forse sto proiettando sull'antico scrittore
   il mio pensiero, chi lo sa.  È un libro che vale la pena leggere,
-  nonostante le dotte citazioni.
+  nonostante le dotte citazioni. 
 * [1790 Firenze](/books/1790-Firenze.pdf), anonimo, evidentemente scritto da giocatori per giocatori, e contiene molti consigli utili, in particolare se ha avuto modo di giocarci.
 * [1798 Dresden](/books/1798-Dresden.pdf), forse il miglior libro sulle
   Minchiate mai composto, scritto da una persona che lo aveva conosciuto a
@@ -32,7 +32,7 @@ e non dal latino "mentŭla".
 * [naibi](https://www.naibi.net/) articoli di Franco Pratesi.
 * [pagat](https:/\negthinspace/www.pagat.com/) di John McLeod.
 * [I Germini](http://germini.altervista.org/) accademia fiorentina.
-* [google books](https://books.google.com/) non ci si trova tutto, ma quasi!
+* [google books](https://books.google.com/), in particolare: [1747 Roma](https://books.google.com.pa/books?id=BxldAAAAcAAJ), [1790 Firenze](https://books.google.com.pa/books?id=4_rdG3SVa48C).
 
 # scrivetemi
 
