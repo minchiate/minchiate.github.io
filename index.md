@@ -4,3 +4,12 @@
 
 layout: home
 ---
+
+front page
+
+books
+
+* 1747 Roma
+* 1790 Firenze
+* 1798 Dresden
+
