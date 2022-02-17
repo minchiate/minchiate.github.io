@@ -23,7 +23,7 @@ e non dal latino "mentŭla".
   fondo, apprezzato, e sembra volerlo diffondere nel suo ambito culturale
   tedesco.  Varrebbe la pena tornare ad analizzarlo e tradurlo in italiano
   moderno.
-* [2022 Pisa](/books/2022-Pisa.pdf), mio modesto sforzo di distillazion
+* [2022 Pisa](/books/2022-Pisa.pdf), mio modesto sforzo di distillazione
   delle tre fonti precedenti, dove provo a non ripetere troppo, provando a
   compilare il minimo necessario da tenere sempre in tasca.
 
