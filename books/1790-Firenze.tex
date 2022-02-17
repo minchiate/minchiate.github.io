@@ -1,0 +1,585 @@
+\documentclass[11pt,a6paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{changepage}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.shapes,shapes.geometric}
+
+% avoid orphans and widows, allow for (a lot of) letter spacing.
+\usepackage[defaultlines=2,all]{nowidow}
+\usepackage[tracking]{microtype}
+\sloppy
+
+% how to format and space chapter titles
+\usepackage{titlesec}
+\titleformat{\section}[display]
+            {\huge\bfseries}
+            {\vspace{-1em}}
+            {0pt}
+            {}
+\titleformat{\subsection}[display]
+            {\normalfont\fontsize{12}{14}\slshape}
+            {\vspace{-3em}}
+            {0pt}
+            {\raggedleft}
+% I like this font!
+\usepackage{tgbonum}
+\renewcommand{\rmdefault}{qbk}
+\usepackage{lettrine}
+\usepackage[left=14mm,top=12mm,right=11mm,bottom=14mm]{geometry}
+
+\newcommand{\supersection}[1]{%
+\clearpage
+    {\scshape \centering \huge #1\\}
+    \vspace{6pt}
+    \hrule
+    \vspace{12pt}
+}
+
+\newcommand*\sepline{%
+  \kern 3pt \hrule \kern 2pt
+}
+
+\title{\kern -2em\fontshape{sc}\LARGE Regole Generali\\ \fontsize{20}{18}\selectfont{
+del giuoco}\\ \normalsize \textls[1000]{delle}\\ \fontsize{34}{34}\selectfont{\textls[100]{MINCHIATE}}}
+\author{%
+  \vspace{-26pt}\\
+\textit{Con diverse istruzioni brevi, e facili}\\
+\textit{\textls[86]{per bene imparare a giuocarlo}}\vspace{4pt}\\
+\fontshape{sc}\fontsize{10}{34}\selectfont{\textls[350]{ed in fine}}\\
+  \fontshape{sc}\fontsize{14}{34}\selectfont{\textls[10]{aggiuntavi un ottava}}\\
+  \fontshape{sc}\fontsize{10}{34}\selectfont{sopra la maniera}\\
+  \fontshape{sc}\fontsize{14}{34}\selectfont{di alzare le carte}\vspace{72pt}\\}
+\date{%
+  \kern 3em\small IN FIRENZE MDCCXC.\\ \sepline
+  \textit{Trovavasi vendibile presso Vincenzio Landi\\
+Libraio dirimpetto al Fisco.}}
+\begin{document}
+
+\pagenumbering{gobble}
+
+\maketitle
+
+
+
+\supersection{Regole Generali\\ \textls[20]{del Giuoco delle}\\ Minchiate}
+\pagenumbering{roman}
+
+Il giuoco delle Minchiate è
+senza dubbio il più nobile di 
+tutti i giuochi che siensi mai
+potuti inventare colle carte.
+Egli esige cognizione, e talento. Cognizione non solo dei casi che possono darsi, quanto ancora dell'indole de' Giuocatori suoi Avversarj; poiché conoscendo bene le loro maniere, uno può giungere facilmente a scoprire dopo poche date, quali carte gelose essi abbiano in mano: talento poi è necessario al Giuocatore per saperli schermire, e deludere gli Avversarj, affine di farsi gli onori che si ritrova, come anche per ammazzare quelli degli Avversarj: È altresì il più bello, e il più dilettevole di tutti gli altri giuochi, e per i varj oggetti di ventuna carta che ha in mano, e per il rigiro che ne deriva nel corso d'una mano, ed è dilettevole parimente per gli accidenti che nascono. Cognizione, e talento dunque sono due cose necessarie per un Giuocator di Minchiate,
+
+Lontani, lontani pure ne andare da questi tavolini, o teste dure, o cervelli goffi, perché oltre al proprio danno nel perdere i vostri danari, vi troverete in continue altercazioni con il Compagno, e con gli Avversarj, ed io ho veduto piccole cagioni produrre delle conseguenze notabili.
+
+Il giuoco delle Minchiate si fa con novantasette carte. Quaranta di Tarocchi, cinquantasei di Cartiglia, ed il Matto. Di tutte queste anderò di mano in mano ragionando in appresso, e frattanto non voglio lasciare di trascrivere un Sonetto fatto da un nostro Poeta, in cui si contengono le qualità, e prerogative delle suddette tre specie di carte.
+
+\clearpage
+
+\section*{SONETTO}
+{\it
+\-\hspace{-6pt}{\LARGE N}oi siamo novanzette, ed a girone\\
+Di mano in mano ottantaquattro andiamo, \\
+Perché a vicenda riposar vogliamo \\
+Da tredici di noi le più poltrone. 
+
+\vspace{6pt}
+
+\noindent\-\hspace{-6pt}{\LARGE A} quattro Regj tredici Persone\\
+D'un uniforme ugual suddite siamo;\\ 
+Ma batter da quaranta ci facciamo \\
+Che per lor Generale hanno un Trombone. 
+
+\vspace{6pt}
+
+\noindent\-\hspace{-6pt}{\LARGE S}on nostri Capitani il Mondo, il Sole,\\
+La Luna, ed una Stella; e grave è il lutto \\
+Se uccidere talun fra lor si puole. 
+
+\vspace{6pt}
+
+\noindent\-\hspace{-6pt}{\LARGE M}a poi un Figurin rende buon frutto\\
+Senz'ammazzare, e senza far parole, \\
+Quando dà Matto vuol entrar per tutto.
+}
+\clearpage
+\pagenumbering{arabic}
+\section{I}
+\subsection*{Origine del giuoco delle Minchiate}
+
+Ebbe questo giuoco la sua prima origine in una conversazione di Nobili Cittadini Fiorentini, che studiosi nell'Aritmetica lo inventarono per occuparsi con util diletto nell'ora di loro ricreazione; e sebbene sul principio segnato avessero con i soli numeri la graduazione dei Tarocchi dall'uno al quaranta, fu poi coll'andar del tempo ornata ciascuna carta delle presenti figure, ricavate più dall'altrui fantasia, che da altra cosa, e questo per dare una idea più formale del loro valore ai meno perspicaci, e particolarmente alle donne, dimostratesi portate a tal divertimento, le quali trattenendosi nel computare i numeri descritti dal maggiore, o minore spazio di tempo che impiegavano nel biascicare la numerazione di ciascun Tarocco, venivano a far conoscere con facilità quali carte avevano in mano. Perfezionato poi questo nobilissimo giuoco, è andato in seguito cotanto dilatandosi, che posto piede in ogni conversazione più culta e pulita, si tiene per uno stupido quel tale, che ricercato di accomodare una partita, non sa cosa sieno le Minchiate.
+
+\section{II}
+\subsection*{Della Cartiglia, e suo valore}
+
+Di quattro sorti è composta la Cartiglia, ed ogni sorte ha 14 carte. Le sorti sono: Spade, Bastoni, Danari, e Coppe; ed ecco i nomi delle 14 carte, cioè di Spade, e di Bastoni gradatamente salendo, secondo il loro valore.
+
+Asso, che equivale all' 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, Fante, Cavallo, Regina, e Re.
+
+Di Danari, e Coppe
+
+10, 9, 8, 7, 6, 5, 4, 3, 2, 1, Fantina, Cavallo, Regina, e Re.
+
+E perciò in Spade, e Bastoni i numeri minori son presi dai maggiori, quando in Danari, e Coppe i numeri maggiori vagliono meno, e son presi dai minori.
+
+Le figure poi di dette quattro sorti mai variano di valore, restando sempre nel grado di sopra.
+
+Quando un Giuocatore ha riportata sul suo monte o pure (per servirmi del termine del giuoco) quando uno si è fatta la Cartiglia, conta tanti punti, quante sono le carte che ha prese superiormente alle sue proprie, e del Compagno suo, giuocando in partita, quali insieme dovendo esser 42, perché 21 per ciascheduno ne hanno ricevute da chi fa le carte, così trovandosene fatte 52 segna 10 punti a suo favore.
+
+Le carte tutte a 97 senza distinzione godono il privilegio di esser valutate un punto in favor del numero delle medesime riportato contro gli Avversarj.
+
+Il Re di tutte le quattro sorti della Cartiglia conta per suo proprio valore 5 punti, e questo è privilegio suo singolare, mentre le altre 13 carte per proprio valore non vagliono cosa alcuna. E questo sia detto circa alla Cartiglia, suo valore, e valore d'ogn'altra carta guadagnata di soprannumero, ancorché sieno Tarocchi, della qualità, pregio, e valore dei quali, parlerò nel seguente capitolo.
+
+\section{III}
+\subsection*{Dei Tarocchi in generale}
+
+
+Già si è detto che 40 sono le carte
+dei Tarocchi. Dall'uno sino al cinque, 1, 2, 3, 4, 5. Queste si domandano Papi: cioè, Papa uno; Papa due; Papa tre, o terzo; Papa quarto; Papa quinto.
+
+Papa uno; conta 5 punti. Gli altri quattro Papi contano 3 punti per ciascuno.
+
+Dal sei fino al dodici si domandano Papi parimente, come: Papa sei, Papa sette ec. ma il solo Papa dieci fra questi conta 5 punti, per le ragioni che dirò nel Cap.\ delle Verzicole.
+
+Il tredici conta parimente 5 punti, per le ragioni medesime, e dal quattordici sino al diciannove inclusive non conta cosa alcuna.
+
+Il venti conta 5 punti, per le ragioni medesime, e da' ventuno sino al venzette inclusive non contano cosa alcuna.
+
+Talmeneché dal 1 sino al 27 i soli 1, 10, 13, e 20 contano 5 punti, ed il 2, 3, 4, e 5 contano 3 punti per ciascheduno.
+
+Dal 28 sino al 35 contano 5 punti per ciascheduno, eccettuato il 29 che conta solamente cinque, quando è principio, o carta media di Verzicola.
+
+Le ultime cinque carte dopo il 35 si chiamano Arie, e sono: Stella, Luna, Sole, Mondo, e Trombe, che corrispondono, benché non numerate al 36, 37, 38, 39, 40, e queste contano 10 punti per ciascheduna.
+
+\vspace{24pt}
+
+
+{\noindent \scriptsize
+  \begin{tabular}{*{10}{|r}|}
+    \cline{1-10}
+\bf  1& \bf 2& \bf 3& \bf 4& \bf 5& \bf 6&\bf  7&\bf  8&\bf  9& \bf 10\\
+  5& 3& 3& 3& 3&  &  &  &  & 5\\
+    \cline{1-10}
+\bf 11&\bf 12&\bf 13&\bf 14&\bf 15&\bf 16&\bf 17&\bf 18&\bf 19&\bf 20\\
+   &  & 5&  &  &  &  &  &  & 5\\
+    \cline{1-10}
+\bf 21&\bf 22&\bf 23&\bf 24&\bf 25&\bf 26&\bf 27&\bf 28&\bf 29&\bf 30\\
+   &  &  &  &  &  &  & 5& (5)& 5\\
+    \cline{1-10}
+\bf 31&\bf 32&\bf 33&\bf 34&\bf 35&\bf 36&\bf 37&\bf 38&\bf 39&\bf 40\\
+     5&     5&     5&     5&     5&    10&    10&    10&    10&    10\\
+    \cline{1-10}
+  \end{tabular}
+}
+
+\section{IV}
+\subsection*{Del Matto}
+
+Il Matto è una carta che conta 5 punti, ed ha questo in se di particolare, che non può essere ammazzata da veruna carta; e non può altresì ammazzarne alcuna. Ella entra in tutte le Verzicole facendo crescer di più 5 punti la Verzicola, e tante volte si replica il computo dei 5 punti al Matto spettanti, quante sono le Verzicole, che vengono accusate dal Giuocatore. Il Matto si può perdere solamente quando vengano perdute tutte le carte dei Proprietari del medesimo; ed allora ec, come più a basso vedremo al Cap.\ VII. de' Morti ec.\ ec.
+\section{V}
+\subsection{Delle Verzicole regolari,\\ e loro valore}
+
+Avendo in mano una Verzicola subito dopo aver prese le carte, prima di cominciare a dare, bisogna porla in tavola, e lasciarla vedere agli altri Giuocatori, ed allora terminato il giuoco si computano in proprio vantaggio tanti punti di più quanti contano le respettive carte secondo il loro valore detto nei precedenti Capitoli; e non accusandola, non si può pretendere di conteggiarla in suo favore come di prima accusata mentre le carte di
+Verzicola accusata di principio si conteggiano tre volte; e le carte di Verzicola, che si combinano in fine di giuoco, si conteggiano due sole volte.
+
+La Verzicola è composta di tre carte di seguito, o più di tre. Per esempio:
+
+I: Uno, due, e tre. II: Due, tre, e quattro. III: Tre, quattro, e cinque. Oppure 1, 2, 3, 4, ovvero 2, 3, 4, 5, oppure 1, 2, 3, 4, 5, e secondo la qualità e quantità delle carte, tanti punti poi si contano.
+
+E queste si chiamano Verzicole di Papi.
+
+Quello che si è detto delle Verzicole dei Papi si conviene alle altre Verzicole di Tarocchi; come 28, 29, 30, ovvero 29, 30, 31 ec., oppure 29, 30, 31, 32 ec.\ di seguito ec.
+
+E queste si chiamano Verzicole di Tarocchi, o di trenti, essendo 28, 29, 30, o Verzicola di sopratrenti, essendo 31, 32, 33, o Verzicola di rossi, essendo 33, 34, 35.
+
+Verzicola d'Arie poi si dice quella composta di tre Arie di seguito, ed anche quando ve n'entrano due, ovvero una, come:
+
+I: Sole, Mondo, Trombe, dove entrano tre arie.
+
+II: Oppure XXXV, Stella, e Luna, dove entrano due Arie.
+
+III: Oppure XXXIV, XXXV, e Stella, dove entra un'Aria sola, e tutte queste si computano per tanti punti quanto è il proprio valore delle carte che compongono la Verzicola, che perciò la prima conta 30 punti.
+La seconda 25. 
+La terza 20.
+
+\section{VI}
+\subsection*{Delle Verzicole irregolari}
+
+Tre Regj, o quattro Regj, è Verzicola.
+
+Uno, Matto, e Trombe, è Verzicola. 10, 20, 30, è Verzicola.
+
+Oppure 20, 30, e 40, cioè Trombe: è Verzicola.
+
+1, 13, 28, è Verzicola.
+
+E tutte contano secondo il valore delle carte detto di sopra.
+\vspace{10pt}
+
+{\tiny\tikzset{
+  trumpstar/.style={decorate,decoration={shape backgrounds,shape=star},
+    star points=#1,fill=white}
+}%
+\begin{tikzpicture}[decoration={shape sep=0.8cm, shape size=.53cm}]
+  \draw [very thick] (0.4,4.0) -- (3.6,4.0);
+  \draw [very thick] (0.8,1.6) -- (5.6,1.6) .. controls (6.5,1.6) and (6.5,0.8) .. (5.6,0.8) -- (2.4,0.8);
+  \draw [dashed, very thick] (0.4,4.0) .. controls (0.8,3.6) and (0.8,3.8) .. (0.8,2.8) -- (0.8,1.6);
+  \draw [densely dash dot, very thick] (0.4,4.0) .. controls (0,3.6) and (0,3.8) .. (0,2.8) -- (0,2) -- (0,1.6) .. controls (0,1) and (0.4,0.8) .. (0.8,0.8) -- (2.4,0.8);
+  \draw [densely dotted, very thick, dash phase=2.4pt] (2.4,3.2) -- (2.4,0.8);
+  \draw [trumpstar=5] (0.4,4.0) node {1};% (pagat)
+  \draw [trumpstar=5] (0.8,2.8) node {13}; % (morte)
+  \draw [trumpstar=5] (0,2.0) node {M}; % (matto)
+  \draw [trumpstar=5] (2.4,3.2) node {10}; % (dieci)
+  \draw [trumpstar=5] (2.4,2.4) node {20}; % (venti)
+  \draw [trumpstar=5] (6.2,1.2) node {35}; % (gemini)
+  \foreach \x in {28, 29,..., 34} {
+    \draw [trumpstar=5] (0.8*\x - 21.6,1.6) node {\x};
+  }
+  \foreach \x in {36, 37, ..., 40} {
+    \draw [trumpstar=10, decoration={shape size=0.55cm}] (34.4 - 0.8*\x,0.8) node {\x};
+  }
+  \foreach \x in {2,..., 5} {
+    \draw [trumpstar=3, decoration={shape size=0.5cm}] (0.8*\x - 0.4,4.0) node {\x};
+  }
+  \draw [densely dotted, very thick] (4.4,3.6) .. controls (4.95,4.15) and (5.75,3.35) .. (5.2,2.8) .. controls (4.65,2.25) and (3.85,3.05) .. (4.4,3.6);
+  \draw [trumpstar=5, decoration={shape sloped=false}] (4.4,3.6) node {R} -- (5.2,3.6) node {R} -- (5.2,2.8) node {R} -- (4.4,2.8) node {R};
+\end{tikzpicture}
+}
+
+\section{VII}
+\subsection*{De Morti, e del segnare i punti}
+
+Quando viene ammazzata una carta
+degli Avversarj, allora si segnano tanti punti in vantaggio di chi l'ammazza, quanto importa la carta medesima, secondo il suo valore, cioè, se è un'Aria si segna 10 punti, se è un Tarocco, o un Re, si segna 5 punti, come pure 5 se ne segnano se muore Papa uno, e tre punti si segnano quando muore uno degli altri quattro Papi.
+
+Se mai si desse il caso, come più volte, benché di rado suole accadere, che si vengano a perdere tutte le carte, da quelli che hanno il Matto, allora non potendo consegnare in baratto altra carta, corre l'obbligo di dare il Matto agli Avversarj, con scapito di più dei 5 punti del Morto, ed il Matto allora accomoda tutte le loro Verzicole, accrescendole ec.\ come si è detto di sopra al Cap.\ IV.
+
+Dunque si vede di quanta forza, e
+valore sia il Matto nel giuoco delle Minchiate, quale sebbene da per se stesso non possa prender veruna carta come neppure un asso di Bastoni, non ostante tanto può giovare a quelli che lo hanno.
+
+Si deve avvertire che quanto ho detto circa al segnare i Morti, si deve fare per via di numerazione, o sottrazione secondo che porti il caso: per esempio, se gli Avversarj avessero segnati già dieci punti e che ammazzassero altra carta, \textit{puta}, del valore di 5 punti, debbono ritoccare il numero, accrescendolo ec.\ di 5 punti, come le venisse loro ammazzata una carta del valore di 5 punti, allora invece di 10 debbono sottrarne cinque, e segnare 5.
+
+Si deve stare attenti sulla stessa regola di segnare ancora i punti della rubata o scoperta, come al seguente Capitolo.
+
+\section{VIII}
+\subsection*{Del fare le carte, alzare, \\ rubare, scoprire ec.}
+
+Cominciando a giuocare, o riprincipiando
+un giuoco, si deve procurar 
+di scozzar bene le carte, acciocché tutte 
+quelle di conto non sieno insieme: poi 
+dopo d'aver mischiate le carte a piacere, 
+quello a cui toccherà, ponga le carte 
+avanti del suo Avversario a sinistra. Egli 
+alzerà, e guardando la carta, che ha alzata, mentre sia carta di conto, oppure 
+sorpassi il 20 Tarocco, allora se la prenderà
+per se, e così di mano in mano seaguiterà a rubare finché seguita a trovare 
+carte di conto, o sopraventi una appresso 
+l'altra continuamente, e senza frapposizione 
+di cartaccia, e tanti punti in suo favore 
+segnerà, quanto importeranno tutte le carte rubate secondo il loro valore ec. Quello
+che fa le carte, ne darà prima 10 per 
+ciascheduno, cominciando dal suo Avversario
+a mano destra e così proseguirà 
+fino a se: poi di nuovo ne darà altre 11 e scoprirà a ciascuno l'undecima, ed ultima, ed ancora qui, se è carta di conto, sarà segnata in favore di quello, a cui appartiene; lo stesso a se, con questo privilegio però, che dopo d'aver scoperta la sua undecima carta, proseguirà a scoprir rubando finché può, e segnando in suo favore, o defalcando secondo ec.\ quanti punti avrà, e scoperti, e rubati. Fatto questo, conterà da se le carte dalla fola, che devono restar 13, supposto che non ne sieno state rubate.
+
+\section{IX}
+\subsection*{Dello scartare}
+
+Bisogna avvertir bene a scartare; da
+questo dipende tutta la facilità di farsi le carte di conto, e gelose.
+
+In primo luogo quando si è accusata qualche Verzicola, e specialmente composta di Tarocchi bassi, è necessario farsela con sicurtà nel proprio sfaglio, onde convien pensare a scartare in quella sorte di
+Cartiglia, di cui poche uno se ne ritrova in mano, e che in minor numero appariscono nelle carte restate a monte (perché allora è più difficile trovare ivi lo sfaglio negli altri) e si deve scartare tante cartacce, quanti onori, o sopraventi uno ha rubati, o trovati nelle 13 carte della fola, talché l'effetto sia di far sì, che in mano restino carte 21, e non più, per non incorrere nelle pene ec.
+
+Giuocando per altro in partita a ognun per se, ho veduto esser cosa molto utile il
+riserbarsi in mano, avendone, una quantità grande di Cartiglia dell'istessa sorte, perché oltre una o due date, specialmente quando uno è sicuro, o per altri sfagli, o per altre riprese di poter spesso ripigliare e giuocare, si viene, dico, dopo una o due date a far sì, che quella Cartiglia diventa Tarocco, perché non avendo gli altri da rispondere nella medesima sorte, sono obbligati a dare un Tarocco, e così si vengono a spossare gli Avversarj dei loro Tarocchi, che sono le armi offensive, e difensive di questo giuoco, e allora chi pensasse di far l'ultima data che importa assai, per avere
+in mano le Trombe, è obbligato a cadere, non avendo più Tarocchi da sostenerle, e così perder l'ultima, con suo pregiudizio e vantggio grande di chi avrà in fine il Tarocco superiore agli altri, sempre presumibile in quello, che procura di far tal giuoco. Giuocando in partita ai Compagni, questo è errore massiccio, perché altro non si ottiene che mandar sotto il suo Compagno con i suoi Tarocchi, ed onori in faccia all'Avversario, con dando grande del suo partito; non potendosi prevedere quali carte gelose possa avere in mano il suo Compagno, a cui piuttosto deve cercar di giovare, che nuocere, tornando pure il danno in disvantaggio di se medesimo,
+
+Se poi quello che deve scartare si trova scarso di Cartiglia, e con molti Tarocchi, in tal caso converrà scartare anche qualche Tarocco, ma dei più grossi per assicurarsi in mano una distribuzione di carte da far maggior guerra agli Avversarj, molto più se egli ha delle Arie principali.
+
+Molti casi però si danno, ai quali non si può dar regole fisse; intanto basti questo ad un Principiante circa allo scartare; mentre l'uso, e l'esercizio gli faranno meglio comprendere tutte le accortezze che qui bisogna usare.
+
+
+\section{X}
+\subsection*{Dell'impiccare i Re}
+
+Giuocando col Compagno in partita può impiccare i Re, cioè
+si può ed è permesso dare un'altra carta dell'istessa sorte invece del Re, e questo però solamente, essendo sotto mano a quello che sfaglia in tal sorte, o che si supponga che ne manchi naturalmente, e questo si fa quando si crede, che dopo la prima, seconda, o terza data ec.\ possa sfagliare ancora il Compagno, onde potendo dar Tarocco, è facil cosa il ricuperare quel Re, che giuocandolo da principio, cioè alla prima data, sarebbe certamente perduto, considerato lo scarto dell'Avversario fatto dell'istella sorte di quel che s'impicca.
+
+Quando uno ha molta Cartiglia, e pochi Tarocchi, suole impiccare quel Re che
+si trova in mano colla speranza di cadere e farselo in fine su qualche Tarocco del Compagno.
+
+È permesso pure al soprammano d'impiccare il Re, ma nel caso però, che egli sia il primo a giuocar tal sorte di Cartiglia, che allora viene a diventar sottomano sempre di chiunque Giuocatore Avversario, e questo si fa quando quello che impicca il Re non ha giuoco da far guerra, e sarebbe errore l'impiccare il Re con grossi onori in mano, perché nel muovere tal sorte di Cartiglia, sapendo il sottomano, che il suo soprammano ha ancora nelle mani il Re, col quale è obbligato a rispondere, passa sicuro e franco qualunque carta gelosa, che ha bisogno di farsi; perciò l'impiccare i Regj si fa solo da quelli che non avendo in mano carte da ammazzare, procurano solo di farsi quel Re, o per non accomodare di ritorno una Verzicola di Regj agli Avversarj, o per farla essi medefimi, o per salvare almeno una carta che conta 5 punti, non avendo che poche carte di conto. Per questa ragione dunque da un soprammano a chi sfaglia è cosa lodevole l'impiccare i Regj.
+
+\section{XI}
+\subsection*{Delle varie maniere di giuocar la~Cartiglia secondo la stato differente delle~carte
+che uno si trova in mano}
+
+Chiunque abbia in mano le Trombe deve procurar di condursi, cioè deve procurar d'avere in mano sempre dei Tarocchi, per non cader colle Trombe senza profitto.
+
+A tale effetto dunque deve fare ogni possibile di sbrogliarsi di tutta quella Cartiglia, che difficilmente può esser giuocata dagli altri; cioè quella di cui ne ha in maggior quantità di carte, e di quella per conseguenza che gli altri non possono che averne in piccolo numero.
+
+Bisogna avvertire però di non nuocere al Compagno, che fidandosi d'una carta \textit{puta} di spade mossa dal suo compagno, egli sbagliandone, potrebbe, secondo le buone regole, dare una carta di conto; e
+per far questo giudiziosamente, bisogna giuocar tante carte di quella Cartiglia, quanto si crede di poter dar rifitte all'Avversario a sinistra, e quando, dopo di aver computate le carte giuocate, quelle restate a monte, e quelle che uno ha in mano, si crede che egli non possa averne più, allora si giuochi Cartiglia d'altra sorte, e dopo poi si può tornare a giuocar la sorte di prima, perché la giuocata di diversa Cartiglia dà a divedere al Compagno, che avete bisogno di condurvi per aver le Trombe in mano: che però siete costretto a disfarvi di tutte quelle cartacce, e nell'istesso tempo gli fate capire, che non deve fidarsi di tal giuocata, onde non passi qualche carta di conto, perché passandola anderebbe a risico di perderla.
+
+Quando poi uno non abbia carte maggiori in mano, e perciò non possa essere in stato di far guerra, bisogna che procuri d'aver riguardo a due cose nel giuocar la Cartiglia, 1 di metter sotto il suo soprammano; 2 di rifittar l'altro a sinistra, sempre intero però di non pregiudicare al proprio compagno, come di sopra si è detto.
+
+Mandando sotto il suo soprammano, si può dar la combinazione, che stagliando in quella sorte, come obbligato a risponder Tarocco, non avendo altre carte di conto, se ne faccia ammazzar taluna dal vostro Compagno, e nell'istesso tempo rifitrando l'alero vostro Avversario lo tepete in soggezione, e perché non può farsi carte di conto, come obbligato an rispondere, e perché può credere che abbiate in mano le Trombe, onde venendo il caso di passar Tarocco, si guarderà bene dal passarvi una carta di conto, e gelosa.
+
+Alle volte è bene il levar le rifitte di mano al suo loprammano, acciò nell'occasione di dover egli giuocar Cartiglia, non si ritrovi una rifitea da darvi, e questo credetemi quando sulla fine del giuoco avviene, specialmente nel giuocare alle Minchiate a ognuno per se, che allora non si può sperar aiuto dal Compagno, è cosa molto dolorosa, perché dopo aver posto il suo soprammano nella dura necessità di prender la bazza, quando si crede che vi giuochi la carta da potervi fare un Onore, voi vi vedete dare una rifitta, onde siete nuovamente esposto a perder quella carta che con tanta gelosia procurate di assicurare. Di questa regola servitevi pure con attenzione per voi medesimi, e sia a profitto vostro quello che ho inteso dirvi, per liberarvi da tale accidente.
+
+\section{XII}
+\subsection*{Prevedimento\\ del giuoco del Compagno, o maniera\\ d'aiutarlo a riescir nel suo fine}
+
+Da varj fonti si ricava la qualità del
+giuoco del suo compagno, e quello che dirò serva di regola reciprocamente a voi, per fare ad esso comprendere lo stato del vostro giuoco.
+
+In primo luogo, dalla maniera di scartare si può prevedere se il vostro compagno abbia in mano carte da far guerra, onde pensi di ammazzar qualche carta 
+gelosa al suo Avversario, dal procurar egli di lasciarsi varia Cartiglia da poter rifittare il suo sottomano, essendo in certi casi ben fatto lo scartar qualche Tarocco in vece di Cartiglia, come si è detto, ma per far questo bisogna aver pratica assai di questo giuoco, e veder se convenga a suo vantaggio un tale scarto, utile più tosto a non nuocere al suo proprio Compagno, che a danneggiar gli Avversarj, che però in questo si deve andar con cautela, e riflessione. Lo sfagliarsi di Tarocchi alti, il conservarsi i piccoli, ma con maniera senza farsi conoscere, è chiaro segno che quel tal Giuocatore vuole sbrogliarsi di carte grosse da ripresa, affine di poter fare delle lasciate a tempo, e luogo, per obbligare il suo sottomano a venirgli sotto con quelle carte, alle quali intende far caccia, ed in tal caso bisogna che il Compagno lo aiuti, come di riprender quei Tarocchi grossi che gli viene a mandare, perché la data non resti a lui, e deve poi in vece di Cartiglia, o piccoli Tarocchi, giuocargli sempre in faccia dei Tarocchi alti; etiam a perdita sicura di
+qualche carta di conto, purché li preveda non poter esser questa di vantaggio grande agli Avversarj, e non poter guastar notabilmente il suo conto.
+
+\section{XIII}
+\subsection*{Del modo di far conoscere al Compagno
+di darsi il tempo d'un giuoco di rigiro}
+
+Siccome non è cosa degna d'un uomo
+pulito il palesar colla voce quali sieno le carte che uno ha in mano, mentre da tal dichiarazione riuscir ne potrebbe disvantaggio agli Avversarj, e così dandosi persone tali, verrebbero ad esser tacciati di Giuocatori di vantaggio, e improprj, che però l'accortezza ha inventato, ed anche la naturalezza del giuoco richiede, che qualora si sia visto che il Compagno abbia accusate in Verzicola, o trovate in fola, o scoperte molte carte delle maggiori, ed egli si trovi in mano le altre carte di seguito superiori, e le Trombe ec.\ in tal caso alla prima ripresa, per non dar luogo agli Avversarj di
+farsi i piccoli Tarocchi, se mai potessero sfagliare in una sorte di Cartiglia, richiedesi cominciare a staroccare, e principiare con qualche carta di conto piccola, come un Papa, dall'1 al 5, o Papa x, o il xiii, e con tale invito, conosce il suo Compagno che deve andar sotto con la carta più grossa che egli abbia in mano, quale sa benissimo essere a notizia del suo Compagno, per averla o accusata in Verzicola, o rubata, o scoperta, e poi deve proseguire di mano in mano a giuocare le carte più grosse che egli abbia, talché viene a dar comodo all'altro di porvi sopra i piccoli Tarocchi di conto, e viene ad acquistare ancora quelli degli Avversarj, se mai vengono a mancare idi Taroccacci; ma per altro in tal giuoco di rigiro bisogna riflettere ad aiutare anco il Compagno, acciò non segua che trovandosi anch'egli con pochi Tarocchi, non cadano le di lui Trombe sopra il suo Mondo, e così si venga a perdere una bazza sicura di grosse carte di più, il che potrebbe far perdere il frutto di tanta premura, come talvolta è successo che in quel vuoto han potuto gli Avversarj
+far il xx il xxx o l'uno, carte gelosissime, che avrebbe giovato molto a chi 
+faceva loro la caccia. E però, se mai si 
+temesse che il Compagno fosse per cadere colle sue Trombe, o altre carte grosse 
+di mezzo, bisogna slargare lo sminchio 
+dei Tarocchi, giuocandone uno basso 
+così egli mettendoci sopra una delle sue 
+carte grosse, verrà ad ottener l'istesso intento, e se fosse per cadere coll'altre le 
+deve giuocare una dopo l'altra; e cosi 
+gioverà a se, ed al Compagno nell'istesso 
+tempo, che allora porrà egli aver comodo di porvi sopra i piccoli Tarocchi, e 
+così non perdere neppure un Papa. 
+
+\section{XIV}
+\subsection*{Di ben regolare il giuoco\\ secondo la diversità delle carte}
+
+Se uno si trovasse Padrone del Mondo 
+e delle Trombe, e che volesse far
+la caccia al Sole, supponendolo esser sottomano, è necessario distribuirsi il giuoco
+nella seguente maniera. Procurar di non levarsi di mano tutta la Cartiglia, affine di poter dare una rifitta quando occorra; essendo obbligato a pigliare negli sfagli della prima Cartiglia, procurar di levarsi i Tarocchi grossi, e poi rifittare il sottomano; e procuri di salvarsi le carte gelose, mandandole verso al Compagno, come pure farà dei Tarocchi grossi, e di conto, acciò egli glieli ripigli, ed essendo costretto a ripigliare, procuri d'aver una rifitta da dare in tutti i casi; e qui bisogna ben distinguere quando sia il caso di lasciarsi della Cartiglia a tal fine in mano, perché si potrebbe dare, che uno poi cadesse colle Trombe e il Mondo, volendo seguitare a lasciare, e non coprir la bazza, il che sarebbe ben fatto, perché chi ha il Sole in mano naturalmente mai lo serberà all'ultima; ma si trovano dei bravi Giuocatori, che attenti tanto ai Tarocchi, quanto alla Cartiglia, potendo avvedersi che con tutte le vostre due carte superiori siete per cadere, azzardano l'ultima col Sole, oppure se ne vanno col Sole quando voi ripigliate con
+una, credendo di dargli una rifitta; e però bisogna bene avvertire prima di ritenersi una carta di Cartiglia, e riflettere se quella sia veramente rifitta al sottomano, perché potrebbe essere tal carta in mano d'uno degli altri due, Avvertite d'avere dei piccoli Tarocchi in mano; ed in tal caso non vi rincresca di perder dei Papi di conto, che giusto riterrete in mano a tal oggetto, all'eccezione di Papa 3, che sempre procurerete di farvi; ed è buonissimo il Matto per tal circostanza. Colle Trombe, e il Mondo abbiate, sempre in mano un Tarocco grosso etiam di conto, non importa, purché il non farselo non guasti una Verzicola a voi che possa importare, o non ne accomodi una agli Avversarj; ma ridotti alle strette, e riflettendo che colla perdita ancora di quella carta potete guadagnare il Sole, così è bene perdere il poco per acquistare il molto. Anco colle Trombe solamente sempre abbiate un Tarocco grosso in mano; ma se volete tenervi le Trombe col Sole per dar la caccia al Mondo, supponendovelo sottomano, procurate d'avere
+in mano il Matto, o un Papa dei minori acciò in ogni caso possiate lasciare, che se rimanesse la bazza a voi, andreste a rischio di farvi ammazzare il Sole anco di sotto in su; come pure potreste perderlo se mai il Mondo vi fosse soprammano, essendo facile l'ingannarsi sulla qualità delle carte che v'immaginate potessero avere i vostri Avversarj. Colla pratica per altro potrete con più chiarezza formarvi un'idea del come possano succedere varj impensati accidenti, che tutta frastornano la conseguenza del giuoco. Quel che ho detto della caccia da farsi al Sole o al Mondo, è l'istesso che devesi procurare all'altre Arie, o, carte, colla differenza però, che non bisogna ritenersi in mano altro che un'Aria superiore a quella che si vuole ammazzare, e quando dico superiore, dico che non possa essere ammazzata, o per non v'essere sicuramente Arie a detta superiori soprammano, o per esser cadute le altre maggiori alla medesima, ed avvertasi dissi di non ritener due Arie piccole in mano
+volendo far caccia ad un'Aria per non sottoporsi a perderne una, per ammazzarne un'altra: per altro ciò si deve fare quando non si può a meno di dare Aria per Aria, e ciò a solo oggetto di un'Aria indifferente per acquistarne una che vi faccia Verzicola,
+
+\section{XV}
+\subsection*{Delle carte gelose\\ da procurarsi far sicuramente}
+
+Avvertite di non trascurare le seguenti carte, che accomodano la maggior parte delle Verzicole. Cioè, I, XXXV, e Sole.
+
+Avendo accusato I, Matto, e Trombe, è sempre da farsi l'Uno alla prima occasione sicura.
+
+Avendo accusato XX, XXX, e Trombe, è sempre bene farsi il Venti, perché come più facile ad essere ammazzato, ma avendo accusato X, XX, XXX e Trombe, o XXX, XXXI, XXXII, o altra Verzicola XXVIII, XXIX, e XXX, io son di parere, che in vece del XX devasi prima fare il XXX. Provatevi in pratica, e vi si daranno dei casi col tempo, che verrete sicuramente nella mia opinione.
+
+Già le Verzicole accusate da principio bisogna procurar di farsele, giuocandole probabilmente sicure, ma le suddette 4 carte bisogna cercare il possibile di farsele sicuramente, cioè, o a buona mano, o su lo sfaglio sicuro, passandole al vostro Compagno. Dopo le suddette procurate, ancorché non l'abbiate accusate in Verzicola, di farvi il XXVIII ed il XXXIII perché queste sono le chiavi di altre Verzicole. Quando abbiate fatto il Sole, non v'importi di sottoporre il Mondo ad essere ammazzato, quando col ritenerlo in mano potete sperare d’ammazzar la Luna che vi accomodi Verzicola. Basta, son tante le maniere da deludere gli Avversarj per giungere al suo intento, che non vi è se non la pratica che possa insegnarvele.
+
+\section{XVI}
+\subsection*{Del modo di far la caccia a varie carte,\\
+e di quelle de arrischiare a tal fine}
+
+La caccia dell'Uno, del Venti, e del
+Trenta richiede che si pongano al rischio delle carte di Conto; prima, se volete far la caccia al XXX avendo già il XX fatto, siccome nel vedervi far delle lasciate, se il vostro sottomano che ha il XXX si avvede che gli fate caccia, e per aver voi già fatto il XX s'immagina che abbiate le Trombe, che però vi tenterà con varj onori, ma voi non li coprite, anzi su questi avrete comodo di disfarvi dei Tarocchi grossi, come dei Passaventi ec.;
+ma il più bel giuoco di far caccia al XXX, avendo in mano il XX e le Trombe, è quello di non farsi il XX mai, finché vi sia probabilità che vi venga passato sotto il XXX dal sottomano, senza dare alcun sospetto; perché le vi fate il XX e poi vi mettere sulle lasciate, andate a rischio di trovare giuoco tale,
+e diretto con tal'arte dall'Avversario, da rovinare tutto il vostro giuoco.
+
+Similmente avendo in mano le Trombe, e il Matto, quando vogliate far la caccia all'Uno, procurate di non far vedere il Matto, acciò più facilmente e senza sospetto vi possa venir sotto; se poi tanto l'Uno che il XXX vi fosse soprammano, allora procurate (come difficilissimo a voi il poterle ammazzare) di farle ammazzare al Compagno con continuare a staroccare, e secondo la regola prefissa al Cap.\ XIII con tutte le cautele ivi espresse ec.
+
+\section{XVII}
+\subsection*{Della maniera di salvar\\ le carte gelose al Compagno}
+
+Volendo salvar qualche carta gelosa,
+che possa avere in mano il Compagno, o bisogna procurar di far la lasciata al vostro sottomano, oppure all'altro soprammano. Se fate la lasciata al vostro sottomano coll'idea che il vostro Compagno possa farsi l'Uno, o il XX ec.\ quando tocca a voi a dare, avvertite di dare una carta grossa se è Taroccaccio, cioè il XXVII o il XXVI, almeno; ma se avete qualche sopratrenta, è benissimo fatto il darlo, perché se il vostro soprammano non lo copre, allora il vostro compagno si fa quella carta, che egli vuole, e se il vostro soprammano vi cuopre con una carta più grossa, mette a rischio di perdere un onore; se pur non vi mette le Trombe, o altra carta sicura, che allora egli viene a privarsi d'una carta di tanta forza senza ottener di ammazzare la carta del vostro compagno, che se non cade, non se la farà ammazzare in quella data. Avvertite però che l'onore che passate per il fine suddetto, non sia tanto importante, come al Cap.\ XV se pure non abbiate sicurezza non poter tal carta pregiudicarvi assai.
+
+\section{XVIII}
+\subsection*{Del Contare}
+
+Terminato il giuoco, per propriamente disporre le carte da contarsi bisogna osservare di far tanti gruppetti di tre carte l'uno, cioè avendone abbastanza un Taroccaccio, una carta di Cartiglia, ed un onore, e così di mano in mano, perché raccogliendosi in seguito le carte per rimescolare, non vadano tutte unite le cartacce, e gli onori; poi conterete quanti gruppetti avete, e sopra i 14 computerete quante carte vincete, e quante saranno le carte, tanti faranno i punti che marcherete unitamenete ai punti guadagnati, o defalcandoli dai punti de' morti ec.\ secondo a chi ha segnato; e così salderete la partita del dare, e dell'avere fra voi e la parte contraria, segnando il di più per chi spetta; e così segnati lascerete stare in disparte i punti guadagnati ec. Poi in primo luogo conterete le Verzicole accusate in principio se pur non le abbiate marcate allora, il che non si costuma inoggi di segnare le Verzicole a principio; perché se mai ne muore qualche carta, allora bisognando computare i punti del morto, si viene a raddoppiare una funzione, cioè ad accendere e scancellare una partita di tanti 
+punti, che poi si riduce al Zero; e però non segnando la Verzicola da principio, quando che muoia, non si defalca il morto.
+
+Computata dunque la Verzicola o più Verzicole accusate in principio; questa si riconta un'altra volta, cioè di \textit{Ritorno}, e si computano ancora in questo luogo le Verzicole acquistate colla battaglia del giuoco, oppure si aumenta il computo della prima Verzicola, se mai a questa si fosse aggiunta qualche altra carta di seguito o sopra, o sotto.
+
+Poi vedute e computate tutte le Verzicole, prima, come dissi, quelle accusate da principio, poi quelle che esistono di ritorno, devesi computare dieci punti di più in vantaggio di quelli che ha fatto l'ultima data, o bazza, e dopo di
+aver computato i dieci punti dell'ultima si aggiungano poi i punti del valor intrinseco di ciascuno onore, 5, o 3, ai Papi, cinque al X, XIII, XX, XXVIII, ec.\ come notammo al Cap.\ III.
+
+Veduto poi quanto somma tutto l'importare d'una Parte, si ponga a defalco con l'importare degli Avversarj, e quanti punti supera una parte, si consideri come appresso.
+
+Da punto 1 di vincita fino a punti 60 inclusive un resto; e passando etiam di un punto solo i punti 60 si computano due \textit{resti} fino agli altri 60 che sono 120, e così di mano in mano regolandosi in questa forma.
+
+Trovato poi il numero dei \textit{resti} guadagnati in quella giuocata, questi si segnano ex parte, e così si tolgono, o accrescono secondo la qualità delle future giuocate, ed alzandosi poi dal tavolino si paga in contanti, o si risquote l'importar della vincita secondo più, o meno \textit{resti}, in quantità di danaro come si sarà fissato da primo.
+
+\supersection{Dei Delitti e delle Pene nel Giuoco delle Minchiate}
+
+\section{I}
+\subsection*{Dell'avere in mano più o meno carte.}
+
+Dovete prima di tutto sapere, che niuno de' Giuocatori può giuocare con più, o meno carte, mentre gli è stato posto per pena il non contare alla fine del giuoco i suoi onori, sia comunque si voglia, non potendo contare che l'ultima se la fa, e le carte se pure la vince; e la ragione si è perché il giuocare con più, o meno carte può esser fatto forse con frode. A questa pena resta anche soggetto il proprio compagno, perché prima che cominci a giuocare può, e deve avvertirlo che conti le sue carte, acciò
+abbia a giuocare con carte giuste, e perciò resta egli ancora soggetto alla pena in caso di contravvenzione. Chi ha più carte del suo dovere, prima che cominci il giuoco, dee scartarle, e gettarle al monte, restando in suo arbitrio scartare quelle carte, che più gli piacerà, purché non fieno carte d'onore, dovendo queste restare tutte in giuoco contro l'opinione mal fondata d'alcuni, i quali pretendono forse il contrario. Tutto quel che è onore, dee restare in giuoco a benefizio reciproco, inclusive i Regj, non permettendoli neppur lo scarto di alcuni di essi, come per abuso suol praticarsi.
+
+L'avere più o meno carte in mano può dunque dependere, o per averle rubate nell'alzare, o per difetto di chi ha dato le carte, ed eccoci al
+
+\section{II}
+\subsection*{Del dare più, o meno carte.}
+
+Chi
+ dà più, o meno carte è obbligato alla pena, perché nel dare le
+carte può conoscere qualche carta d'onore, e così darne una più o meno secondo gli tornasse più a profitto; onde per ovviare a questa frode è stato necessario mettervi la pena, e per essere obbligato alla pena non importa ricercare se abbia sbagliato le carte con frode, ma tanto serve che le abbia dare male.
+
+La pena di chi sbaglia le carte è di 20 punti per la prima carta, e dieci per ogni altra fino alla somma di un resto; ma se lo sbaglio fosse in tutti, allora si dee pagare la pena per tutti nella maniera che sopra. A questa pena è soggetto anche il Compagno, perché egli dee stare attento, ed avvertire il suo Compagno quando si accorge dello sbaglio.
+
+Chi avrà carte di più date per sbagli, ha facoltà di scartarle a suo arbitrio prima che cominci a giuocare, purché con lo scarto non si faccia faglio, perché non dee servirsi di quel comodo per ammazzare un Re agli Avversarj, che allora verrebbero a soffrire due pene. Se poi ne avrà di meno, dee parimente prima di principiare a giuocare 
+domandare a quello che fa la fola tante 
+carte, quante ne ha di meno, e questi 
+dovrà darle di quelle del monte, prima
+di prendere la fola, mescolandole per bene e alzandole, e dando poi quelle che 
+gli verranno chieste a piacimento senza 
+vederle. 
+
+Inoltre può darsi lo sbaglio di carte anche in uno, che avesse le sue carte giuste, cioè se quello che fa le carte si scordasse di dare la scoperta a qualcuno, e non ostante egli avesse le sue carte giuste. In tal caso cade l'istessa pena de' 20 punti in chi avrà dato le carte; mentre si deve credere, che lo sbaglio sia accaduto nelle prime carte, e poi col non dare la scoperta ha privato quello del vantaggio di segnare a suo favore tanti punti, quanti ne doveva, seppure fosse stata una carta d'onore.
+
+Se poi uno cominciasse a giuocare senza aver prima contate le sue carte, il che è contro ogni buona regola di giuoco, e si trovasse dopo la prima giuocata con più o meno carte, allora non è
+più in tempo di rimediare al male, e dee pagar la pena di non contare, come all'Artic.\ I.
+
+Se uno si accorgesse di avere una carta più nell'atto medesimo della prima data, ancorché principiato il giuoco, avanti però che sia stato rigiuocato, coperta la mano, egli può dire che la carta posta sul tavolino è quella che ha inteso di scartare, e così rimedierà al male, e sarà obbligato alla pena dei 20 punti quello che avrà data di più la carta.
+
+Ma se per accidente nel rispondere la prima volta desse un Re, oppure altra carta d'onore, allora non gli può giovare il suddetto compenso, perché già si è detto di sopra che non si possono scartare carte di conto. Similmente se avesse per esempio una sola carta di Spade, e che la prima giuocata fosse appunto Spade, neppure in tal caso potrà difendersi, perché già si è determinato che in tale scarto non si dee fare il faglio. E in questi casi starà per esso ferma la pena di non contare alla fine del giuoco.
+
+\section{III}
+\subsection*{Della maniera di correggersi per aver data di più, o di meno qualche
+carta.}
+
+Ora che abbiamo veduto il modo che
+dee tener uno che avesse più, o meno carte, è necessario spiegare la maniera che dovrà tenere chi fa le carte nel caso che si accorgesse dello sbaglio in tempo da poterlo rimediare. Egli dee prima di ogn'altra cosa star bene avvertito nel contare esattamente le carte, ma qualora dubitasse di averne date qualcuna di più o di meno, subito, e prima che uno se le volti al viso, le deve far riscontrare per sincerarsi della verità, e non giova il dire all'altro che conti le carte nel tempo che le ha prese in mano e voltate alla faccia, perché in tal caso non ne è più padrone, e deesi lasciar correre lo sbaglio, e non fare come si lusingano molti, i quali nello scuoprire agli Avversarj una qualche carta d'onore, dicono
+subito contate le carte, credendosi potergliela levare qualora avessero fatto lo sbaglio di dar più una carta. Se ciò fosse, non sono più in tempo a correggersi, quando si è data la scoperta, e debbono soggiacere alla pena già comminata; come ancora se nel dar le carte venisse a scuoprire altra carta, per esempio la nona, o la decima, invece dell'undecima, allora non vi è più luogo alla correzione dee pagar la pena come sopra ec.
+
+\section{IV}
+\subsection*{Quel che deva farsi qualora per caso fra
+restata fuori qualche carta d'onore.}
+
+Contro il sentimento di alcuni, il miglior parere dettato dalla ragione si è che mancando nel giuoco o per caso, o per malizia qualche carta d'onore, debba mandarsi il giuoco a monte in qualunque tempo uno se ne avveda, cioè o al principio, o a mezzo, o alla fine. E ancorché il giuoco fosse ultimato, e che nel contare i punti, uno si accorgesse
+della mancanza di qualche onore, si dee tenere per nullo quel giuoco, e rifar le carte. È troppo giusto per tutti, e necessario per questo giuoco, che le carte d'onore fieno tutte in giro, essendo quelle che formano il bello ed il vantaggioso del giuoco medesimo. Nè occorre che si dica, che se quello che fa le carte se ne accorgesse prima di cominciare a giuocare, e si esibisse di prender per se come rimasta in fola la carta restata fuori, si potrebbe in tal caso permettere la continuazione del giuoco; poiché gli si risponde, che ci può essere stata la frode di chi ha fatto le carte di aver lasciata, o fatta cadere in terra a bella posta la carta, o più carte d'onore, coll'idea poi di prendersele con se; onde per ovviare a questi inganni (benché supposti), è troppo necessario il determinare, che tutte le volte che nelle carte del giuoco manca alcuna carta d'onore, oppure ve ne fosse qualcuna di più, per non far nascere un inconveniente maggiore, s'intenda quel giuoco per non fatto: se poi le carte che mancassero, o crescessero, non fossero de
+onore, allora il giuoco s'averà sempre per ben fatto, e validissimo.
+
+\section{V}
+\subsection*{Cosa si debba praticare\\ nel caso che uno non prendesse\\ dal tavolino le carte robate ec.}
+
+Supponghiamo che uno de' Giuocatori abbia, alzando, rubate due carte, e che l'abbia poste da parte sul tavolino per doverne scartare due altre a suo tempo. Egli senza più riflettere a quelle due carte ha incominciato a giuocare senza scartare. Si domanda adesso come debba andare questo giuoco. Camminando sempre coll'istesso principio, che tutte le carte d'onore debbono essere in giuoco, in tal caso si osservi se le carte rubate sono d'onore, o non lo sono; se fono d'onore allora dee prendersele in mano, e giuocare con più carte, e poi soggiacere alla pena di non contare: se poi non sono d'onore, senza essere obbligato a pena
+alcuna, può dire d'avere scartate quelle stesse che ha rubate.
+
+Un altro caso può succedere, al quale bisogna osservare. Supponghiamo che quello che fa le carte abbia trovato, e prese in fola tre carte d'onore. Prima di giuocare ricontando le carte, trova che ne ha una di meno: egli per ripararci, invece di tre ne scarta due sole; si domanda se può farlo. Qualora tutti i Giuocatori abbiano osservato, che realmente le carte trovare in fola sieno state tre, e non due, e che si ricordino inoltre qual sia stata la di lui carta scoperta, allora deve assolutamente soggiacere alla pena dello sbaglio per essersi presa unaw carta di meno. Si è detto, che bisogna che i Giuocatori si ricordino bene qual sia stata la di lui carta scoperta, perché se non l'hanno presente, egli può dire che era una delle tre trovate in fola, e così farà esente da ogni pena.
+
+
+\section{VI}
+\subsection*{Regole nell'alzare le carte.}
+
+Sono necessarissime a sapersi le seguenti cose. Se quello che alza, lascia cadere nell'alzare una carta in tavola, quella ancorché non sia veduta deve essere la sua alzata. È vero che in molti luoghi si pratica, che quando la carta non si è scoperta, è padrone chi alza di dire non la voglio; ma questo è piuttosto un abuso, perché può darsi il caso che la detta carta per essere separata dalle altre possa essere riconosciuta o per buona, o per cattiva, e così per ovviare alla frode, dee essere quella necessariamente l'alzata, ancorché la detta carta caduta sul tavolino non fosse l'ultima carta alzata.
+
+Taluni usano ancora dopo di avere alzato di dare alcune carte di quelle alzate dal suo compagno senza però vederle, aspettando a prender per se quel la che più gli piace per sua alzata; ma
+ciò neppure deve esser permesso, perché col tatto si possono facilmente conoscere le carte; onde per togliere di mezzo ogni sospetto bisogna, che egli prima di alzare si spieghi se dalla sua alzata vuol mandar carte al suo compagno con dirne la quantità.
+
+Se poi nell'alzare cadessero di mano tre, o quattro carte tutte scoperte, allora per non mettersi in disputa quale fosse la prima (di qualunque sorte fossero le carte) allora si deve di nuovo rifar le carte, e di nuovo alzarle, ma se delle carte cadute sul tavolino, sola fosse la scoperta, e le altre tutte coperte, in tal caso la scoperta farà la prima carta dell'alzata, e poi succederanno le altre carte coperte.
+
+Se finalmente si delle la sorte sebbene difficilissima che quello che alza, e ruba, durasse di seguito a trovar carte di rubata anche di più alle 13 carte, che dovrebbero restare in fola, allora quello che fa le carte, oltre non godere il vantaggio della fola, farà obbligato a
+prendersi il compimento delle sue carte dallo scarto di quello che ha rubato.
+
+
+\section{VII}
+\subsection*{Di un caso che può darsi a chi fa la Fola.}
+
+Se per disavvertenza quello che fa le
+carte dopo aver mescolato il monte, fatto alzare, e principiato a dar le carte agli altri in modo che questi già se le fossero voltare alla faccia si accorgesse di non aver prese, e lasciate fuori del giuoco le 13 carte della Fola antecedente allora egli in pena della svista è obbligato a prendersi per Fola quelle medesime carte restate fuori del giuoco, che saranno tutte senza onori. E se nel tempo istesso si desse l'altra combinazione, che quello che alza rubasse tre o quattro carte d'onore, in tal caso quello che fa le carte dee prendere il compimento delle sue carte dal restante delle cartacce restate fuori casualmente,
+
+\section{VIII}
+\subsection*{Del non rispondere giuocando.}
+
+Tenute bene a memoria tutte le descritte regole per riparare a ogni disputa, che potesse insorgere per i riferiti accidenti che sogliono accadere nel giuoco, si parlerà adesso della maniera di praticarlo esattamente.
+
+Il Giuocatore è sempre obbligato a rispondere di quella specie, che si giuoca, talmenreché se uno giuocasse una carta di denari, e l'altro rispondesse Tarocco, nonostante che avesse in mano carte di denari, egli è obbligato alla pena subito che gli Avversarj se ne accorgono. Ma siccome, essi non se ne possano accorgere se non quando torni ad esser giuocata quella medesima cartiglia, su cui prima non rispose, e poi ha risposto, suol succedere, che il delinquente neghi il fatto, che gli si proverà con lo scorrere le carte giuocate, e fargli vedere l'errore apertamente con la data in
+questione. Provato dunque il delitto, deve pagare la pena di un resto per uno ai due Avversarj, la quale sarà cura a carico di chi ha sbagliato a differenza di tutte l'altre che si pagano in compagnia; e la ragione si è perché il Compagno non sapendo quali carte egli abbia in mano, non può e non deve avvertirlo come negli altri casi. Se poi giuocandosi Denari, egli desse Coppe, o qualche altra Cartiglia, allora l'avvertimento del Compagno vi ha luogo, perché troppo palesemente si vede la svista.
+
+Il non rispondere adeguatamente di quella specie che si giuoca, si chiama rifiuto. Fino che uno ha in mano della specie giuocata, dee rispondere a quella, e mancandone, darà Tarocco a suo piacere, qualora poi abbia terminati tutti i Tarocchi, e resti con della Cartiglia in mano, per esimersi dal pericolo del rifiuto, può gettare in tavola le sue carte scoperte, lasciando in arbitrio de' Giuocatori il prendersi, che carta vogliono; ma in tal caso le sue carte non possono fare più alcuna bazza, e si tengono per 
+perdute. Si dee per altro, avvertire di non gettare le carte in tavola qualora vi fosse ancora un Re nelle mani, perché esso pure si ha per perduto; che allora quel Re lo potrebbe salvare, dandolo sopra qualche Tarocco, di ripresa del Compagno.
+
+Se col rifiuto, o sia col non rispondere adeguatamente ei venisse a prendere qualche carta d'onore alla parte contraria, oltre alla pena de' due resti suddetti, deve altresì alla fine del giuoco restituire agli Avversarj non solo la carta d'onore presa loro, come anche la altre due carte di quella medesima data, a riserva della sua che potrà tenersela e contarla nel suo giuoco, con dare però agli Avversarj altra cartaccia in luogo di quella per motivo del numero delle carte vinte, o perdute, Se poi il rifiutante desse una carta d'onore, e se questa gli fosse presa da quello che gli sta sopramano, è benissimo presa, nè potrà ripeterla alla fine del giuoco, come nell'altro caso, tuttoché sia obbligato alla pena, mentre coll'aver data la suddetta
+carta d'onore, può avere impedito all'Avversario di farsi qualche carta di maggiore importanza, che abbia poi necessariamente dovuta perdere.
+
+Il rifiuto perché si possa dir tale, è necessario, che quello che lo commette abbia rigiuocato, e sebbene se ne accorga
+subito, non basta il dire che la bazza è tuttavia scoperta per non cadere in pena, ma anche in tal caso dovrà pagare i due resti, e sarà obbligato a rispondere subito adeguatamente, riprendendo in mano il suo Tarocco, e lasciando la bazza a chi appartiene. Se prima di rigiuocare, toccando la mano a lui, da se stesso avverte il rifiuto, allora può rimediare al male senza alcuna pena, con questo per altro che metta in tavola la carta che ha per rispondere, e riprenda parimente il suo Tarocco, o carta d'onore, e rilasci la bazza a chi sarà di ragione. Se poi dopo il rifiuto fosse passata più di una data, allora senza più aggiustarsi le bazze, si continovi il giuoco fino alla fine per regolarlo poi come si è detto di sopra
+
+
+Ad alcuni potrà forse sembrare troppo gravosa la pena imposta a chi non risponde, cioè di pagar due resti, e di dover restituire le carte agli Avversarj, quasi che per un solo delitto si abbiano a pagare due pene; ma se si rifletterà al gran pregiudizio che può apportare un rifiuto, o sia fatto per malizia, o per inavvertenza, egli è certo che ognuno dirà, che è troppo giusta una tal pena. Proviamo il nostro assunto. Se chi non risponde dovesse soltanto pagare due resti, e non restituire la carta presa all'Avversario illegittimamente, con questa egli potrebbe molte volte guadagnare più di tre resti, e cosi gli tornerebbe più conto il rifiutare, che il rispondere. Eccone l'esempio. Figuratevi di avere in mano cinque, o sei carte solamente, fra le quali vi sieno il Re di Denari, la Tromba, quattro altri piccoli Tarocchi, e che tocchi a voi a giuocare. Voi giuocate il Re di Denari; il secondo non avendo Denari dà il 30 che non si era mai potuto fare per dubbio di non lo perdere; il terzo che ha il Sole, ve lo mette sopra tentando di ammazzarlo per impedire
+il gran giuoco che potrebbe fare; il quarto avendo il Mondo, sebbene egli tenga in mano dei Denari, rifiuta per non perdere una bazza cosi vantaggiosa, Ora con questo rifiuto ha impedita agli Avversarj la Verzicola di Trombe, Mondo, e Sole; del X, XX, XXX, e Trombe; di XXX, XXXI, e XXXII, ed invece egli ha fatta Verzicola di Mondo, Sole, e Luna; di XXVIII, XXIX, e XXX; e di tre Regj. Ora ditemi un poco quanto importa questo rifiuto? se farete bene il conto importa 384 punti, vale a dire 4 resti, e 44 punti. Non vi par dunque giustizia, che chi rifiuta, oltre la pena de' due resti debba ancora essere obbligato a restituir le carte d'onore prese con il rifiuto, essendogli sufficiente l'avere impedita la Verzicola di Tromba, Mondo, e Sole; altrimenti bisognerebbe confessare, che il non rispondere in certi casi portasse maggior vantaggio, che pena al rifiutante.
+
+Chi rifiuta una volta senza esserne avvertito dagli altri, e continua a rifiutare fino all'ultimo, s'intenda compreso
+non in più, ma come in un solo rifiuto. Se poi il rifiuto si scoprisse prima di terminare il giuoco, o si rimediasse nell'atto stesso che si scuopre, e ciò non ostante il Giuocatore rifiutasse la seconda volta sopra l'istessa o altra specie, allora dee di nuovo pagar la pena se viene scoperto, perché essendo il secondo rifiuto atto nuovo, e diverse dal primo, deve anch'esso avere la sua pena come l'altro.
+
+\section{IX}
+\subsection*{Qualità del matto nel rifiuto.}
+
+Si avverta finalmente, che giuocando
+il Matto si può rifiutare per parte di chi giuoca, ancorché avesse in mano altre carte di quella specie che vien giuocata, mentre quella è una carta,
+che dee esser giuocata da Matto, cioè quando si vuole, e fa tutte le figure, con questa sola distinzione, che mai può prendere ancorché vi fossero in tavola le carte più inferiori del giuoco, a segno tale
+che se tutti fossero caduti, cioè avessero poste le loro carte in tavola, che li giudicano perdute, e chi ha il Matto lo tenesse in mano per l'ultima carta, nonostante l'ultima bazza, la dovrebbe fare uno di quegli che hanno gettate le loro carte sul tavolino.
+
+\section{X}
+\subsection*{Pena di chi non fa nel giuoco\\
+  alcuna bazza, o poche}
+
+Benché il Matto possa giuocarsi a suo
+piacere per qualunque carta, como si è detto di sopra, pure si dee avvertire, che in un caso solo non è lecito giuocarlo; cioè se uno de' Giuocatori dà la prima data di una Cartiglia, e quello che viene appresso non avendo di quella specie mettesse un Tarocco, allora quello che ha il Re, se non ha ancora giuocato, è obbligato a darlo ancorché avesse il Matto, o altre carte di quella specie; ma questa necessità non obbliga altro che la prima volta che si giuoca di quella data specie, e quando vi è in tavola un Tarocco, mentre allora assolutamente bisogna dare il Re, e non serve avere il Matto. Fuori di questo caso, cioè non
+essendo Tarocco in tavola nella prima
+giuocata, è permesso, o per genio, o per timore di morte il non dare il Re col rispondere per altro con altra carta di quell'istessa specie, e allora non è più obbligato a darlo se non quando venisse a mancare di quella Cartiglia, e si trovasse senza Matto.
+
+Può darsi l'accidente, che quello che ha il Matto in mano, non abbia occasione di prender mai, e si trovi alla fine del giuoco senza aver fatta alcuna bazza. Allora questi oltre il non contar niente, perde anche il Matto per non avere altra carta da dare in baratto, ma con tutto che sia carta d'onore, non si segna il morto perché è carta che non può mai morire. Se poi per riavere il Matto fosse obbligato a dare una carta d'onore per non averne altre, allora sì che si segna la morte della medesima secondo il di lei valore.
+
+Avvertiamo inoltre, che quello che fa le carte, dopo d'averne date 21 per ciascheduno nella forma espressa al Cap.\ VIII.\ delle \textit{Regole Generali}, e dopo che ha veduto se ruba, deve cercar la Fola, e prender dalla medesima tutte quelle carte che vi troverà di conto, e secondo il numero di queste, e di quelle che ha rubate, scartarne altrettante di Cartiglia, o Tarocchi di niun valore come al Cap.\ IX.
+
+Questo è quanto poteva dirsi in breve di un giuoco, che porta seco infinite ed impensate combinazioni; e non ostante che la pratica sia una maestra più sicura per apprendere il medesimo, contuttociò sono troppo necessarie a sapersi per ben capirlo anche le suddette \textit{Regole Generali}, senza le quali non vi farebbe nè ordine nè intelligenza alcuna.
+
+Ecco finalmente, come il nostro Poeta Pittor Lorenzo Lippi ha combinato in un Ottava del suo Immortal Poema, le Pene comminate a chi erra nel giuoco delle Minchiate.
+
+  \noindent
+\begin{minipage}{8cm}
+{\LARGE G}iusto appunto Baldone a far s'è posto\\
+Alle Minchiate, ed è cosa ridicola \vspace{2pt}\\
+Il vederlo ingrugnato, e mal disposto \\
+Perché gli è stata morta una Verzicola. \vspace{2pt}\\
+Le carte ha date mal, non ha risposto, \\
+E poi di non contare anche pericola, \vspace{2pt}\\
+Sendo scoperto aver di più una carta, \\
+Perché di rado quando ruba scarta. 
+\end{minipage}
+
+\vspace{6pt}
+
+Altra Ottava sopra la maniera d'alzar
+le carte d'un Poeta vivente
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}{8cm}
+{\LARGE U}no alza, e fa pepin, l'altro và in fondo\\
+Per trovar l'uno e l'altro un gioco grosso; \vspace{2pt}\\ 
+Ed io, che ho più cervel, non mi confondo, \\
+Se in ciò mi sento urlar la croce addosso. \vspace{2pt}\\
+Si scapi nell'alzar chi ha il capo tondo, \\
+Urli, strida, minacci a più non posso; \vspace{2pt}\\
+Io dico, per uscir d'ogni imbarazzo: \\
+È degno di pietà colui che è pazzo. 
+\end{minipage}
+
+\vspace{48pt}
+
+\huge\bfseries\centering F I N E.
+
+\end{document}

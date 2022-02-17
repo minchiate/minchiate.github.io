@@ -1,0 +1,4553 @@
+\documentclass[11pt,a6paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{changepage}
+
+\usepackage{mathabx}
+\usepackage{array}
+\usepackage{verse}
+
+\newcounter{listombrecnt}
+\newenvironment{listombre}{
+  \begin{list}
+    {\arabic{listombrecnt}.}
+    {\usecounter{listombrecnt}
+      \setlength{\labelwidth}{0.3pt}
+      \setlength{\labelsep}{0.3em}
+      \setlength{\itemsep}{-0.2em}
+      \setlength{\leftmargin}{0em}
+      \setlength{\itemindent}{0.6em} % equals \labelwidth+\labelsep
+    }
+}{\end{list}}
+
+% needed for floating frames
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{framed}
+
+\usepackage{titlesec}
+\titleformat{\section}[display]
+            {\huge\bfseries}
+            {}
+            {0pt}
+            {}[]
+\titleformat{\subsection}
+            {\slshape\large}
+            {}
+            {20pt}
+            {\flushright}[\kern -4pt]
+\titleformat{\subsubsection}
+            {\scshape}
+            {}
+            {0pt}
+            {\centering}[\kern -4pt]
+
+
+
+% avoid orphans and widows, allow for (a lot of) letter spacing.
+\usepackage[defaultlines=2,all]{nowidow}
+\usepackage[tracking]{microtype}
+\sloppy
+% how to format and space chapter titles
+% I like this font!
+\usepackage{tgbonum}
+\renewcommand{\rmdefault}{qbk}
+\usepackage{lettrine}
+\usepackage[left=13mm,top=12mm,right=11mm,bottom=14mm]{geometry}
+
+\newcommand{\textdoublecircle}{%
+  \textcircled{\raisebox{1.5pt}{\textbigcircle}}%
+  }
+
+\newcommand{\textfisch}{\raisebox{-5.6pt}{\Huge\textbullet{}}}
+
+\setlength{\leftmargini}{0pt}%
+\newcommand{\literaryquote}[1]{%
+\kern -6pt  \begin{verse}
+    {\footnotesize \it #1}
+  \end{verse}\kern -2pt%
+}
+
+\newcommand{\markerA}{{\small$\Downarrow$}}
+\newcommand{\markerC}{{\small$\downarrow$}}
+\newcommand{\markerB}{{\small$\downdownarrows$}}
+\newcommand{\markerD}{{\small$\downuparrows$}}
+\newcommand{\markerE}{{\small$\downtouparrow$}}
+
+\newcommand{\supersection}[1]{%
+\clearpage
+    {\scshape \centering \huge #1\\}
+    \vspace{6pt}
+    \hrule
+    \vspace{12pt}
+}
+
+\title{\kern -42pt\fontsize{30}{30}\selectfont{\textls[80]{GIUOCHI}} \\ \kern 1pt \fontsize{10}{10}\selectfont{\textls[600]{DELLE}}\\ \fontsize{22}{22}\selectfont{MINCHIATE, OMBRE,} \\ \fontsize{18}{18}\selectfont{\textls[480]{SCACCHI},}\\ \kern 2pt \fontsize{11}{11}\selectfont{Ed altri d'ingegno}}
+\author{\vspace{-30pt}\\
+\textsc{\fontsize{12}{12}\selectfont{\textls[520]{dedicati}}}\\
+\textit{\fontsize{11}{11}\selectfont{Alla Ill$\widetilde{\textit{m}}$a, ed Ecc$\widetilde{\textit{m}}$a Signora la Signora}}\\
+\textsc{\fontsize{18}{18}\selectfont{\textls*[500]{principessa}}}\\
+\textsc{\fontsize{30}{30}\selectfont{\textls*[120]{donna giulia}}}\\
+\textsc{\fontsize{28}{28}\selectfont{\textls*[33]{albani chigi}}}\\
+\textit{\footnotesize D A}\\
+\small D. FRANCESCO SAVERIO BRUNETTI\\
+\small \textls[360]{DA CORINALDO}.}
+\date{\vfill\small In Roma, per il Bernabò, e Lazzarini, 1747 \\ \textit{\textls[80]{Con licenza de' Superiori.}}}
+
+
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\maketitle
+
+\clearpage
+
+
+
+\pagenumbering{roman}
+
+
+\noindent{\fontsize{15}{15}\selectfont{\centering Ill$\widetilde{\textup{m}}$a, ed Ecc$\widetilde{\textup{m}}$a Signora.\\}}\vspace{80pt}
+
+
+
+\lettrine{S}e la grandezza dell'animo
+altrui argomentar si dovesse
+dalla bellezza del corpo, dalla grazia,
+dalle maniere leggiadre, Eccellentissima
+Signora, Voi sareste la massima Eroina di Roma;
+ma che lo siate molto più, da' più alti principj,
+che non amettono errore, si scorge. Questi
+sono le vostre opere
+insigni, le quali non vi fan punto de
+genere dalla Ill$\widetilde{\textup{m}}$a, ed Ecc$\widetilde{\textup{m}}$a Prosapia
+donde veniste, e da quella generosissima
+ove andaste, garreggiate per certo con
+quelli Eroi, che il Mondo adorò sul Trono
+supremo del Cristianesimo il vostro
+Prozio Clemente XI, ed Alesandro VII.\
+della familgia Chigi; alla propagazione di
+cui due germogli donaste Sigismondo, e
+Francesco, oh di quanta espettazione, mentre
+si vedono promettere colla loro indole generosa
+non inferiori progressi dei loro Maggiori.
+Io non voglio quì annoverare l'efimie
+gesta di tanti Eroi, quanti ambedue
+le Famiglie produssero, perché non sarei
+per mai venirne a capo: dico bene, che
+Voi di tutti vi fate in ogni più chiara loro
+virtù immitatrice. Costanza ne i giusti
+impegni, potente protettrice de' miseri,
+affabile cogl'umili, corretrice dell'ardire,
+benigna, cortese, familiare con sommo
+decoro coi costumati, pia, guardinga, illibata.
+Queste sono le vostre doti ordinarie.
+Siete poi nel conversare gioliva, sincera,
+e leale di modo che chiunque una
+volta vi tratta non cessa mai di celebrarvi
+con meritate lodi. Ora essendo Voi di
+tante, e sì preclare prerogative, ornata
+che in Donna forte richiedonsi, e che sì
+rara cosa è trovarne più d'una. Non vi
+sia maraviglia se io ancora rapito da tanta
+eccellenza di merito, e dal desiderio di
+proporre ancora ad altrui un ottimo, e sì
+raro esemplare, giacché Validiora, sunt
+exempla, quam verba, \& plenius opere
+docentur quam voce, S.\ Leone. Non
+vi sia dissi maraviglia se io venga ora a
+tributarvi in segno del mio più ossequioso
+rispetto quest'Opera fatta, perché altri
+apprendano quelle virtù delle quali Voi
+abbondate. So, che altezza dell'Animo
+Vostro userà meco la confueta degnazione
+di accettare il mio piccolo dono, come
+l'Amplissimo, e Sagacissimo Porporato vostro
+Fratello Gianfrancesco Cardinale in
+questo fausto giorno 10.\ Aprile 1747.\
+meritamente ornato ed esaltato dal Sommo
+Pontefice Benedetto XIV si degnò poc'anzi
+di accettare da me un simile tributo
+d'ossequio. Con che io spero di confermarmi
+sempre più sotto l'alto patrocinio
+dell'Eccellenza Vostra, e dell' E$\widetilde{\textup{m}}$o Principe
+sudetto, alle quali fin da fanciulli ho esibito
+una sincera, e cordiale servitù, in cui
+con tutto l'ossequio, e rispetto mi confermo,
+e mi dico
+
+\vfill
+
+D.V.E.
+
+\vfill
+
+Roma 10.\ Aprile 1747.
+\vfill
+
+{\flushright
+ \textit{Umilis, Divotis, ed Oblig., serv.}\\
+Saverio Brunetti Cappellano di N.S.
+
+\vfill
+
+
+}
+
+\section{PREFAZIONE.}
+
+\lettrine{L}{'U}omo altro non è, che una
+mente, ed in corpo talmente
+organizzato, e disposto,
+che ogni sua parte, qualunque
+ella sia, è in ordine al
+moto. In esso, oltre il gran
+Caos delli moti corporei spontanei, evvi il
+moto dell'Anima, allorché pensa
+incessantemente, o agli oggetti, che gli si paran
+davanti da i sensi, co i quali si unisce in virtù di
+quel potere, che cosi vuole: o al Sommo
+Vero, la di cui connessione è tanto
+indispensabile, e necessaria, che da esso separare
+mai non potrassi, senza ritornare in quel
+nulla, da cui fu tolta. Ecco l'Uomo da tanti
+moti a lui naturali perpetuamente agitato;
+che fa egli con quel molto, che di volontario
+gli resta? Va sempre in cerca del suo
+riposo, della sua pace, altro non desidera,
+non fa mai altro, che cercare un'oggetto
+proporzionato ad appagarlo. Vede per esperienza,
+e per tutte le ragioni altro non esservi,
+che la giustizia capace di farlo montare
+alla intiera sua felicità, se a questa (non distratto)
+si appiglia, eccolo tutto attento a
+serj pensieri, di meditare il Vero, e di anelare
+amando verso il Sommo Giusto, che per
+tal fine creollo. Ma perché forz'è di natura
+non qual fu, ma qual'è, non potere intensamente,
+e senza mai cessare attuarsi così,
+sa di mestieri, che pure qualche respiro si sia
+talvolta alle cure più serie, acciocché l'animo
+meno applicato in cose sì premurose,
+quasi dopo breve riposo riassuma con più vigore
+i negozj di maggiore importanza. \textit{Homines, quamvis in rebus maximis exerceantur, tamen si modo homines sunt, interdum.
+animis relaxentur}. Cic.\ Tusc.\ q.\ 2.
+
+Un'opportuno trattenimento, che con
+piacere si costuma, è il giuoco, questo per
+avventura è talvolta un'adattato mezzo
+termine per trattenersi con gioliva applicazione
+nella civile conversazione, ove lo spirito
+impiegato in cosa di leggiero interesse, e di
+allegro trastullo ristora l'illanguidito vigore.
+\textit{Ludo \& joco uti illo quidem licet, sed sicut
+ somno, \& quiete tum cum gravibus, seriisque
+ rebus satisfecerimus}. Cic.
+
+Tra questi il gioco delle Minchiate giudico
+molto a proposito a rendere plausibile
+conversazione, che per esser lungo, vario
+e meschiato d'azardo, e d'ingegno può insieme
+trattenere, dilettare, ed erudire colui,
+che talvolta lo giuoca. Egli è lungo,
+perché si tratta di 97 carte che debbono mischiarsi,
+dare, giuocare, e poi contare in più
+modi. Vario, perché ha 96.141.308.410.784.017.049
+casi diversi v.\ la mia Arimetica
+Sp.\ c.\ 5. D'azardo, perché le carte migliori
+acaso capitano alle mani, e poi d'ingegno,
+perché con poco il più esperto vincerà l'avversario;
+egli è anche facile, benché a primo
+aspetto paja difficile. Lucr.\ 1.2.
+\literaryquote{
+ Sed neque tam facilis res ulla est, quinca primii difficilis.}
+
+Ora questo giuoco io intraprendo a spiegare
+forsi con non minor diletto d'esso: scrivendo,
+di quello, che altri abbiano a giucarlo,
+e spero di nulla perdere col mio, piacere,
+anzi di guadagnare, e far guadagnare
+altro, che scienza di giuocare a chi leggerà
+queste poche pagine, perché mi confido di
+trattarlo. \textit{Lectorem delectando pariterque
+ monendo}.
+
+Con sano consiglio spero aver unito, alle
+regole d'un giuoco i precetti più seri della
+vita sociale di alcuni Uomini morigerati, e
+dabbene, e ciò perché i Giovani avidi dei
+piaceri giuocosi, volontieri leggendo questi
+precetti a poco a poco senza avvedersene
+coll'imparare il giuoco delle Minchiate,
+apprendino ciò, che è più importante il vivere
+civile, e savio. Tutti noi abbiamo in noi
+medesimi i semi, delle virti, basta eccitarli
+per vederli germogliare, e far frutti: \textit{
+ Omnibus natura fundamenta dedit, semengue
+virtutum: omnes ad omnia ista nati sumus:
+Cum irritator accessit, tunc illa animi bona
+velut sopita excitantur}. Per verità non
+merita un giuoco l'applicazione, totale d'un
+Uomo, o tanta, che per impararle bastasse ad
+apprendere una qualche utile scienza. In esso
+(cosa rarissima) lodevole è la mediocrità,
+e'l saperne troppo, come dice il Castiglione
+del giuoco de i Scacchi nel suo Cortiggiano,
+non è molto comendabile, ond'io per togliere
+questa nota da chi impara a giuocare, gli fo
+in un tempo medesimo imparare a giuocare,
+ed a convivere, acciocché l'eccellenza in uno
+via più nobiliti la perizia nell altro.
+
+Chi sa, se a sì bello scopo collimerà il mio
+talento, che poi con retta ragione mi senta
+dire con Anaxippo Ateniese riferito da Celio
+Rodigino l.\ 22.\ c.\ 13.
+\textit{Vah numquid fingi potest portentosius illo,\\
+Qui Sophos in Triviis inflato mugit ab ore,\\
+Rebus at in mediis stupet, ac velut iscius haeret?}
+Io perciò quasi nulla v'ho posto del mio (se
+si eccettui il difetto) tutto ciò, che dico,
+altri lo dicono a nostra istruzione. T.~Calfurnio.
+\textit{Ut mea rustictitas si non valet arte polita
+ Ludendi, at certe valeat pietate probari.}
+
+Se poi tutto ciò dica io sì bene, che altrui
+piaccia, e con profitto, sappiano, che
+\textit{De virtute loqui minimum: Virtutibus uti
+Hoc Sampsonis opus.}
+
+Facendo io dunque tutto quello che posso per
+utile, e profitto d'altrui senza risparmio né di
+applicazioni, né di spese; né d'incommodo.
+Ed avendo io radunate nel corso di molti anni
+in occasione di leggere varj Autori, alcuni
+loro detti veramente memorabili, utili pare
+a me alla retta economia del vivere d'ognuno,
+gli ho qui disposti insegnando un giuoco, che
+per essere tutti d'Autori Poeti, o Istorici, o
+Oratori, non è inconveniente, che in un
+giuoco da tali s'impari, come dice Ugone
+l.\ 9.\ didascalicon. \textit{Ab omnibus libenter disce
+quod tu nescis}.
+
+
+Il Giuoco di grande interesse vien detestato
+dalle Leggi, perché ivi si perdono le cose
+più preziose della vita umana, il tempo, le
+facolta, la salute, la riputazione, e la
+tranquillità dell'animo, ivi si offende la carità
+verso il prossimo, vincendo, e verso se stesso,
+perdendo, e quello, che è peggio, i Giuocatori
+non si persuadono giuocando di fare alcun
+male. \textit{Ac, qui perniciosis est error, multi
+ etiam, ne injuriosos quidem in proximos esse,
+ eos, qui Alea ludunt: aut ullo se scelere
+ contaminare, quamvit id magnam in pecuniam
+ vel rem faciant, arbitrantur}. Pascalio
+Giusto nella Prefazione. Perciò ognuno
+fugga da quei giuochi, ove tutti i suddetti
+mali s'incontrano, ed ove dice Giovenale.
+
+\literaryquote{Ploratur lacrymis amissa pecunia veris.}
+
+Incomincio dunque col massimo precetto,
+che chi lo principia ad osservare, subito in
+tutti gli altri è perfetto, e questo è la Carità
+verso di se, verso de i prossimi, e sopra tutto
+verso di Dio. Verino.
+
+\literaryquote{Est Charitas perfettus amor perfellague virtus,
+Qua fine perfelium nil reperire potes.}
+
+\subsection{IMPRIMATUR}
+
+Si videbitur Reverendissimo Patri Sacri Palatii Apostolici Magistro.
+
+\nopagebreak
+\hfill F.M.\ de Rubeis Archiep.\ Tarsi Vicesg.
+
+\subsection{APPROVAZIONI}
+
+\lettrine{A}{v}endo per commissione del Reverendissimo
+Padre Maestro Ridolfi Maestro del Sagro Palazzo Apostolico
+attentamente letto un Libro intitolato:
+Giuochi delle Minchiate, Ombre, Scacchi etc.\ nè
+avendovi ritrovate cose contrarie a'
+Principi, ed a' buoni costumi, giudico se ne possa
+permettere la stampa. Di Casa quello dì
+2 Settembre 1746.
+
+\nopagebreak
+\hfill Giampietro Marchese Lucatelli.
+
+\lettrine{P}{er} Ordine del Reverendissimo Padre
+Maestro Fra Luigi Niccolò Ridolfi Maestro
+del Sagro Palazzo Apostolico ho letto
+un'Operetta del Signor D. Francesco
+Saverio Brunetti, intitolata Giuochi delle
+Minchiate, Ombre, Scacchi etc.\ e non vi ho
+trovato cosa contro la Fede, e buoni costumi.
+Ed in fede \&c. Da Campitelli questo dì 1 Ottobre 1746.
+
+\nopagebreak{\flushright Alessandro Pompeo Berti\\
+Consultore dell'Indice.\\}
+
+\subsection{IMPRIMATUR.}
+{\flushright Fr.\ Aloysius Nicolaus Ridolphi Ordinis Pradicatorum Sac.\ Palat.\ Apost.\ Mag.
+
+}
+
+
+\supersection{
+Notizie
+per il Giuocco
+delle
+Minchiate.}
+
+\pagenumbering{arabic}
+
+\section{CAPO PRIMO.}
+
+
+\subsection{Mazzo delle Carte.}
+
+\lettrine{Q}{uesto} Giuoco si fa con un
+mazzo di 97.\ carte. Sono
+queste le 4 seguenze volgari di Spade,
+Bastoni, Danari, e Coppe;
+ogni seguenza ha 14 Carte. Vi sono
+poi 40 Tarocchi, e 'l Matto.
+
+\subsubsection{nota allegorica}
+{\footnotesize
+Si può assimigliare questo gran mazzo di Carte
+alla catastrofe delle vicende mondane; tutte
+insieme è come il Genere Umano, che vive, alla rinfusa
+su questa Terra; le 4 seguenze sono come le 4
+Monarchie prima degli Assirj, o Caldei, che cominciò
+in Nino suocero di Semiramide V'anno del
+Mondo 1944 contemporaneo a Debora, e terminò in
+Dario Medo figlio di Astiage contemporaneo a
+Danielle l'anno del Mondo 3450. La seconda
+Monarchia de' Persi incominciò da Ciro nipote di Sorella
+al sudetto Dario, e terminò in Dario codomano
+vinto da Alesandro il Grande, in cui cominciò, e
+finì la terza Monarchia de' Greci, perché dopo esso
+si spezzò in molti Regni, i quali a poco a poco
+vennero sotto il potere de i Romani, che la quarta
+Monarchia gloriosamente ottennero. I 40 Tarocchi,
+che prendono tutte le altre seguenze possono alla
+quinta universale Monarchia applicarsi, che sotto
+suo manto raccoglie ogni Nazione. Evvi in fine il
+Matto, che ad ogni qualunque carta risponde, non
+prende mai, e non mai resta preso, se non quando
+tutto va in rovina. Forsi per ricordarci, che fin
+dalla sua origine l'Uman Genere impazzì, e
+tuttavia i stolti dureranno fino alla fine del Mondo,
+quando non nasceranno più uomini, \textit{Stultorum
+plena sunt omnia.} Cic. ep. 9.
+
+Tutto questo ho voluto indicare acciocché
+coll'occasione delle Minchiate
+venga a' Giuocatori il
+desiderio di sapere le Istorie, e sopra
+tutto la Cronologia, perché \textit{nescire quod
+anteaquam natus sis acciderit,
+id est semper esse puerum.} Cic. in
+Oratore.
+}
+\subsection{Le quattro Seguenze.}
+
+Il valore delle Carte nelle due Seguenze
+di Spade, e di Bastoni il più piglia il
+meno; ma Denari, ed a Coppe (prescindendo
+dalle figure, che sono Re, Regina,
+Cavallo, e Fantiglia) il meno piglia il
+più, cioè
+l'Asso piglia tutte le altre carte fino
+al 10.~il 2.~similmente, come nel giuoco
+dell'Ombre. Il solo Re conta cinque.
+Tutte le Carte guadagnate agli aversarj contano,
+uno per una.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Nella republica umana alle volte succede che
+il minore supera il maggiore, ed un dispreggiabile
+plebeo tal volta è salito alli più sublimi gradi dei
+Magistrati. Due soli memorandi in vero tra tanti
+ne scelgo, acciocché ci rendiamo cauti a non dispreggiare
+mai alcuno, perché per abietto, che egli
+sia può per vie impensate, o in tutto, o in parte
+divenire arbitro dei nostri vantaggi. Claudio il più
+stolido. uomo del Mondo, avendo inteso lo scempio
+di Caligola \textit{rumore ce dis exterritus} (racconta
+Svetonio) \textit{prorepfit ad folariun proximum iutergue
+pratenta foribus vela se abdidit, Ibi iatemtem~
+discurrens forte gregarius miles, animadversis pedibus,
+e studio sciscitandi quisnam esset, agnovit
+extractumque, et prae metu ad genua sibi
+accidentem, Imperatorem consalutavit, perduxit ad
+alios commilitones fluctuantes, nec quidquam adhuc
+quam frementes, et lecticae impositum vicissim
+succollantes in castra detulerunt, tristem, ac
+trepidum, miserante turba obvia, quasi ad poenan, et
+suplicium raperetur infans.}
+
+Quando mai averebbe possuto pensare un'Aratore in tempo,
+che refocillavasi con pane, e cipolla
+sopra la sua gomèra, che sarebbe a lui venuto un
+Cavallo, che lo avrebbe prescelto Re di Boemia,
+il che per essere successo a Primislao l'anno 632
+piacemi la giocondissima narrazione istorica come
+Kranezio Wandal c.\ 17.\ trascrivere \textit{Boemis imperabat
+Libussa, qua moriente patre Virgo coepit
+administrare paternam ditionem, tam prudenter,
+ut Rex diu nullus desideraretur in ea gente. Ita circumspexit
+omnia, ita justitia insignis erat, ut nemo
+sub illa quereretur se suo destitutum: adeo scelerum
+Ultrix, ut impune nemo peccaret. Mansissent
+Proceres sub foemina longius: sed mortalem
+prospicientes, semen Regium ex illa desiderare
+videbantur. Dum tamen nemo audet interpellare super ea
+re foeminam, sumpsere audaciam non ulli ex majoribus
+ut voluntatem Procerum, et totius Populi
+confenfum, atque defiderium explicarent. Tila, torvo
+primo vultu intuit referentes: quid est, inquit,
+quod vobis desit in hoc rerum statu, ut Regem
+desideretis? At illi. Nihil si te immortalem haberemus,
+nunc, quoniam communi omnes forte sumus
+defecturi, cum te carere jam debeamus, semen ex
+Regium mitigaret Populi defidevium; \& ingentem nominis
+tui affectum. Dissimulabat aliquandiu casta
+Mulier Populi de se desiderium: tam illa delectabat
+Thorus sine socio. Sed cum illi finem non
+facerent, jussit ornari candidum gradarium Equum,
+cui proficiscens insidere solebat. Illum sequi praeeuntem
+Proceres jubet, et apud quem is consisteret,
+Regem mox consalutarent: nam illam dignaretur
+Thoro maritum, quem fata jumento imperantia
+monstrarent. Sedulo implent, que jusserat
+Regina, sternunt jumentum, et premisso illi fraeno
+liberum sinunt praeires illi porro sequuntur,
+observantes quo vadat. Abibat in Agros, viam non
+parvam, nec per solita gradiebatur itinera sed
+compendia querere visus ibat in directum per nemora
+per dumeta, per Agros, donec ipsa jam meridiae
+deprehenderet hominem labore fessum se ad refectionem
+in Agro, quem araverat reponentem. Cum
+hominem cerneret jumentum, ecce stetit immobile
+nusquam divertens, aut circumspiciens. Aderant
+dicti primores, qui observabant. Voto se potitos
+interpretantur, et gaudent, mox sciscitantur de
+nomine. Pribislao, inquit, mihi nomen est. Illi
+vero surge protinus, et conscende stratum tibi
+jumentum pertrabuntque ad Reginam, insinuantes
+quid repererint. Illa virum complectitur, et pro
+Regia dignitate, suis nudatum vestibus, ornat,
+et thoro dignatur. Fuit optimus Princeps, leges
+enim non paucas (si Fulgosio fides) tulit quibus
+Bohemi in alta pace viverent, quibus quidem
+meritis adeo affecti fuere Bohemi, ut in primario Urbis
+Templo ligneas soleas, quibus arans utebatur,
+diutissime servarint, easque novis Regibus, dum
+diademate ornarentur praeferrent.}
+
+Altri esempj senza fine di Uomini umili, ed
+abietti, che divennero potenti Signori, e
+Monarchi, potrei portare, che per brevità tralascio; onde
+chiunque tu sia averti, che, quegli, che tu dispreggi,
+non abbi un giorno da vederlo tuo superiore,
+e patrone, o perché tale divenga, o perché
+favorito del Prencipe. Vedi l'esempio delle piccole
+bestie, che, o col veleno, o coll'industria atterrano i
+gran bestioni.
+\literaryquote{Parva necat morsu spatiosum Vipera Taurum\\
+A Cane non magno saepe tenetur Aper.}
+}
+\subsection{Tarocchi.}
+
+I Tarocchi sono notati co i numeri Romani
+dall'I fino al XXXV; primi cinque si chiamano
+Papi, gli ultimi cinque Arie, e sono
+36 Stella, 37 Luna, 38 Sole, 39 Mondo,
+40 Trombe. Il loro valore è dal 2.\ fino al 5., 3,
+ed 1.\ 10.\ 13.\ 20.\ 28.\ Matto, e 30.\ fino a
+35.\ vagliono 5, e le arie 10.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+I Tarocchi in questo giuoco sono utilissimi,
+come nella Republica sono utili quelli, che anno la
+perizia, o delle Arti, o delle Scienze, che in esse
+divenendo eccellenti giungono ad acquistare per se,
+e per la Patria la fama immortale, e la vera gloria.
+Ovid. de ponto.
+
+\literaryquote{Artibus ingenuis quesita est gloria multis.}
+
+Onde ciascuno dee procurare di esercitarsi in
+quell'arte, o applicarsi in quella scienza, in cui
+si sente
+più idoneo, \textit{quam quisque norit artem in ea
+ exerceat.} Aristot. appresso Cice. onde Ovidio
+nella sua arte.
+
+\literaryquote{Si vox est, canta: si brachia mollia, salta,\\
+ Et quacumque potes dote placere, place.}
+
+Questa è la maniera di divenire insigne, ragguardevole,
+e ricco, a cui ancora le leggi portan rispetto
+in virtù di quell'asioma \textit{excellens in arte non debet
+mori}; e Orazio dice
+
+\literaryquote{Dignum laude virum multa vetat mori.}
+
+Dunque ogn'uno segua l'amonizione del Poeta I
+de art, fatta a' suoi Concittadini.
+
+\literaryquote{Disce bonas artes, moneo Romana juventus.}
+
+}
+\subsection{Matto.}
+
+Questo non è nè Tarocco né Cartiglia,
+entra in tutte le verzicole, e ne forma
+una col massimo, e minimo Tarocco;
+non si perde mai se non si perdono
+tutte le carte, perché quando si giuoca si
+ripiglia, ed in sua vece si dà una Cartiglia,
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Giacché, come dice Cicerone in Or. \textit{Stultorum
+ plena sunt omnia}; l'indole de' pazzi chi mai
+raccapezza? Quelto è certo però,che chiunque finge esser
+pazzo, e non è (se da sopranaturale impulso non è
+guidato) va a finir male \textit{illegitime stultitia finis e
+infortunium}. Stobeo; i matti nel Mondo non sono
+qualche cosa determinata fan di tutto, si ficcan per
+tutto; e scompigliano tutto, solamente cogli
+estremi uniti (come coll'uno, e le Trombe) fanno a
+caso tal volta qualche buon'effetto. La vera pazzia
+non finisce mai se non si muore, e nel Mondo durerà
+col Mondo medesimo. Nelle Minchiate è desiderabile
+il Matto, ove il Savio lo giuoca a suo modo.
+Soleva dire Solone \textit{Stultus numquan taceres
+potest}; ora se v'è chi poco parla tale sarà ben savio,
+ancorché altri segni s'industrj dare di pazzia; a tale
+però intimo il parer di Stobeo. Sono però molto
+più quelli che vogliono apparire savj, e non lo sono,
+e diconsi impostori, che van vendendo \textit{magno
+conatu nugas}; e sono per lo più con gran solennitè
+cacadubj, de' quali Gellio \textit{homines diliros, qui
+ verborum minutiis rerum frangunt pondera} i questi
+sono gli uomini senza senno più nocivi nel Mondo.
+Con tutto che la pazzia sia un male sopra ogn'altra
+malatia perniciosa, pur sé trovato un'Erasmo,
+che ha infarcito in un'Opuscolo molte lodi di essa,
+sotto il titolo Moriae encomium.
+}
+\subsection{Verzicole.}
+
+Le Verzicole sono gli onori del giuoco, e
+si accusano da principio, e sono le
+seguenti.
+
+Tre Re, o tutti e quattro.
+
+Uno, matto,
+e Trombe.
+
+1.13.28.\ — 10.20.30.\ — 20.30.40.\ o
+tutte le decine.
+
+Tre papini in ordine o più.
+
+E tre, o più carte in ordine dal 28 fino
+alle Trombe.
+
+Il 29.\ non conta fuorché in Verzicola.
+
+Il Matto si accusa, e conta in tutte le
+Verzicole.
+
+In fine del giuoco tutte le carte contano
+354, e l'ultima levata 10 di più.
+
+Un resto si fa da 60 punti, e questi resti
+sono le vittorie del giuoco.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Universalmente gli Uomini cercano gli onori,
+le ricchezze, ed i piaceri, le quali cose cercate con
+moderazione, e possedute senza soverchio attacco
+non rendono male il di loro seguace, né sempre dee
+biasimarsi colui, che non ha di queste cose un totale
+disprezzo, potendo esse all'occasioni avere ottimi
+usi, e per la Republica, e per la Religione, e per
+i prossimi. Terent.
+
+\literaryquote{Atque haec perinde sunt, ut illius animus est, qui ea possidet.\\
+Qui uti scit, ei bona sunt: illi, qui non utitur recte, mala.}
+
+Nelle Minchiate si acquista onore d'ingegno, giuocando
+bene; denaro, vincendo; e piacere, conversando;
+or parliamo dell'onore, giacché
+
+\literaryquote{Honore gaudet offici se quilibet.}
+
+Non è mica l'istesso essere uomo d'onore, e
+cercare gli onori; il primo vuol dire essere ornato
+delle virtù orrevoli; il secondo vuol dire, il cercare
+le Dignità, le Cariche, e le preeminenze; al primo
+fanno corteggio gli ossequj, a i secondi, sono
+strascinati gli uomini a fare i segni esterni. di rispetto,
+onde queili, e non questi anno la vera gloria. Seneca
+
+\literaryquote{Qui favoris gloriam veri petit.\\
+Anime magis quam voce landart volet.}
+
+Plutarco saviamente insegna quanta gloria a ciascuno
+convenga desiderare; \textit{tantum gloriae}, dice,
+\textit{desiderabis, quantum satis est ad conciliandum tibi ia
+rebus gereudis auttoritatem, qua inde uascitur
+quod vir probus babeavis.}
+L'uso delle ricchezze è ottimo alli padroni di
+esse, pessimo a chi esse comandano. \textit{Imperat aut
+servit collecta pecunia cuique} Horat. e. 1.
+Pessimo giudico il consiglio di colui, che disse
+
+\literaryquote{ Pria i danar cercate, o Cittadini.\\
+ E dopo questi le virtù cercate.}
+
+Forsi questo fu detto, perché dice Giov.
+
+\literaryquote{Unde habeas quaerit nemo, sed oportet habere.}
+
+Fu interrogato un giorno Simonide cosa era meglio
+essere dotto, o ricco, rispose \textit{ignoro, video Sapientes
+divitum limina frequentare}; ora sentiamo un gran
+Saggio \textit{divitiae saeculares si desunt non per mala
+ opera querantur in Mundo, si autem adsunt, per bona
+opera serventur in Caelo.} Ecco come si cercano, e si
+conservano le ricchezze.
+}
+
+\subsection{Modo di giuocare.}
+
+Si giuoca questo giuoco in quattro persone,
+o in partita con l'entragnos (come
+usa communemente) o in partita senza entragnos
+(entragnos vuol dire, che si vedono, e
+prendono dopo le rubate tutte le carte di
+conto, che si trovano nelle residue) tutte
+queste maniere debbono spiegarsi.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Diverse sono le maniere di vivere degli uomini,
+altra è la vita d'un Causidico, altra quella
+d'un Pecoraro, altra quella d'un Certosino. Le
+cure d'un Generale d'armata sono molto diverse
+dalle cure d'una donnicciuola, che fila, e poi
+tutti, abbiamo varj i nostri desiderj
+all'adempimento
+de i quali s'indrizzano le nostre azioni.
+\literaryquote{Vivere diverso Mortales more videntur, \\
+Nam ratio cunctos non regit una viros.}
+
+quindi è, che tanto bisbiglio vedesi nelle
+popolazioni, tutti gli uomini in grandi e
+diversissime faccende applicati. Verino.
+\literaryquote{
+ Hic opibus vacat innumeris, ille ambitioni: \\
+Hic peragrat campos, navigat alter aquas \\
+Sunt, qui bella petunt, sunt queis servire togatis\\
+Contigit, af alios otia laeta juvant. \\
+Unus amat Venerem, vino se ingurgitat alter.\\
+Hic hilaris ridet, tristis at ille gemit,\\
+Hic citharam movet, hic cantus emittit amoenos,\\
+Viribus ille valet, litibus ille vacat. \\
+Sunt qui mundanos tantum venantur honores\\
+Sunt, qui in praeruptis montibus adificant \\
+Ille est astridicus, tellurem sed metit alter, \\
+Hic numeros curat, diligit ille notas.\\
+Sic variis diversa placent sua cuique voluptas \\
+Ad sibi res gratas quemque libido trabit.}
+
+Onde chi si vuole cattivare l'animo di chi che sia,
+veda di scoprire il suo desiderio; e quanto più gli si
+mostrerà atto a farglielo conseguire, tanto più da
+quello sarà frequentato, ed amato: questo è un
+precetto di politica sommamente proficuo, che la
+maniera di scoprire gli altrui desiderj, inclinazioni,
+e pensieri sia il giuoco più abbasso diremo.
+}
+\subsection{Modo di giuocare in partita
+con l'entragnos.}
+
+Il giuocare la partita è giuocare in quattro,
+due contra due, se i compagni non sono
+determinati, si scelgono a sorte, alzando le
+carte, e quei due, che alzano carte migliori,
+stanno insieme, e si pongono al tavolino di
+contro; e gli avversarj parimente, e poi
+quelli, che alzarono più, comandano a chi
+dee il primo fare le carte.
+
+Questo meschia le carte, poi le pone in
+tavola acciocché il suo contrario, che le sta
+a sinistra le alzi. Questo scuopre ciò, che è
+sotto, perché, se vi trova carta di conto, o
+un sopraventi, lo prende, e se dopo questa
+sianvi altre carte simili, si prendono tutte,
+finché ve ne sono seguitamente, e questo si
+chiama rubare, e segna tanti punti, quanti
+ne vagliano le carte rubate.
+
+Quindi chi fa le carte ne dà prima dieci
+per uno, e poi undici, e scuopre l'ultima, che
+se conta si segna il suo valore da chi l'ebbe.
+Finito che ha di dare le carte, ne debbono restare
+tredici, se non ne furono rubate, in queste
+vede, se ruba, cioè osserva, se la vigesimaseconda
+è carta di conto, o sopraventi,
+che, se è, lo prende, e susseguentemente
+quant'altre simili ve ne sono, seguitamente
+poi scuopre tutta la fola, e prende quante
+carte di conto vi trova. Fola sono le sudette
+tredici carte, che restano in fine, le carte
+trovate in fola non si segnano: fatto questo,
+chi rubò scarta, ed ognuno dee restare con
+ventuna carte in mano; poi giuoca quello,
+che sta alla destra di chi fece le carte; a cartiglia
+si risponde cartiglia dell'istesso palo, chi
+non l'ha mette tarocco, dopo giuocata la prima
+carta si mostrano i scarti. Chi rifiuta paga
+uno resto per uno agli avversarj.
+
+La prima volta, che si giuoca un palo,
+al faglio si dà il Re, e non si può dare il Matto
+in quest'unico caso; per salvare un Re bisogna
+impiccarlo, cioè non giuocarlo la prima volta,
+che si giuoca al suo palo.
+
+Ogni volta che si prende una carta di conto
+agli avversarj si segna il valore di detta carta
+purché non sia stata accusata in verzicola,
+perché allora non si conta da principio. Il
+solo ventinove si conta in verzicola da principio,
+ancorché sia stato preso dagl'avversarj,
+ma poi non si conta nella medesima, perché
+non v'é.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Lo scartare, e il giuocar bene si può adattare al
+vivere con se stesso, e il fare bene i fatti, suoi.
+Seneca ci dà un bel modo di vivere con noi medesimi
+ep. 82. Sic certe vivendum est tanquam
+an conspectu vivamus, sic cogitandum tanquam aliquis
+in pettus intuitum trabere possit. E con gli altri:
+Non erit tibi scurrilis, sed grata urbanitas.
+Sales tui sine dente sint, joci sine vilitate, risus sine
+cachinnatione, vox sine clamore, incessus sine tumultu,
+quies tibi non desidia erit, \& cum ab aliis
+luditur, tu sancti, honestique aliquid tractabis.
+Giuocando poi non siate negligente, massimamente
+quando vincete, perché è vero quello di Tito Livio
+Negligentia nascitur ex re bene gesta.
+}
+\subsection{Modo di contare.}
+
+Finito il giuoco, si pongono le carte a tre
+per tre, cioè due che non contano, ed
+una sopra di conto, e si fanno tanti di questi
+monticelli, quante sono le carte di conto,
+che si hanno. Quattordici di questi monti
+fanno il numero delle carte, che si avevano,
+cioè quarantadue, tutte le altre sono guadagnate,
+e quante se ne guadagnano, tante subito
+si segnano, se ne possono guadagnare
+2.\ 6.\ 10.\ 14.\ 18.\ 22.\ 26.\ ecc.
+
+Poi si conta tanto, quanto si ha di carte
+accusate da principio, poi tutte le verzicole,
+che si hanno, poi tutte le carte, l'ultima, ed
+i segnati, da tutto questo computo si leva il
+conto degli avversarj, e il residuo dà la vittoria
+di tanti resti, quante volte il sessanta
+entra in detto residuo, e uno di più, se avanza
+qualche punto, che pur dicesi entragnos.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Sommamente accorto è quegli, che sa contare,
+ed adoprare gli Uomini per quello, che vagliono.
+Tutti hanno qualche abilità, e perizia, ma non tutti
+vagliono in una cosa, in un'altra.
+
+Hic satus ad pacem, hic castrensibus utilis armis.
+Naturae sequitur semina quisque suae Prop. 1.\ 3.
+
+I sommi ingegni tal volta non sono gli ottimi
+in tutte le cose, singolarmente nel governo. Tucid.
+lib. 3. Hebetiores ut plurimum melius Rempublicam
+administrant, quam acutiores, e poi ne rende
+ragione. Onde Euripide disse:
+\textit{
+Mens qua sapit nimium, non sine damno sapit.}
+È necessario ancora, ché voi intendiate il vostro valore
+per esercitarvi in quello Cic. ae quisque nocat
+ingenium, et quam quisque novit artem in ea
+se exerceat. Q.\ Tutc.
+}
+\subsection{Spiegazione de i termini\\ proprj di questo giuoco}
+
+Non penso, che siavi alcun giuoco, in
+cui si adoprino termini più stravaganti
+di questo, de i quali è ben difficile a renderne
+ragione, perciò noi faremo come i Geometri,
+che non mai definifscono le cose, ma
+i nomi, \textit{definitionibus Geometricis vocabula
+artis explicantur}. Clau. in Eucl. ad lect.
+\begin{description}
+\setlength{\itemsep}{-3pt}
+\item[Affogare un Re] ovvero {\bf impiccare un
+Re} vuol dire non giuocare il Re la prima
+volta, che si giuoca ad un palo. S'impiccano i
+Re per non perderli.
+\item[Ammazzare un Re] vuol dire prenderlo
+all'avversario.
+\item[Ammazzare un Papa] vuol dire prenderlo
+all'avversario.
+\item[Morire] vuol dire prendere qualunque
+carta di conto. Le Trombe sono immortali,
+e il Matto muore solamente nella rovina
+universale di tutto il giuoco.
+\item[Rubare] vuol dire, alzando, trovare
+carte di conto, che si prendono. Similmente
+si chiamano rubate le carte di chi fa la fola, se
+dopo l'undecima trovi in fola altre carte di
+conto.
+\item[Smattare] vuol dire rispondere col Matto.
+\item[Rifitta] vuol dire giuocar cartiglia, che la
+abbia l'avversario posto a sinistra.
+\item[Fare] vuol dire non aver più d'una seguenza,
+e per ciò rispondere con tarocco.
+\item[Far caccia] vuol dire lasciare il giuoco in
+mano altrui per aspettare carta di conto
+vantaggiosa.
+\item[Far tenuta] vuol dire passare di sopra mano
+carta maggiore a quella, che si vuol prendere
+all'avversario, acciocché allora non se
+la faccia.
+\item[Far passata] è dar tarocco geloso sopra
+ cartiglia con pericolo.
+ \item[Ganzo] è quello, che assiste a chi
+non sa troppo giuocare.
+\item[Girare una carta] è quando si giuoca in
+faccia al compagno mandalisi carta gelosa.
+\item[Girare il gioco] è giuocare da principio
+i tarocchi maggiori.
+\item[Fumare] è giuocare un papino in segno al
+compagno d'avere buon giuoco, si fuma
+ancora con un sopraventi.
+\item[Cascare] vuol dire non aver più tarocchi,
+ed allora, se non vi sia in mano qualche Re
+da dare al compagno; si pongano tutte le carte
+in tavola, che di mano in mano le prendono
+quei che fanno le levate.
+\item[Entragnos] sono le carte di conto che sono
+in fola, ed i punti, che avanzano, che
+fanno un resto.
+\item[Fola] sono le ultime tredici carte,
+ che restano a monte.
+ \end{description}
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Il parlare, e lo scrivere polito, elegante, e con
+termini proprj della buona lingua è cosa assai civile,
+e comendabile; perciò deesi fare studio di adoprare
+vocaboli buoni, e ricevuti dall'uso delle persone
+culte, e letterate del paese. Non già per parlar
+bene andar ricercando certi rancidumi de' primi Scrittori
+se pure l'uso non gli richiami, perché
+\literaryquote{
+Multa renascentur, qua jam cecidere, cadentque.\\
+quae nunc sunt in honore vocabula, si volet usus\\
+quem penes arbitrium est, \& vis, \& norma loquendi.}
+}
+\subsection{Leggi del Giuoco.}
+
+Chi non trova niente in fola, era legge
+che dovesse pagare un resto, ma ora è
+stata abolita, come crudele.
+
+Chi sbaglia le carte, paga per la prima
+carta sbagliata venti punti, per le altre dieci
+per una agli avversarj. Chi ne ha avute di
+meno, le prende in fola prima meschiata.
+
+Chi non s'accorge d'aver ricevuto carte
+di più, o di meno, in fine di giuoco non conta
+nulla di quanto ha fatto, conta però le verzicole,
+che accusò da principio, le carte, e
+l'ultima.
+
+Chi rifiuta, cioè non risponde al palo
+che si giuoca, avendone, paga un resto per
+uno agli avversarj, e si aggiusta la mano.
+
+Chi non accusa la verzicola prima di
+giuocare la prima carta, tal verzicola da
+principio non conta più.
+
+Chi casca, e mette le carte in tavola,
+non n'è più padrone di ripigliarle.
+
+Se nel mazzo manca qualche carta, non si
+rifanno le carte, né si muta mazzo, la carta
+per terra va in fola a monte.
+
+Gli errori massicci di questo giuoco il Zipoli
+li racchiude in una stanza all'ottavo cantare
+del Malmantile stanza 61.
+
+\literaryquote{\normalsize Apunto il Generale a far s'è posto\\
+Alle Minchiate, ed è cosa ridicola\\
+Il vederlo ingrugnato, e mal disposto:\\
+Perché non ha accusata una verzicola,\\
+ Le carte ha dato mal, non ha risposto,\\
+E poi di non contare anco pericola,\\
+Sendo scoperto aver di più una carta:\\
+Perché di rado quando ruba scarta.}
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Ottima cosa sarebbe non v'ha dubbio trovare
+un'amico da conversare senza difetti, ma dove egli
+stia di casa, non si è scoperto ancora: Ne hoc præceperim
+tibi, ut neminem nisi sapientem attrabas.
+Ubi enim istum invenies, quem tot sæculis quærimus?
+pro optimo sit minime — Seneca d. c. 7.
+
+Perciò i difetti tollerabili nell'amico si debbono
+scusare, e questo è l'ottimo nelle umane cose, Orazio,
+
+ Vitis sine nemo nascitur,\\
+ Optimus ille, qui minimis urgetur,
+
+Bisogna prendere gli Uomini come sono, purché
+non siano insofribili, che se si muta la loro familiarità,
+per l'ordinario si va di male in peggio. Hom,
+Illiade.
+
+\literaryquote{Nemo hominum in Terris vitio sine nascitur usquam.}
+
+Poi sono vi alcuni difetti scusabili, come colui che
+beve del vino, pare, che sia contro la sobrietà, pure
+da Orazio, da Marziale, e da simili Poeti è preferito
+a chi beve acqua.
+
+\literaryquote{Aquam bibens, probum, \& utile paries nibil\\
+ Fæcundi calices quem non fecere disertum?}
+
+Questa regola di scusare in altrui i piccoli difetti
+non abbastanza sarà mai ricordata a i cogniugati,
+che, se tra loro fossero discreti, come conviensi,
+non verificherebbero sì spesso quel di Giovenale
+alla Sat.~6.
+
+\literaryquote{Semper habet lites alternaque jurgia lectus,\\
+In quo nupta jacet, minimum dormitur in illo}
+
+Avvertano le Donne, che all'eccesso s'inquietano
+co i loro mariti, per fino ad abbandonarli, poiché
+dice Plutarco, che fanno come colui, che punto
+dall'Api abbandona il miele. \textit{Sponsæ, qua flatim
+offensa moribus maritorum, eos deserunt: perinde
+faciunt, ac si quis ictus ab apibus mel relinquat}.
+Poi s'intima agli Uomini, che, \textit{qui non communicant
+lusus, \& jocos cum uxores faciunt, at alibi
+quaerant insciis viris}
+}
+
+
+
+
+
+\subsection{Giuoco di Giro.}
+
+Avendo scoperto in mano del compagno,
+o per verzicole accusate, o per fola, e
+per le scoperte, che ha molte delle carte
+superiori, e voi vi trovate o tutte, o in gran
+parte delle altre, allora si fa il giuoco di giro
+per far cadere gli avversarj, e prenderli
+quant'anno. Subito, che vi capita il giuoco
+in mano, che dovete procurare, che sia quanto
+prima, fumate o con un papino, o con un
+sopraventi, oppure giuocate un sopratrenta
+in segno delle Arie, che voi avete, e così
+alternando, ora voi, ora il compagno a pigliare
+sempre con le vostre superiori, farete, che
+i contrarj finalmente, non potendo resistere a
+tarocchi, vi cadino in mano con tutte le loro
+carte di conto, o almeno con alcune di esse
+le più gelose, che sono 1, 3, 20, 30, 28.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Qui mi cade in acconcio di parlare della Rota
+della Fortuna, della qual Deità si ride Giovenale
+alla Sat.\ 10.\ 3
+
+\literaryquote{Nos facimus fortuna Deam Caeloque locamus.}
+
+Ovidio meglio indovinò, che cosa è la Fortuna,
+quando disse ep.\ 1.:
+
+\literaryquote{Ludit in humanis divina potentia rebus.}
+
+Le vicende umane girano tal volta gli Uomini
+a tali felicità, alle quali neppure mai avrebbero o
+aspirato, o pensato; e tal volta da sommi gradi precipitano
+al fondo di tanta miseria, che divengono
+obrobrio degli Uomini, e derisione del popolo a
+chiunque, che o nell'una, o nell'altra sorte si trova,
+avverto con Ausonio.
+
+\literaryquote{Si Fortuna juvat caveto tolli. \\
+Si Fortuna tonat caveto mergi.}
+
+Certo è, che 1a fortuna sia ella favorevole, o
+avversa, sempre è cattiva. \textit{Fortuna cum blanditur,
+ tune maxime metuenda}. Salust. Ma quando sia peggiore,
+non è deciso ancora, ed è problema assai disputabile.
+Il Comune vorrebbe la buona ventura
+nel Mondo; pochi, e nascosti si contentano d'ogni
+cosa, né si lagnano nelle disgrazie. L'indole per altro
+di ciascuno molto dipende dalle vicende. Terent.
+
+\literaryquote{Omnibus nobis ut res dant sese, ita magni, atque
+humiles sumus.}
+
+Ma perché radi sentirete darsi il vanto di fortunati,
+che tra poco non vediate precipitati, perché come
+avverte Silvio Italico.
+
+\literaryquote{Brevis est magni Fortuna favoris.}
+
+Quindi è, che nelle traversìe, e nelle quanto si sian
+grandi disgrazie, conviene all'Uomo saggio mantenere
+l'animo tranquillo, dunque \textit{conare amentiam
+fortunae, animo forti sustinere}. Menandro. Giacché
+è verissimo quello, che maravigliosamente disse
+Cicerone in 5.\ lib.\ Ep.\ \textit{\textsc{Praeter culpam, aut peccatum
+homini accidere nihil potest, quod sit
+horribile, aut pertimescendum}}. Tanto è: nel
+giuoco della vita umana, che è mescolato di
+fortuna, e d'ingegno, come lo è quello delle minchiate;
+l'ingegno s'adopri per conservarsi giusto, e santo.
+La Fortuna s'osservi per ridersi d'essa. L'animo
+umano è troppo grande per soggettarsi ad essere
+vellicato da queste cose esteriori, che sotto il
+dominio della Fortuna vacillano. Concludo dunque:
+\textit{Divitie si diliguntur, ibi serventur, ubi perire non
+possunt; honor si diligitur, illuc habeatur, ubi nemo
+indignus honoratur; salus si diligitur, ibi adipiscendo
+desideretur, ubi adepta nihil timetur: vita si
+diligitur, ibi acquiratur, ubi nulla morte finitur.}
+}
+\supersection{Avvertimenti per giuocar bene.}
+
+\section{CAPO SECONDO.}
+
+\subsection{In che cosa consista il giuocar bene.}
+
+Quegli giuoca bene a Minchiate, che
+con l'istesse carte procura, o di vincere
+più, che sia possibile, o di perdere
+meno che sia possibile: dissi procura di
+vincere, e non risolutamente vince; perché
+può darsi caso, che si giuochi con ottimo
+consiglio, ma ne succeda male, ed in tal caso
+non dee biasimarsi colui per l'infelice successo:
+Siccome non merita lode, un felice successo
+d'una temeraria impresa: \textit{Aliqui omnia imprudenter
+agunt, et ipsis aliquando pro voto
+succedunt: quidam ad omnia se consilio disponunt,
+et sæpe in contrarium eis cedit.} Cassiod.\ 1.\ 3.\ p.\ 2.
+Perciò il mestiere di consigliere
+è molto pericoloso, perché, come asserisce
+Demostene, \textit{duram esse conditionem corum,
+qui in dandis consiliis, et in gerendis
+rebus solent versari, cum eorum fides ex eventu
+soleat extimari}. Quindi è, che talvolta si
+giuoca una carta con ottima ragione, che poi
+il caso conduce a mal porto, ed allora si sentono
+le alte querele del compagno, le derisioni
+degli Avversarj, le dispute de i spettatori;
+allora meglio è tacere, e seguire l'aurea
+sentenza di Cicerone, che dice, \textit{ferendas
+esse linguas, et qualemcumque fortunam,
+praefertim, quae absit a culpa}.
+
+Siccome si dee vincere il giuoco con
+quelle carte, che il puro caso ci fa capitare
+alle mani, così nella vita umana, che altro
+non è, che un giuoco, \textit{quomodo et fabula,
+sit \& vita}. Sen. Le disposizioni del corpo, le
+passioni dell'animo, gli Uomini, che ci circondano,
+gli affari, che ci occupano, le contingenze,
+che ci occorrono, sono come un
+miscuglio di carte, che continuamente abbiamo
+alle mani, che c'intrigano per lo traffico
+della nostra eterna felicità, alla quale l'esercizio
+delle sole virtù ci può condurre.
+
+E perché il giuocar bene consiste in gettare
+convenevolmente volta per volta ciascheduna
+delle carte, che si anno in mano,
+così ogni nostra azione dee essere concorde
+colle regole del giusto, dell'onesto per il
+fine sudetto. \textit{Vita humana ex multis actionibus
+consistit: at felicitas actiones absolvit}.
+
+Tutte le maniere di giuocar bene a Minchiate
+riduco in quattro Capi. Primo scartare.
+Secondo rispondere cartiglia a cartiglia, tarocco
+a cartiglia, e tarocco a tarocco. Terzo, giuocare
+cartiglia. Quarto, giuocar tarocco, per i
+quali seguono dodici precetti utilissimi.
+
+\subsection{PRECETTO PRIMO.}
+
+Prima d'ogni cosa, ricevute le carte, bisogna
+guardarsi di non dar segno alcuno
+della qualità di esse, o col rallegrarsi o col
+rattristarsi, o in qualunque altra maniera,
+ma si dee stare sempre eguale, ilare, ed attento.
+
+{\footnotesize
+ Molto bene a proposito avverte Euripide:
+ \textit{Palam enim fortem suam testando,
+apud omnes imperiti hominis est, celare vero
+sapientis. Hujusmodi enim gaudium hostium, et risum movent}, e Pindaro:
+\literaryquote{Alteri aperire noli, quidnam taboris nos exerceat\\
+ Hoc te admonitum volo.}}
+
+
+\subsection{PRECETTO II.\\
+ \footnotesize Scartare.}
+Si faccino fagli più, che si può; primo,
+quando non si ha buon giuoco, per potere
+amazzare i Re; secondo, quando si hanno
+carte gelose da salvarsi, per farsele su le
+Cartiglie; terzo, quando si anno 10, o più
+Tarocchi, perché in tal caso difficilmente si
+cade. Si averta di scartare in quel palo, di
+cui ne sono meno in fola, perché più sicure
+siano le passate, se poi si anno pochi Tarocchi
+per sostenersi, si scarti ove ne sono più in
+fola.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+
+Le Cartiglie sono, come il comune del volgo,
+la natura di costoro, bene osservò Titto Livio dec.\ 2.\ l.\ 4.
+\literaryquote{Vulgares, aut serviunt humiliter, aut superbe dominantur.}
+
+I miseri, ed i ricchi faranno bene
+a scansarne il comercio, e molto più la familiarità.
+I potenti debbono essere loro affabili, e cortesi per
+avere l'applauso, e l'opera universale. \textit{Caeteris
+mortalibus in eo stare consilia, quod sibi conducere
+putent. Principum diversam esse sortem, quibus
+praecipuam rerum ad famam dirigendam}. Tac.\ 4.\ ann.
+La pena poi di chi giuoca con gente plebea, e
+misera si è di perdere, e pagare, e di vincere, e non
+riscuotere, perché, come disse il Zipoli
+\literaryquote{Di rapa sangue non si può cavare, \\
+Ne far due cose perdere, e pagare.}
+}
+
+\subsection{PRECETTO III.}
+
+Non si dee far faglio, quando si abbiano
+le Trombe, e pochi Tarocchi, cioè
+meno di nove, perché si caderebbe presto e
+mancherebbe al compagno la difesa, ed a voi
+il piacere di far caccia. Si averta di scartare
+in quel palo, ove se ne hanno più in mano.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Tale è la parsimonia, che conserva le sostanze
+per le gravi occorrenze. \textit{Non intelligunt homines,
+ quam magnum vestigal sit parsimonia}. Cic. in paradox.
+ed Ovidio de Arte.
+
+\literaryquote{Non minor est Virtus, quam querere parta tueri.\\
+Casus inest illic, hic erit Artis opus}
+
+Quasi tutti cercano arricchire, ma pochi assai ne
+sanno la maniera: una efficacissima si è il non ispendere
+mai nulla in cosa superfiua. \textit{Divitiae grandes
+ homini sint vivere parce}. Lucan.\ l.\ 9. Se mi si chieda
+qual sia più lodevole quegli, che di povero divenne
+ricco, o quegli, che seppe conservare il patrimonio, o l'eredità: rispondo con Claudiano l.\ 2.
+\textit{Plus est servasse repertum, quam quesisse decus};
+L'ottima maniera d'arricchire ce la insegna S. Agostino
+nelle epistole: \textit{Si vis esse Mercator optimus,
+foenerator egregius da quod non potes retinere, ut
+recipias, quod non poteris amittere: da modicum, ut
+recipias centuplum, da temporalem possesionem, ut
+consequaris hereditatem eternam}.
+}
+
+\subsection{PRECETTO IV.}
+
+Tenere a memoria il numero delle carte
+di ciascun palo, che sono in fola, e
+di mano in mano, che si giuoca fare il conto
+quante ne restano, ed in mano di chi, per
+regolarsi, si nel passare, si nel dare le rifitte,
+e non far cadere il compagno, o non mandarlo
+con qualche carta gelosa a morire, ma
+farli fare su le Cartiglie il suo giuoco: e questo
+è il più utile Precetto di questo giuoco;
+chi sa questo eseguire è bravissimo Giuocatore;
+chi non ha tal solerzia, e prontezza di
+spirito, e di memoria, non sarà mai riputato
+buon giuocatore di Minchiate.
+
+{\footnotesize
+E ben vero, che molti sanno questo precetto,
+e volendo possono metterlo in prattica,
+ma siccome ricerca un'attenzione assai
+laboriosa, a chi giuoca con tanta fatica, stimo,
+che si convenghino tutte le lodi, che Tolomeo
+Filadelfo diede al Libro di Eraclide Sofista,
+intitolato \textit{De Laudibus laboris} a cui Tolomeo
+mutò questo titolo in quest'altro: \textit{De Laudibus Afini bestiarum laboriosissima}. Un piccolo
+interesse, ed un giuoco, che si fa per
+onesta ricreazione » non merita certo
+un'attenzione, che affatichi l'animo, tolga il
+tepore di conversare, e manifesti un'avidità
+troppo grande di superare i compagni. Tengasi
+a memoria quel bel detto di Terenzio
+molto usato da Tommaso Moro; \textit{Illud nihil
+nimis, nimis mihi placet}.
+}
+
+\subsection{PRECETTO V.\\
+ \footnotesize Rispondere Cartiglia a Cartiglia.}
+
+Prima passate il Re, o impiccatelo, se
+dubitate del faglio per lo scarto dell'aversario;
+secondo mettete su le seconde le
+Regine, per fare la levata, e poi poter presto
+giuocare nel faglio, o scarto del compagno;
+se poi volete, che quello vi giuochi nel
+vostro, mettete le carte inferiori. Quando il
+Matto non può avere uso migliore tal volta
+giova a salvare un Re affogato, cioè quando
+è restato solo, e si giuoca a quel palo, al
+quale il compagno non ha fatto ancora, si dà il Matto.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Può adattarsi il rispondere cartiglia a cartiglia
+al trattare dell'Uomo con se medesimo, e prima
+bisogna, secondo quel celebre detto Delfico, che
+l'uomo conosca se stesso, \textit{nosce te ipsum}, cioè le
+proprie passioni, inclinazioni, vizj, abiti, e simili.
+Ogn'uomo, siccome è creato per la fruizione, e
+possesso d'un'infinito bene, quanto sia vasto
+l'oggetto, a cui aspira, e l'inesausta voglia del piacere,
+né pur'esso comprende a bastanza, quindi è, che ha
+una stima di se assai stravagante; ogni bene, che li
+succede lo reputa dovuto al suo merito, ogni male
+ingiusto, ecco l'origine d'ogni disordine, la superbia;
+quest' Idra abbattuta nel cuore umano, subito
+non solo farà d'ogn'altro vizio purgato, maeziandio
+d'ogni più eccelsa virtù girà nobilmente fastoso;
+a tali io dico con Prudenzio.
+\literaryquote{Define grande loqui frangit Devs omne superbum.\\
+Magna cadunt, inflata crepant, tumefatta praemuntur\\
+Disce supercilium deponere, disce cavere \\
+Ante pedem sovean, quisquis sublime minaris}
+
+Per pungere al vivo questi palloni di vento legghino
+pochi versi di Simone Nanquerio, ove parlando
+dell'uomo dice
+\literaryquote{Concipitur foeda primorum sorde parentum,\\
+Nescitur, et nudus, plorat, et ortus humi\\
+O miser interius secreta mente revolvas,\\
+Carne quid humana vijius esse potest?\\
+Cerne quid emittant nares, cunctique meatus\\
+Corporis assidua sorde fluente tua.\\
+Inspice quam fragilis, quam pauper, quamque misellus, \\
+Vivas, tuta dies von tibi nulla datur.\\
+Aspice vel prorfus quid sis, nisi putre cadaver, \\
+Quod tamen minimis vermibus esca datur.
+}
+}
+\subsection{PRECETTO VI.\\
+ \footnotesize Rispondere Tarocco a Cartiglia.}
+
+Quì ricorre il Precetto quarto, che chi
+tiene a memoria le Cartiglie uscite,
+e da uscire, chi vi fece, e chi nò,
+passerà sicuramente le sue carte gelose; quì
+aggiungo solamente, che su le prime si passa
+qualunque cosa, e su le seconde ancora, su
+le terze si può arrischiare un papino, o altra
+carta di conto, ma di poca importanza; su le
+terze sopra Tarocco si azarda più facilmente
+un sopra trenta, s'averta però, che in fola
+non ve ne siano più di tre. Chi osserva il
+Precetto quarto, passerà sicuramente anche su le
+quarte, e su le quinte.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Per applicare questo Precetto al nostro vivere,
+trattandosi di Tarocco, che prende tutte le Cartiglie,
+stimo, che convenga al superiore, qualor tratta
+con gl'inferiori, ed eccone un'ottima regola,
+che ne dà il morale Filofofo alla ep.97. \textit{
+ Sic cum inferiore vives, quemadmodum superiorem
+ tecum vivere velis.} Si noti quello, che dice
+in appresso, \textit{
+omnes tibi pares facias, inferiores superbiendo non
+contemnas, superiores recte vivendo non timeas}.
+Per altro il superiore non dee facilmente azardarsi
+a scherzare coll'inferiore, massimamente in cose
+d'ingegno; perché può accadere, che ne resti
+confuso. E famoso quello, che fu risposto da un certo
+Neka mal'uomo al Cardinal Filippo Repington
+Inglese, gli disse il Cardinale.
+
+\literaryquote{
+ Et niger, © nequam cam sis cognomine Nekam.\\
+ Nigrior esse potes, nequior esse nequis.}
+
+Rispose Neka.
+
+\literaryquote{Phy nota faetoris, lippus malus homnibus horis.
+Phy malus, \& lippus, totus malus ergo Phylippus.}
+}
+\subsection{PRECETTO VII.\\
+ \footnotesize Rispondere Tarocco a Tarocco.}
+
+Se il Tarocco vi si giuoca in faccia, cioè
+sotto mano, o sia dalla destra fatevi ciò
+che volete, e potete; se sopra mano girate al
+compagno; se dal compagno, quando non
+avete voi giuoco da far caccia, coprite per
+sostenere il vostro compagno, o per far tenuta
+a qualche carta importante.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+ Qui gioverà fare alcuna riflessione per trattare
+convenevolmente, e cautamente cogli eguali. In
+primo luogo si averta, che due sono i cardini su i
+quali ogni azione umana comunemente ragirasi.
+Amore, ed interesse; onde fra tanti, che ti
+circondano, sappi, che rari sono quelli, che di vero
+amore d'amicizia ti amano. \textit{Vulgus
+ amicitias utilitate
+probat}. Ovid., e l'Ariosto c. 4.\ ft. 2.
+\literaryquote{
+Che dopo lunga prova a gran fatica\\
+Trovar si può chi ti sia amico vero,\\
+Et a chi senza alcun sospetto dica\\
+E discoperto mostri il tuo pensiero.}
+
+Ma i loro ossequj i loro officj abili sempre sospetti,
+che questi da te voglino un qualche loro vantaggio,
+o di commodo, o d'interesse, o di onorificenza o
+di diletto, e tanto più, quanto è migliore lo stato
+tuo per alimentare questa loro fiducia; allora
+t'avedresti quanti pochi siano gli amici tuoi, se
+cangiassi
+la felicità in miseria; onde molto bene cantò lo
+stesso massimo Poeta al Canto 19.\ stanza prima.
+\literaryquote{
+Alcun non può saper da chi sia amate\\
+Quando felice in fu la rota fede,\\
+Però che ha i veri e i finti amici a lato,\\
+Che mostran tutti una medesma fede, \\
+Se poi si cangia in tristo il lieto stato, \\
+Volta la turba adulatrice il piede.\\
+E quel che di cuor ama riman forte, \\
+Et ama il suo Signor dopo la morte.}
+
+E' memorabile il detto di Archita Tarentino.
+\textit{Quemadmodum difficile est piscem sine spinis
+inveniti, ita, \& hominem, qui non dolosum quiddam
+habeat}. Onde, se Chilone Lacedemone a tutti
+diceva, \textit{cave te ipsum}, quanto più dico io, \textit{ceteros
+homines}. E questo basti per renderci cauti nel trattare
+cogli uomini. Per poi convenevolmente con essi
+conversare aurea veramente è la regola data da
+Seneca il morale nel 3.\ de Ira, si metta bene a
+memoria, e molto più in prattica, che è cosa di somma
+importanza. \textit{Dum inter homines sumus colamus
+humanitatem, non timori cuipiam, non periculo
+simus, detrimenta, injurias convicia, contumelias,
+vellicationes, comtemnamus, ut magno animo brevia
+feramus incommoda}. Riflettete poi, che l'amicizia
+è un vero negozio, in cui i Mercadanti sono gli
+amici; i commodi, i piaceri, ed i comuni sollievi
+sono la mercanzia. L'amore, la sincerità, la fedeltà,
+la confidenza sono le monete di questo banco amoroso;
+fallisce il banco, quando uno paga sempre favori,
+e beneficj, e non ne riscuote mai alcuno; onde
+ Seneca in Octo.
+\literaryquote{
+{\hspace{14em} amor est}\\
+Quem si fovere, aut alere desistat, cadit. \\
+Brevique vires perdit extinctus suas.}
+
+Uno dei massimi solazzi della vita nostra si è il
+godere de i nostri beni con gli amici, e lo sfogare con
+essi le nostre perturbazioni, o traversie, queste
+senza il sollievo dell'amicizia ci opprimerebbero, e
+quelli quasi nulla ci consolarebbero.
+\literaryquote{
+Quid tibi jucundum submotis esset amicis?\\
+Cuncta tibi quamquam sint cumulata bona.}
+
+}
+
+\subsection{PRECETTO VIII.}
+
+Suole bene spesso accadere, che, giuocandosi,
+siate ripreso dal compagno di qualche
+errore, o di qualche inavvertenza che
+veramente abbiate commesso, o che egli se la
+figura, o che di naturale è querulo, inquieto,
+irrisore. In tal caso meglio è tacere, se
+questo non basta, pregatelo a voler sospendere
+le querele fino alla fine del giuoco, perché
+allora pienamente giustificherete la vostra
+condotta, non potendo dire le vostre ragioni,
+che sono fondate nelle carte, che avete in
+mano; se questo né pur basta, eccovi un
+precetto il più utile, ed il più necessario, che io
+abbia mai inteso, ed è d'un savio Cortiggiano
+pieno di trionfi in simili battaglie, o per
+dir meglio assalti di parole:
+\literaryquote{Nobile vincendi genus est patientia, vincit\\
+Qui patitur, si vis vincere disce pati.}
+
+E incredibile quanto amore si concilia quegli,
+che così opera, né mai si adira per si fievole
+cagione, onde soleva dire S. Anselmo
+\literaryquote{Ira odium generat, concordia nutrit amorem.}
+
+Ussino ci dà un'ottima regola per conversare
+con tutti con plauso, e decoro, ognuno se la
+impari, e la prattichi nel conversare
+\literaryquote{Sis patiens, verax cornis, sermone modestus,\\
+Sint tua laudatis seria picta jocis.\\
+Attamen extremum nemo laudabit utrumque\\
+Serius aut nimium, sive jocosus eris}.
+
+
+\subsection{PRECETTO IX.\\
+ \footnotesize Giuocare Tarocco.}
+
+Se tocca a voi a giuocare Tarocco, e avete
+giuoco da far caccia, fumate al compagno,
+acciocché vi sostenga, e poi lasciate il
+giuoco in mano ad altrui, finché non capita
+quella carta, che bramate, o per farvela, se
+voi l'avete in mano. Ma sappiate, che di
+tutte queste cose ne fa più scienza un mese di
+prattica, che dieci anni di precetti: \textit{Usus
+frequens omnium Magistrorum opera superat.}
+Cic, 1.\ de Orat.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Conversando con altri procurar sempre si dee
+imparar da loro qualche cosa, e questo è uno de'
+maggiori emolumenti del Cittadino, che ha sopra
+gli abitatori delle campagne, dicea Platone in Phae.
+Agri, \& arbores docere me nihil possunt: sed homines,
+qui in urbe versantur. Per imparare ottime
+sono le regole date da Ugone in Didascalion. \textit{Mens
+humilis, studium quaerendi, vita quieta, scrutinium
+tacitum, paupertas terra remota. Haec referre
+solent multis obscura legendo}. Se mi si chieda
+per quanto tempo convenga imparare, rispondo
+con Seneca ep. 76. \textit{Tandiu discendum est, quamdiu
+ nescias}. Dico questo a proposito di acquistare
+qualche carta degli avversarj, e di fare in modo, che il
+compagno vi ajuti. }
+
+\subsection{PRECETTO X.\\
+ \footnotesize Cascare.}
+
+Non deesi cascare, quando si hanno in
+mano i Re affogati, finché non siano
+dati, se si può, nelle levate fatte dal
+compagno, o quando probabilmente tutti ancora
+abbiano cartiglia. Fuori di questi due casi si
+gettano le carte in tavola che le prendono di
+mano in mano, chi fa le levate; consiglio però
+a tenerle fino alla fine.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Siccome questi miei precetti sono diretti al savio
+conversare con altri, il più arduo caso, che loro
+accada, si è il conversare con gran Personaggi,
+stimano essi il più fausto incontro trattare i gran Signori,
+ed è veramente. Ma o quanto con essi facilnenté si
+casca. Ecco dunque le avvertenze per evitare più
+che si può le cadute, si osservi, se il Principe prevale
+nell'ingegno, o nella potenza, o in ambedue.
+Se è di grande ingegno, allora quel poco, che se ne
+ha, s'impieghi in tener nascosti i suoi interni pensieri,
+o difetti. Dante.
+
+\literaryquote{
+Abi quanto cauti gli Uomini esser denno.\\
+ Presso a color, che veggon pur l'opera\\
+Ma per entro al penfier miran col senno.}
+
+Se poi prevalgono in potenza farai appò loro,
+come il secchio del pozzo, che quando è pieno,
+tira in alto, ma quando è voto, si precipita al fondo
+del pozzo. Se tu loro sarai utile per l'adempimento
+de i loro fini, salirai in grazia, in favori, onori, e
+dove vuoi. Se cesserè in te questa dote, allora sì,
+che tutto d'un colpo ti troverai sommerso fin nei
+fondi dei più cupi pozzi della confusione: \textit{Brevia
+momenta plerumgue extollunt homines, rursumque
+deprimunt inprimis vero eos, qui in aulis versantur,
+illi enim profecto similes sunt mensarum calculis,
+qui pro eo, ac calculatori libet mode assem, modo,
+talentum valent. Ita homines ad nutum Principis,
+modo miseri sunt, modo beati}. Appresso Polibio
+lib 5.
+
+Quando i gran Signori sono potenti, ma di poca
+elevatura, s'incorre con essi il gran pericolo delle
+Corti, cioè della maldicenza e calunnia di coloro,
+che gli stanno a fianchi, singolarmente, se costoro
+mai fossero Uomini di perduta coscienza, vili,
+e mal nati, de' quali dice Crispo Salustio \textit{ad Cæsarem.
+ Ad reprebendenda aliena facta, \& dicta ardet
+ omnibus animus: Vix fatis apertum os, eorum
+ lingua prompta videtur}. onde loro ben s'adatta il
+nome datoli da Apulejo: \textit{Insidiatores, \& Canes
+clanculam mordentes, qui secretis criminationibus
+infament ignarum, \& quod incautior decipiare palam
+laudatum} e quel, che è peggio, ti fingono
+amicitia, come avverte Tacito an. 14. \textit{Sunt, qui
+specie amicitiae dolum tibi parent}, che, se sei buono,
+e semplice senza dubbio veruno \textit{invenies supplantatores,
+ \& funambulos simplicitatis tuae}, Tertull. Bisogna
+dunque non mediocre avvedutezza per guardarsi,
+difendersi, e premunirsi da costoro per non
+cascare. Ecco adunque gli appoggi più efficaci.
+
+Seneca ce ne dà uno bellissimo nel 3.\ de Ira.
+\textit{Si imbecillior est, qui te lafit, parce illisf potentior,
+ tace}. Un'altro pur'ottimo ne dà nel l. 2. \textit{
+ Potentiorum injurias hilari vultu non patienter tantum ferendas
+ esse}. Sofocle dice, che molto giova esser
+sobrio, e non fidarsi di alcuno: \textit{Sobrius sis, \& memor
+ esto nulli credere, seu confidere}. In fine voglio
+raccontare, che Alessandro Magno aveva tra i suoi
+un certo Calistene filofofo inettissimo nella scienza
+del vivere sociale. Solea il Re spesso ripetere in sua
+presenza: \textit{Sapientem ego odi, qui sibi opis nihil}
+
+Ora resta a parlarsi, comte debbasi trattare con
+quel Signore, che tale è veramente di senno, e di
+potenza, con tali meno pericolosa è la cosa, leggasi
+però il capo 13.\ dell'Ecclesiastico. Ma come dissi
+intorno al savio, dotto, e giusto Principe, è difficile,
+che l'Uomo d'onore non venga onoratdod, amato,
+ed esaltato ancora alle occasioni, di questi però se ne
+trovano rari, ed è forte non piccola in tali incontrarsi.
+
+Infelicissimo certamente è colui, che con un
+Prencipe ignorante, e bestiale è portato a vivere i
+giorni suoi, perché con tali né ragione, né ben'operare
+giova, anzi talvolta pregiudica Dante:
+\literaryquote{
+Che dove l'argomento della mente \\
+S'aggiunge al mal volere, \& alla possa\\
+Nessun riparo vi può far la gente.}
+
+Dunque dovendo voi scegliere un'amico, e vi si dia
+il poter scegliere, tra il potente, e l'eguale, questo
+a quello preferite, benché vi paja del primo minore, perché
+\literaryquote{
+Dulcis inexpertis cultura potentis amici, \\
+Expertus metuet.}
+
+Ma se il vostro destino vi guidi a dovere altrui servire.
+Dante Par. c.17.
+\literaryquote{
+Tu provarai siccome sa di sale\\
+Lo pane altrui: \& come è duro calle\\
+Lo scender, e 'l salir per l'altrui scale.}
+
+Meglio di tutti è il consiglio di Ovidio a chi può eseguirlo.
+Tristium.
+\literaryquote{
+Usibus edocto, si quicquam credis amico, \\
+Vive tibi, \& longe nomina magna fuge.}
+}
+
+\clearpage
+\subsection{PRECETTO XI.\\
+ \footnotesize Valore de i Tarocchi.}
+
+\begin{wrapfigure}{r}{3.8cm}
+ \vspace{-12pt}
+ {\scriptsize\begin{tabular}{@{}rr|r}
+ \multicolumn{2}{@{}c}{Sole levano}&\multicolumn{1}{c}{Matto con}\\
+ \multicolumn{1}{@{}c}{Matto}&55&\multicolumn{1}{c}{un'altra}\\
+ 30&55&105\\
+ 1&55&75\\
+\multicolumn{1}{@{}c}{Trombe} & 50 & 95\\
+\multicolumn{1}{@{}c}{Sole} & 50 & 105\\
+\multicolumn{1}{@{}c}{Mondo} & 40 & 95 \\
+20&40& 90\\
+\multicolumn{1}{@{}c}{Luna} & 30 & 85\\
+\multicolumn{1}{@{}c}{Stella} & 30 & 85\\
+13 & 30 & 70\\
+35 &10 & 70\\
+34 & 10 & 70\\
+33 & 10 & 70\\
+32 & 10 & 70\\
+31 & 10 & 70\\
+29 & 10 & 65\\
+28 & 35 & 80\\
+ 3 & 28 & 78\\
+\multicolumn{1}{@{}c}{Re} & 15 & 70\\
+10 & 15 & 70\\
+2 & 14 & 69\\
+4 & 14 & 67\\
+5 & 9 & 64\\
+Ultima & 20&
+\end{tabular} }\end{wrapfigure}
+
+Acciocché si sappia il valore de i
+Tarocchi, quanto voglia dire averli, o non
+averli ecco la seguente tabella, in cui il valore
+della mancanza d'una sola carta di conto si
+esprime. Tutte insieme le carte di conto contano
+354, alle quali si debbono aggiungere le
+verzicole da principio, le carte vinte,
+dieci dell'ultima con i segnati delle scoperte,
+e degli amazzati.
+
+
+Questa Tavola si potrebbe seguitare sino a combinare due
+carte, ma per due
+motivi me ne astengo. Primo, perché
+con essa si toglierebbe a questo giuoco,
+uno degli ottimi fini, per cui è stato
+istituito, qual'è
+quello di addestrare
+la gioventù ad impratichirsi de i numeri,
+e prontamente sapere a memoria computarli. Secondo, perché ella
+è sì lunga, e tediosa, che io non ho
+ozio per simile faccenda: se però a
+qualchuno venisse voglia di prendersi questa
+briga, sappia che dovrà fare due Tavole con
+le seguenti combinazioni de i soli Tarocchi di
+conto senza i Re.
+
+\begin{tabular}{@{}l@{ }l@{ }r}
+Per le carte&\multicolumn{2}{@{}r}{a 2, a 2 combinazioni 231}\\
+& a 3, a 3 & 1540\\
+& a 4, a 4 & 7315\\
+& a 5, a 5 & 26334\\
+& a 6, a 6 & 74613\\
+& a 7, a 7 & 170544\\
+& a 8, a 8 & 319770 \\
+& a 9, a 9 & 497420 \\
+& a 10, a 10 & 646646\\
+& a 11, a 11 & 705432
+\end{tabular}
+
+I Re fanno combinazioni a parte.
+
+Chi in queste, o somiglianti cose
+appartenenti alla scienza de' Giuochi è vago volersi
+istruire, legga tutto il Capo V. della mia
+Arimmetica Speciosa, ove abbondantemente
+resterà appagato di questa dissicilissima scienza.
+Qui non si vogliono proporre, che cose,
+che solamente sollievino l'animo, e lo allettino
+con profitto, non cose, che molto lo
+applichino, e lo affatichino.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+ Siccome in questa Tabella subito si vede il
+ valore delle carte; e la loro efficacia in scemare il conto
+dell'Aversario, così io trovo qui materia di svelare
+una delle massime proprietà del Giuoco, che è
+quella di manifestare un nomo tal qual'è nel suo intimo
+del cuore, e nelle sue naturali, o acquistate perturbazioni
+dell'animo. Poiché nel giuoco e squisitamente
+si vellicano le più risentite passioni, ivi si
+vedono alcuni, che investiti dalla cupidigia di
+acquistare, usano ogn'industria, adoprano ogn'arte,
+muovono ogni pietra per vincere; la fraude, la
+menzogna, l'inganno sono i loro famigliari ripieghi; la
+simulazione, e la dissimulazione sono i
+mezzi, che usano i meno colpevoli: quegli per poco,
+altri per nulla s'adirano, altri per dispetto
+precipita il giuoco; v'è chi loda gli errori per farsi merito;
+v'è chi per invidia biasima un'ottima, ed ingegnosa
+attenzione. Sfavilla altrui negli occhi un non so che di
+grand'incendio nascosto nel seno alla presenza di
+qualche suo collusore, e ad altri un non so che di
+odio ferale. Non pochi melenzi, ed inetti giuocano
+per rendersi del tutto ridicoli. I loquaci, ed i
+buffoni, quanto più pajono graditi tanto meno acquistano
+di stima: gli ambiziosi, e vanagloriosi fanno il fracasso
+più stomachevole, lo sboccato, e empio non
+altrove meglio si scorge, in somma l'avaro, il fraudolento,
+l'ingrato,, il molle, il lascivo, e se v'è altro
+vizio nel Mondo, tutto nel giuoco si osserva, e
+singolarmente spicca quella passione, che è la moderatrice
+universale delle azioni di colui, che giuoca:
+né per quanto cauto, ed avveduto egli sia può
+nascondere giammai se stesso il giuocatore: perché,
+siccome le vicende, le più strane, le sorprese, le più
+inaspettate, le astrazioni, le più inconsiderate
+succedono nel giuoco: cosi è difficilissimo, se non
+impossibile in tanta strana tempesta tenere tranquillo
+lo spirito internamente agitato dalle più vivaci
+passioni.
+
+Non però minor mostra fanno nel giuocate le
+belle virtù, che ornano un'animo moderato, e
+savio. Ivi il liberale, il giusto, il mansueto con
+lepidezza, sofferenza, costanza, e moderazione, opera
+sinceramente, vivace, ilare, giocondo, e pronto
+riparatore, o precisore d'ogni sinistro avvenimento,
+e tutto fa cosi bene, che tal resta dipinto nel suo
+estrinseco qual veramente è; da ciò ben si vede, che
+la via più sicura di conoscere chiunque, si è quella di
+farlo giuocare; se tanto è vero, com'è indubitato,
+qual'emolumento dal giuoco si cava? Lo dirò
+brevemente, chi giuoca perde tempo, denari, e
+riputazione (parlo ora de i giuochi sempre detestabili di
+resto e di grande interesse, non già delle
+Minchiate) ma perché non paja, che io esageri troppo
+contro d'un contratto, e comercio il più frequente del
+Mondo, eccovi ciò, che ne dice Giovanni Lottini
+all'avviso 559. \textit{Il giuoco è cattivo in tutte le parti,
+perciò, che mentre si giuoca si sta sempre con sete di
+vincere, onde ogni piccola cosa turba il Giuocatore,
+e cagione, che s'adiri contra qualunque si sia, non
+avendo rispetto né a luogo, ne a persone, né a se
+medesimo, senza che tira all'inganno, allo
+spergiurare, ed alla rovina de' più cari amici, che egli abbia,
+desiderando di vincere tutte le facolta loro. Finito il
+giuoco, da poi se l'effetto è riuscito contrario al
+desiderio, colui, che perde rimane dolente, e pieno di
+disperazione, e per riscuotersi non è male, che ei non
+pensa di fare, e potendo, che non facesse, ed avendo
+vinto per lo più consuma i danari in cose vane, e
+triste, di maniera che, ragionevolmente fu fatta un
+legge in Egitto, la quale concedeva ad ogn'uno di
+potere accusare il Giuocatore d'ogni sorte di vizj,
+senza essere obbligato di stare alla medesima pena,
+quando bene non si fussero verificate le accuse tanto
+avevano per cosa ferma che di chi giuoca si possa
+sospettare ogni male, per grande, che egli sia}
+
+Sono vi poi alcuni, che si lagniano di perder
+sempre; giuocando anche a Minchiate, a questi io
+insegnerò un segreto di non perdere mai più, e lo
+imparai nel Malmantile del Zipoli, e perciò non
+voglio essere avaro di manifestarlo a tutti quelli, che
+giuocando perdono, ed è sicurissimo, e provato,
+eccolo :
+\literaryquote{Capitano sai tu quel, che ai a fare, \\
+ Se tu non vuoi più perder non giuocare.}
+
+E Giacomo Beneventano di più ci comanda a fuggire
+quel giuoco, ove si può perdere la robba sua.
+\literaryquote{
+Ludum quoque fuge, per quem tua perdere possis.}
+
+Racconta Svetonio, ché Cesare Augusto dopo aver
+perduto due battaglie navali giuocava frequentemente
+alle carte. Un bell'ingegno ne espresse la ragione
+cosi.
+\literaryquote{Postquam bis classe victus naves perdidit\\
+Aliquando ut vincat Judit assidue aleam.}
+
+Se poi giuocando avete perduto, vi averto ad essere
+puntualissimo a pagare per giustizia, per decoro,
+e per vostra quiete; eccovi quelli, che Automedonte
+stima fortunati.
+\literaryquote{Rei anil debet fortunatissimus ille est, \\
+oximus huic celebs, tertius orbus erit.}
+
+La sventura è dopo la perdita restar debitore,
+questa si toglie col pagare.
+}
+
+
+\subsection{PRECETTO XII.}
+
+Alla fine del giuoco se vinci, o perdi restati
+sempre eguale, né dar segni, o di
+troppa displicenza dell'uno, di troppa allegtezza
+dell'altro avvenimento; e sopra
+tutto ricordati dj essere economo dei denari
+vinti, perché, non sempre 1a forte ti sarà
+favorevole; onde riperdendo tu, non ti abbi
+ad incomodare del tuo, avendo guadagnato
+l'altrui, Dalle congratulazioni poi dei circostanti
+te ne sbrigherai in quella guisa che suggerisce Dante Purg. c. 5.
+\literaryquote{
+Quando si parte il giuoco della Zara,\\
+Colui, che perde, si riman dolente\\
+Repetendo le volte: e tristo impara.
+
+Con l'altro se ne va tutta la gente:\\
+Qual va dinnanzi e qual diretro 'l prende,\\
+E qual da lato gli si reca a mente:
+
+Ei non s'arresta: Or questo e quello intende\\
+A cui porte la mano, più non fa pressa\\
+Et così della calca si difende.\\}
+
+Sopra tutto se hai perduto non ti affligere
+perché non v'è male di peggior nacumento
+quanto l'ansietà dell'animo; onde Ovidio
+parla per esperienza 2.\ de ponto.
+
+\literaryquote{Unda focusque nocent et causa valentior istis\\
+Anxietas onimi, quae mibi semper adest.}
+
+Se avete perduto pensate, che non è già
+felice quello, che ha molti denari, ma quello
+bensì, che non si rattrista, come disse
+Euripide. \textit{Non felix appellandus est, qui pecunias
+habet plurimas, sed qui non tristatur.}
+E Cicerone nel 3.\ delle Questioni Tusculane,
+dice \textit{Summa stultitia est frustre confici dolore,
+ cum intelligas nihil posse profici}, E se il giuoco
+è la cagione in voi di rattristarvi lasciatelo
+perché \textit{non debemus causas doloris accerescere}. Senec. ep. 10.
+
+
+\section{CAPO TERZO.}
+
+\subsection{Giuoco in quattro ad ogn'uno per se.}
+
+Ora in disuso giuocare a Minchiate a ogn'uno per se; ma pur volendolo giuocare,
+eccone i principali precetti.
+
+Primo. Si giuoca in quattro, si ruba si
+danno venti carte, e poi la scoperta; si
+prendono le carte buone della fola da chi fa le
+carte, si scarta ecc. come sopra.
+
+Secondo. Ogn'uno segna i punti delle
+rubate, e degli amazati, contro tutti e tre i
+collusori, tre segnano contro chi ha perduto
+la carta di conto. Sicché ogn'uno tiene, o
+può tenere accese trè partite, le quali
+giuocando crescono, o calano, secondo le
+vicende del giuoco.
+
+Terzo. In fine ogn'uno fa i conti con
+ciascuno de' suoi compagni, e può
+succedere, che con altri vinca, e con altri perda, ed
+allora si girano i resti.
+
+Quarto. Per giuocar bene; dovendosi
+perdere qualche carta, si procuri darla a chi
+non fa verzicola, v.g.\ se vedete, che
+qualch'uno ha fatto l'uno, el 28, il vostro 13, che
+non potete farvi, procurate darlo, quando
+fa la levata, ad uno degli altri due.
+
+Quinto. Somma attenzione per farsi le
+sue carte per far caccia, per conteggiare
+esatto, e spedito, e per simili occorrenze, ove
+come in ogn'altra azione umana \textit{Usus Magister est optimus}. Cic.\ pro reb.
+
+\subsubsection{nota allegorica.}
+{\footnotesize
+Il conversare è all'uomo necessario, e spesso
+inevitabile; farà però molto bene, se a tutto suo
+potere sfuggirà la troppa familiarità di chi che sia;
+resterà in vero privo d'alcuni piaceri emolumenti
+della societa, ma anderà esente da molti incommodi,
+rancori, e passioni d'animo, che incontrano
+coloro, che troppo cogli uomini si familiarizzano.
+\literaryquote{Si vitare velis acerba quedam,
+Et tristes animi carere morsus,
+Nulli te facias nimis sodalem,
+Gaudebis minus, \& minus dolebis}
+
+E' ben vero, che l'uomo, che poco prattica altrui,
+o che vive solitario \textit{aut Angelus st, aut bestia},
+dice Arist. 1.\ polit. però dee guardarsi di non
+divenire come un bruto intrattabile, e rozzo, ma essere
+buono, e della legge ottimo emulo. Un giorno
+s'incontrò Crate Filosofo in un Giovanetto, che andava
+solo, e cogitabondo, gli dimandò, che cosa
+egli andava facendo così solo, e pensieroso.
+Rispose il Giovane, se parlare con se medesimo, allora
+Crate ripigliò \textit{Fili cave rogo, \& diligenter
+ attende, ne cum homine malo loquaris.}
+}
+
+Ed ecco quanto del Giuoco delle Minchiate
+per mio trastullo aveva io raccolto, il che visto da
+varj miei amici, vollero, che pubblicassi, al che,
+benché di mala voglia, pur condescesi, sperando di
+fare colle annesse allegorie qualche vantaggio alla
+Gioventù studiosa, ed insieme avida di giuocare.
+
+Concludo col ricordarvi quello, che fin
+da principio vi dissi, che se avrete la carità,
+avrete ancora ogn'altra perfezione, ora,
+vi aggiungo la grandezza della nostra gloria
+dipendere dalla grandezza della carità.
+\literaryquote{Cui major charitas, debetur gloria major:
+ Quantus amor fuerit, premia tanta feret.}
+
+E di più ogni industria, tutto il talento, e
+qualsisia fatica si dee adoprare nel giuoco
+terribile di questa vita, per vincere, e per
+ottenere il premio eterno. Verino.
+\literaryquote{Quam potes eterno pro munere ferre laborem?
+Mercedi an tantae, par labor esse potest?}
+
+
+
+
+
+
+
+\supersection{GIUOCO DELL'OMBRE}
+
+\section{CAPO QUARTO}
+
+\subsection{Avvertenze sul Giuoco dell'Ombre.}
+
+\lettrine{D}opo il giuoco degli Scacchi senza
+dubbio il più bel giuoco inventato da un'acutissimo
+spirito Spagnolo, è a giudizio
+comune il Giuoco dell'Ombre, è vero,
+che egli è meschiato d'azardo, e d'ingegno,
+ma questo v'ha tal parte che assolutamente
+chiunque ha sopra i conpagni questa
+prerogativa, a giuoco lungo resterà sempre
+vittorioso. Perciò confido di fare altrui cosa
+gratissima, se qui darò in esso qualche avertenza
+particolare, perché talvolta molto diletta
+un giuoco sì bello.
+
+\subsection{Sucinta Spiegazione \\del Giuoco
+dell'Ombre.}
+
+Il Giuoco dell'Ombre si fa in tre con 40
+carte Spade, Bastoni, Danari, e Coppe.
+
+\subsection{Valore delle Carte.}
+
+Spadiglia è l'asso di spade la prima carta
+del giuoco, che sempre trionfa.
+
+Maniglia è, o il 2 di spade, o il 2 di bastoni,
+o il 7 di denari, o il 7 di coppe, secondo quale
+de' sudetti pali trionfano, ed è la seconda carta del giuoco.
+
+Basto è l'asso di bastoni, terza carta del giuoco,
+che sempre trionfa; onde Spade, e Bastoni
+si chiamano pali curti; perché anno un
+trionfo di meno, che Coppe, e danari. Queste
+tre carte si chiamano Stuccio, e Mattatori.
+
+Punto sono: Asso di denari, e di coppe,
+quando il loro palo trionfa, sono la quarta
+carta di Stuccio, e prendono tutte le figure
+quando non sono trionfi, sono la migliore
+dopo le figure nel loro palo.
+
+Nella Cartiglia di coppe, e di danari le
+migliori sono le più piccole.
+
+I Stucci sono tanti, quante carte si anno
+consecutive dopo le tre prime sudette. E
+questi stucci sono onori in mano dell'Ombre.
+
+Far tenazza vuol dire avere spadiglia, e
+basto, o due altre carte equivalenti, ed essere
+ultimo in giuoco.
+
+
+\subsection{Modo di giuocare.}
+
+Si danno cento puglie tra fisce, e gettoni
+a ciascuno de' tre collusori, che vagliono
+ad arbitrio, si sceglie a sorte chi dee far carte.
+
+Chi fa le carte mette in piatto 4 puglie,
+meschia, fa alzare, e da 9 carte a ciascuno.
+a tre a tre, e non altrimente.
+
+Il primo a man destra di chi fa le carte
+considera il suo giuoco, e se vuol'essere
+Ombre, ciò è se si vuole impegnare a fare più
+levate d'ogn'uno de' suoi Compagni, può dire
+la giuoco, ed allora giuoca senza scartare, e
+gli altri scartano, e prendono per ordine dal
+monte quante carte lor piace dopo, che l'Ombre
+ha dichiarato il palo che trionfa. Se
+alcuno degli altri due non vuole, che l'Ombre
+la giuochi, gli dice, mas di mas, se l'Ombra
+dice dichiara il palo, ed allora è obbligato a
+fare tutte le levate; se non dice, chi fece
+dire mas di mas è Ombra esso, ed è obbligato
+a fare nove levate.
+
+Se poi vuol giuocare scartando dice entro,
+e se nessuno gli fa dire di più, ciò è se
+non v'è chi voglia giuocare senza scartare,
+dichiara prima il palo, che trionfa, e poi
+scarta, e gli altri prendono le carte, che avanzano
+con ordine, e scartano anch'essi; e poi
+ambedue si difendono procurando, o di fare
+tre levate per uno, o uno quattro, e l'altro
+una.
+
+Se poi non vuole né pure entrare può fare
+o Cascarone portando due carte, o Cascariglio
+portandone una sola, o novena non
+portandone alcuna; ed allora dopo dichiara
+il trionfo, e se fa cinque base, o pure
+quattro, ed i compagni uno tre, e l'altro due,
+tira tutto il piatto con gli onori, che ha da i
+suoi compagni, se poi fa tre, o quattro base la
+ripone, cioè ne mette in piatto quante ve ne
+sono, e paga gli onori; se poi uno aversario
+da Codiglio, cioà fa esso più levate degli altri
+l'Ombre paga a quello tutto il piatto.
+
+Se non vuol'essere Ombre dice passo, e
+pone una puglia in piatto, così si dica degli
+altri due; la seconda volta o si ripassa, o si fa
+novena, o cascariglio, o cascarone.
+
+\subsection{Gli Onori sono.}
+
+Una puglia per ogni Stuccio; due per la
+giuocata, due pel Cascarone una per il
+Cascariglio, e una per la novena, quattro per il
+totos si pagano all'Ombre se vince.
+
+Quando l'Ombre non ha speranza fondata
+di vincere, dica mi do, perché, se qualch'uno
+non lo prende, facilmente con l'ajuto
+dell'altro potranno essere in due a riporla, e
+talvolta in tre, quando nessuno lo prende, e
+fanno tre levate per uno.
+
+\subsection{Leggi del Giuoco.}
+\begin{list}
+{\arabic{listombrecnt}.}
+{\usecounter{listombrecnt}
+\setlength{\labelwidth}{1.5pt}
+\setlength{\labelsep}{1.0em}
+\setlength{\itemsep}{-0.3em}
+\setlength{\leftmargin}{0em}
+\setlength{\itemindent}{2.5em} % equals \labelwidth+\labelsep
+}
+\item È uso, che chi ha Spadiglia faccia giuoco
+e non può passare, che con due
+puglie, una per il passo, l'altra per la spadiglia.
+Questa maniera di giuocare si chiama
+spadiglia a forza, e basto a vista.
+\item Chi ha il basto può passare la prima
+volta, poi la seconda bisogna, che faccia
+giuoco, o che passi con puglia: se giuoca, e
+se gli viene la Spadiglia la dee subito mostrare,
+alttimenti ripone il piatto, se perde
+due volte, e se vince non lo tira.
+\item Chi sbaglia le carte non ha pena veruna, ma si rifanno di nuovo.
+\item Chi ha carte di più o di meno di nove
+ripone la puglia, se non lo dice prima di far
+giuoco.
+\item Se dando le carte si scopre un Mattatore,
+ cioè una carta di Stuccio, si rifanno le carte.
+\item Se l'Ombre non nomina il trionfo s'intende Spade.
+\item Se l'Ombre si è dimenticato di nominare
+ il palo, e se non ha confuso con l'altre
+sue carte lo scarto, può rifarlo di nuovo; ha
+tempo di nominare il palo, finché non si è
+voltato le carte, che prende, in faccia.
+\item Se l'ultimo a scartare lascia qualche
+carta la può vedere subito, e dopo giuocata
+la prima carta tutti la possono vedere. Se
+qualcuno la vede prima di essersi giuocata la
+prima carta, ripone il piatto. Se restano più
+d'una carta, non si vedono, se non è consenso comune.
+\item Chi scarta se prende più, o meno carte,
+ se se ne accorge prima di giuocare, si può
+emendare, e prendere dal monte quella,
+che gli manca, o rimettere quella, che ha
+preso di più.
+\item Chi fa vedere una o più delle sue
+carte in pregiudizio dell'Ombre ripone la
+puglia.
+\item Chi rifiuta ripone il piatto tante volte,
+ quante volte rifiuta. Si può emendare finché
+ non si è giuocata un'altra carta, ancorché
+ la base sia coperta.
+\item Se uno prende una base non sua copre,
+ e rigiuoca ripone il piatto, e restituisce
+ da base al patrone.
+\item I tre mattatori non sono obbligati da
+ i trionfi inferiori; la Spadiglia obbliga la
+ maniglia, e 'l basto prima giuocata, ma se ella
+ giuoca seconda non obbliga.
+\item I Stucci sono onori in mano dell'Ombre
+ non in mano d'altrui,
+\item Gli onori si possono dimandare, , finché
+ non è incominciato un'altro giuoco.
+\item Chi fa sei base dee farle tutte, altri
+ menti paga quattro gettoni a testa a i compagni;
+ basta giuocare la sesta carta per obbligarsi
+ a far totos.
+\item Qualunque parola, che si dice a questo
+ giuoco è irrevocabile, chi dice passo, non
+ può far giuoco, e se ha la Spadiglia ripone;
+ chi dice entro non può fare altro giuoco, che
+ entrare ecc.
+\item I contr'ombre possono chiedere gano,
+ cioè il Cavallo d'un Re, possono dire vada
+ con la maggiore, possono dir mia, cioè
+ non copra, e questo sempre, che lor piace.
+\item Chi ha una carta di più o di meno,
+ e se ne accorge dopo, che ha detto di far
+ giuoco ripone la puglia, e poi sta in sua arbitrio
+ di far giuoco, o non farlo. Se fa giuoco,
+ ripone la puglia, due volte se la perde, e se
+ vince non tira niente.
+\end{list}
+Supponendo, che si sappiano tutte le regole,
+e tutte le leggi di questo piacevolissimo
+giuoco. Prima dirò quali siano quelle combinazioni
+di carte, con le quali, abbenché minime,
+chiunque entrerà, potrà con ragione
+sperare la vittoria, che se non li succede non
+incorrerà la taccia, o di temerità, o di
+troppo azardoso. Secondo, vi esporrò alcuni giuochi
+sicuri per altro, ma per essere mal guidati
+si perdono, e saranno casi tanto più belli,
+quanto che parrà, giuocandoli bene, che si
+giuochino male, e giuocandoli male parrà
+d'averli giuocati bene.
+
+\subsection{Giuochi minori, co i quali\\ si entra a palo curto.}
+
+\begin{listombre}
+\item Maniglia, Basto, Re, cinque.
+\item Spadiglia, Basto, Re, cinque.
+\item Spad. Man. Re, quattro.
+\item Spad. Man. sei, sette.
+\item Spad. Basto, Dama, sette.
+\item Spad. Re, Dama, Fante, sette.
+\item Man. Basto, Dama, sei, cinque.
+\item Man. Re, Dama, Fante, fette.
+\item Basto, Re, Dama, Fante.
+\item Man. Basto, sette, sei, cinque.
+\item Re, Dama, Fante, sette, sei, cinque.
+\item Spad. Re, Dama, quattro, tre.
+\end{listombre}
+
+\subsection{A palo lungo si entra entra con}
+
+\begin{listombre}
+\item Spad. Man. punto, quattro.
+\item Basto, Man. punto, due.
+\item Spad. Basto, punto, tre.
+\item Spad. Man. Re, Dama.
+\item Spad. Man. Fante, tre, un Re.
+\item Spad. Basto, Re, Dama, Fante.
+\item Basto, punto, Re, Dama, Fante.
+\item Man. punto, Re, Dama, Fante.
+\item Man. Basto, Re, Dama, tre.
+\item Man. Basto, Fante, due, tre, cinque.
+\item Spadiglia, Basto, Re, due, un Re.
+\end{listombre}
+
+L'entrare con minori giuochi è rischio imprudente,
+è meglio, avendosi la spadiglia, a
+fare cascariglio, o cascarone.
+
+\subsection{Si giuocan solo a palo curto.}
+\begin{listombre}
+\item Quattro Mattatori, un'altra, e un faglio.
+\item Spad. man. Re, Fante, due Re, e un faglio.
+\item Spad. man. basto, e due Re.
+\item Stuccio, sei, tre, quattro, un Re e un faglio
+\item Man. Basto, Dama, Fante, quattro, tre, e un Re.
+\item Man. basto, sei, cinque, quattro, un Re, e un faglio.
+\item Basto, Re, Dama, Fante, sette, sei, cinque, quattro, un Re.
+\item Re, Dama, Fante, sette, fei, cinque, quattro, un Re.
+\item Spad. Re, Dama, sette, sei, quattro, un Re, e un faglio.
+\item Man. Re, Damas Fante, sette, quattro, Re, e due fagli.
+\end{listombre}
+
+
+\subsection{Si giuocano a palo lungo.}
+\begin{listombre}
+\item Stuccio, tre, quattro, cinque, un Re.
+\item Basto, Re, fette, tre, un Re, due fagli.
+\item Spad. man. punto, sei, tre, un Re, e due
+Dame guardate.
+\item Man, Basto, Dama, Fante, due, sei, un
+Re, e due Dame guardate.
+\item Basto, punto, Re, sei, tre, due, un Re, e
+due Dame guardate.
+\item Punto, Re, Dama, Fante, due, tre,
+sei, un Re.
+\item Man. bast. punto, tre, quattro, cinque,
+un Re, e due fagli.
+\item Spad.
+punto, Re, Dama, due, sei, un
+Re, e Fante guardato.
+\end{listombre}
+
+ Chi è primo, o ultimo a giuocare, può
+prendersi qualche arbitrio di più.
+
+\subsection{
+Casi ne i quali si perde \\per giuocar bene
+in apparenza, \\e la maniera di giuocarli.}
+
+\subsection{CASO PRIMO.}
+
+L'Ombre di mano ha maniglia, Re, Dama,
+Fante, sei a spade trionfo. Re di coppe,
+Dama, e tre di denari, Re di bastoni.
+
+Il secondo ha sette, cinque, quattro. Dama; e
+fante di bastoni; Re, e Fante di denari, sei di coppe.
+
+Il terzo ha basto, e tre di trionfo, Fante,
+quattro, due, tre di coppe, asso, cinque,
+quattro di denari.
+
+L'Ombre perderà questo giuoco, se incomincierà
+a giuocare col Re di bastoni: l'ultimo
+lo prende, e giuoca denari, il secondo
+fa il suo Re, e poi il Fante di denari, poi
+giuoco bastoni, fa mettere il basto, se l'ombre
+lascia sperde codiglio, se prende, è riposta,
+Dunque per vincere si giuochi così.
+
+L'Ombre giuochi il Re di trionfo. Il secondo
+prende colla spadiglia, il terzo dà il
+tre.
+
+Il secondo giuoca bastoni per la meglio,
+il terzo mette il basto, e l'Ombra dail Re.
+
+Il terzo giuoca denari, Ombre mette la
+Dama; e il secondo prende col Re; poi fa il
+Fante ancora, e poi tutto fa l'Ombre.
+
+Se il terzo giuoca in vece di denari coppe,
+Ombre prende col Re, e poi giuoca
+tutti i suoi trionfi.
+
+\subsection{CASO SECONDO.}
+
+L'Ombre secondo ha maniglia, basto, Re,
+Dama, cinque, tre di bastoni trionfo,
+Dama guardata di spade, e Fante di coppe.
+
+Il primo a giuocare ha sei di bastoni,
+Re, e sei di coppe, Re, Fante, asso, e sei
+di denari, sei, sette di spade.
+
+Il terzo ha spad. Fante, sette, quattro di
+trionfo asso, due, quattro di coppe, Re,
+e Fante di spade.
+
+L'Ombre perde il giuoco, perché amazza
+col cinque il Re di denari, che giuoca il
+primo, e il terzo glielo prende col sette, e
+poi giuoca coppe, che resta del primo, e poi
+giuoca spade, e il terzo ne fa due altre, e la
+spadiglia fa la quarta, onde è riposta.
+
+Per vincerlo basta, che lasci col Fante di
+coppe il Re di denari, oppure l'assicuri con
+un mattatore.
+
+\subsection{CASO TERZO.}
+L'Ombre terzo a giuocare ha maniglia,
+basto, Re, Dama, tre, sei, quattro a
+coppe trionfo, due Fanti di bastoni, e di denari.
+
+Il primo ha punto di coppe, Re, Fante,
+sette, tre di spade, tre, quattro, cinque, sei
+di bastoni.
+
+Il secondo spade, Fante, due e cinque
+di coppe, Re di bastoni, Re, Dama, sei,
+cinque di denari.
+
+L'Ombre perde il giuoco così. Il primo
+giuoca bastoni, il secondo pone il Re, e lo fa,
+poi giuoca il Re di denari, l'Ombre mette il
+Fante, e il primo da bastoni, il secondo poi
+giuoca denari, l'Ombre mette il Re, el primo
+il punto, se poi giuoca bastoni, il secondo
+mette il Fante di trionfo, l'Ombre prende
+con la Dama, e giuoca il basto, il primo da
+bastoni, e il secondo da il cinque trionfo,
+l'Ombre giuochi che che sia, ha riposto.
+
+Si vincerà così. Se in vece. di mettere il
+Re sul Re di danari, l'Ombre lo coprirà con
+un trionfo basso.
+
+\subsection{CASO QUARTO.}
+L'Ombre primo a giuocare spadiglia, maniglia,
+sei, cinque, quattro, tre di spade
+di trionfo, ed una cartiglia per palo.
+
+Il secondo ha il basto, e il sette di trionfo,
+Re, e sei di bastoni; asso, e cinque di
+coppe, Fante, tre, sei di denari.
+
+Il terzo ha Re, Dama, Fante di trionfo,
+Re, e sette di denari, Dama di bastoni, Re,
+Fante, e due di coppe.
+
+L'ombre perde il giuoco così. Giuoca la
+spadiglia, il secondoda il ette, e il terzo il
+Fante, e poi giuoca a bastoni, il terzo prende
+col cavallo, poi giuoca il Re di coppe, e lo
+fa; poi fa il Re di denari, poi giuoca coppe,
+l'Ombre mette trionfo, e il secondo prende
+col basto e il terzo pur fa la sua quarta con
+Re, e Dama.
+
+L'unico modo di vincere questo giuoco è
+che Ombre giuochi subito spadiglia, e maniglia.
+\subsection{CASO QUINTO.}
+
+Il primo a giuocare ha maniglia, basto,
+Re, cinque di denari trionfo, Re, Dama
+di bastoni, Dama, Fante, tre di spade.
+
+L'Ombre secondo spadi. punto, Dama,
+due, tre, quattro, sei di trionfo, Re di
+coppe, e Fante di Bastoni.
+
+Il terzo Fante di trionfo, Re, sette, sei,
+cinque di spade, sei di bastoni, Cavallo,
+tre, cinque di coppe.
+
+L'Ombre perde così. Il primo giuoca il
+Re di bastoni, e lo fa, poi giuoca il Cavallo,
+l'Ombre mette il due trionfo, e il terzo
+prende col Fante, e giuoca coppe, il primo
+mette cinque trionfo, e lo fa, poi giuoca,
+come vuole, sempre farà due altre levate.
+
+L'Ombre vincerà, se passerà la Dama sul
+Cavallo. Insomma quando l'Ombra ha molti
+trionfi, la meglio è giuocare le grosse.
+
+\subsection{CASO SESTO.}
+
+L'Ombre terzo a giuocare ha spad. basto,
+Cavallo, sei, cinque di bastoni trionfo,
+Re, tre, sette di danari, Re di coppe.
+
+Il primo maniglia, Re, Fante, quattro di
+trionfo, Fante; asso, sette di denari, due di
+spade, e due di coppe.
+
+Il secondo tre sette di trionfo, Fante,
+uno, tre, sei di coppe, Re, tre, sei di spade.
+
+L'ombre perde il giuoco così: il primo
+giuoca il due di coppe, l'ombre prende col
+Re, e giuoca il Re di denari, il secondo
+prende col sette di bastoni, e giuoca tre di
+trionfo. Eccola riposta.
+
+L'Ombre vincerà, se in luogo di giuocare
+il Re di denari, giuocherà il sei di trionfo,
+il primo prenderà col Fante, e giuoca denari,
+il secondo prende col sette, e l'Ombre da
+sette di denari, il secondo giuoca o spade, o
+coppe, e giuochi qualunque, sempre l'Ombre
+vincerà, perché su le spade metterà il cinque
+trionfo, e su la coppe metterà denari.
+
+Tra i casi possibili, che possono succedere
+in questo giuoco che sono 263,547.520 prescindendo
+da i franchi, sonovene tra i dubbj
+curiosissimi, e chi non ha memoria de i scarti,
+de i fagli, e della previsione al caso possibile,
+non s'azzardi contro chi in questo lo supera,
+perché perderà.
+
+I sudetti sei casi ben considerati molto
+gioveranno a dar lume agli altri simili, che ve
+ne sono moltissimi. Che è quanto di questo
+nobilissimo Giuoco mi è parso bastevole indicare
+essendovi di esso molti, e gravissimi
+Scrittori, che diffusamente lo anno spiegato,
+ed io d'alcun d'essi mi sono prevaluto per le
+cose sudette.
+
+
+\supersection{GIUOCO DEGLI SCACCHI.}
+\section{CAPO QUINTO.}
+
+\lettrine{I}L più bel giuoco, che sia stato trovato al
+Mondo senza veruna controversia è il
+Giuoco degli Scacchi; 1a di cui antichità è
+si grande, che coetaneo lo vogliono a Palamede
+sotto Troja, o a Diomede sotto Alessandro
+il Grande, o agli antichi Arabi, o Persiani:
+ma di ciò poco importa: certo è, che
+ha dilettato sempre fuor di modo coloro, che
+l'anno imparato, perché egli impegna, e picca
+sollennemente i giuocatori, essendo tutto
+pieno d'ingegno, e gli amici tra loro si donano
+ogni sorta di cose rare, e preziose, ma
+trattandosi d'ingegno poche volte, o non mai
+si vedranno l'uno cedere all'altro.
+\literaryquote{
+ Aurum, et opes, et rara frequens donabis amicus,\\
+ Qui velit ingenio cedere rarus erit.}
+
+Avertì Marzial.\ l,\ 8. Perciò si vedono questi
+tra loro costantemente combattere le ore, e
+i giorni intieri con applicazione incredibile
+per riscuotere la gloria, o il piacere d'aver
+superato il compagno in quel feroce combattimento
+d'ingegno; dico però, che non si
+dee alcuno tanto lasciare trasportare dall'impegno
+di questo giuoco, che poi l'abbia da
+perdere troppo tempo, perché \textit{non ita generati
+et natura sumus, ut ad ludum fatti esse
+videamur}; disse Cic.\ 1.\ de officiis: dico però
+che quando ci troviamo scarichi di negozj, di
+studj, di applicazioni, e quando compiuto abbiamo
+ogni obbligo del nostro stato siccome il
+natural talento ci porta ad indagare cose
+belle, nuove, e mirabili, come conobbe anche
+Seneca l.\ de moribus. \textit{Cum sumus necessariis
+negotiis curisque vacui, tunc avemus aliquid
+videre, audire, dicere, cognitionemque
+rerum aut admirabilium ad bene beateque vivendum
+necessariam ducimus}. Cosi possiamo
+dare qualche ora a questo Giuoco. Certamente
+novità più ingegnosa, e più innocente
+fra tutti i trastulli del Mondo del Giuoco degli
+Scacchi vi farà difficile il ritrovarla, al quale
+non manca né pure il mirabile d'una sottilissima
+invenzione; ed in esso non si giuoca d'altro
+interesse, che della gloria di vincere.
+
+\subsection{Notizie per giuocare a Scacchi.}
+
+E qualch'uno siavi, che non abbia veruna
+contezza del Giuoco degli Scacchi,
+premetto una succinta, ma sufficiente
+spiegazione di esso giuoco.
+
+\subsection{Tavoliere, e sito de i Pezzi.}
+
+Il Giuoco de i Scacchi si fa in due in una
+tavola quadrata, che dicesi Scacchiera distinta
+in sessanta quattro caselle alternanti di
+color bianco e nero con sedici pezzi bianchi,
+e con sedici neri di sei specie, che stanno nelle
+due prime file opposte; e sono
+
+Due Rocchi, o Torri nelle case di cantone.
+
+Due Cavalli nelle case seguenti.
+
+Due Alfieri seguenti.
+
+Re. Pezzo principale, in ordine a cui sono tutti gli altri.
+
+Regina bianca in casa bianca, e Regina
+nera in casa nera, si chiama ancora Dama, e
+Donna.
+
+Otto pedine stanno avanti alli sudetti
+pezzi.
+
+\subsection{Moto di essi pezzi.}
+
+Il Re può andare, e prendere in qualunque
+prossima casa d'intorno alla sua, che
+attualmente occupa, una sol volta può saltare
+nella fila de' suoi pezzi col Rocco, purché
+non si sia mai mosso, e sia libero il passo da
+Scacco, e da altro suo pezzo, nell'atto, che
+ha scacco, né pure può far detto salto, e
+facendolo, non può offendere l'inimico, né radoppiare
+offesa.
+
+La Regina va, e prende come il Re ma
+per tutte le linee dritte, e traverse, ed oblique
+da capo a fondo al Tavoliere dovunque
+vuolsi, purché non vi sia pezzo, che impedisca la strada.
+
+Gli Alfieri vanno per obliquo per le loro
+linee, o bianche, o nere da capo a fondo.
+
+Le Torri, o siano i Rocchi vanno per
+dritto, e per traverso pure da capo a fondo
+alla scacchiera e da un lato all'altro, se il passo
+sia libero e possono prendere se vogliono, l'inimico
+che s'incontra essere per queste strade.
+
+Cavalli saltano, e prendono di bianco
+in nero, e di nero in bianco tre case per tre
+case nella fila contigua d'ogni intorno alla
+loro, che attualmente occupano.
+
+Le Pedine vanno avanti per dritto, e pigliano
+per traverso. La prima loro mossa
+può essere, se si vuole, di due case, e poi
+s'avanzano casa per casa, né mai tornano in
+dietro; arrivata all'ultima casa qualunque di
+esse diventa o Regina o qualunque altro
+pezzo si voglia.
+
+Quando un pezzo piglia occupa la casa
+del preso.
+
+Le Case sono denominate dal pezzo, che
+li sta in fila v. g. prima del Rocco, e quella
+che ha, seconda è quella, che li sta avanti,
+terza, e quarta le seguenti ecc.
+
+Quando s'offende il Re con qualche pezzo
+s'avvisa con dire Scacco è poi Scacco
+matto, quando il Re non ha luogo da salvarsi, o
+pezzo da coprirsi, o pezzo, che prenda il
+pezzo offensore. Chi dà questo Scacco matto
+porta la vittoria del giuoco.
+
+Lo Scacchiere sia con casa del rocco bianca
+alla destra delli giuocatori.
+
+Pezzo toccato pezzo giuocato.
+
+Casa toccata casa occupata.
+
+Re non può saltare, o come si dice arroccare.
+1. Se si è mosso. 2. In atto di Scacco.
+3. Se passa per lo Scacco. 4. Se offende, o se
+radoppia offesa.
+
+Il Giuoco si fa patta in due maniere. Prima,
+perché si resti con pezzi uguali, o con pezzi
+ineguali; ma che non possino dare Scacco
+matto, Come il Re; o col Cavallo, o
+coll'Alfiere, o con due Cavalli. O con Rocco, e
+Cavallo, contro un Rocco. O con Cavallo,
+con'Alfiere contro un Rocco. O con Pedina,
+e Dama contro Rocco.
+
+Seconda, quando il Re è serrato senza
+essere offeso, e non possa moversi senza essere
+preso né possa movere altro pezzo.
+
+Re, e Rocco: contro Re, e Regina impatta.
+
+Se si dia un giuoco così. Il Nero abbia il
+Re alla casa del Cavallo, pedina avanti, e
+pedina alla terza di rocco, e rocco alla terza
+d'Alfiere. El bianco abbia Re, e Regina dove
+vuole. Il nero impatta se non moverà altro
+che il Re, altrimenti perde senza riparo.
+
+B. Re in casa di suo Cav. Rocco alla seconda di detto Cav.
+
+N. Re alla quinta del suo roc. Dama alla
+terza dell'Alf. di Re bianco. Se il Bianco
+giuoca prima è patta.
+
+B. Dà Scacco col roc.\ alla sua seconda.
+N. Re alla terza di cav.
+
+B. Rocco alla sua terza dà Scacco. N. Piglia.
+B. Re serrato.
+
+Pedina di rocco. E l'Alf. che non ferisca
+la casa ultima di detto rocco, se il Re contr.
+occupa dette case è patta.
+
+Una ped.\ che non sia de' rocchi col suo
+Re a lato. E'l Re contr. stia avanti, è patta,
+se si opponga a casa di mezzo, a più d'una
+non si opponga.
+
+Ped.\ alla penult. di rocco, Re all'ultima,
+e Cav.\ nella sua casa. Re contr. in casa
+dell'Alf. è patta, purché non prenda mai il Cav.
+
+Re alla casa del Cav. Rocco alla seconda
+di cav.\ di Re nero.
+
+N. Una ped.\ alla seconda di cav.\ di Re
+bianco. Pad.\ a quarta di cav.\ di Re bianco.
+Re alla terza di rocco di Re bianco. Rocco
+alla casa di Re.
+
+Il bianco impatta cosi. Dà Scacco col rocco
+in sua seconda casa, e poi sempre si metta
+in presa del rocco contrario.
+
+Eccovi alcuni bellissimi, ed ingegniosissimi
+colpi cavati per lo più da varj Autori, che
+di questo giuoco anno fatto libri laboriosissimi.
+
+Per intendere, e per gustare veramente
+la bellezza di questi Tratti, bisogna disporre
+i giuochi come si propongono, e poi provare
+da se, se mai riuscisse fare quello, che si
+prescrive, perché, o vi arrivate, ed avrete il
+piacere del vostro ritrovato, o no, e vi sarà
+gratissimo avere imparato una cosa da voi
+disperata.
+
+
+\section{CAPO SESTO.}
+
+\subsection{Tratti curiosissimi.}
+
+\subsubsection{TRATTO I.}
+
+{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}.& {\bfseries\scshape Nero}.\\
+Re alla 4 del re contr.
+Il rocco del re alla 4 dell'alf.\ del re contrario.
+Il rocco della dama alla
+4 della dama contraria.& Re solo alla sua casa seconda.\\
+\end{tabular}}
+
+Il bianco dee dar matto al nero in tre colpi a condizione di movere tutti i pezzi.
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Il rocco del re alla casa dell'alf. di dama contr. dà scacco. & Il re alla sua casa.\\
+Il re alla terza dell'alf.\ del re contrario & Il re alla casa del suo alfiere.\\
+Il rocco della dama dà matto alla casa della dama contraria.&
+\end{tabular}}
+
+\subsubsection{TRATTO II.}
+{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}.\\
+Re alla 2.\ casa del suo alfiere.&Re alla seconda del rocco del re contrario.\\
+Cavallo alla casa del cavallo del re contr.& La pedina del roc.\ del re alla 3.\ del rocco del re contrario.\\
+& La ped.\ del cav.\ del re alla 3.\ del cav.\ del suo re.
+\end{tabular}}
+
+Il bianco giuoca prima, e dà matto in 4.\ colpi.
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Il cavallo del re alla terza dell'alfiere del re, contrario. & La ped.\ del cav.\ del re una casa alla quarta del cavallo del suo re.\\
+Il caval. dà scacco alla 4.\ del cav.\ del suo re. & Il re alla casa del rocco del re contrario.\\
+Il re alla casa del suo alfiere. & La ped.\ del rocco del re una casa alla seconda del rocco del re contr.\\
+Il cav.\ dà scacco matto alla 2.\ dell'alf.\ del suo re.
+\end{tabular}}
+
+\subsubsection{TRATTO III.}
+
+{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}\\
+Il rocco della dama alla quarta della sua dama.&Il re in sua quarta casa.\\
+Il rocco del re alla quarta dell'alfiere del re.\\
+Il cav.\ della dama alla 2.\ della dama contraria. \\
+Il cavallo del re alla terza dell'alf.\ del re contr.
+\end{tabular}}
+
+Il bianco darà matto in quattro colpi.
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Il cavallo della dama dà scaccho alla 2.\ dell'alf del re contrario.& Il re alla sua terza casa.\\
+Il cav.\ del re alla 2.\ del rocco del re contrario.& Il re alla sua seconda casa.\\
+Il cav.\ della dama alla 3.\ del rocco del re contr.& Il re dove vuole.\\
+Il rocco del re dà scacco matto alla quarta del suo re.
+\end{tabular}}
+
+\subsubsection{TRATTO IV.}
+
+{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}.\\
+Il re alla quarta del re contrario. & Il re alla casa del cavallo del re contrario.\\
+La dama alla sua seconda casa & La pedina dell'alf.\ del re alla seconda dell'alf.\ del re contrario.\\
+\end{tabular}}
+
+Il bianco giuocherà, come segue, altrimenti farà
+patta per forza.
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Il re alla 4 del suo alf. &La ped.\ fa dam.\ novella.\\
+Il re alla terza del suo cavallo, e darà matto nel colpo seguente.
+\end{tabular}}
+
+\subsubsection{TRATTO V.}
+
+{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}.& {\bfseries\scshape Nero}.\\
+Il re alla casa dell'alfiere del re nero.& Re alla sua terza casa.\\
+Il rocco di dama alla casa della sua dama.& La pedina del re alla 4.del suo re.\\
+Il rocco del're alla casa dell'alfiere del suo re& La dama alla 4 del rocco della dama bianca.\\
+Il cavallo del re alla terza dell'alf.\ del suo re.& Il rocco di dama alla seconda dell alfiere del suo re.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+La pedina del re alla quarta del suo re.& Il cav.\ del re alla terza del rocco del suo re.\\
+& Il rocco del re alla terza del cavallo del suo re.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+& La ped.\ del rocco della dam.\ alla 3.\ del suo roc.\\
+& La pedina del cavallo di dama alla sua terza.
+\end{tabular}}
+
+Il bianco dà scacco matto in tre colpi.
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ Cav.\ del re dà scacco alla 4.\ del cav.\ del re negro. & Rocco prende cavallo.\\
+ Rocco del re dà scacco alla terza dell'alf.\ del re negro & Re prende rocco.\\
+ Roc.\ della dama dà scacco matto alla terza di dama nera.
+\end{tabular}
+}
+
+
+\subsubsection{TRATTO VI.}
+
+{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Nero}. &{\bfseries\scshape Bianco}.\\
+Re alla 2.\ di rocco suo. &Re nella casa del cavallo della sua dama.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Pedina del rocco alla 3.\ del roc.\ di dam.\ bianca.&Pedina alla seconda di re contrario. \\
+Ped.\ del cav.\ alla 3.\ del cav.\ di dama bianca.&\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco in casa dell'alfiere di sua dama. &\\
+Dama alla 3.\ del suo cav.
+\end{tabular}}
+
+Il nero dopo 4.\ mosse senza prendere la pedina dà
+ scacco prima con una, e poi matto con l'altra.
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla terza del cavallo di re dà scacco. &Re alla casa del rocco.\\
+Dama alla casa di suo re. &Re alla casa del cavallo.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco alla seconda dell'alfiere del re contrario. &Re alla casa del rocco.\\
+Dama alla quarta di rocco di dama contraria. &Re torna alla casa del cavallo\\
+& Se fa dama.
+\end{tabular}}
+
+Nero dà colle pedine i due scacchi consecutivi, e se
+non fa dama, parimenti.
+
+\subsubsection{TRATTO VII.}
+
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}. \\
+Re alla 2.\ di Re nero. & Re in casa del suo Rocco.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla 3.\ di suo re.\\
+Ped.\ alla 4.\ d'alf. di re.\ nero.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cavallo alla 4.\ di cav.\ detto.\\
+Alf.\ in casa di cav.\ di sua dama.\\
+Ped.\ alla 3.\ di rocc.\ di re n.
+\end{tabular}
+}
+
+Il bianco darà Scacco prima con una pedina, e poi
+matto con l'altra in cinque Tratti.
+
+\vspace{6pt}{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla 4.\ di alf.\ di sua dama; poi alla 4.\ di re
+nero; poi alla 2.\ d'alf.\
+di re nero; poi Scacco con
+una ped.\ e matto con
+l'altra. & Il re vanellacasa di cavallo, e di rocco.\\
+\end{tabular}
+}
+
+\subsubsection{TRATTO VIII.}
+
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}. \\
+Re alla casa di rocco suo. & Re in sua casa.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Pedine di cav., e di roc.\ alle loro case, ed altri
+pezzi, quanti si vogliono,
+purche sia libera la
+fila di rocco di re bianco.
+&
+Alfiere di re alla quarta d'alfiere di dama.
+Pedina di detto alla 5.
+Dama alla terza di rocco di suo re.
+Rocco alla terza dell'alfiere del suo re.\\
+\end{tabular}
+}
+
+Il Nero dà scacco matto in due mosse.
+
+\vspace{6pt}{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Prende la ped.\ del rocco con la dama. & Prende la dama col re.\\
+Dà scacco matto col rocco alla terza sua.
+\end{tabular}}
+
+
+
+\subsubsection{TRATTO IX.}
+
+
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}. \\
+Re alla 2.\ del re nero; Ped.\ alla terza del rocco del re nero. &Re nella casa del suo rocco.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Pedina alla 5.\ dell'alfiere del suo re. &\\
+Cavallo alla sua quinta.&\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla 3: del suo re.&\\
+Alfiere del re alla quinta del rocco del suo re.&
+\end{tabular}}
+
+
+Il Bianco darà scacco con una pedina, e matto coll'altra in cinque colpi,
+
+\vspace{6pt}{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ della 3.\ del re alla 4.\ del Cav.\ del re.&Re in casa del suo cav. \\
+Det.\ cav.\ alla 5 d'esso re.&Re tornain casa del roc. \\
+Detto alla 2.\ dell'alfiere del re nero dà scacco.&Re in casa del cav.\\
+Scacco con una pedina e poi matto coll'altra.&
+\end{tabular}
+}
+
+
+\subsubsection{TRATTO X.}
+
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Nero.} & {\bfseries\scshape Bianco.} \\
+Re alla terza del re bianco con quatro pedine
+intorno alle quattro case bianche, e due cavalli, uno alla terza di rocco di dama, l'altro alla quarta di cav.\ di dama. &
+
+Re in sua casa, con suo
+rocco in sua casa, e l'altro rocco in casa d'alfiere di sua dama. Alfiere
+in casadirocco di dam. nera\\
+\end{tabular}
+}
+
+
+Il Nero dà matto con pedina, che sta alla quatta di
+re bianco in cinque colpi.
+
+\vspace{6pt}{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ che sta a 3.\ di rocco dà scacco alla 2.\ d'alf. & Piglia col rocco.\\
+Avanza la pedina alla. seconda di dama. & La prende.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Scacco col cav alla terza di dama. & Rocco lo prende.\\
+Prende con la pedina, con cui dà matto il colpo seguente.
+\end{tabular}
+}
+
+\subsubsection{TRATTO XI.}
+
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}.\\
+Pedina alla 4.\ di rocco di dama contr.& Re in casa di rocco di sua dama.\\
+Re alla 4.\ di cav.\ detto.& Pedina di cavallo in sua casa.\\
+Dama alla 4.\ d'alf come sopra.&
+\end{tabular}
+}
+
+Il bianco dà scacco matto di pedina in tre tratti.
+
+\vspace{6pt}{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama in casa dell'alfiere del re contr. dà scacco.& Re alla 2. del rocco.\\
+Dama alla casa dell'alfiere della dam.\ contr.& Pedina un passo.\\
+Piglia con pedina, e dà scacco matto.&
+\end{tabular}
+}
+
+\subsubsection{TRATTO XII.}
+
+{\small
+ \noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}. \\
+Re in casa del suo rocco,
+e due pedine di rocco,
+e di cav.\ alle loro case. & Re in sua casa; Dama alla seconda di suo rocco.\\
+Rocco di dama in sua
+casa. Altro rocco in casa
+dell'alfiere. & Cav.\ alla quarta di cav.\ di re bianco.\\
+\end{tabular}
+}
+
+Il Nero dà scacco matto in tre, ovvero in quattro mosse.
+
+
+
+\vspace{6pt}{\small
+ \noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ &Cavallo dà scacco alla seconda d'alfiere.\\
+Re alla casa di cavallo. &Cav.\ alla 3.\ di rocco scacco doppio di due pezzi in presa.\\
+Se il re va in casa del suo alfiere. & Dà scacco matto colla, dam.\ alla 2. di d. alf.
+ \end{tabular}
+}
+
+Se poi il Bianco andiede in casa del rocco. Il Nero
+li dà scacco colla dama alla casa del cav. Il
+Bianco piglia col'rocco, e il Nero dà scacco matto col
+cav.\ alla seconda dell'alfiere.
+
+\subsubsection{TRATTO XIII.}
+
+{\small
+ \noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ {\bfseries\scshape Nero}. & {\bfseries\scshape Bianco}.\\
+Rocco del re alla terza del suo cav. & Re alla casa del rocco suo.\\
+Dama alla 4.\ del suo re. & Dama alla seconda del cav.\ della dama contr.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ del re alla quarta
+dell'alf.\ del re suo. \\
+Rocco della dama alla
+sua quarta. \\
+Re alla quarta dell'alf.\ del re contr.\\
+Pedina alla terza dell'alf.\ del re contr.\\
+Ped.\ alla terza del rocco del re contr.\\
+ \end{tabular}
+}
+
+Nero in sei mosse darà scacco con una pedina, e
+poi matto con l'altra. Questo è di molto ingegno.
+
+\vspace{6pt}{\small
+ \noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla casa del re, contr. dà scacco. & Il re va alla seconda del rocco\\
+Rocco alla seconda del rocco contr. dà scacco. & Si copre colla dama. \\
+Dà scacco coll'altro roc. & Lo prende colla dama.\\
+Dà scacco colla dama alla terza del cav.\ della
+dama contr. &
+Il re vada dove vuole,
+avrà prima scacco con
+una pedina, e poi matto con l'altra.
+ \end{tabular}
+}
+
+\subsubsection{TRATTO XIV.}
+
+\hfill\textit{\footnotesize Bellissimo.}
+
+{\small
+ \noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ {\bfseries\scshape Nero}. & {\bfseries\scshape Bianco}.\\
+Re alla seconda del rocco della dama contr.& Re in sua casa\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla seconda del cav.\ del re contr.& Pedina del cav.\ del re alla terza.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla quarta del re contr.& Pedina del rocco del re alla quarta.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla quarta della s. sua dama. &\\
+Rocco del re alla sua 2. &\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Quattro pedine quella del cav.\ della dam alla 3.\ del cav.\ della dama contraria.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Quella della dama alla 3.\ della dama,
+contr. quella dell'alf.\ del re
+alla 3.\ dell'alf.\ del re contrario e
+quella.\ del rocco del re alla
+terza del suo rocco.
+
+ \end{tabular}
+}
+
+Il Nero in tredici mosse dà scacco colle quattro pedine consecutivamente, e matto con quella del rocco. Partito di grand'ingegno.
+
+\vspace{6pt}{\small
+ \noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama dà scacco alla 2. dell'alf.\ del re contr. & Re alla casa della sua dama.\\
+Dama dà scacco alla seconda del re contr. &Re va alla casa dell'alfiere della sua dama.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ del rocco va avanti. &Va avanti con la pedina.\\
+La prende con la sua. &Avanza la sua ped.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Avanza la sua. &Avanza la sua.\\
+Rocco va alla seconda del suo alf. &Avanza la pedina.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ della 4.\ della dama va alla quarta dell'alf.\ del re contrario. &Fa dama.\\
+Dà scacco col rocco alla seconda dell'alf.\ della dama. &Sicopre colla dama alla terza del suo alfiere.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dà scacco con la dama alla 2.\ dell'alf.\ tra la dama ed il Re. &La prende con la sua, e dà scacco.\\
+Si copre, e dà scac.\ con la pedina, Poi prende la dama, e dà scac.\ coll'altra, poi dà scac. col1a 3.\ e poi matto coll'altra. \\
+ \end{tabular}
+}
+
+
+\subsubsection{TRATTO XV.}
+{\small
+ \noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}.&{\bfseries\scshape Nero}.\\
+Re alla 2.\ della sua dam. &Re alla 2.\ del cav.\ della dama contr., con una\\
+Rocco alla casa dell'alfiere della dama.& pedina ivi alla 2.\ del roc.\\
+Pedina del rocco del re alla quarta del rocco.&Due pedine una del rocco del Re alla 4.\ e l'altra del cav.\ alla terza.\\
+ \end{tabular}
+}
+
+
+Se il Bianco non giuoca come segue farà patta.
+
+\vspace{6pt}{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco in casa del rocco avanti la ped.\ contr. & O lo prende o no: se lo prende. \\
+Re alla 2.\ dell'alfiere. & Avanza la sua pedina.\\
+\end{tabular}}
+
+Il Bianco la prende, fa dama prima del nero, e vince il giuoco.
+
+Se il nero non prende il rocco si ritira, e perde tutto.
+
+\subsubsection{TRATTO XVI.}
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ {\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}.\\
+Re alla 3.\ del suo alfiere. & Rocco di re in sua casa. \\
+Donna alla quarta del cavallo di suo re. & Rocco in seconda. Dama in quarta.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alfiere di donna in sua casa. & Pedina in quinta.\\
+Alfiere di re alla 2. di. cav.\ di donna contr. & Re in settima di detto rocco. \\
+\end{tabular}}
+
+Il Bianco dà matto al quinto colpo.
+
+\vspace{6pt}{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ di dama dà scacco alla 4.\ d'alf.\ di re. & Re in casa del rocco del re contr.\\
+Alf.\ di re alla 3.\ dell'alf. di donna nera. & Se la dama pigliala dama, e dà scacco.\\
+Re alla 2.\ del suo alf.\ e dice scacco di scoperta. & Si copre con la dama. \\
+\end{tabular}}
+
+Il Bianco piglia con l'alfiere e dà scacco matto.
+
+Se il Nero non piglia la dama, ma la giuoca alla sua
+quarta, e dà scacco. Il Bianco va sempre col re
+alla seconda del suo alfiere, e dopo farà matto, o,
+con l'alfiere, o con la dama.
+
+Se poi il Nero giuoca il rocco in casa dell'alfiere
+della sua donna, o del cavallo de suo re. Il Bianco
+re alla seconda dell'alfiere, e dice scacco di
+scoperta. Il Nero piglia l'alfiere. Il Bianco dà
+scacco matto con la dama alla quarta del rocco.
+
+Se il Nero non piglia l'alfiere, ma si copre con la
+dama. Il Bianco la piglia con l'alfiere, e dà matto.
+
+
+\subsubsection{TRATTO XVII.}
+\hfill\textit{\footnotesize Bellissimo.}
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ {\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}.\\
+
+Re alla seconda di rocco
+di dama contr. con tre
+pedine alle 3.\ di cav.\ di
+donna, di dama, e di
+alfiere di re nero. &Re in casa di sua dama.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco di re in sua casa. &Pedina di rocco di re alla terza.\\
+Cavallo avanti il rocco.&\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla quinta di detto rocco.&\\
+Alfiere alla terza di rocco di dama.&\\
+\end{tabular}
+}
+
+
+
+Il Bianco dà matto di tre pedine successivamente in
+quindici tratti.
+
+\vspace{6pt}{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla 2. d'alf.\ di re. &Re in casa dell'alfiere.\\
+Cavallo alla terza d'alf. &Re in casa di sua dama.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cavallo alla quarta di re nero. &Re come sopra.\\
+ Rocco alla sua terza. &Re torna come sopra.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama dà scacco alla seconda di re nero.&Re come sopra.\\
+Cav.\ alla 4.\ dell'alfiere del suo re.&Avanza la pedina.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla 5.\ di suo re.&Avanza la pedina.\\
+Rocco alla 3.\ del suo alf.&Avanza la pedina.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco alla 3.\ del suo re.&La pedina.\\
+Rocco alla 3.\ del suo alf.&Fa dama.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco dà scacco. &Si copre con la dama.\\
+Dama dà scacco alla seconda dell'alfiere. &La prende.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dà scacco con ped.\ di cavallo.& Re in casadidama.\\
+Prende la dama collapedina, e dà scacco.& Re In sua casa.\\
+\end{tabular}}
+Il Bianco dà scacco matto colla pedina dell'alfiere.
+
+\subsubsection{TRATTO XVIII.}
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ {\bfseries\scshape Nero}. &{\bfseries\scshape Bianco}.\\
+Re alla seconda di alfiere di sua dama. & Re alla seconda di rocco di regina nera.\\
+Cavallo in casa di dama bianca. & Pedina di roc.\ alla sesta.\\
+& Pedina di cavallo di dama alla terza.\\
+\end{tabular}}
+
+Il Nero dà scacco matto di cavallo in quattro mosse.
+
+\vspace{6pt}{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cavallo alla 3.\ dell'alf. & Spinge 1a pedina.\\
+Dà scacco col cavallo. & Re in casa del rocco.\\
+Ritira il re in casa dell'alfiere. & Spinge la pedina del rocco.\\
+\end{tabular}}
+
+Il cavallo nero dà scacco matto alla seconda dell'alfiere.
+
+Se il Bianco giuoca prima la ped.\ del cav.\ di donna.
+
+\vspace{6pt}{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla 3.\ dell'alf. & Avanza detta pedina,
+viene come sopra: ma
+se va in cantone col re.\\
+Cav.\ alla 4.\ sua. & Spinge la ped.\ del rocco.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla 3.\ dell'alfiere contr. & Avanza la pedina.\\
+Cav.\ alla 4.\ di sua dama. & Dà scacco colla sua ped.\\
+\end{tabular}}
+
+Il Nero la prende col cavallo, e dà scacco matto.
+
+\subsubsection{TRATTO XIX.}
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}.& {\bfseries\scshape Nero}.\\
+
+Re in casa dell'alf.\ della dama contraria. & Re in casa di rocco di dama,\\
+Due rocchi alla loro 4. & con tre pedine avanti,\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla 4.\ del suo alf. & E tre altre avanti al re bianco.\\
+Due alf.\ alle 3.\ di cav.\ e di rocco di re.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Due ped.\ di da.\ e di cav.\ di dama alle seconde.\\
+\end{tabular}}
+
+Il Bianco dà matto di pedina in dieci mosse.
+
+\vspace{6pt}{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco alla 4.\ del suo re. &Piglia con pedina.\\
+Alf.\ alla 2.\ di cav.\ nero. &Promove la pedina.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+L'Alf.\ alla terza di re.& Lo piglia.\\
+Re alla 2.\ dell'alfiere. & Promove la pedina.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla quarta dell'alfiere di dama nera. & Promove la pedina.\\
+Rocco alla sua terza. & Ivi promove la pedina.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+La sua pedina quanto la va. & L'altra.\\
+La sua. & L'altra.\\
+Donna in casa dell'alf.\ del re neroda scacco. & Re avanti.
+ \end{tabular}
+}
+
+Il Bianco dà scacco matto di pedina alla sesta.
+
+\subsubsection{TRATTO XX.}
+\hfill\textit{\footnotesize Ingegnoso.}
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ {\bfseries\scshape Bianco}. &{\bfseries\scshape Nero}. \\
+Re alla 2. dell'alfiere di donna nera. &Re in casa di rocco di sua dama.\\
+Rocco alla seconda di cavallo ivi. & Pedina alla quarta di re bianco.
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Due pedine alle terze di detti dietro. \\
+Rocco alla 2.\ del suo re. \\
+\end{tabular}}
+
+Il Bianco senza movere il re dà matto di pedina in
+sei mosse.
+
+\vspace{6pt}{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco alla 2.\ dell'alfiere del suo re. & Avanza la pedina. \\
+Rocco alla 4.\ dell'alf. & Avanza la pedina. \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco alla 3.\ dell'alf. & Fa Dama.\\
+Rocco dà scacco alla sua terza. & Si copre con la dama.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco posto alla 2.\ di
+cav.\ dà scacco alla 2.\ di
+rocco nero. & Prende colla dama.\\
+\end{tabular}}
+
+Il Bianco dà scacco matto di pedina.
+
+\subsubsection{TRATTO XXI.}
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Nero}. & {\bfseries\scshape Bianco}. \\
+Rocco alla terza dell'alfiere della dama contr. & Re in casa del rocea del la sua dama.\\
+Rocco alla terza del cavallo della dama contr.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cavallo alla quarta della dama contraria.\\
+Alfiere alla 4.\ del cavallo della dama contr.\\
+Re in sua casa.
+\end{tabular}}
+
+Si dee dare dal Nero tre volte scacco, è l'ultima, matto.
+
+Nero. Rocco dà scacco in casa dell'alfiere, e poi
+nella seconda, poi matto coll'alfiere alla terza dell'alfiere contrario.
+
+\subsubsection{TRATTO XXII.}
+
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Nero.}& {\bfseries\scshape Bianco}.\\
+Rocco alla quarta dell'alfiere del suo re. & Re alla sua quarta.\\
+Rocco alla 4.\ della a Cav.\ alla terza dell'al- fiere del re contrario.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla terza della dama contraria.\\
+Re in sua casa.\\
+\end{tabular}}
+
+Senza dar scacco in tre mosse darlo matto nella quarta
+
+\vspace{6pt}{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cavallo del Re alla casa
+del re contrario. &Re alla sua terza.\\
+
+“Cavallo della dama alla
+casa dell'alfiere della
+dama contraria. &Re alla sua quarta.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+
+Lo ftesso cav.\ alla z. del
+cav. della dam.\ contr.&Re alla sua terza.\\
+\end{tabular}}
+
+Nero. Scacco col rocco della dama alla quarta del
+suo re, ed è matto.
+
+\subsubsection{TRATTO XXIII.}
+
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}. {\bfseries\scshape Nero}.
+Pedina d'alfiere di re in sua casa con avanti cav.\ due roc.\ e alla 6. il re.& Re alla casa del suo alfiere, tutti in linea.
+\end{tabular}
+}
+
+Il Bianco dà scacco matto in sei mosse con la pedina.
+
+\vspace{6pt}{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco alla 4.\ dell'alf.\ va alla quarta del suo re. & Re alla casa del cavallo.\\
+Scacco col sopradet.\ roc.\ nella casa del re contr. & Re nella seconda del suo rocco.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Scacco col cavallo alla quarta del cav.\ contr. &Re alla terza del suo rocco.\\
+Il sudetto rocco alla terza del suo re. &Re alla quarta del suo rocco.\\
+Il detto rocco dà scacco alla sua terza. &Il re va per forza a prendersi matto di pedina alla 4.\ del cav.\ contr.\\
+\end{tabular}
+}
+
+\subsubsection{TRATTO XXIV.}
+
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}.&{\bfseries\scshape Nero}.\\
+Re alla casa del suo roc.&Re alla casa del rocco della dama. \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco del re alla casa dell'alfiere del suo re.&Ambi i rocchi nelle case reali. \\
+Rocco della dama in sua casa.&Alfiere del re in sua casa.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alfiere della dama alla seconda del roc.\ del re. Alf.\ del re alla 2.\ del re.&Alfiere della dama alla seconda del suo cavallo.\\
+Cavallo alla terza dell'alfiere della dama.&Cavallo alla seconda di dam.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Pedine del cavallo, e dell'alfiere del re in loro casa. &Altro cavallo alla quarta del cavallo del re contrario. \\
+Pedina del cavallo della dama alla quarta del cav.\ contrario.&Dama alla 4.\ del rocco del suo re.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Pedina del'alfiere della dama alla quarta dell'alf.\ della dam.\ contr.&Pedine dei due rocchi, e del cavallo, e dell'alfiere del re alle loro case.\\
+Ped.\ del re alla 4.\ del re.&
+\end{tabular}
+}
+
+
+Pare, che il Nero in questa disposizione di giuoco,
+e per numero de i pezzi, e per qualità di essi sia
+in istato di vincere, e pure il Nero avrà per
+forza scacco matto al più in sei mosse.
+
+
+\vspace{6pt}{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Il Rocco prende la ped. contr., e dà scacco. & Il re prende il rocco.\\
+Ped.\ del cav.\ della dam.\ s'avanza alla terza del cav.\ nero, e dà scacco. & Re torna nella casa del rocco.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dà scacco col rocco alla casa del roc.\ della dam. & Il re si copre coll'alfiere alla terza del rocco.\\
+Lo prende col rocco e dà scacco. & Re alla seconda del cavallo.\\
+Rocco alla 2.\ del rocco contrario, e dà scacco. & Re alla casa dell'alfiere.
+\end{tabular}
+}
+Bianco dà matto di pedina, e se va alla terza dell'alfiere, avrà matto col rocco alla seconda di detto alfiere.
+
+\subsubsection{TRATTO XXV.}
+{\small
+ \noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ {\bfseries\scshape Nero}.& {\bfseries\scshape Bianco}.\\
+Re alla casa dell'alfiere della dama contraria; Roc.\ di dama nella sua 3.; Ped.\ del cavallo della dama in sua casa. & Re nella casa del rocco della dama, e quattro pedine avanti, e quattroavanti alla casa del suo alfiere. \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla 2.\ del suo alf.\\
+Cavallo alla casa della sua dama.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla casa del suo re.\\
+Alfiere alla 2.\ del rocco del re \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ alla terza di detto.\\
+Rocco del re, alla sua 4.
+\end{tabular}
+}
+
+Ciò essendo disposto, il Nero darà scacco matto con
+la pedina in tredici mosse.
+
+
+
+\vspace{6pt}{\small
+ \noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav., che sta alla casa del re, si pone alla terza della dama in presa dell'ultima pedina. & Lo prende.\\
+Promuove la dama nella casa lasciata dalla pedina. &Avanza la pedina.
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Mette il rocco, che sta alla sua quarta in presa della pedina. &Lo prende. \\
+Alf.\ alla 2.\ del suo cavallo, acciocché il Bianco non scopra. &Avanza la pedina, che prese il rocco.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ alla terza della dama contraria. &Lo prende con la ped.\\
+Re alla 2.\ dell'alfiere. &Ped, alla 4.\ del re.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla quarta dell'alfiere contrario. &Ped.\ alla 5.\ del re.\\
+Ritira il rocco alla sua seconda. &Avanza la pedina prossima.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Avanzala sua. &Avanza l'altra.\\
+Avanza la sua. &L'altra.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+La sua. &L'altra. \\
+Dama nella prima linea dà scacco. &Re alla seconda del rocco.\\
+\end{tabular}
+}
+
+Il Nero dà scacco matto colla sua pedina.
+
+\subsubsection{TRATTO XXVI.}
+
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Nero}. & {\bfseries\scshape Bianco}. \\
+Re alla sua terza. Pedina avanti alla 4. &Re alla casa dell'alfiere del re nero.\\
+Dam.\ alla 4.\ di suo roc. &Pedina alla 4.\ di suo re.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco di dam.\ alia sua 2. &Due rocchi uno in casa di dama,\\
+Rocco di re alla terza di cavailo di re. &L'altro in casa d'alf.\ di re.\\
+Cav alla 3.\ di rocco di re.& Cav di re alla 3.\ di rocco di re.\\
+\end{tabular}
+}
+
+Il bianco dà matto in tre mosse Giuoca prima il Bianco.
+
+\vspace{6pt}{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+&Cav.\ Scacco alla sua 5.\\
+Lo prende col rocco. &Rocco, che sta in casa d'alf. dà scacco. \\
+Lo prende col re. &Dà matto coll'altro rocco alla 3.\ di dama nera.
+\end{tabular}
+}
+
+
+\subsubsection{TRATTO XXVII.}
+
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}. \\
+Re alla terza della dama contr. con quattro&Re In casa della sua dam. \\
+pedine bianche nelle 4 case bianche d'intorno. &Alf.\ in casa del rocco del re contr. \\
+Cavallo alla 3.\ del rocco del re contr. &Roc della dam alla sua 2.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cavallo alla 4.\ del caval lo del re dama contr. &Rocco del re in casa del suo alf.\\
+&Ped.\ del cav.\ della dama in sua casa. \\
+&Ped.\ del rocco deila dama alla terza del rocco.\\
+\end{tabular}}
+
+Il bianco dà scacco matto in cinque mosse con la pedina, che sta in presa dell'alfiere.
+
+\vspace{6pt}{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla 3.\ del rocco dà scacco alla 2.\ dell'alf.&Lo piglia col rocco.\\
+Avanza la pedina posta alla 3.\ del re, e dà scac.&La piglia col rocco.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ dà scacco alla terza del re.&Prende col rocco.\\
+\end{tabular}}
+
+Prende il rocco colla pedina con cui poi dà scacco matto.
+
+
+\section{CAPO SETTIMO.}
+
+\subsection{Maniere di giuocare.}
+
+Ho scelto alcune poche maniere di giuocare,
+pajono a me sufficienti per introdurre un bel
+talento a prendere il buon gusto di questo ingegnosissimo
+Giuoco, perché, come dice Plutarco in
+Mor.\ ad un bravo ingegno: \textit{Satis est accensio, velut
+incitamentum in materia, quo vis inveniendi, et
+cupiditas veritatis incitetur.}
+
+\subsubsection{Prima maniera.}
+{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}. &{\bfseries\scshape Nero}.\\
+Ped.\ del re due case.&L'istesso. \\
+Cav.\ del re alla 3.\ d'alf.&Cav.\ di dam.\ alla 3.\ d alf.\\
+Alf.\ di re alla 4.\ d'alfiere di dama.&L'istesso.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ d'alf. di dama una casa. &Cavallo di re alla terza d'alfiere.\\
+Ped.\ di dama due case.&Ped.\ di re laprende. \\
+Ped.\ prende la pedina.&Alfiere dà scacco.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cavallo copre alla terza d'alfiere. &Cav.\ prende la pedina del re.\\
+Re salta. &Cavallo di re prende il cavallo di dama.\\
+\multicolumn{2}{@{}c}{\markerA}\\
+Pedina prende il cavallo &Alfiere di re prende la ped.\ alla 3.\ d'alf.\ di da.\ contr.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla 3.\ di suo cav. &Alfiere prende il rocco.\\
+Alf.\ prende la ped.\ d'alf.\ di re, e dà scacco. &Re in casa d'alfiere.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ di dam.\ alla quarta di cav.\ di re contrario. &Cav.\ alla seconda di suo re.\\
+\multicolumn{2}{@{}c}{\markerB}\\
+Cavallo alla quarta di re contrario. &Alf.\ prende la ped.\ alla 4.\ di dama contraria.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ di re alla 3.\ di cavallo di re contrario-.&Ped.\ di dama due case. \\
+Dama dà scacco alla terza d'alf.\ di suo re.&Alfiere copre. \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alfiere prende l'alfiere. &Alfiere prende il caval.\\
+Alf.\ alla 3.\ di re contr.\ e dà scacco di scoperta. &Alfiere copre alla sua terza. \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alfiere prende l'alfiere &Ped.\ prende l'alfiere. \\
+Dam.\ prende terza dell'alfiere contrario, e dà scacco. &Re in sua casa.\\
+\end{tabular}
+}
+
+Dama dà scacco matto alla seconda d'alfiere di re
+contrario.
+
+dopo l'{\markerB}
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla 4 di recontr. & Ped di dama due case.\\
+Dama alla terza d'alfiere di suo re. & Alf.\ di dama alla 4 d'alf.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ alla terza di re contrario & Ped.di dam- di re una casa\\
+Alf.\ di da.\ dà scacco. alla 3.\ di rocco di re contr. & Re in sua casa \\
+\end{tabular}
+}
+
+Alfiere di re dà scacco matto alla 2.\ d'alfiere di re
+contrario.
+
+Dopo la {\markerA}
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+La ped.\ prende il cav. &Alfiere prende la ped.\\
+Dama alla 3.\ di suo cav.& Alfiere prende il rocco.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ prende la ped d'alf. e dà scacco.&Re in casa d'alfiere.\\
+Alf.\ di dama alla 4.\ di cav.\ contr. & Cav.\ prende la pedina alla quarta di dama.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama dà scacco alla terza di rocco. & Re prende l'alfiere\\
+Alfiere prende la dama. & Rocco prende l'alfiere.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco prende l'alfiere. Cav.\ alla seconda d'alfiere di dama contraria. \\
+Dama dà scacco alla 3.\ di cav. & Re in casa d'alfiere.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama prende il cavallo, e vincerà\\
+\end{tabular}}
+
+Ancora dopo \markerA
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dam.\ alla 3.\ di suo cav.&Alf.\ prende la pedina alla quarta di dama.\\
+Alf.\ prende la pedina, e dà scacco.&Re in casa d'alfiere.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ di dam.\ alla 4.\ di cavallo di re contrario.&Alfiere copre alla sua terza. \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Roc.\ di da. in casa di re.&Cav.\ alla seconda di re.\\
+\multicolumn{2}{@{}c}{\markerC}\\
+Alf.\ di re alla 4.\ di rocco contrario.&Cav.\ alla terza di cavallo di re.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ alla quarta di re contrario.&Cav.\ prende il cavallo.\\
+Rocco prende il caval.&Ped.\ di cav.\ una casa.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alfiere di dama dà scacco alla terza di rocco.&Alfiere copre.\\
+Rocco dà scacco alla 4.\ d'alfiere.&Pedina prende il rocco.\\
+\end{tabular}
+}
+
+
+Dama dà scacco matto alla seconda d'alfiere di re
+contrario.
+
+Dopo \markerC{}
+
+
+
+{\small
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alfiere di re alla quarta di rocco contrario.&Ped.\ di dama due case.\\
+Rocco prende il cavallo contrario. &Re prende ilrocco.\\
+\multicolumn{2}{@{}c}{\markerD}\\
+Rocco dà scacco in casa di re.&Re in casa d'alfiere.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama dà scacco alla 4.\ di suo cavallo.&Re In casa di cavallo.\\
+\end{tabular}
+}
+
+
+Rocco dà scacco in casa di re contrario, prenderà
+la dama contraria, e guadagnerà.
+
+dopo \markerD
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco dà scacco in casa di re. & Re alla seconda di dama.\\
+\end{tabular}}
+
+Dama prende la pedina di dama, e dà scacco matto.
+
+\subsubsection{Altra maniera di giuocare.}
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}.&{\bfseries\scshape Nero}.\\
+Ped.\ del re due case.&L'istesso.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Gav.\ del re alla terza d'alfiere.&Cav.\ di dama alla terza d'alfiere.\\
+Alfiere di re alla quarta d'alfiere di dama.&Littesso.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ d'alfiere di dama una casa. &Daina alla seconda di re.\\
+Re salta. &Ped.\ di dama una casa.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ di dama due case. &Alf.\ di re alla 3.\ di cav-\\
+Alf.\ di dama alla 4.\ di cavallo di re contrario.&Ped.\ d'alfiere una casa.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Detto alla quarta di rocco. &Ped.\ di cavallo di re due case.\\
+La prende col cavallo. &Ped.\ prende il cavallo.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama dà scacco alla 4.\ di rocco contrario.&Re alla seconda di sua dama.\\
+\multicolumn{2}{@{}c}{\markerA}\\
+Alf.\ prende la pedina. &Dam alla seconda di cav.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ del re dà scacco. alla terza di re contrario. &Re lo prende.\\
+Dama dà scacco alla casa del re contrario.&Cav.\ lo copre.\\
+\end{tabular}}
+
+Pedina di dama dà scacco matto.
+
+Dopo \markerA, se si difende così.
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ prende la pedina. & Dama alla casa d'alf.\\
+\multicolumn{2}{@{}c}{\markerB}\\
+Alf.\ di re alla seconda d'alf.\ di re contrario. & Pedina di re prende la pedina.\\
+\end{tabular}}
+
+Dama dà scacco matto alla quarta di cavallo di suo re.
+
+Dopo \markerB
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ di re alla 2.\ d'alfiere di re contrario. &Cavallo di dama, alla seconda di re.\\
+\multicolumn{2}{@{}c}{\markerC}\\
+Ped.\ prende la pedina.&Ped.\ prende la pedina.\\
+Rocco dà scacco. &Re alla terza d'alfiere di sua dama.\\
+Alf.\ di re dà scacco alla casa di re contrario.&Re alla quarta d'alfiere.\\
+Alf.\ di dama dà scacco alla terza di suo re.&Re alla quarta d'alfiere di dama contraria. \\
+\end{tabular}}
+
+Pedina di cavallo dà scacco matto.
+
+Dopo \markerC
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Pedina prende la ped.&Pedina di rocco una casa.\\
+Alf.\ di dama alla quarta di rocco di suo re.&Rocco alla sua seconda.\\
+\multicolumn{2}{@{}c}{\markerD}\\
+Ped.\ di dama dà scacco. & Re alla terza dell'alfiere di dama\\
+\end{tabular}}
+
+Alfiere di re dà scacco matto alla casa di re contr.
+
+Dopo \markerD
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped. \&c. Re in casa di sua dama.\\
+Ped di re una casa. &Ped.\ di dama una casa.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla terza dell'alfiere di suo re. & Ped.\ d'alfiere di dama una casa.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Pedina d'alf.\ di dama una casa. & Re alla seconda d'alfiere di sua dama.\\
+\multicolumn{2}{@{}c}{\markerB}\\
+Dam.\ alla 3.\ di suo roc. & Re alla casa di cavallo.\\
+Alf.\ di re prende il cav. & Dama prende l'alfiere\\
+\end{tabular}}
+
+Alfiere prende il cavallo, e guadagnerà.
+
+
+Dopo \markerB{} se si difende cosi.
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla terza di suo rocco. & Ped.\ d'alfiere una casa. \\
+Pedina prende la pedina di dama. & Cavallo di dama prende la pedina.\\
+Dama alla sua terza. & Rocco prende l'alfiere.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama prende il cavallo alla 4.\ di dama contr.& Rocco alla quarta d'alfiere di re contrario\\
+Pedina una casa alla 2.\ di re contrario. & Cav.\ prende la ped.\ alla seconda del suo re.\\
+\end{tabular}}
+
+Dama dà scacco matto alla terza di dama contraria.
+
+\subsubsection{Alcune maniere di giuocare il GAMBITTO.}
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ {\bfseries\scshape Bianco}. &{\bfseries\scshape Nero}.\\
+ Ped.\ del re 2 case.& L'istesso.\\
+ Ped.\ d'alf.\ di re 2 case. &La prende.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ di re alla 3 d'alf. & Ped di cav.\ 2 case. \\
+\multicolumn{2}{@{}c}{\markerA}\\
+Alf.\ di re alla 4.\ d'alf. di Dam.& Ped di cav di re una casa. \\
+ \end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ di re alla 4 di re contr. & Dam.\ dà scacco alla 4 di roc.\ di re contr. \\
+Re alla casa del suo alf. & Cav.\ di re alla 3 di suo rocco.\\
+ \end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ di dam.\ 2 case. &Ped.\ di dam.\ una casa. \\
+Cav.\ di re alla 3 di sua dam. &Ped.\ di re una casa. \\
+\multicolumn{2}{@{}c}{\markerB}\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ di cav.\ 1 casa.&Dam.\ dà scac. alla 3 di rocco.\\
+Re alla 2.\ di suo alf. &Dam.\ dà scac. alla-2 di cavallo. \\
+ \end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Re alla sua terza. &Cav.\ di re in sua casa.\\
+Cav.\ di re alla 4 dell'alfiere di suo re. &Alfiere di re alla terza del rocco suo.\\
+ \end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ di re in sua casa. &Dam.\ pren. il rocco\\
+Alf.\ di re dà scac. alla 4 di cav.\ di dam.\ contr. &Ped.\ d'alfiere copre.\\
+ \end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Aif.\ la prende, e dà scac. &Prende l'alf.\ con la ped.\\
+Dam.\ prende la dama. &
+\end{tabular}}
+
+Dopo \markerB{} se il Nero si difende cosi.
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ di cav.\ 1.casa. &Dama dà scac.\ alla 3.\ di rocco. \\
+Re in sua casa.&Dam.\ alla 2.\ di cav contr.\\
+Cav alla 2.\ d'alf.\ di suo re.&Cav. di dam.\ alla 3 d'alf.\\
+\end{tabular}}
+
+Alfiere di re in sua casa, e vincerà.
+
+Dopo \markerB{} se il Nero si difende cosi.
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ di re alla 4.\ d'alfiere di sua dam.&Ped.\ di cav di re una casa. \\
+Cav.\ di re alla 4 di re. contr. &Dam.\ dà scac.\ al 4 di roc.\ contr.\\
+ \end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Re in casa d'alfiere. &Cav.\ di re alla 3 di suo rocco.\\
+Ped.\ di dam.\ 2 case. &Ped.\ di dam.\ una casa.\\
+ \end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ di re alla 3 di sua dama.&Pedina di re una casa.\\
+Ped.\ di cav.\ di re una casa. &Dama dà scacco alla terza di rocco contrario.\\
+ \end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Re in sua casa. &Dama al 4 di rocco di suo re. :\\
+ \end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ di re alla 4.\ d'alfiere di suo Re. &Dama dà scacco alla 4 di suo rocco. :\\
+\multicolumn{2}{@{}c}{\markerC}\\
+Alfiere di dama copre &Dama alla 3 di suo cav.\\
+ \end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ di re alla 4.\ di dam.\ contr. &Dam.\ pr.\ la ped.\ di dama contr.\\
+Alfiere di re alla3 di sua dama. & Dama alla 4 del suo alfiere.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alfiere di dama alla terza di suo re. &Dama dà scacco alla 4 di suo rocco.\\
+ Pedina di cavallo copre. &Dama alla 4 di rocco di dam.\ contr.\\
+ \end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ di re dà scac. alla quarta di cavallo di dama contr. &Dama lo prende.\\
+Cav di re pr.\ la ped.\ dell'alf.\ di dam.\ e dà scac. &Re in casa di sua dama.\\
+\end{tabular}}
+
+Il cavallo prende la dama.
+
+Dopo * e se così.
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ di dam.\ copre.&Dam.\ a 4 di roc di dam.\ bianca\\
+\multicolumn{2}{@{}c}{\markerD}\\
+Cav.\ di dam.\ alla. terza di rocco.&Pedina d'alf.\ di dam.\ 1 casa.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ di re alla 4 casa di dam.\ contr. &Ped.\ di cav.\ di dam.\ 2 case.\\
+Ped.\ di. cav- di dam.\ 1.\ casa. &Dam.\ pr.\ il cav.\ di dam.\ contr.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ di dam.\ alla 4 di cav.\ suo. &Dama alla 2.\ di cav.\ di dam.\ contr.\\
+Rocco di dama in 1.\ di cav.&Dam.\ prende la ped.\ del rocco.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Rocco in sua casa.&Dama in 2.\ di cav.\\
+Alf.\ di dam.\ alla sua 3 &Dam.\ pr.\ il rocco.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama pr.\ la dama. &Ped.\ d'alf. pr.\ il cav.\\
+Alfiere p.\ la ped. &Cavallo di dam.\ alla 2.\ di sua dama.\\
+\end{tabular}}
+
+Alfiere di re pr.\ il rocco di dama.
+
+Dopo \markerD, e se cosi.
+
+{\small\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav di dam alla 3 di roc. & Da alla sua 2.\\
+Cav.\ di re alla q di dam.\ contr. & Alf.\ di re alla 2.\ del cav.\ di suo re.\\
+Alf.\ di dam.\ pren. il cav. di re. &Alf.\ pren. il cav di dam.\\
+Gav.\ di re dà scac. alla 3 dell'alf. di re nero. &Re in casa dell'alf-\\
+\end{tabular}}
+
+Cav.\ prende la dama.
+
+\subsubsection{Altra maniera di giuocare il
+GAMBITTO.}
+
+{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ {\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}.\\
+Ped.\ del re 2 case.&L'istesso.\\
+Ped.\ d'alf. di re 2 case.&Ped.\ del re prende.\\
+Cav.\ del re alla 3 d'alf.&Ped, di cav.\ di re 2 case.\\
+Alf.\ di re alla 4 d'alf. di sua dam. &Alf.\ di re alla seconda di cav. \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ di dam.\ due case.&Ped.\ di dam.\ una casa.\\
+Cav.\ di dam.\ alla 3 dell'alfiere.&Pedina d'alf.\ di dama una casa. \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped di roc.\ di re 2 case.&Ped.\ di roc.\ di re 1 casa.\\
+Ped.\ prende la ped.&Ped.\ prende la ped.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Il roc.\ prend il rocco.&Alf.\ dere prende il roc.\\
+Cav del re alla 4 di re N.&Ped.\ di dam.\ pren il cav.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dam.\ alla 4 di roc.\ di re nero.&Dama alla terza d'alf. di re suo.\\
+\multicolumn{2}{@{}c}{\markerC} \\
+Ped.\ di dam.\ prende la pedina. &Dama alla seconda di cav.\ di suo re.\ \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ alla 3 di re nero.&Cav di re alla 3 di suo alf.\\
+Ped prende la ped d'alf. e dà scacco.&Re in casa dell'alfiere.\\
+Alfiere di dama prende la ped.\ di re nero.&Cav.\ di re prende la dama.\\
+\end{tabular}
+}
+
+Alfiere di dama alla terza di dama contraria, e dà
+scacco matto.
+
+dopo \markerC{} se 'l nero si difende così
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ prende la ped.\ d'alfiere, e dà scacco.&Re alla sua seconda.\\
+Dam.\ alla 2.\ del suo re.&Alf.\ di dam.\ alla 3.\ del suo re.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alfiere di re prende l'alfiere di dam.\ contr.&Re prende l'alfiere. \\
+Dama dà scacco alla 4 del suo alfiere.&Re alla sua seconda.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama alla quarta di suo cavallo dà scacco.&Re prende la pedina.\\
+Dam prende la pedina di cavallo dà scacco.&Cavallo di dama copre.\\
+Dama prende il rocco.&\\
+\end{tabular}
+}
+
+
+Dopo \markerC, se il nero si difende così.
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Pedina prende la pedina d'alfiere, e dà scacco.& Re in casa di dama. \\
+Dam pren la ped di cav.&Dama prende la dama.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ fa dam.\ e dà scacco.&Re alla 2.\ di dama.\\
+Dama prende l'alfiere del re.&Dama prende la pedina del cavallo del re.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama prende il cavallo del re.&Pedina una casa alla terza d'alf. di re bianco.\\
+Dam dà scac.\ alla 2.\ d'alf. &Re alla 3 di sua dama.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ di dam.\ dà scac.\ alla 4dell'alf. di suo re. &Re alla 4 d'alf. di sua dama. \\
+\multicolumn{2}{@{}c}{\markerC}\\
+Il cav dà scac. alla quarta di rocco. & Re alla quarta di dama bianca.\\
+Pedina d'alf.\ dà scacco.& Re prende la ped.\ di re.
+\end{tabular}
+}
+
+Cav.\ dà scacco matto.
+
+Dopo \markerC{} o pure così
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ dà scac.\ alla quarta di rocco.& Re alla quarta di cavallo di dama.\\
+Pedina d'alfiere dà scacco. & Re prende la pedina di re. \\
+\end{tabular}
+}
+Cavallo dà scacco matto alla 4 d'alf. di dama nera.
+
+Dopo CROSS se il nero e difende così.
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ dà scac.\ alla 2.\ di dam.& Re prende il cavallo. \\
+Ped.\ di cav di dama dà scac. & Re alla terza di rocco di dama bianca.\\
+Dama dà scacco alla seconda di re nero. & Re alla seconda di cavallo di dama bianca.\\
+Dama dà scacco alla 4.\ di re nero. & Re prende la pedina d'alfiere.\\
+\end{tabular}
+}
+
+Rocco dà scacco matto.
+
+
+Dopo *', se si difende cosi.
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama dà scacco alla 4 di re nero. & Re alla terza di rocco di.dama bianca.\\
+Alf.\ di dam.\ dà scac. in sua casa. & Re alla quarta di cav.\ di dama contraria. \\
+\end{tabular}
+}
+La pedina dell'alf. dà scacco matto.
+
+
+
+\subsubsection{Altra maniera di giuocare.}
+
+{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}.& {\bfseries\scshape Nero}.\\
+Ped.\ del re due case. & Il medesimo.\\
+Ped.\ dell'alfiere del re due case. &Pedina prende la pedina contraria.\\
+Cavallo del re alla terza casa del suo alfiere. &Pedina del cavallo del re due case. \\
+\end{tabular}
+
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Pedina del rocco del re due case. &Ped.\ del cav.\ del re alla 4.\ del cav.\ del re contr.\\
+Cav.\ alla 4.\ del re contrario. &Ped.\ del roc.\ del re alla sua 4\\
+Alf.\ del re alla 4.\ dell'alfiere della dama.&Cav. del re alla 3.\ case del rocco. \\
+\end{tabular}
+
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Pedina della dama alla quarta.&Alf.\ del re alla seconda j casa del suo re.\\
+Alf.\ della dama prende la ped.\ contr.\ alla 4.\ casa dell'alf.\ del suo re. &Alf.\ del re prende la ped.\ contraria, alla quarta casa del rocco del re, contr.\ e gli dà scacco. \\
+Pedina del cavallo del re copre. & Alfiere del re alla quarta casa del suo cavallo.\\
+\end{tabular}
+
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Roc.\ del re piglia la ped contraria alla 4.\ casa del del rocco contrario.&Alfiere del re prendes l'alfiere contrario:\\
+Ped.\ prende l'alf contr alla 4.\ casa dell'alfiere del suo re. &Pedina dela: dama una casa.\\
+Cav del re prende la pedina alla quarta casa.&Alf.\ della dama piglia il cav.\ contr.\\
+\end{tabular}
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Dama piglia l'alfiere. &Cavallo piglia la dama.\\
+Rocco piglia ia il rocco, e dà scacco. &Re alla sua seconda~ \\
+Rocco piglia la dama. &Re piglia: il rocco. \\
+\end{tabular}
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alf.\ piglia la pedina, alla 2.\ casa dell'alf.\ del re contrario &Cavallo della dama alla terza case del suoi alfiere. \\
+Pedina dell'alfiere della dama una casa. &Re alla fa Seconda \\
+Alfiere alla terza casa del cav. della sua dama.&Cavallo, del Re alla terza casa del re contrario\\
+Re alla seconda del suo alfiere. &Cav.\ ‘del Re dà scacco ‘alla 4casa del cav.\ det, re contrario.\\
+\end{tabular}
+}
+Re alla terza casa del suo alfiere, e guadagnerà
+
+
+
+
+
+\subsubsection{Altra maniera di giuocare.}
+
+\vspace{6pt}{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+{\bfseries\scshape Bianco}.& {\bfseries\scshape Nero}.\\
+Pedina del re due case. & Il medesimo.\\
+Pedina dell'alfiere del re due case. & Pedina del Re prende la ped.\ dell'alfiere del re contrario. \\
+\end{tabular}
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ del re alla terza casa del suo alfiere. & Pedina del rocco del re una casa.\\
+Alf.\ del re alla 4.\ casa dell'alfiere della sua dama. & Pedina del cavallo del re due case. \\
+Pedina del rocco del re due case. & Pedina dell'alfiere del re una casa.\\
+\end{tabular}
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ del re pren. la ped.\ del cav.\ del re contrar. & Dama alla seconda casa del suo re.\\
+Dama dà scacco alla 4.\ casa del roc.\ del re contr. & Re alla casa della sua dama\\
+Cav.\ dà scacco alla 2.\ casa dell'alf.\ del re contrar.& Re alle sua casa.\\
+\end{tabular}
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ del re pren. il roc.\ del re contr.\ e dà scacco della sua dama. & Re alla casa della sua dama\\
+\end{tabular}
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cav.\ dà scac.\ alla 2.\ casa dell'alf.\ del re contr. & Re alle sua casa.\\
+Cav.\ prende la ped.\ del rocco del re contr. e dà scacco alla sua dama. & Re alla casa della sua dama
+\end{tabular}
+}
+Cavallo prende il cavallo del re contrario, e guadagnerà.
+
+\subsubsection{Altra maniera di giuocare.}
+
+{\small
+\noindent
+\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+ {\bfseries\scshape Bianco}. & {\bfseries\scshape Nero}.\\
+ Pedina del re due case.& Il medesimo\\
+Pedina dell'alfiere del re due case. & Pedina del re piglia la pedina dell'alfiere del re contrario.\\
+Cav.\ del re alla terza casa del suo alfiere. &Pedina del rocco del re, una casa.\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Alfiere del re alla quarta casa dell'alfiere della sua dama. & Pedina del cavallo del re, due case.\\
+Pedina del rocco del re, due case. & Pedina del cavallo del re, una casa. \\
+Cav.\ del re alla quarta casa del re contrario. & Rocco del re alle sue due case. \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Ped.\ della dam.\ 2 case.& Ped.\ della dam.\ 1 casa. \\
+Cav.\ del re alla terza casa della sua dama & Pedina 1 casa alla 3.\ casa dell'alf.\ del re contr.\\
+Pedina del cavallo del re, una casa. & Dama alla seconda casa del suo re.\ \\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}p{3.84cm}p{3.84cm}}
+Cavallo del re alla quarta casa del suo alfiere. & Dama piglia la ped.\ del re contr. e dà scacco. \\
+Re alla seconda casa del suo alfiere. & Dama alla terza casa del suo alfiere. \\
+Dama alla sua terza casa. & Rocco alla seconda casa del cavallo del suo re. \\
+\end{tabular}
+}
+
+L'alfiere del re alla quarta casa del cavallo del re
+contrario, sopra la dama contraria, piglierà la
+dama contraria, e vincerà, e tanto basti di questo giuoco aver detto.
+
+
+\supersection{Gioconde riflessioni su varie cose utili
+al comercio umano.}
+
+\subsubsection{PER LA BILANCIA.}
+
+Mi sembrano utili le seguenti notizie, perciò
+non istimo inconveniente lo esporle. Siccome
+da me l'anno scorso fu osservato nella Binomica,
+che i termini della progressione Geometrica dupla
+possono esprimere qualsisia numero, dalla qual notizia
+tutto quel calcolo ne dedussi. Cosi ora osservo,
+che nella progressione Geometrica tripla con i soli
+suoi termini simpli, altri sommati, e altri
+sottratti, parimenti si possono esprimere tutti i
+numeri, che si vogliono sotto la somma di tutti li detti
+termini: v.g.\ con i termini 1.\ 3.\ 9.\ 27.\ 81.\ si
+potranno esprimere tutti i numeri da 1 fino a 121.\ somma
+de i sudetti termini. Così, se vorrò esprimere 74.
+farò 81-9+3-1=74 e se vorrò esprimere 63 farò
+81-27+9=63, e così degli altri. Un uso preclaro di
+questa osservazione si è, che in una bilancia senza
+tenere tanti contrapesi, con pochissimi si possono
+pesare quante libre si vogliono perché da tutta la somma
+si leva il simplo, levando il peso, e si leva il doppio,
+levando il triplo da una parte, e mettendo il simplo dall'altra; per
+altro con 4 pesi si pesano da 1 fino a libre 40
+\begin{tabular}{l@{ }c@{ }l@{ }r@{ }l}
+con 5 pesi &—& da 1 fino a libre& 121\\
+con 6 pesi &—& da 1 fino a libre& 364\\
+con 7 pesi &—& da 1 fino a libre& 1093\\
+con 8 pesi &—& da 1 fino a libre& 3280&ecc.
+\end{tabular}
+
+Quello, che si dice del peso in libre nelle bilancie
+grandi, intendasi ancora di altre bilancette minori,
+e de i seggiatori a grani.
+
+Se
+volete fapere il giusto peso d'una cosa, e non
+avete altra bilancia, che una dolosa, pesatela prima
+da una parte, e notate condiligenza il peso, che
+mostra, poi pesatela dall'altra parte, e notate
+parimente il peso, che mostra; ambedue questi pesi
+saranno falsi. Il peso medio geometrico proporzionale
+tra questi due sarà il vero peso di detta cosa;
+cioè si moltiplichino insieme li due pesi falsi, dal
+prodotto si estragga la radice, che sarà il giusto peso
+di detta cosa.
+
+\subsubsection{CONTRATTI}
+
+Giova osservare in materia di contratti varje
+cose, che a primo aspetto pajono impossibili, e
+pure riescono, v g. Tre Mercanti di cavalli vanno in
+fiera, il primo vi reca 10.\ cavalli, il secondo 30, il
+terzo 50. Ognuno di loro vende i suoi al prezzo
+corrente in fiera, la sera si trovano ogn'uno di loro
+avere fatta l'istessa somma di moneta. Così. La mattina
+il prezzo corrente fu 7 per cento, il primo fece
+100.\ scudi, e gli avanzarono tre cavalli. Il secondo
+fece 400.\ scudi e gli avanzarono due cavalli. Il terzo
+fece 700.\ scudi, e gli avanzò un sol cavallo. Verso
+il tardi si mutò il prezzo dei cavalli, e si venderono
+300.\ scudi l'uno. Dunque tutti e tre i Mercanti
+portarono a casa 1000.\ scudi all'istessa fiera con tanta
+disparità di mercanzia.
+
+Un Mercante da a due suoi figli mille scudi a
+testa, accioché vadino in fiera a trafficarli. Il primo
+compra vitelli a 10.\ per cento, poi va in altra fiera,
+ed essendosi dimagrati, bisognò rivenderli a 20.\ per
+cento. L'altro ebbe miglior forte, ed in altro paese
+compro i Poledri a 20.\ per cento, e li rivendé a 10.
+per cento: Si dimanda, che negozio fece il padre di
+costoro? Pare, che non ne dovesse avere né utile,
+né discapito; e pure vi guadagnò scudi 500.\ non ho
+proposto a veruno questi casi, che non abbia mal
+giudicato prima di considerarli, onde avverto con
+Gellio: \textit{Sapiens sermones suos praecogitat,
+ \& examinat prius in pectore, quam proferat in ore}.
+
+\subsubsection{MISURE.}
+
+Con due vasi, uno di cinque metrete, ed uno di
+tre si può dividere per metà un vaso di balsamo
+di 8 metrete. Così: empiasi quello di tre, e si voti in
+quello di cinque, e di nuovo si empia quello di 3, e
+si voti, finché è pieno quello di 5, questo si rimetta
+in quello di 8 e vi si metta quell'una, che sta in
+quella di tre; poi si riempia quello di 3, in quello
+di 8.\ ne resteranno 4.
+
+E se le misure fossero state, una di 5, ed una
+di 11, e il vaso pieno di 16, e pur si dovesse divider
+per metà. Si empia tre volte quella di 5, e si voti in
+quella di 11, questa piena si voti in quella di 16, e vi
+si mettino le 4, poi due volte si empia quella di 5,
+e si metta in quella di 11., resteranno 3 in quella
+di 5 che posti in quella di 11 prima votata in quella
+di 16, riempiendosi poi quella di 5, resteranno 8 in
+quella di 16:
+
+Tre Cacciatori trovarono in un ripostino 33
+vasi d'oro, 11 pieni di un liquore prezioso, 11
+pieni per metà, ed 11 voti. Per dividerli egualmente
+senza votarli. Si divide 11 in tre parti, ciascuna minore
+della metà, che si può fare in quattro maniere,
+perciò il quesito ha quattro soluzioni, prima 1.5.5.\
+seconda 2.4.5.\ terza 3.4.4.\ quarta 3.3.5.\ questi
+numeri indicano le piene, e le vote di ciascuno:
+dunque nel primo caso il primo avra una piena, una
+vota e nove mezze; Il secondo, e il terzo cinque
+piene, cinque vote, e una mezza ecc., ed in altri
+simiglianti casi si farà sempre l'istesso.
+
+Un Pastore ha da condurre 90 pecore per 30
+macelli a 30 per viaggio, e ad ogni macello ha da
+lasciare una pecora. Si dimanda, se al fine può farne
+restare alcune per sé. Si risponde, che per se ne
+può fare restare 25. Prima a 30 a 30 le conduca a 10
+macelli, e poi a 15 macelli, e poi agli altri 5 ne
+resteranno 25 per se.
+
+\subsubsection{PERIODO GIULIANO.}
+
+Dati gli anni dell'Indizione, delli Cicli Solari,
+e Lunare, trovare l'anno del Periodo Giuliano.
+Si moltiplichi il Ciclo Solare corrente per 4845,
+della Luna per 4200., dell'Indizione per 6916., la
+somma di questi prodotti si divida per 7980, il
+residuo farà l'anno del Periodo.
+
+Il Periodo Dionisiano e il prodotto del Ciclo
+Solare, e Lunare 532. Dati i numeri dunque de i
+sudetti Cicli dell'anno corrente, si troverà l'anno
+del Periodo, se si moltiplicheranno il numero
+Lumare dato per 479, e il Solare per 57, e la somma si
+dividerà per 532.
+
+I detti numeri moltiplicatori sono i minimi
+moltiplici di uno, diviso per l'altro che avanza 1.
+
+E nel Periodo Giuliano i numeri moltiplicatori
+sono i minimi moltiplici di due, che divisi per il
+terzo avanza 1.
+
+Per trovare il numero Aureo, l'Indizione, e il
+numero Solare corrente, si divida per essi l'anno
+corente, agli avanzi s'aggiunga 1, si averà l'Aureo
+numero, s'aggiunga 3, s'averà l'Indizione, e se si
+aggiunge 9, s'averà il numero Solare, o la lettera
+Domenicale per tutto questo secolo.
+
+Per trovare l'Epatta in questo secolo, si moltiplichi
+l'aureo numero dell'anno corrente per 11, e
+si divida poi per trenta il prodotto, all'avanzo si levi
+11, e s'averà l'epatta corrente.
+
+Un Cavaliere da una egual somma di dobloni a
+tre povere Donne, con patto che ne distribuisca
+ognuna egualmente per dote alle sue figliuole, e se
+qualche cosa gli avanza, sia suo. La prima aveva
+tre figliuole, li divide, e per se ne avanzarono due.
+La seconda aveva cinque figliuole, e per se ne avanzò
+uno; e la terza aveva sette figliuole, e per se ne
+avanzo pur'uno. Si dimanda quanti dobloni regalò
+il Cavaliere ad ognuna di esse?
+
+Si moltiplichi il primo avanzo per 70, il secondo
+per 21, il terzo per 15. Si sommino i prodotti, la
+somma si divida per 105, e l'avanzo di questa divisione
+sarà il numero de i dobloni, che il Cavaliere
+diede per limosina a ciascuna delle sudette donne.
+Il perché di questa operazione si cerchi nella mia
+Arimmetica Speciosa c.\ 3.\ a.\ 2.
+
+Se saravvi chi avrà piacere di biasimare, o tutto.
+o parte di questo Libretto, o l'autore, sappia,
+che l'uno ingegna, e l'altro prattica il precetto di
+Catone.
+
+\literaryquote{Cum recte vivas, ne cures verba malorum.\\
+Arbitrii nostri non est quid quisque loquatur.}
+
+Direi mille bagattelle di più, se qui non fosse
+
+{\centering\LARGE\textbf{\textls[200]{IL FINE}}.\\}
+
+\end{document}

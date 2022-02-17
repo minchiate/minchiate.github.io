@@ -1,0 +1,739 @@
+\documentclass[11pt,a6paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{changepage}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.shapes,shapes.geometric}
+
+% avoid orphans and widows, allow for (a lot of) letter spacing.
+\usepackage[defaultlines=2,all]{nowidow}
+\usepackage[tracking]{microtype}
+\sloppy
+
+% how to format and space chapter titles
+\usepackage{titlesec}
+\titleformat{\section}[display]
+            {\huge\bfseries}
+            {\vspace{-1.5em}}
+            {0pt}
+            {}
+\titleformat{\subsection}[display]
+            {\normalfont\fontsize{12}{14}\slshape}
+            {\vspace{-1em}}
+            {0pt}
+            {\raggedleft}
+% I like this font!
+\usepackage{tgbonum}
+\renewcommand{\rmdefault}{qbk}
+\usepackage{lettrine}
+\usepackage[left=13mm,top=11mm,right=13mm,bottom=14mm]{geometry}
+
+\renewcommand{\negthinspace}{\hspace{-3pt}}
+
+
+\newcommand{\jetton}{%
+  \textbf{\textbigcircle}}
+\newcommand{\jettons}{%
+  \textbf{\textcircled{\raisebox{1pt}{\jetton}}}%
+  }
+
+\newcommand{\textfisch}%{\kern 0.5pt \rule[1pt]{1.5em}{6pt}\kern 0.5pt}
+%{\pounds{}\kern -5.7pt\rule[2.8pt]{4.0pt}{0.5pt}}}
+{\kern 0.5pt\rule[1pt]{18pt}{0.5pt}\kern -18pt\rule[6pt]{18pt}{0.5pt}\kern -18.1pt\rule[1.2pt]{0.5pt}{4.8pt}\kern 17.2pt\rule[1.2pt]{0.5pt}{4.8pt}\kern 0.5pt}
+
+\newcommand{\supersection}[1]{%
+\clearpage
+    {\scshape \centering \huge #1\\}
+    \vspace{6pt}
+    \hrule
+    \vspace{12pt}
+}
+
+\newcommand*\sepline{%
+  \kern 3pt \hrule \kern 2pt
+}
+
+\title{\kern -2em\fontshape{sc}\LARGE Nobilissimo Giuoco\\ \normalsize \textls[1000]{delle}\\ \fontsize{34}{34}\selectfont{\textls[100]{MINCHIATE}}}
+\author{%
+  \vspace{-26pt}\\
+\textit{Un distillato da fonti settecentesche}\\
+\vspace{14pt}\\
+\fontshape{sc}\fontsize{10}{34}\selectfont{\textls[350]{termini, regole}}\\
+\vspace{24pt}\\
+\fontshape{sc}\fontsize{10}{34}\selectfont{\textls[30]{e la giusta dose di}}\\
+\fontshape{sc}\fontsize{18}{34}\selectfont{\textls[300]{poesia}}\\
+\fontshape{sc}\fontsize{10}{34}\selectfont{\textls[90]{dell'epoca}}}
+\date{%
+  \vfill\small IN PISA MMXXII.\\ \sepline
+  \textit{Trovasi scaricabile liberamente.}}
+\begin{document}
+\renewcommand{\refname}{X\hfill{\large\mdseries\slshape Bibliografia}}
+
+\pagenumbering{gobble}
+
+\maketitle
+
+\supersection{\textls[0]{Il Giuoco delle}\\ \textls[320]{Minchiate}}
+\pagenumbering{roman}
+
+\noindent Chissà se sarà stato proprio il nome, a metter fine a questo gioco complesso
+e stimolante, o chissà se sarà stato il mazzo di carte, necessario per
+giocarlo.  Fatto sta che già dopo il 1840 il gioco era quasi scomparso dalla
+scena aristocratica fiorentina, dove era nato ed aveva tenuto banco durante
+secoli.
+
+A fine '700 scriveva l'anonimo autore di uno dei manuali di riferimento:
+``Il giuoco delle Minchiate è senza dubbio il più nobile di tutti i giuochi
+che siensi mai potuti inventare colle carte.  Egli esige cognizione, e
+talento.''
+
+Senza pretendere di avere l'una o l'altro, e non avendo avuto l'opportunià
+di giocarlo in pratica, offro al lettore interessato un moderno distillato
+di tre manuali datati 1747, 1790, e 1798, pubblicati a Roma, Firenze, e
+Dresda, rintracciati in rete in copia digitale.
+
+Questo PDF è composto su pagine ISO-A5, e l'intenzione è che possa
+essere stampato fronte-retro su A4,  organizzato per venir ricucito in
+modo da risultare un manualetto tascabile, così come lo era il Firenze 1790.
+
+\section*{SONETTO}
+{\it
+\-\hspace{-6pt}{\LARGE N}oi siamo novanzette, ed a girone\\
+Di mano in mano ottantaquattro andiamo, \\
+Perché a vicenda riposar vogliamo \\
+Da tredici di noi le più poltrone. 
+
+\vspace{6pt}
+
+\noindent\-\hspace{-6pt}{\LARGE A} quattro Regj tredici Persone\\
+D'un uniforme ugual suddite siamo;\\ 
+Ma batter da quaranta ci facciamo \\
+Che per lor Generale hanno un Trombone. 
+
+\vspace{6pt}
+
+\noindent\-\hspace{-6pt}{\LARGE S}on nostri Capitani il Mondo, il Sole,\\
+La Luna, ed una Stella; e grave è il lutto \\
+Se uccidere talun fra lor si puole. 
+
+\vspace{6pt}
+
+\noindent\-\hspace{-6pt}{\LARGE M}a poi un Figurin rende buon frutto\\
+Senz'ammazzare, e senza far parole, \\
+Quando dà Matto vuol entrar per tutto.
+}
+\clearpage
+\pagenumbering{arabic}
+
+\section{I\hfill{\large\mdseries\slshape Il Gioco, ed il Mazzo.}}
+
+Il giuoco delle Minchiate si fa con novantasette carte. Quaranta di
+Tarocchi, cinquantasei di Cartiglia, ed il Matto, e si svolge fra quattro
+giocatori, in due squadre, seduti ciascuno di fronte al compagno.
+
+Non sono noti altri giochi che facessero uso di questo stesso mazzo, per cui
+il nome ``Minchiate'' si riferisce tanto al gioco, quanto al mazzo di 97
+carte oramai praticamente introvabile sul mercato.
+
+Nelle Minchiate si utilizzano termini abbastanza curiosi, non presenti in
+altri giochi di carte, che verranno presentati nella sezione II.
+
+\subsection{Le cinquantasei di Cartiglia.}
+
+Il mazzo delle Minchiate contiene i quattro pali o seguenze caratteristici
+delle carte ``latine'', cioè italiane e spagnole. A differenza di queste,
+contiene i numeri 8, 9, e 10 come le carte francesi. Come le carte francesi,
+include la figura della regina, e come le carte latine include la figura del
+cavallo.
+
+In totale, le seguenze dei quattro pali di Spade, Bastoni, Coppe e Denari si
+compongono di 14 carte.
+
+Spade e Bastoni vengono detti ``pali lunghi'', mentre Coppe e Denari ``pali
+tondi''. Chi è abituato alle carte francesi potrebbe preferire i termini
+``neri'' per i pali lunghi e ``rossi'' per i pali tondi.
+
+Nei pali lunghi le figure sono Re, Regina, Cavallo, Fante, nei pali corti il
+Fante è sostituito da una Fantina, ma la funzione nel gioco è la stessa. In
+tutti i pali il cavallo è un essere mitologico con corpo di animale, in cui
+la testa è sostituita da un busto umano.  Nei pali lunghi troviamo un
+centauro, mentre in quelli corti il busto umano si trova su un corpo di
+fiera: nelle coppe un capricorno alato, nei denari un leone.
+
+Mentre l'ordine di presa delle figure resta immutato nei quattro pali, per
+la cartiglia numerica nei pali lunghi ``il più piglia il meno'', cioè le
+carte dopo il Fante sono nell'ordine di presa naturale dal 10 fino
+all'asso. Nei pali tondi invece ``il meno piglia il più'', cioè dopo la
+sequenza Re - Regina - Cavallo - Fantina, segue l'asso ed i numeri da due a
+dieci.
+
+Il Re di tutte le quattro sorti della Cartiglia conta per suo proprio valore
+5 punti, e questo è privilegio suo singolare, mentre le altre 13 carte per
+proprio valore non vagliono cosa alcuna, e vengon dette Cartacce.
+
+Questo gioco è anteriore al fenomeno che attribuisce un ruolo particolare
+agli assi. Nelle Minchiate l'asso è semplicemente l'uno del suo palo.
+
+Il proverbiale ``due di coppe'', che nella briscola è carta senza valore né
+forza, in particolare se comanda un altro palo, nelle Minchiate dovrebbe
+esser sostituito da un meno intuitivo dieci tondo, o da un asso lungo.
+
+\subsection{I quaranta Tarocchi.}
+
+I Tarocchi sono identificati con il loro numero sequenziale da 1 a 40.  I
+primi 35 sono notati con i numeri romani dall'I fino al \mbox{XXXV}; gli ultimi non
+marcati sono: 36~Stella, 37~Luna, 38~Sole, 39~Mondo, 40~Trombe, sono detti
+collettivamente Arie, e sono le carte di forza di presa massima.
+
+Scendendo in ordine di presa, i successivi cinque tarocchi dal 35 al 30
+vengono detti ``sopratrenta'', dal 29 al 20 ``sopraventi'', dal 19 all'11
+``sottoventi''. I cinque tarocchi minori vengono detti ``papi'', mentre
+quelli dal 6 al 10 è uso chiamarli ``papini''. I tarocchi fra il 15 ed il 19
+vengon ancora detti ``preghe''.
+
+Questi nomi non hanno alcun effetto sul loro valore nel gioco, ma vedasi il
+``fumare'': lo scartare o giocare una carta invece che un'altra può essere
+una maniera di segnalare una condizione al proprio compagno.
+
+I Tarocchi sono a tutti gli effetti un quinto palo oltre ai quattro
+descritti sopra. Il palo dei Tarocchi è sempre di briscola, ed è
+obbligatorio giocare Tarocco quando è richiesto Tarocco, o non si possiede
+la seguenza richiesta.  Se in una levata solo un giocatore può e deve
+giocare Tarocco, questo gli vincerà la levata.
+
+\subsection{Dei numeri, nomi e delle figure.}
+
+Ogni Tarocco ha tanto un nome quanto un numero, ma si potrebbe giocare anche
+con carte non decorate e solo numerate. Secondo l'autore fiorentino: ``fu
+poi coll'andar del tempo ornata ciascuna carta delle presenti figure,
+ricavate più dall'altrui fantasia, che da altra cosa, e questo per dare una
+idea più formale del loro valore ai meno perspicaci''.
+
+I Tarocchi delle Minchiate non sono una semplice estensione dei tarocchi
+bolognesi, né piemontesi, né marsigliesi: anche se la maggior parte delle
+carte coincidono, o sono riconoscibili fra i vari mazzi, altre mancano, e
+quelle che coincidono sono in ordine leggermente diverso.
+
+Fra le aggiunte ai Tarocchi delle Minchiate risaltano i quattro elementi:
+Terra 22, Acqua 21, Aria 23, Fuoco 20, a cui seguono i 12 segni zodiacali,
+anche loro in ordine alquanto sparso.  Dall'Ariete ai Pesci secondo l'ordine
+zodiacale, i numeri corrispondenti sono invece: 27, 34, 35, 30, 33, 25, 24,
+26, 29, 28, 32, 31.
+
+\subsection{Tarocchi e Taroccacci.}
+
+Il valore dei Tarocchi non corrisponde del tutto all'ordine di presa: se è
+vero che i cinque tarocchi maggiori, le Arie, sono anche le carte di valore
+massimo, con 10 punti ciascuna, ed i successivi dal 30 al 35 ne valgono 5,
+gli altri sono disposti in maniera da rendere più interessante il gioco, e
+motivare i giocatori a sviluppare tattiche per conservare i tarocchi di
+conto più deboli.
+
+Il tarocco minore, il Papa uno, vale 5 punti, gli altri quattro Papi ne
+valgono 3, i Papini non valgono nulla ma sono superiori ai Papi per ordine
+di presa. Degli altri tarocchi dal 10 fino al 29 solo i seguenti valgono 5
+punti: 10, 13, 20, 28.  Il 29 vale 5 punti solo in combinazione con altri,
+come spiegato nella sezione sulle versicole.
+
+\subsection{Riassumendo.}
+
+Tavola che presenta il valore di ciascuno dei quaranta tarocchi.
+
+\kern 6pt
+
+{\noindent \scriptsize
+  \begin{tabular}{*{10}{|r}|}
+    \cline{1-10}
+\bf  1& \bf 2& \bf 3& \bf 4& \bf 5& \bf 6&\bf  7&\bf  8&\bf  9& \bf 10\\
+  5& 3& 3& 3& 3&  &  &  &  & 5\\
+    \cline{1-10}
+\bf 11&\bf 12&\bf 13&\bf 14&\bf 15&\bf 16&\bf 17&\bf 18&\bf 19&\bf 20\\
+   &  & 5&  &  &  &  &  &  & 5\\
+    \cline{1-10}
+\bf 21&\bf 22&\bf 23&\bf 24&\bf 25&\bf 26&\bf 27&\bf 28&\bf 29&\bf 30\\
+   &  &  &  &  &  &  & 5& (5)& 5\\
+    \cline{1-10}
+\bf 31&\bf 32&\bf 33&\bf 34&\bf 35&\bf 36&\bf 37&\bf 38&\bf 39&\bf 40\\
+     5&     5&     5&     5&     5&    10&    10&    10&    10&    10\\
+    \cline{1-10}
+  \end{tabular}
+}
+
+
+\subsection{Il Matto.}
+
+Questo non è nè Tarocco né Cartiglia, non viene giocato ma mostrato e
+trattenuto. Può essere utilizzato una sola volta, in risposta ad una Levata
+a cui non si vuol rispondere perdendo una Carta di Conto.
+
+In cambio del Matto va ceduta una scartina, o la peggior carta di conto
+catturata. L'unico caso in cui si perde il Matto è quando, non avendo fatto
+alcuna bazza, e non avendo nulla da consegnare in cambio, bisognerà
+rinunciare anche al Matto.  L'equivalente di una resa incondizionata.
+
+Il solo caso in cui è vietato smattare: la prima volta che viene giocata una
+seguenza, se il proprio compagno, o l'avversario soprammano avrà messo in
+gioco un tarocco, si ha l'obbligo di calare il Re, anche se si ha il Matto,
+o se si ha altra cartiglia del palo richiesto.
+
+\section{II\hfill{\large\mdseries\slshape Vocabolario minimo.}}
+
+La letteratura sulle Minchiate usa termini ancora correnti, molti oramai
+obsoleti, altri assolutamente stravaganti, ``endemici'' di questo gioco, o
+prestito da quelche gioco contemporaneo alle Minchiate.
+
+\begin{list}
+  {}
+  {
+  \setlength{\labelsep}{4pt}
+  \setlength{\labelwidth}{14pt}
+  \setlength{\topsep}{0pt}
+  \setlength{\parsep}{0pt}
+  \setlength{\parskip}{0pt}      
+  \setlength{\itemsep}{0pt}
+  \setlength{\leftmargin}{18pt}
+  \setlength{\itemindent}{0pt}
+  \let\makelabel=\textbf
+  }
+\item[Affogare un Re] ovvero \textbf{impiccare un Re} vuol dire non giuocare il Re la prima volta, che si giuoca ad un palo. S'impicca un Re quando si ha temore di perderlo.
+\item[Ammazzare] vuol dire conquistare una carta per il proprio mazzo. Si utilizza per Papi e Re, e come già l'affogare e l'impiccare, suona abbastanza sovversivo: Ammazzare un Papa, Ammazzare un Re.
+\item[Bazza] è una Levata vinta.
+\item[Cartaccia] è cartiglia senza valore. Delle 97 carte 52 sono cartacce. I Tarocchi senza valore sono Taroccacci, non cartacce: comunque possono servire per ammazzare un Re, o un Papa.
+\item[Cartiglia] sono le carte delle quattro seguenze latine, Spade, Bastoni, Coppe, Denari.
+\item[Cartaro] ovvero chi \textbf{fa la folla}, il giocatore che distribuisce le carte.
+\item[Cascare] vuol dire non aver più tarocchi, ed allora, se non vi sia in mano qualche Re da dare al compagno; si pongano tutte le carte in tavola, che di mano in mano le prendono quei che fanno le levate.
+\item[Entragnos] sono le carte di conto che sono in folla, che chi fa la folla può prendere. Entragnos sono ancora i punti che avanzano dopo la divisione per 60, e per pochi che siano valgono come un resto intiero.
+\item[Fallio] o \textbf{Faglio} è quando non si ha alcuna carta di una sorte. Può essere \textbf{naturale} se sia prima di iniziare a giocare, cioè servito o dopo aver rubato e scartato, \textbf{di prima} se dopo una rifitta.
+\item[Far caccia] vuol dire lasciare il giuoco in mano altrui per aspettare carta di conto vantaggiosa.
+\item[Far passata] è dar tarocco geloso sopra cartiglia con pericolo.
+\item[Far tenuta] vuol dire passare di sopra mano carta maggiore a quella, che si vuol prendere all'avversario, acciocché allora non se la faccia.
+\item[Fare] vuol dire non aver più d'una seguenza, e per ciò rispondere con tarocco.
+\item[Fiches] e \textbf{Gettoni}, vengono utilizzate per annotare la differenza punti fra gli avversari.
+\item[Folla] o \textbf{fola} sono le ultime tredici carte, che restano a monte.
+\item[Fumare] è giuocare un papino in segno al compagno d'avere buon giuoco, si fuma ancora con un sopraventi.
+\item[Ganzo] è quello, che assiste a chi non sa troppo giuocare.
+\item[Gelosa] è una carta di conto a rischio che, se perduta, comporterebbe gran danno.
+\item[Girare il gioco] è giuocare da principio i tarocchi maggiori.
+\item[Girare una carta] è quando si giuoca in faccia al compagno mandalisi carta gelosa.
+\item[Impiccare] vedi Affogare.
+\item[Levata] è il giro in cui chi è di turno dà una carta, gli altri a turno in senso antiorario rispondono. Chi fa la bazza è di turno per la levata successiva.
+\item[Mazzetti] si formano alla fine del gioco, per contare le carte, e per facilitare il mischiarle per il prossimo gioco. Due cartacce, e la terza di conto scoperta.
+\item[Morire] si dice di una carta di conto che viene perduta. Una Carta di Conto conquistata dal compagno \textbf{muore in casa}. Le Trombe sono immortali, e il Matto muore solamente nella rovina universale di tutto il giuoco.
+\item[Onore] anche detta Carta di Conto.
+\item[Pigliare] è quello che il cartaro fa dopo aver rubato: cerca nella folla le carte di conto, mostrandole, e scartandone altrettante, senza mostrarle.
+\item[Resto] è il pagamento che si effettua quando la differenza punti fra gli avversari supera i sessanta punti. Al pagare un resto, si riduce di 60 la differenza.
+\item[Rifitta] vuol dire rispondere con cartiglia, perché se la faccia l'avversario posto a sinistra. Una rifitta può aiutare a formare un fallio.
+\item[Rifiuto] è il crimine di non rispondere, potendo, al palo richiesto.
+\item[Rubare] vuol dire, alzando, trovare carte di conto o sopraventi, che si prendono. Similmente si chiamano rubate le carte di chi fa la folla, se dopo scoperta l'undecima trovi in folla sopraventi o carte di conto. Le carte rubate si annotano come punteggio a favore, i sopraventi permettono di continuare a rubare anche se non aggiungono punteggio.
+\item[Scartare] è il simmetrico del rubare: per ogni carta rubata dalla folla, una va scartata in sua sostituzione.
+\item[Smattare] vuol dire rispondere col Matto.
+\item[Soprammano] è l'avversario alla sinistra, che precede nel gioco.
+\item[Sottomano] è l'avversario alla destra, che segue nel gioco.
+\item[Taroccaccio] un Tarocco senza valore.
+\item[Tarocchi, Papi, Papini, Preghe] vedasi sopra al capitolo I.
+\item[Ultima] è il nome che si dà al vincere l'ultima levata, e vale 10 punti.
+\item[Versicola] è una combinazione di tre o più Carte di Conto.
+\end{list}
+
+\section{III\hfill{\large\mdseries\slshape Delle versicole.}}
+
+Alcuni libri riportano il termine versicola, altri verzicola.  Qui
+utilizzeremo entrambi indistintamente.
+
+Una verzicola è una sequenza, o una combinazione di tre o più carte.  Le
+versicole vanno dichiarate e mostrate all'inizio del gioco, ed i giocatori
+annotano a proprio vantaggio tanti punti quanto è il valore delle carte che
+entrano nella versicola.
+
+Una versicola va accusata in principio, non si può pretendere di conteggiare una
+versicola a proprio favore durante il gioco.
+
+I punti delle versicole vengono computati nelle due occasioni: da principio
+nella accusa se in mano ad uno stesso giocatore, di nuovo in fine giuoco
+come combinazione catturata dai due compagni di gioco.
+
+Ci sono due successioni di tarocchi che formano versicole dette regolari.  I
+re, e tre combinazioni di tarocchi possono formare versicole dette
+irregolari.
+
+\subsection{Delle carte di conto.}
+
+Oltre che in versicola, i punti delle carte di conto vengono computati
+durante la distribuzione se la carta è scoperta come ventunesima carta, o
+se è rubata dalla folla.
+
+Inoltre si annota il suo valore durante il gioco se muore dagli
+avversari.  Infine contando le carte, da chi la abbia in possesso.
+
+\subsection{Delle verzicole regolari.}
+
+I papi da uno a cinque, e i tarocchi da 28 a 40 sono le due sequenze dove si
+formano le versicole regolari.
+
+Il tarocco 29 vale 5 punti solo in versicola, altrimenti è un sopraventi
+senza valore.
+
+Una versicola dei tarocchi da 1 a 5 è detta versicola ``di Papi''.  Una versicola
+con una o più arie viene detta versicola ``di Arie''.
+
+\subsection*{Delle verzicole irregolari.}
+
+\begin{list}{\guilsinglright}{
+  \setlength{\labelsep}{0pt}
+  \setlength{\labelwidth}{9pt}
+  \setlength{\topsep}{0pt}
+  \setlength{\parsep}{0pt}
+  \setlength{\parskip}{0pt}      
+  \setlength{\itemsep}{0pt}
+  \setlength{\leftmargin}{9pt}
+  \setlength{\itemindent}{pt}
+  \let\makelabel=\textbf}
+\item Tre regi, o quattro regi, è verzicola ``dei Re''.
+\item Uno, Matto, e trombe, è verzicola ``del Matto''. 
+\item 1, 13, 28, è verzicola ``del 13''.
+\item Una sequenza di diecine, è verzicola ``delle Diecine''.
+\item \textit{C'è chi conta 14, 35, 39 come ``Versicola della Carne''. In questo caso applica al 14 quanto detto del 29.}
+\end{list}
+
+Una versicola di diecine può essere completa, ovvero vergognosa quando
+manchi delle trombe, o del 10.  La versicola delle decine completa vale 25
+punti.  Le versicole vergognose valgono 20, o 15 punti rispettivamente
+se senza 10, o senza trombe.
+
+Quando due compagni abbiano catturato due re, e gli avversari gli altri due,
+si dice che si è finito ``senza regi'', perché nessuno può contare la
+versicola di re.
+
+\subsection{Graficamente.}
+
+Nel seguente diagramma ciascuna carta di conto è rappresentate da una stella a
+tante punte quanti sono i punti della carta.
+
+\vspace{4pt}
+
+{\tiny\tikzset{
+    trumpstar/.style={
+      decorate, star point ratio=1.95,
+      decoration={shape backgrounds,shape=star, shape size=0.58cm},
+      star points=#1,fill=white}
+}%
+\begin{tikzpicture}[decoration={shape sep=0.8cm}]
+  \draw [very thick] (0.4,4.0) -- (3.6,4.0);
+  \draw [very thick] (0.8,1.6) -- (5.6,1.6) .. controls (6.5,1.6) and (6.5,0.8) .. (5.6,0.8) -- (2.4,0.8);
+  \draw [densely dotted, very thick] (0.4,4.0) .. controls (0.8,3.6) and (0.8,3.8) .. (0.8,2.8) -- (0.8,1.6);
+  \draw [densely dash dot, very thick] (0.4,4.0) .. controls (0,3.6) and (0,3.8) .. (0,2.8) -- (0,2) -- (0,1.6) .. controls (0,1) and (0.4,0.8) .. (0.8,0.8) -- (2.4,0.8);
+  \draw [densely dotted, very thick, dash phase=2.5pt] (2.4,3.2) -- (2.4,0.8);
+
+  \draw [densely dotted, very thick, draw=gray!50] (6.2,2.8) -- (6.2,1.2) -- (3.6,1.2) .. controls (3.4,1.2) and (3.4,1.0) .. (3.2,0.8); 
+  \draw [trumpstar=5, draw=gray!50] (6.2,2.8) node {14}; % (demonio)
+  
+  \draw [trumpstar=5] (0.4,4.0) node {1};% (pagat)
+  \draw [trumpstar=5] (0.8,2.8) node {13}; % (morte)
+  \draw [trumpstar=5] (0,2.0) node {M}; % (matto)
+  \draw [trumpstar=5] (2.4,3.2) node {10}; % (dieci)
+  \draw [trumpstar=5] (2.4,2.4) node {20}; % (venti)
+  \draw [trumpstar=5] (6.2,1.2) node {35}; % (gemini)
+  \foreach \x in {28, 30, 31,..., 34} {
+    \draw [trumpstar=5] (0.8*\x - 21.6,1.6) node {\x};
+  }
+  \draw [trumpstar=5, draw=gray!70] (0.8*29 - 21.6,1.6) node {29};
+  \foreach \x in {36, 37, ..., 40} {
+    \draw [trumpstar=10, star point ratio=1.4, decoration={shape size=0.55cm}] (34.4 - 0.8*\x,0.8) node {\x};
+  }
+  \foreach \x in {2,..., 5} {
+    \draw [trumpstar=3, decoration={shape size=0.5cm}] (0.8*\x - 0.4,4.0) node {\x};
+  }
+  \draw [densely dotted, very thick] (4.4,3.6) .. controls (4.95,4.15) and (5.75,3.35) .. (5.2,2.8) .. controls (4.65,2.25) and (3.85,3.05) .. (4.4,3.6);
+  \draw [trumpstar=5, decoration={shape sloped=false}] (4.4,3.6) node {R} -- (5.2,3.6) node {R} -- (5.2,2.8) node {R} -- (4.4,2.8) node {R};
+
+
+% \draw [trumpstar=3, decoration={shape size=0.5cm}] (0.0,0.0) node[right=18pt] {3-point card};
+% \draw [trumpstar=5] (0.0,-0.8) node [right=18pt] {5-point card};
+% \draw [trumpstar=10, star point ratio=1.4, decoration={shape size=0.55cm}] (0.0,-1.6) node [right=18pt] {10-point card};
+% \draw [trumpstar=5, draw=gray!50] (3.0,-1.6) node [right=12pt] {value only in versicola};
+
+% \draw [very thick]                 (2.8,-0.0) -- (4.0,-0.0) node [right=6pt] {regular};
+% \draw [densely dashed, very thick] (2.8,-0.6) -- (4.0,-0.6) node [right=6pt, anchor=north west] {irregular};
+% \draw [densely dotted, very thick] (2.8,-0.8) -- (4.0,-0.8);
+\end{tikzpicture}
+}
+
+Le linee che le collegano rappresentano le versicole a cui prendono parte,
+sono continue per le versicole regolari, discontinue per le versicole
+irregolari.
+
+
+
+\section{IV\hfill{\large\mdseries\slshape Del Matto nelle versicole.}}
+
+Alla fine del gioco, il Matto entra in ogni versicola, non in sostituzione
+di una carta per completare la versicola, ma in aggiunta al valore di
+ciascuna versicola guadagnata.  Chi ha il Matto, e ha conquistato v.g.\ tre
+versicole, potrà annotare oltre ai 5 punti del Matto, ancora 5 punti per
+ogni versicola, così che il Matto gli varrà 20 punti.
+
+La versicola del Matto è l'unica in cui il Matto è necessario.
+Evidentemente non si conta il Matto due volte, e questa versicola vale
+5+5+10 = 20 punti.
+
+Può darsi il caso che un tarocco guadagnato non migliori il punteggio, per
+esempio se si ha la versicola del 32, 33, e 34, e quella del 36, 37, e 38.
+Con il Matto queste varranno 15+5 e 30+5 ossia 55 punti.  Portando a casa il
+35 per 5 punti, si avrà una sola versicola da 50+5 punti.
+
+In altre parole, il giudicare se una carta sia gelosa, o meno, dipende molto
+dalle carte sicure, o già guadagnate, ed il Matto influisce molto su questo.
+
+\section{V\hfill{\large\mdseries\slshape Della cartiglia, e suo valore.}}
+
+Il giuoco componendosi di 21 levate, a fine giuoco necessariamente una delle
+due squadre avrà vinto 11 o più levate, e raccolto più carte delle 42
+ricevute inizialmente, ed annota tanti punti quante saranno le carte prese
+in eccesso delle 42 iniziali.
+
+Così
+trovandosene fatte 52, equivalenti a 13 levate vinte, segnerà 10 punti a suo
+favore.
+
+Si noti come in gioco entrano attivamente 84 carte, mentre 13 restano
+``poltrone'' nella folla, como lo annunciava il sonetto.
+
+
+\section{VI\hfill{\large\mdseries\slshape De' morti.}}
+
+Quando viene vinta una carta di conto agli avversari, allora si segnano tanti
+punti in vantaggio di chi l'ammazza, quanto è il valore della carta giocata
+dagli uni, e vinta dagli altri.  In questo caso si dice che ``muore'' il
+valore della carta passata di mano.
+
+Quando viene ammazzata una carta dal proprio compagno, si dice che ``muore
+in casa'', e non si annotano punti.
+
+Il Matto non può mai morire, ma chi gioca il Matto in una levata vinta dagli
+avversari, dovrà consegnare una carta in sua vece.
+
+Se chi ha il Matto non ha da dare in cambio se non carte di conto, sceglierà
+la carta di minor valore a cui rinunciare in cambio del Matto.  In questo
+caso, la carta morirà e verrà computata come catturata in gioco.
+
+Se mai si desse il caso che si vengano a perdere tutte le carte, a quelli
+che avevano il Matto corre l'obbligo di cederlo agli avversari.
+
+\section{VII\hfill{\large\mdseries\slshape Dello scozzare.}}
+
+Cominciando a giuocare, o riprincipiando un giuoco, si deve procurar di
+scozzar bene le carte, acciocché tutte quelle di conto non sieno insieme:
+poi dopo d'aver mischiate le carte a piacere, quello a cui toccherà, ponga
+le carte avanti del suo avversario a sinistra.
+
+\subsection{Dell'alzare e rubare.}
+
+Egli alzerà, e guardando la
+carta, sul fondo della porzione di tallone che avrà alzato.
+
+Mentre sia carta di conto, oppure sorpassi il tarocco 20, allora la prenderà
+per se, e di mano in mano seguiterà a rubare finché la successiva carta
+diventata visibile risulterà una carta di conto, o sopraventi, una appresso
+l'altra continuamente, e senza frapposizione di cartaccia.
+
+Annoterà tanti punti in suo favore quanto importeranno tutte le carte
+rubate.  In questa fase il 29 è un comune sopraventi, cioè permette di
+continuare a rubare, ma non regala punteggio.
+
+\subsection{Del fare le carte e lo scoprire.}
+
+Successivamente il cartaro, ne darà prima 10 ciascuno, in mazzetti di cinque
+perché sia chiaro che sta distribuendo correttamente, e questo in senso
+antiorario cominciando dall'avversario alla sua destra e così proseguirà
+fino a se: poi di nuovo ne darà cinque, più cinque, più finalmente la
+undicesima ed ultima scoperta, ed ancora qui, se è carta di conto, sarà
+segnata in favore di quello, a cui appartiene.
+
+\subsection{Del validare la folla.}
+
+Quando tocchi al cartaro ricevere le sue carte, undicesima a ventunesima, se
+ne darà prima dieci coperte, poi prima di scoprire la sua ventunesima,
+conterà la folla, perché si verifichi che la distribuzione è stata giusta, e
+si possa ancora correggere se necessario.
+
+Dopo aver scoperta la sua undecima carta, proseguirà a scoprire la carta
+seguente, che ruberà se fosse di conto, o sopraventi, sempre segnando in suo
+favore, o defalcando dagli avversari quanti punti avrà fra scoperti e
+rubati, e seguirà robando fintantoche troverà.
+
+\subsection{Del caso che si sia robato molto.}
+
+Se l'avversario che alzò avesse rubato più di 13 carte, caso improbabile ma
+non impossibile, il cartaro non potrà completare la distribuzione delle
+carte, e dovrà attendere che l'avversario che rubò scarti.
+
+Terminati la distribuzione e gli scarti, il cartaro tornerà a contare le
+carte della fola, che devono ora restar 13.
+
+\subsection{Del pigliare dalla folla.}
+
+Dopo gli scarti, il cartaro guarderà da sé nella folla, per pigliare le
+carte che vorrà, per scartare quelle che non vorrà, e passerà la folla al
+suo compagno.
+
+\subsection{Della composizione della folla.}
+
+Il compagno del cartaro guarderà nella folla, tornerà a validare che
+contenga 13 carte, e dichiarerà la sua composizione, cioè quante carte di
+ciascuna sorte, e per differenza si saprà quanti tarocchi.
+
+Si noti che è ancora suo compito verificare che la folla non contenga carte
+di conto, mentre potrebbe contenere tarocchi fra quelli senza valore.
+
+\section{VIII\hfill{\large\mdseries\slshape Del segnare i punti.}}
+
+Durante la fase iniziale appena descritta, ed ancor più durante il gioco,
+per annotare la differenza di punteggio fra una squadra e l'altra, si usano
+cinque fiches, e cinque gettoni, che stanno presso uno dei compagni che sono
+in vantaggio.
+
+Un gettone vale un punto, una fiche vale 10 punti, due gettoni sovrapposti
+rappresentano cinque punti.  I gettoni si pongono alla destra per
+rappresentare l'addizione, o alla sinistra, per rappresentare la
+sottrazione. un paio di esempi per fissare le idee:
+
+Per rappresentare il 3 ovviamente \jetton{}\jetton{}\jetton{}; il 4 può essere \jetton{}\jetton{}\jetton{}\jetton{}, o più economicamente \jettons{}\jetton{}.
+
+Il 10 lo rappresentiamo con una fiche: \textfisch{}, mentre 9 e 8 si ottengono sottraendo uno o due gettoni dal 10: \textfisch{}\jetton{}, \textfisch{}\jetton{}\jetton{}, ed evidentemente l'undici aggiungendo un gettone alla sinistra della fiche: \jetton{}\textfisch{}.
+
+Se una squadra è avanti di 27 punti, e gli viene morto il papa uno, si leveranno 5 punti:
+
+\jetton\jetton\jettons\textfisch\textfisch{} → \jetton\jetton\textfisch\textfisch{}
+
+Se una squadra è avanti di 56 punti, e ammazza un re ed un papa minore, cioè
+``muore 8'', la squadra in vantaggio supera i 60 punti, riscuote o annota un
+\textit{resto}, e marca ancora i quattro punti in eccesso dei 60:
+
+\jetton\jettons\textfisch\textfisch\textfisch\textfisch\textfisch{} → \jettons\jetton{}
+
+Del pagare i \textit{resti} si parla a fine capitolo.
+
+\subsection{Del cadere.}
+
+In teoria una smazzata si conclude dopo le 21 levate dei quattro giocatori.
+In pratica però quando un giocatore viene a trovarsi senza tarocchi, senza
+re, senza speranza di rientrare in gioco, è norma che lo dichiari,
+``cadendo'', cioè scoprendo le sue carte e lasciando agli altri la scelta di
+quale carta giocare per lui.
+
+Dovendo cadere anche il suo compagno, il gioco si conclude con la squadra
+ancora in gioco che raccoglie tutte le carte, annotando inoltre
+l'``ultima''.
+
+Se un giocatore dovesse cadere pur avendo carte di conto, suo danno.
+
+Non è obbligatorio cadere, ma non è buona educazione protrarre un gioco perso.
+
+\subsection{Della conta finale.}
+
+Terminato il giuoco, per propriamente disporre le carte da contarsi bisogna osservare di far tanti gruppetti di tre carte l'uno, cioè avendone abbastanza un Taroccaccio, una carta di Cartiglia, ed un onore, e così di mano in mano, perché raccogliendosi in seguito le carte per rimescolare, non vadano tutte unite le cartacce, e gli onori; poi conterete quanti gruppetti avete, e sopra i 14 computerete quante carte vincete, e quante saranno le carte, tanti faranno i punti che marcherete unitamenete ai punti guadagnati, o defalcandoli dai punti de' morti ec.\ secondo a chi ha segnato; e così salderete la partita del dare, e dell'avere fra voi e la parte contraria, segnando il di più per chi spetta; e così segnati lascerete stare in disparte i punti guadagnati ec.
+
+Poi in primo luogo conterete le Verzicole accusate in principio; questa si riconta un'altra volta, cioè di \textit{Ritorno}, se la si è difesa con successo, e si computano ora le Verzicole acquistate colla battaglia del giuoco, oppure si aumenta il computo della prima Verzicola, se mai a questa si fosse aggiunta qualche altra carta di seguito o sopra, o sotto.
+
+Una volta vedute e computate tutte le Verzicole, devesi computare dieci punti di più in vantaggio per quelli che ha fatto l'ultima bazza, e dopo si aggiungano i punti del valor intrinseco di ciascuno onore, 5, o 3, o 10, come al Capitolo I.
+
+Veduto poi quanto somma tutto l'importare d'una Parte, si ponga a defalco
+con l'importare degli Avversari, e quanti punti supera una parte, si
+consideri come appresso.
+
+Ogni 60 punti di vincita valgono un \textit{resto}.  Si esegua quindi la
+divisione del punti di vincita per 60, e se i punti di vincita non fossero
+multiplo intero di 60, ogni ``entragnos'' da 1 a 59 punti si pagherà come un
+intero resto.
+
+Trovato il numero dei \textit{resti} guadagnati in quella giuocata, questi
+si segnano ex parte, e così si tolgono, o accrescono secondo la qualità
+delle future giuocate, ed alzandosi poi dal tavolino si paga in contanti, o
+si risquote l'importar della vincita secondo più, o meno \textit{resti}, in
+quantità di danaro come si sarà fissato da primo.
+
+\section{IX\hfill{\large\mdseries\slshape Dei ringraziamenti.}}}
+
+Chi ha raccolto queste poche note non è un giocatore di carte, solo un appassionato di matematica, di giochi, di storia, e tradizioni.
+
+Spero che serva questo libriccino di stimolo a quei quattro amici al bar che vogliano recuperare il gioco.  Non aggiungo nulla sulle strategie di gioco, perché nulla ne so.
+
+Rimando alla letteratura, ed alle risorse sulla rete.  Chi dovesse recuperare uno dei tre libri riconoscerà le sezioni più letterarie qui presenti.
+
+\clearpage
+
+\begin{thebibliography}{9}
+\bibitem{roma}
+Francesco Saverio Brunetti.
+\textit{Giuochi delle Minchiate, Ombre, Scacchi, ed altri d'ingegno}.
+Bernabò e Lazzarini, Roma, 1747.
+\bibitem{firenze}
+Anonimo.
+\textit{Regole Generali delle Minchiate}.
+Presso Vincenzio Landi, Firenze, 1790.
+\bibitem{dresda}
+Anonimo.
+\textit{Regeln des Minchiatta-Spiels}.
+in der Waltherschen Hofbuchhandlung, Dresden, 1798.
+\bibitem{pagat}
+John McLeod.\\
+\textit{https:/\negthinspace/www.pagat.com/}
+\bibitem{naibi}
+Franco Pratesi.\\
+\textit{https:/\negthinspace/www.naibi.net/}
+\bibitem{germini}
+I Germini.\\
+\textit{http:/\negthinspace/germini.altervista.org/}
+\bibitem{minchiate-github}
+Le Minchiate su Github.\\
+\textit{http:/\negthinspace/minchiate.github.io/minchiate/}
+\end{thebibliography}
+
+\section{XI\hfill{\large\mdseries\slshape In conclusione.}}
+
+Passo la parola all'anonimo autore delle fiorentine \textit{Regole Generali}.
+
+Questo è quanto poteva dirsi in breve di un giuoco, che porta seco infinite ed impensate combinazioni; e non ostante che la pratica sia una maestra più sicura per apprendere il medesimo, contuttociò sono troppo necessarie a sapersi per ben capirlo anche le suddette \textit{Regole Generali}, senza le quali non vi farebbe nè ordine nè intelligenza alcuna.
+
+Ecco finalmente, come il nostro Poeta Pittor Lorenzo Lippi ha combinato in un Ottava del suo Immortal Poema, le Pene comminate a chi erra nel giuoco delle Minchiate.
+
+\vspace{4pt} \noindent
+\begin{minipage}{8cm}
+\-\hspace{-6pt}{\LARGE G}iusto appunto Baldone a far s'è posto\\
+Alle Minchiate, ed è cosa ridicola \vspace{2pt}\\
+Il vederlo ingrugnato, e mal disposto \\
+Perché gli è stata morta una Verzicola. \vspace{2pt}\\
+\-\hspace{-6pt}{\LARGE L}e carte ha date mal, non ha risposto, \\
+E poi di non contare anche pericola, \vspace{2pt}\\
+Sendo scoperto aver di più una carta, \\
+Perché di rado quando ruba scarta. 
+\end{minipage}
+
+\vfill
+
+Altra ottava sopra la maniera d'alzar
+le carte d'un Poeta vivente
+
+\vspace{4pt}
+
+\noindent
+\begin{minipage}{8cm}
+\-\hspace{-6pt}{\LARGE U}no alza, e fa pepin, l'altro và in fondo\\
+Per trovar l'uno e l'altro un gioco grosso; \vspace{2pt}\\ 
+Ed io, che ho più cervel, non mi confondo, \\
+Se in ciò mi sento urlar la croce addosso. \vspace{2pt}\\
+\-\hspace{-6pt}{\LARGE S}i scapi nell'alzar chi ha il capo tondo, \\
+Urli, strida, minacci a più non posso; \vspace{2pt}\\
+Io dico, per uscir d'ogni imbarazzo: \\
+È degno di pietà colui che è pazzo. 
+\end{minipage}
+
+\vfill
+
+\vfill
+
+\huge\bfseries\centering\textls[500]{\textsc{il fine}}.
+
+\end{document}
