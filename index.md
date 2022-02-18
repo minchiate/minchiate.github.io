@@ -30,7 +30,7 @@ e non dal latino "mentŭla".
 # riferimenti ad altri siti
 
 * [naibi](https://www.naibi.net/) articoli di Franco Pratesi.
-* [pagat](https:/\negthinspace/www.pagat.com/) di John McLeod.
+* [pagat](https://www.pagat.com/) di John McLeod.
 * [I Germini](http://germini.altervista.org/) accademia fiorentina.
 * [google books](https://books.google.com/), in particolare: [1747 Roma](https://books.google.com.pa/books?id=BxldAAAAcAAJ), [1790 Firenze](https://books.google.com.pa/books?id=4_rdG3SVa48C).
 * [Tarock einziges Vergnügen](http://www.tarock.info/), in particolare [1798 Dresden](http://www.tarock.info/Minchiatta.htm)
