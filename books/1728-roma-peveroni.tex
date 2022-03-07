@@ -1,72 +1,86 @@
+\documentclass[11pt,a6paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{changepage}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.shapes,shapes.geometric}
+
+% avoid orphans and widows, allow for (a lot of) letter spacing.
+\usepackage[defaultlines=2,all]{nowidow}
+\usepackage[tracking]{microtype}
+\sloppy
+
+% how to format and space chapter titles
+\usepackage{titlesec}
+\titleformat{\section}[display]
+            {\huge\bfseries}
+            {\vspace{-1em}}
+            {0pt}
+            {}
+\titleformat{\subsection}[display]
+            {\normalfont\fontsize{12}{14}\slshape}
+            {\vspace{-3em}}
+            {0pt}
+            {\raggedleft}
+% I like this font!
+\usepackage{tgbonum}
+\renewcommand{\rmdefault}{qbk}
+\usepackage{lettrine}
+\usepackage[left=14mm,top=12mm,right=11mm,bottom=14mm]{geometry}
+
+\newcommand{\supersection}[1]{%
+\clearpage
+    {\scshape \centering \huge #1\\}
+    \vspace{6pt}
+    \hrule
+    \vspace{12pt}
+}
+
+\newcommand*\sepline{%
+  \kern 3pt \hrule \kern 2pt
+}
+
+\title{\kern -2em\fontshape{sc}\LARGE REGOLE GENERALI\\ \fontsize{20}{18}\selectfont{
+Del Nobilissimo Gioco}\\ \normalsize \textls[1000]{delle}\\ \fontsize{34}{34}\selectfont{\textls[100]{MINCHIATE}}}
+\author{%
+  \vspace{-26pt}\\
+\textit{Con un modo breve, e facile}\\
+\textit{\textls[86]{per ben imparare a giocarlo}}\\}
+\date{%
+  \kern 3em\small In Roma, Per Raffaelle Peverono. 1728\\ \sepline
+  \textit{Con licenza de’ Superiori}}
+\begin{document}
+
+\pagenumbering{gobble}
+
+\maketitle
  
 
  
- 
 
-REGOLE GENERALI
-
-Del Nobiliffimo Gioco
-Doo hioL eh:
-
-MINCHIATE
-
-Con un modo breve, e facile
-per ben imparare a giocarlo.
 
  
 
  
 
  
+Cortese Lettore
 
-In Roma, Per Raffaelle Peveroni. 1728,
-
- 
-
- 
-
- 
-
- 
-
-|
-| Coa licenga de’ Superiors « |
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
--Cortefe Lettore
-
-Leveder girare que-
-| to picciolo Libric-
-Na ciolo fotto di un ti-
-P™ solo cost _[peciofo di
+Leveder girare questo
+picciolo Libricciolo sotto di un tiP™ solo così speciofo di
 Regole generali del Gioco
 delle Minchiate ; fon ficuros
-benigno Lettore 5 che ti reche-
-ra qualche forte di maraviglia:
+benigno Lettore 5 che ti rechera qualche forte di maraviglia:
 prima perche hai vedato altre
-wolte flampate quefte Regole.
-
-waza alcun frutto , ¢ poe per
-che bai trovato rn ogni conver=
-
-azione ove prattichi,che opin
-uno gioca quesie gioco a capric-
-cio, econregole diver fe, € per
-effer bravo Giocutore bafta af-
-ferire con franchezxa la prat=
-
-ica delle altre conver/a zioni
+volte stampate queste Regole.
+waza alcun frutto, ¢ poe per
+che bai trovato rn ogni conversazione
+ove prattichi,che opin
+uno gioca quesie gioco a capriccio, e con regole diverse, e per
+esser bravo Giocutore basta afferire con franchezxa la
+pratica delle altre conversazioni
 A a ate
 
 f
@@ -81,63 +95,51 @@ f
 
  
 ‘A. ‘
-ancorche non vera; poco impor
-
-tando,che quefta prattica degea
-nevi in abufo; e ficcome queffo
+ancorche non vera; poco importando,
+che questa prattica degea
+nevi in abuso; e ficcome queffo
 é flatol'unico motivo, che hd
 havuto in flamparle per levaye
 da mezzp tante prattiche, e
-tanti abufi: volendo dare una
+tanti abusi: volendo dare una
 regola generale, certa, e fifa
 per tutte le converfarsoni, cost
-pero , che faprai compatire 7]
+pero, che saprai compatire 7]
 mio ardire, quale per render]e
 accreditate bo pretefo ancorg
 di renderne la ragione, perche
-devono tutte effere pratticate
+devono tutte essere pratticate
 uel modo da noi prefcritto; m3
-fe poi quefle ragioni da noz
-addotte non foffero tal’ , che
-poteffero capacitarti 2 baflan-
-za: fappi che io mi contento
+fe poi queste ragioni da noz
+addotte non foffero tal’, che
+poteffero capacitarti 2 baflanza: sappi che io mi contento
 di moderarte jn quella partes
 E ove
 
 Se
 o
 ove foffero defettofe, purche ta
-complacct direndermt una ra-
-giene maggiore, la quale faccia
-coftare effere falfa la prima 5
+complacct direndermt una ragiene maggiore, la quale faccia
+coftare essere falfa la prima 5
 mentre ioche #0n hd mai avuta
-altra idea nel fare quefta pic-
-ciola raccolta , che diftruggere
-ogni abuso , per publico benefi-
-cio,e rendere guefto Gioco fen=
+altra idea nel fare questa picciola raccolta, che diftruggere
+ogni abuso, per publico beneficio,e rendere guefto Gioco fen=
 za competenza di prattica egua~
 le in tutte le conver [azioni, mé
-fapro fottofcrivere dibuonavo-
-glia al two faggio,e miglior pa~
-rere ogni qual volta lo conofee-
-v0 fondato si la ragione. Del
+sapro sottofcrivere dibuonavoglia al two faggio,e miglior pa~
+rere ogni qual volta lo conofeev0 fondato si la ragione. Del
 refio vivi felice .
   
 
 49, al male per gevio, e
 Nosema @ per natura, che ftima
-debolezza di fpirito fignorile , -
-evilta d’animo nobile Pintra-
-prendere per {uo divertimento
-qualche qnorato impiego , 4 fe-
-gno tale, che vuole pit tofto
+debolezza di fpirito fignorile, evilta d’animo nobile Pintraprendere per suo divertimento
+qualche qnorato impiego, 4 fegno tale, che vuole più tosto
 marcire nell’ ozio per averes
 campo di poterfi liberamente
 dare in preda ad ogni forte di
 vizio che fe gli faccia incontro,
-che fottometterfi a qualche lég-
-giera, e virtuofa fatica,creden-
-do ftoltamente di non poterf
+che sottometterfi a qualche léggiera, e virtuofa fatica,credendo ftoltamente di non poterf
 prendere altro divertimento
 pil conveniente alla loro nobi-,
 
@@ -155,64 +157,48 @@ iy
  
 
 8
-le condizione di quello lisa fug-
-gerire un mal configliato cap-
-priccio 3 Onde la vediamo gior-
-nalmente pratticare baldanzofa
+le condizione di quello lisa fuggerire un mal configliato cappriccio 3 Onde la vediamo giornalmente pratticare baldanzofa
 tutti li ridotti, e frequentare
 tutti li poftriboli, ove il gioco
 facendola da gran capitano tira
-a fe tutta la Gioventu vagabon-
+a fe tutta la Gioventu vagabon
+da per condurla a militare sotte
 
-da per condurla a militare fotte
-
-il ftendardo della difperazione ,
-¢ con la fperanza d’un impofi-
-bile guadagno li conduce ad un
+il ftendardo della difperazione,
+¢ con la fperanza d’un impofibile guadagno li conduce ad un
 ftata miferabiliflimo fenza ri.
 paro.
 
 Tralafcio le frodi, che quivi
 fempre fi meditano; Pinganni,
-che fempre fi tentano con pre-
-giudizio anche notabile del pro-
-ptio carattere ; tralafcio le be-
-flemic, che quivi continuamen-
-te fi fentono, le queftionl, che fi
+che fempre fi tentano con pregiudizio anche notabile del proptio carattere ; tralafcio le bestemic, che quivi continuamente fi fentono, le questionl, che fi
 fomentano, livituperj, che fi
-Pratticano, e dird folo, che qui-
-
+Pratticano, e dird folo, che qui
 vi
 : 2
 viregnano continue lecrapole:,.
 nelle quali fanno folo macftofa
 
-pompa: la prodigalita, Pintem-
-
+pompa: la prodigalita, Pintem
 peranza,.e Pubriachezza madri
 feconde ditutte le fceleratezze
-pid abominevoli,le quali ma
+più abominevoli,le quali ma
 fcherate col nome digenerofita
-grandiofa, dé {piritofa fortezzay
+grandiofa, dé spiritofa fortezzay
 e di animofa gagliardia ftrafci~
 nano a viva forza la Gioventt in
 
 un precipitofelaberinto- di vizjj.
 
-a fegno tale, che non sa pit co-=
-nofcere il bene, non sa pit di-
-ftinguer ragione , ¢ fe qualche
+a fegno tale, che non sa più co-=
+nofcere il bene, non sa più diftinguer ragione, ¢ fe qualche
 wero, @fedele amico., amante
 dell’onor fuo,procura con bella
 
-forma.di farle concepire l’erros-
-
-re ,. i cub abbagliato fen vive,
-fi fa reo.d’infedelta-, ¢ colpevo-
-le di zelo indifcreto , quafi.che
-voglia impedirle li fuorgiova-
-nili paflatempi,non confideran-
-
+forma.di farle concepire l’erros
+re,. i cub abbagliato fen vive,
+fi fa reo.d’infedelta-, ¢ colpevole di zelo indifcreto, quafi.che
+voglia impedirle li fuorgiovanili paflatempi,non confideran
 do. altro fpaffo per loro., che.
 
 Ag quek
@@ -222,28 +208,24 @@ Ag quek
 quello gli sa fuggerire un mal
 configliato capriccio.
 
-Onde io per vedere di difto-
-gliere la nobile Gioventt ims 4
-qualche parte da cotanti abo-
-minevoli vizj mi fono lufing a-
-to’ di poter loro impedire una
+Onde io per vedere di diftogliere la nobile Gioventt ims 4
+qualche parte da cotanti abominevoli vizj mi fono lufing ato’ di poter loro impedire una
 firada cotanto precipitofa coll’
-allettamento d’un folo vizio ,
+allettamento d’un folo vizio,
 quale per altro abbia in fe fteffa,
 ¢ del dilettevole,e del virtuofo,,
 accioche fodisfacendo in quetta,
 forma alla loro mala inclina.
-zione pofla bel bello andarg
+zione possa bel bello andarg
 fcordando ogn’altro vizio peg—
 giore.
 
 Non vie dubbio, che tutte
 le novita. rifvegliano nel?ani- ¢
-mode’Giovaniun nonsochedi _
+mode’Giovaniun nonsochedi 
 piacevole, che fortemente gli
 ftimola per prefto condurli ad
-una perfetta cognizione di quel-
-1a novita ; cosi mi Infingo 5 che
+una perfetta cognizione di quel1a novita ; cosi mi Infingo 5 che
 
 i per
 
@@ -254,86 +236,69 @@ gcse ee ee i Ree:
 
 It
 
-er effere quefto vizio non ha
+er essere questo vizio non ha
 1olto introdotto per tutte le
-onverfazioni poffa con facilita
+onverfazioni poffa con facilità
 1overe l’animi della Gioventi
-d applicarvi con tutto. il fer-
-ore, econ tutta lattenzione
-er ben impoffeflarfene ;, tanto
+d applicarvi con tutto. il ferore, econ tutta lattenzione
+er ben impoffessarfene ;, tanto
 iu che fembra degno. di ginfta.
 jprenfione colui, che pretende:
 li pratticare tutte le nobilt con=
-rerfazioni fenza fapere quefto
+rerfazioni fenza fapere questo
 jizio virtuofa..
 
-E’ quetto il nobiliffimo., edi-
-ettevole gioco delleMinchiate,,
+E’ quetto il nobiliffimo., ediettevole gioco delleMinchiate,,
 sotanto pratticato in tutte le
 converfazioni, quale per altro,
 yorta in fronte Vorribile nome:
 li gioco, caggione d’ogn’altra
-(celeratezza , ma racchiude pe-
-ro. in fe tea un compleffo di
-virti, quale lo rende amabile ,
+(celeratezza, ma racchiude pero. in fe tea un compleffo di
+virti, quale lo rende amabile,
 guftofo, ¢ piacevole, perches
 oltre Vimparare l’aritmeticas
 
-A 6 im-
-Lg
-smpara ancora la politica ,. la
+A 6 imLg
+smpara ancora la politica,. la
 prudenza »e economia ; onde
 per non avere db viziofo, che jl
-folo nome , pare che poffa me-
-ritar con ginuftizia tutta Patten-
-zioneé della Gioventi:, mentre
-€ maggiore il vantaggio,cheé
-per apportare di quello.non fia
+folo nome, pare che poffa meritar con ginuftizia tutta Pattenzioneé della Gioventi:, mentre
+e maggiore il vantaggio,cheé
+per apportare di quello.non sia
 il danno, fe ne poffa temere,
 
-Figuratevi in quefto gioco di
+Figuratevi in questo gioco di
 vedere. due inimici a fronte,
 quali con Parmi alla mano.,e
 coir la rabbia ful cuore vanno
 avventandofi vicendevolmente
-replicati colpi di {pada per ca-
-varfidalle vene lun Valtro col
+replicati colpi di spada per cavarfidalle vene lun Valtro col
 fangue la vita; cosi appunto il
 Giocatore delle Minchiate ayi- .
 do anch’egli della vittoria, va
-€on bell’ arte machinando fe-
-crete infidie al fuo caro inimi-
-Co per farle perdere quella car-
-ta donore , che troppo —
+eon bell’ arte machinando fecrete infidie al fuo caro inimiCo per farle perdere quella carta donore, che troppo —
 
 “ i:
 
  
 i
 di pregindizio a fe fteffo fe no
-la perdefle, e con bello, e polis
+la perdesse, e con bello, e polis
 tico ftudio procura cavare ik
-fangue dalla borfa del fuo ini-
-mico, fenza pero che egline
+fangue dalla borfa del fuo inimico, fenza pero che egline
 refti offefo; ma folo lafcia in lui
-un bel defiderio delka vendetta,
-perloche crefce in lui lo ftimo-
-Jodi andare piu guardingo nei
+un bel desiderio delka vendetta,
+perloche crefce in lui lo ftimoJodi andare piu guardingo nei
 cimenti, e quando fe glifa in=
-controuna dura neceflita di re=
+controuna dura necessita di re=
 ftare perdente, deve almeno
-con tutta Peconomia: poflibile
+con tutta Peconomia: possibile
 procurare il fuo minor male,
-perche fembra anche {pecie di
+perche fembra anche specie di
 vittoria rl faper refiftere con
 animo generofo alle avverfita
-jnevitabili , mentre tutta la va-
-ghezza di quefto gioco, confifte
-in fapere con prudenza appro-
-fittarfi del (uo maggior vantag-
-gio, 0 pure Vevitar il fuo mag-
-gior male con daria i di-
-Elle
+jnevitabili, mentre tutta la vaghezza di questo gioco, confifte
+in fapere con prudenza approfittarfi del (uo maggior vantaggio, 0 pure Vevitar il fuo maggior male con daria i diElle
  
 
  
@@ -342,56 +307,42 @@ Elle
 
 fenderfi dall’infidie fecrete d'un
 inimico fcoperto, e con bella
-forma fempre renderfi a lui fu-
-
+forma fempre renderfi a lui fu
 periore in ogni cimento .
 Attefo dunque le cost belle
-qualita di quefto gioco parm »
-che il faperlo a perfezione pofla
-eflere d’un gran vantaggio alla —
+qualita di questo gioco parm »
+che il faperlo a perfezione possa
+essere d’un gran vantaggio alla —
 nobile Gienenti, qual’e inoltre
 necefatata 4 ben faper contate »
-fommare , € fottrare 5 pertanto
-ad effetto,che pofla ogn’une.con
-tutta facilita impoffe flarfene dk
-buona voglia intraprendo que-
-fta fatica 5 defcrivendo. prima»
+fommare, e sottrare 5 pertanto
+ad essetto,che possa ogn’une.con
+tutta facilità impoffe flarfene dk
+buona voglia intraprendo questa fatica 5 defcrivendo. prima»
 tutte le regole generali, che
 pofiono ben ammaeftrarvi 10
 quefio gioco, © pol andaremo
 bel bello difcorrendo del modo
 di pratticarle. Tocchera pet?
 avoia ben ftudiarle per potere
--poicon tutta facilita ridurle
-buona prattica; effendo. che 14
+-poicon tutta facilità ridurle
+buona prattica; essendo. che 14
 
-; Teo-
-15
+; Teo15
 
 Teorica da per fe fola non é ca*
 pace a rendervene informatia
-pieno: attefe le grandi appendi-
-ci, che anno tutte le regole ge-
-nerali, e quefte non puole impa-
-rarle altri, che una diligente »
-& efatta prattica, mentre nd-
-{cono da foli accidenti, che con-
-tinuamente diverfi accadono.in
-quefto gioco 5 onde per ben im-
-parare quefto sioco fa di meftie~
-reunire alla Teorica la pratti-
-ca, la quale come ailai pitt bra~
-va maeftra fapra meglio darvi
+pieno: attefe le grandi appendici, che anno tutte le regole generali, e queste non puole impararle altri, che una diligente »
+& efatta prattica, mentre ndscono da foli accidenti, che continuamente diverfi accadono.in
+questo gioco 5 onde per ben imparare questo sioco fa di meftie~
+reunire alla Teorica la prattica, la quale come ailai più bra~
+va maeftra sapra meglio darvi
 ad intendere quello, che non sa
 fpiegarvi la Feorica.
 
-Quefto gioco trae la fua pri~
-ma originedalla nobiliflimaCit-
-ti di Firenze inventato con bel-'
-lo ftudio pert un piacevole am-
-maeftramento della nobile Gio-
-yentw nell’ Aritmetica, ma le al-
-tre vistu,che Padornano Phanno
+Questo gioco trae la fua pri~
+ma originedalla nobiliflimaCitti di Firenze inventato con bel-'
+lo ftudio pert un piacevole ammaeftramento della nobile Gioyentw nell’ Aritmetica, ma le altre vistu,che Padornano Phanno
 
 refo:
 
@@ -400,27 +351,21 @@ refo:
  
  
 
-16 -
-refo cosi univerfale , che ormai
-fembra difetto di curto intendi-
-mento il non faperlo, mentre
+16 refo cosi univerfale, che ormai
+fembra difetto di curto intendimento il non faperlo, mentre
 fi fa reo d’incapacita chi ne trax
-fcura il confeguimento ,. folo vi
+fcura il confeguimento,. folo vi
 avverto pero,che per ben gioca=
-xe a quefto gioco non bafta il
+xe a questo gioco non basta il
 conofcere le-carte,ed il giocarlo
 perche qnefto é ftato ginfto if
-motivo ,,che mi hamoflo.a de-
-fcrivere le regole generali di
-quefto gioco, effendo che in.»
+motivo,,che mi hamoflo.a defcrivere le regole generali di
+questo gioco, essendo che in.»
 ogni converfazione dove anda~
 vo,. trovavo regole: diverfe,e¢
-talvolta alcuno fi faceva leci-
-to ne’ cafi, dubj: afferire con
-franchezza per ferma-refoluzio-
-ne cid,.che ne-meno.¢ da met-
-terfi indubio, e fe poi glie ne
-dimandavate laragione , non»
+talvolta alcuno fi faceva lecito ne’ cafi, dubj: afferire con
+franchezza per ferma-refoluzione cid,.che ne-meno.¢ da metterfi indubio, e fe poi glie ne
+dimandavate laragione, non»
 fapevarifpondere altro,foloche
 cost fi prattica in altre conver~
 fazioni, fenza riflettere» che
@@ -429,28 +374,22 @@ ognt
 ak ot mM RO Lt et ett a Of tie feed eh, ih it Oe CI IA ee OA kt OCMC COPS
 rp
 yeni converfazione fi regolas
-on regole diverfe , & & capric-
-io, ed il giocare fenza faper
-‘endere la ragione del {uo mo-
-lo di giocare, oltre l’effere re~
+on regole diverfe, & & capricio, ed il giocare fenza faper
+‘endere la ragione del suo molo di giocare, oltre l’essere re~
 ugnante atutie le nature de’
-siochi , & anche contro Vinten~
-ione dell’ Autore,. quale ha pre-
-efo nell’ inventare quefto gioco:
+siochi, & anche contro Vinten~
+ione dell’ Autore,. quale ha preefo nell’ inventare questo gioco:
 li ftabilire regole certe, filfe, &
 mmutabili, le quali doveffera
-empre fervire per tutti , fenzas
+empre fervire per tutti, fenzas
 afciare in arbitrio de’ giocatork
-] variarle 4 loro capriccio. On-
-Je per togliere da mezzo quefti
+] variarle 4 loro capriccio. OnJe per togliere da mezzo questi
 ibufi communemente praticati
-n moltiflime converfazioni ab-
-siamo ftimato neceffario defcri-
-rervi tutte le regole generali, —
+n moltiflime converfazioni absiamo ftimato neceffario defcrirervi tutte le regole generali, —
 \ccio. ch’ogn’uno pola reftarne
-‘apace , eregolarfi in avvenire:
+‘apace, eregolarfi in avvenire:
 ie] modo, che diremo in ap-.
-oueflo.. Intanto vi bafti re
+ouesto.. Intanto vi basti re
 cne
  
 
@@ -470,59 +409,50 @@ cne
 
 19
 
-che quefto gioco fi fa con 9%.
+che questo gioco fi fa con 9%.
 carte, fra qualive ne fono 24
-d’onore,0 vogliandire che con-
-tano, ¢l’altre tutte non col
+d’onore,0 vogliandire che contano, ¢l’altre tutte non col
 tano niente.
-Quefto gioco tutto che abbia
+Questo gioco tutto che abbia
 un folo nome puol perd giocat#
-in pid modi tutti diverfi, men
+in più modi tutti diverfi, men
 tre fi puol giocare 4 ogn’uno 04
 per fe folo, e fi puol giocare con
 il compagno adue per due;
-pitt fi puol giocare,in due,in tres
+più fi puol giocare,in due,in tres
 ed in quattro, e quando fi gioc®
 in meno di quattro, allora fi 0°
 ca ad ogn’uno per fe, fe bene®
 puolanche giocare in quatttos
 ad ogn’ano per fe, ma quando ®
 g10ca in quattro il vero giocate
-€giocar con il compagno: ,.
+egiocar con il compagno:,.
 Quando fi gioca in mene di
 quattro fidanno fempre 25. CaF
 te per ogn’uno, e quando fi 810°
 
-ca in quattro fe ne danno fola-
- men-
-19
+ca in quattro fe ne danno fola men19
 mente 21.con che pero l’ultima
 deve fempre darfi fcoperta a
 
-tutti,e fe quefta fara carta d’ho-.
+tutti,e fe questa fara carta d’ho-.
 
 nore quello, a cui fara toccata
 fegnera tanti puntia fuo favore
-quanto importa la carta fco-
-perta, fe poi non € carta che»
-conti, allora non fi fegna nien-
-te; dopo che tutti li Giocatori
-averanno ayute tutte le fue car-
-te , quelle che reftano fono fuo-
-ri digioco, enon fi confidera-
-no cofa alcuna in quel gioco, ne
+quanto importa la carta fcoperta, fe poi non e carta che»
+conti, allora non fi fegna niente; dopo che tutti li Giocatori
+averanno ayute tutte le fue carte, quelle che reftano fono fuori digioco, enon fi confiderano cofa alcuna in quel gioco, ne
 é lecito ad alcuno de’Giocatori
 il poterle vedere.
 
 Quando fi'gioca ad ogn’uno
 
-per fe quello che ha cattive car-
-te puole non giocare in quella
+per fe quello che ha cattive carte puole non giocare in quella
 mano, ¢ gettare le fue carte ab
-monte, € pagare alcuni punti
+monte, e pagare alcuni punti
 a quello, che fa Vultima mano,
 fecondo quello, che convengo~
-‘ho, € fe bene pero lui non gioca
+‘ho, e fe bene pero lui non gioca
 
 In
  
@@ -538,51 +468,40 @@ vuole giocare paga 20. puntl, il
 fecondo ne paga 39. il terZzo, ed
 il quarto.ne pagano 4o.
 
-Queflo modo di giocare, fe
+Questo modo di giocare, fe
 bene per fe fteffo é piu bello»
 perche ¢ pill difficile giocandofi
 ‘totalmente all’ofcuro ; nulla di
 meno fembra fmezzato, perche
-in quelle poche carte, che refta-
-no fuori del gioco vi poflone
-effere le migliori carte del gio-
-co, e quelle, che poffono fare
-tutto il gioco perd ¢ ftato in-
-ventato dopo il gioco della fo-
-la , quale porta feco per necefii-
-ta, che tutte le carte d’Onoré
-fiano in gioco, € quefto non
+in quelle poche carte, che reftano fuori del gioco vi possone
+essere le migliori carte del gioco, e quelle, che poffono fare
+tutto il gioco perd ¢ ftato inventato dopo il gioco della fola, quale porta feco per necefiita, che tutte le carte d’Onoré
+siano in gioco, e questo non
 
 ftato fatto ad altro fine, che pe
 
 rendere il detto gioco pill tach
-le,e piivago. — Fo-
-at
+le,e piivago. — Foat
 
 Fola vuol dire, che tutte le
-carte d’onore fiano in gioco a4
-{egno tale, che non puole reita-
-re fuori del gioco una carta»
-@onore,benche minima, e quel-
-le, che reftanonell’ultime car~
+carte d’onore siano in gioco a4
+segno tale, che non puole reitare fuori del gioco una carta»
+@onore,benche minima, e quelle, che reftanonell’ultime car~
 te deve tutte pigliarfele per fe»
 quello, che fa le carte; ma 58,
 che voi mi rifponderete, come
-e poflibile , che fola vogtlia di-
-re, che tutte le carte d’onores
-fiano in gioco, fe fecondo quel-
-lo voi avete imparato poc’anzi
+e possibile, che fola vogtlia dire, che tutte le carte d’onores
+siano in gioco, fe fecondo quello voi avete imparato poc’anzi
 puole darfi ’accidente, che an-~
 che giocando con Ja fola tutte
-le carte diconto non fiano in,
+le carte diconto non siano in,
 gioco; mentre fe fi gioca a ogn?
 une perfe, ancorche fi giochi
 con lafola qualched’un de’Gio.
 catori puole gettare le fue car.
 te al monte, fe bene avetle jp
 mano dell’onori; onde in quel
-cafo reftarebbero fuori del Zio-
--O Carte d’onore,. Tous
+cafo reftarebbero fuori del Zio-O Carte d’onore,. Tous
 
  
  
@@ -603,22 +522,19 @@ cafo reftarebbero fuori del Zio-
 
 lo pero vi rifpondo,che ever
 soquello, che vi ho imparato 4
-principio; ma non per quefto &
-vero , che reftino fuori del gio-
-co carte d’onore , quando uno
+principio; ma non per questo &
+vero, che reftino fuori del gioco carte d’onore, quando uno
 de’ Giocatori dice di non volet
-gviocare , € gettale fuc carte al
+gviocare, e gettale fuc carte al
 monte, perche quel Giocatores
 che getta le fue carte al monte »
 dice di non voler giocare ¢
 obligato a pagare quella pends —
 che gl’é ftata aflegnata in prin
-cipio, qual pena vain compen-
-{azione delle carte d’onore, che
+cipio, qual pena vain compensazione delle carte d’onore, che
 puole avere in mano : mentre
 none¢ credibile,che uno,il quale
-abbia in mano tante carte d’ono-
-re, quanto puole importare. a
+abbia in mano tante carte d’onore, quanto puole importare. a
 fua pena voglia fenza rifico Vo
 runo pagare la pena certa, @
 non giocare 5 onde ecco, che la
@@ -627,26 +543,19 @@ pena viene a compenfaré que
 danno,che puole caggionarli ann,
 quels
 23
-quelle poche carte d’onore po-
-fle al monte da chi non vuol
-giocare,ficche non puole giufta-
-mente dirfi in queito cafoy che
-fiano fuori del gioco cartes
-donore, perche quelle vengo-
-no confiderate in gioco mediane
-tela pena,perloche reftera fem-
-pre vera la propofizione, che
-fola vuol dire, che tutte le car-
-te d’onore devono fempre effe-
-re in gioco, ne puole niuno get;
+quelle poche carte d’onore posse al monte da chi non vuol
+giocare,ficche non puole giuftamente dirfi in queito cafoy che
+siano fuori del gioco cartes
+donore, perche quelle vengono confiderate in gioco mediane
+tela pena,perloche reftera fempre vera la propofizione, che
+fola vuol dire, che tutte le carte d’onore devono fempre essere in gioco, ne puole niuno get;
 tarle al monte, fe non in cafo
 ne paghi il compenfo,quale non
-fi deve permettere , fe non &
+fi deve permettere, fe non &
 quelli, che hanno la facolta di
 gettare tutte le fue carte al
-monte , € non giocare in quella
-mano; ma quando non fi poflo-
-no gettare tutte le fue carte al
+monte, e non giocare in quella
+mano; ma quando non fi possono gettare tutte le fue carte al
 
 monte ; allora ne meno élecito.
 
@@ -660,59 +569,43 @@ Z10»
  
 
 24 :
-gioco, e€ potrebbe portare del
+gioco, ee potrebbe portare del
 gran pregiudizio, come diremo
 in appreffo.
 
 Hora poi che havete impara-~
-to che cofavoglia dir fola, do-
-vete imparare 4 conofcere tut-
-tele carte d’onore , e dopo che
-averete ben apprefa la cogni-
-zione delle medefime allora do-
-verete fare lo ftudio delle ver-
-zicole, quali vengono compofte
+to che cofavoglia dir fola, dovete imparare 4 conofcere tuttele carte d’onore, e dopo che
+averete ben apprefa la cognizione delle medefime allora doverete fare lo ftudio delle verzicole, quali vengono compofte
 con fole carte d’onore,ne puole
-mai eflere verzicola, fe non yj
+mai essere verzicola, fe non yj
 concorrono almene tre carte
-d’onore; per ben conofcere tut-
-tele carte d’onore, é necefla~
+d’onore; per ben conofcere tuttele carte d’onore, é necessa~
 rio ancora conofcere quelle,che
 non fono @onore per poterle
-diftinguere, ¢ pero dovete {ape-
-re che tutte le carte fidividono
-parte inTarochi,e parte in Car-
-tiglia, la cartiglia po! fi divide
+diftinguere, ¢ pero dovete sapere che tutte le carte fidividono
+parte inTarochi,e parte in Cartiglia, la cartiglia po! fi divide
 
 in quattro fpecic deter cioe
-pa-
-
+pa
  
-{pada, baftoni, coppe, e denaroy
-ed ognuna di quefte quattro-{pe -
-cl€ € compofta di quattordici
+spada, bastoni, coppe, e denaroy
+ed ognuna di queste quattro-spe cle e compofta di quattordici
 carte, quali tutte non contano
 cofa alcuna, ad efclufione perd
-del? ultima, che fi chiama com-
-munemente il Re, quale contas
+del? ultima, che fi chiama communemente il Re, quale contas
 cingque, ed.é carta d’onore, nel
-eiocare poi dette carte, la mag-
-piore prende fempre la minore ;
+eiocare poi dette carte, la magpiore prende fempre la minore ;
 ad efclufione pero.di coppe, e
-denari;-mentre la minore pren-
-le lamaggiore, quando perd non
-fino carte; figurate, effendo che
+denari;-mentre la minore prenle lamaggiore, quando perd non
+fino carte; figurate, essendo che
 le figurate precedono femprey
 alle numerate, ele numerate
-folo.anno il privilegio di prece-
-dere alle maggiori dinumero.
+folo.anno il privilegio di precedere alle maggiori dinumero.
 Li Tarochi fono quaranta, e
 col Matto fono quarantuno,fino
-al trentacinque fono tutti nu-
-merati, ed i] maggiore precede
+al trentacinque fono tutti numerati, ed i] maggiore precede
 mprefe al minore; dopo il trens
-oe B ta-
- 
+oe B ta 
 
  
 
@@ -724,31 +617,26 @@ oe B ta-
 
 tacingue vi fono altre cinque
 carte, le quali fi chiamano ari¢ »
-€ non fono numerate ; ma fi di-
-ftinguono peré dalla loro repré-
-fentazione , mentre la pid infe-
-riore rapprefenta la Stella, 1a
+e non fono numerate ; ma fi diftinguono peré dalla loro repréfentazione, mentre la più inferiore rapprefenta la Stella, 1a
 feconda la Luna,la terza il Soles
-laquartail Mondo , laquinta le
+laquartail Mondo, laquinta le
 
  
 
 —a
 
-Trombe. ; ¢ quefte fono le mag*
+Trombe. ; ¢ queste fono le mag*
 
 giort carte del gioco. In oltre
-vie un’altra carta,la quale é fen-
+vie un’altra carta,la quale é fen
+zanumero » e non fa nessunas '
 
-zanumero » € non fa neflunas '
-
-figura , ¢ fichiama il Matto »
+figura, ¢ fichiama il Matto »
 
 i quale all’ofanza de’ Matti fa
 quel che yuol¢ ; ma pero é infe>
-riore , € tutte le altre carte tut-
-
-to che fiano carte d’onore,men=
+riore, e tutte le altre carte tut
+to che siano carte d’onore,men=
 
 tre Ini non puole mai pigharé
 neffuna carta .
@@ -767,40 +655,36 @@ y
 ranta efclufene, il yentinove
 quale|non conta, fe non in cafo
 che faccia verzicola, tré di ques
-fte come dicemmo di fopra fan-
-no verzicolas ma per effere vers
-zicola’é neceflario, che fiano
-confecutive.,. come uno, due ,e
+fte come dicemmo di fopra fanno verzicolas ma per essere vers
+zicola’é necessario, che siano
+confecutive.,. come uno, due,e
 tre, 0 pure due,tre, e quattro, 6
 pure 28, 29.30. © cosi di tutte
-Paltre in appreffo fino al. qua-
-tanta ; {¢ poi foflero quattro, 6
+Paltre in appreffo fino al. quatanta ; s¢ poi foflero quattro, 6
 cinque carte: confecutive tutte;
 fanno verzicola,ma fe non fono
 pero confecutive non poffonoe
 fare verzicola oltre di tuttes
-quefte vetzicole, ve ne fono del-
-le-altreycome unMatto;e Trom=
-ba, uno , tredeci, € ventiotto,
-dieci; venti trenta , ¢ quaranta,
-ma per effere verzicola devono
-fempre effere confecutive, di
+queste vetzicole, ve ne fono delle-altreycome unMatto;e Trom=
+ba, uno, tredeci, e ventiotto,
+dieci; venti trenta, ¢ quaranta,
+ma per essere verzicola devono
+fempre essere confecutive, di
 
-“pit tre Re'ancora fanno vérzj-
-cola , il Matto poi entra in tuta
+“più tre Re'ancora fanno vérzjcola, il Matto poi entra in tuta
 Ba te
 
  
 28
-te le verzicole, fe bene da per f€
+te le verzicole, fe bene da per fe
 folo non fa altra verzicola che
 uno Matto,e Tromba. 9): ? °
 
-Tutte quefte carte che fanno
+Tutte queste carte che fanno
 yerzicola contanto cinque©
-ponti per ognuna ,ed efclufione
+ponti per ognuna,ed efclufione
 delli quattro Papi, .che contano
-folamente tré, ¢ le cinque ari€
+folamente tré, ¢ le cinque arie
 che contano dieci :per-ognuta >
 Il vehtinove conta folamente
 Cinque, quando fa verzicola, al=
@@ -809,7 +693,7 @@ fono alcuni che fanno ancora. —
 la verzicola diMondo,Carne,¢ |
 Diavolo, ed:in quel cafo quando —
 i] Diavolo fa-vetzicola conta)
-cinque sancor eflos altriment!
+cinque sancor essos altriment!
 non conta niente. 1 « ¢"!
 
 Le verzicole: ficontano tf
@@ -825,28 +709,24 @@ prima dicominciare 4 a i
 
  
 / 29
-ne fi puolé pit moftrare dopo
-d‘haver giocata la prima carta ,
-né {i deve fupporre moftrata, 6
-per averla rubata ,6 per averla
+ne fi puolé più moftrare dopo
+d‘haver giocata la prima carta,
+né si deve fupporre moftrata, 6
+per averla rubata,6 per averla
 trovata nella fola; ma bifogna
-neceflariamente moftrarla pri-
-ma di giocare chi vuole con-
-tarla ,-alla fine pot-del gioco fi
+necessariamente moftrarla prima di giocare chi vuole contarla,-alla fine pot-del gioco fi
 conta di nuovo’ due | volte,
-quando: pers. fi fia fatta .
+quando: pers. fi sia fatta .
 Quando havrete ben ap
-prefe tutte quefte cofe come ne-
-eeffariiffime::. allora comincia=
+prefe tutte queste cofe come neeeffariiffime::. allora comincia=
 rete avenire in qualche cogni+
 zione diquefto gioco, quale fi fa
 nella forma, che diremo adef=
-~ fo;quefto gioco deve giocarfi in
+~ fo;questo gioco deve giocarfi in
 quattro perfone a due per due,
-€ primieramente fideve venire
+e primieramente fideve venire
 al’elezione de’ Compagni, es
-quando li Giocatori non fi ac-
-cordano fra diloro , allora de.
+quando li Giocatori non fi accordano fra diloro, allora de.
 ve rimetterfi Pelezione alla for.
 
 Bg ae
@@ -870,59 +750,51 @@ de iCompagni,.comincera D0 —
 de’ Giocatori 4 mefcolare ben
 bene tutte le carte affieme » ¢
 poi lafcierd ad arbitrio dellas
-parte Palzarle , quale dovra
+parte Palzarle, quale dovra
 riconofcere l’ultima carta alza@
 
-ta, e fe fara. carta d’onore, 0 {o>
+ta, e fe fara. carta d’onore, 0 so>
 
 praventi,allora dovra pigliarfe
 la per fe,,¢ pigliera tutte quelle,
 
 che ritrovera,¢ fe faranno car~ —
 
-te d’onore , dovra fegnare a fud
-favore tanti punti,quanti ne im-
-
-porteranno: le carte d’onore al-
-
+te d’onore, dovra fegnare a fud
+favore tanti punti,quanti ne im
+porteranno: le carte d’onore al
 zate, perche finoa tanto, che
 
-‘trovera fotto la carta alzata, 9
+‘trovera sotto la carta alzata, 9
 
 carta d’onore, 6 fopraventi, tur
-te dovra prenderfele per {e,€
+te dovra prenderfele per se,e
 
-{e fi daffe l’accidente, che quer”
-lo, che alza rubbaffe per fe piu
+se fi dasse l’accidente, che quer”
+lo, che alza rubbasse per fe piu
 di quattordici carte, 4 fegn? ta
 le, che non vi reftaflero pil cal”
 te d (afficienza pet tutti a
 
  
 31
-catori , come dovra regolarfi
-Pultime? in quel cafo,non effen-
-co dovere, che egli non abbias
-le fue carte giufte, né effendo
+catori, come dovra regolarfi
+Pultime? in quel cafo,non essenco dovere, che egli non abbias
+le fue carte giufte, né essendo
 dovere, che quello, che alza
 tralafci di pigliare le carte d’
 onore che trova nell’ alzata. In
 quel cafo per altro impoffibiles
 deve regolarfi il gioco in quella
-conformita , che fi regolarebbe
-fe uno face ffe le carte fenza me-
-{colarvile carte della folla, es
-Pav verfario rubaffe tre, 6 quat-
-tro carte; mentre dovrebbes
-finire di prendere il fuo compi-
-mento delle carte da quelles
-carte, che fono rimafte fuora
+conformita, che fi regolarebbe
+fe uno face ffe le carte fenza mescolarvile carte della folla, es
+Pav verfario rubasse tre, 6 quattro carte; mentre dovrebbes
+finire di prendere il fuo compimento delle carte da quelles
+carte, che fono rimaste fuora
 del gioco,poco importando,che
-foflero cartaccie ; mentre bafta,
-che non fia fuori del gioco car-
-ta d’onore per effere obligato if
-gioco a tirare innanzi,e ne inco]-
-pi la fna trafeuraggine fe non
+foflero cartaccie ; mentre basta,
+che non sia fuori del gioco carta d’onore per essere obligato if
+gioco a tirare innanzi,e ne inco]pi la fna trafeuraggine fe non
 
 4 ha
 
@@ -931,61 +803,49 @@ pi la fna trafeuraggine fe non
  
 zy
 
-‘trovera fotto la carta alzata 916
+‘trovera sotto la carta alzata 916
 
 30
 te, fatta che fi fara Pelezionés
-de i Compagni ,. comincera uno
+de i Compagni,. comincera uno
 de’ Giocatori 4 mefcolare ben
 bene tutte le carte affieme se
 poi lafciera ad arbitrio della;
-parte Valzarle , quale dovry
-riconofcere ultima carta alza-
-ta, e fe fara carta d’onore, 6 {os
+parte Valzarle, quale dovry
+riconofcere ultima carta alzata, e fe fara carta d’onore, 6 sos
 ptaventi,allora dovra pigliarfe.
 la per fe, ¢ pigliera tutte quelle,
-che ritrovera ,¢ fe faranno Cars
-te d’onore , dovra fegnare 4 fuo
-favore tanti punti,quanti ne im-
-porteranno: le carte d’onore ay,
+che ritrovera,¢ fe faranno Cars
+te d’onore, dovra fegnare 4 fuo
+favore tanti punti,quanti ne importeranno: le carte d’onore ay,
 zate, perche finoa tanto, che
 0
-carta d’onore, 0 fopraventi, tut-
-te dovra prenderfele per fe, «
-fe fi daffe l’accidente, che quel-
-lo, chealzarubbafle per fe pia
+carta d’onore, 0 fopraventi, tutte dovra prenderfele per fe, «
+fe fi dasse l’accidente, che quello, chealzarubbafle per fe pia
 di quattordici carte, a fegno tas
-le, che non vireftaflero pid cars
-te a {ufficienza per tutti li Gio-
-ca-
- 
+le, che non vireftaflero più cars
+te a sufficienza per tutti li Gioca 
 
 Oe
 
 31
-eatori , come dovra regolarfi
-Pultime? in quel cafo,non effen-
-co dovere, che egli non abbias
-le fue carte giufte, né effendo
+eatori, come dovra regolarfi
+Pultime? in quel cafo,non essenco dovere, che egli non abbias
+le fue carte giufte, né essendo
 dovere, che quello, che alza
 tralafci di pigliare le carte d’
 onore chetrova nell’alzata. In
 quel cafo per altro impoflibiles
 deve regolarfiil gioco in quella
-conformita , che fi regolarebbe
-fe uno faceffe le carte fenza me-
-{colarvile carte della folla, es
-Vavverfario rubafle tre, 0 quat-
-tro carte; mentre dovrebbes
-finire diprendere il flo compi-
-mento delle carte da quelles
-carte, che fono rimafte fuora
+conformita, che fi regolarebbe
+fe uno faceffe le carte fenza mescolarvile carte della folla, es
+Vavverfario rubafle tre, 0 quattro carte; mentre dovrebbes
+finire diprendere il flo compimento delle carte da quelles
+carte, che fono rimaste fuora
 del gioco,poco importando,che
-follero cartaccie ; mentre bafta,
-che non fia fuori del gioco car-
-ta d’onore per effere obligato il
-gioco a tirare innanzi,e ne incol-
-, pi la fua trafeuraggine fe non
+follero cartaccie ; mentre basta,
+che non sia fuori del gioco carta d’onore per essere obligato il
+gioco a tirare innanzi,e ne incol, pi la fua trafeuraggine fe non
 fe B 4. ha
  
 
@@ -1000,24 +860,21 @@ fe B 4. ha
 32
 
 ha tatto bene te carte, ¢ fe ha
-lafciato fuori del gioco nel me-
-{colar le carte della fola at
+lafciato fuori del gioco nel mescolar le carte della fola at
 tecedente, cosi parimente ne
-cafo , che chi alza ruballe pill di
+cafo, che chi alza ruballe pill di
 quattordici carte, quello che fa
 le carte farebbe obligato a
 prenderfi il compimento delle
-fae carte dallo fcarto di quelloy -
-che ha rubato, ed incolparYy
+fae carte dallo fcarto di quelloy che ha rubato, ed incolparYy
 fe ftelfe fe non ha faputo mefco=
 lar bene le carte, ne occorre il |
-dire, che lo {carto fono tutte
-‘cartaccie, € che Inj non devé —
-avere men carte dellaleri » pre-_
-tendendo d’ obbligare quello >
+dire, che lo scarto fono tutte
+‘cartaccie, e che Inj non devé —
+avere men carte dellaleri » pretendendo d’ obbligare quello >
 che alza a non poter rubaré
-pit di 13. carte per poter an.
-{ciare le fue carte giufte aque’
+più di 13. carte per poter an.
+sciare le fue carte giufte aque’
 lo, che fa le carte, il che fe 60%
 fotfe quando uno tralafcia /#
 fola fuori del gioco? » pravverer”
@@ -1028,20 +885,16 @@ be in confeguenza x che ae 7
 che alza tion potrebbe rubare >.
 perche fi sa di certo, che le
 carte. della fola antecedentes
-fono tutte cartaccie , eficcome:
-non é vera quefta propofizione
+fono tutte cartaccie, eficcome:
+non é vera questa propofizione
 perche quello,che alza,ha facol.
-ta dirubare, ancorche fia rima.
-fia fuori delle carte la fola an-
-tecedente,cosiancora-ha facolta&
+ta dirubare, ancorche sia rima.
+sia fuori delle carte la fola antecedente,cosiancora-ha facolta&
 di:pigliare alzando. quante car=
 te, che trova da poter pighiare;.
 e quello. che fa le-carte in quel
-cafo deve prendere il compi--
-mento delle fue carte dallo {car-
-to diqueHo:, che-ha alzato, il-
-quale dovra. prima eflere me+
-{colato tutto aflieme .
+cafo deve prendere il compi-mento delle fue carte dallo scarto diqueHo:, che-ha alzato, ilquale dovra. prima essere me+
+scolato tutto aflieme .
 
 Finita poi che fara Palzata,
 quello, che havra mefcolate lé
@@ -1060,11 +913,9 @@ la fcoperta, efe fara carta di
 
 onore, quello a cui fara toccata
 
-{egnera tantiponti a {uo fav 0-
-re, quanti ponti importera lai
+segnera tantiponti a suo fav 0re, quanti ponti importera lai
 
-carta {coperta , e dopo, che ha-
-
+carta scoperta, e dopo, che ha
 vra date atutti li Giacatori le)
 undeci carte con prenderfeley’
 
@@ -1074,8 +925,7 @@ ancora lui, fe dopo la tua unde
 cima carta vi fara apprefio al=.
 
 tra carta d’onore,o fopraventts
-e quelle dovra prenderfele tut-
-te per fe, fino che ve ne trove
+e quelle dovra prenderfele tutte per fe, fino che ve ne trove
 
 ra confegnate @ fu0 favore tan:
 ti pont, quanti importeranno
@@ -1083,14 +933,13 @@ le carte d’onore, che ivi avré
 
 trovate . :
 Dopod che avra yeduto non
-effervi pit carte da potert
+esservi più carte da potert
 prendere, offervera allora fem
 quelle poche carte,che le fara’
 
-no rimafte vi fara carta d’one7
+no rimaste vi fara carta d’one7
 derfele
-t-
-
+t
 re, e quelle dovra prenae
 tu
 
@@ -1103,28 +952,23 @@ delli fopraventi, quali non fi
 poffono pill prendere fe non in
 cafo, che pofflino’ fare verzico=
 la, ¢ quando tutti li Giocatori
-avranno fatto le carte una vol-
-ta per uno,allora fi verra di nuo-
-vo alla divifione de’ Compagni,'
-quale dovra. effer fatta nellas:
+avranno fatto le carte una volta per uno,allora fi verra di nuovo alla divifione de’ Compagni,'
+quale dovra. esser fatta nellas:
 forma, che abbiamo detta di
 fopra. |
 
-Vogliono alcuni, che fe quel-
-lo, che fa le carte trovaffe all’
-ultimo il 29., ¢ quefti non fas.
+Vogliono alcuni, che fe quello, che fa le carte trovasse all’
+ultimo il 29., ¢ questi non fas.
 ceffe attualmente verzicola,che
-non fi pofla prendere , ‘e debbas
-reftare fuori del gioco; ma fic-
-come quefta carta puole fempre
+non fi possa prendere, ‘e debbas
+reftare fuori del gioco; ma ficcome questa carta puole fempre
 fare verzicola,ancorche attuals
 mente non Ja faccia cosi, con fa
-{peranza, che pofla fempre far
-gioco non deve mai reftare ne}
-monte, € percid in moltiflime
+speranza, che possa fempre far
+gioco non deve mai reftare nel
+monte, e percid in moltiflime
 
-BG con-
-
+BG con
  
 
  
@@ -1143,60 +987,49 @@ BG con-
 i :
 26
 converfazioni di gia e ftato le
-vato quefto abufo , perche vera-
-mente ¢ flato conofciuto. jngiu«
-fto; Vorigine di quef’abufo-pro*
-viene da usvaltro.abufo maggie.
-re , il quale fi prattica ancora in
+vato questo abuso, perche veramente ¢ flato conofciuto. jngiu«
+fto; Vorigine di quef’abuso-pro*
+viene da usvaltro.abuso maggie.
+re, il quale fi prattica ancora in
 moltiflime converfaziont; ma
-per eflere ingiuftiflimo» ¢ col
-tro ogni raggione » menita d’ef-
-{ere abolito affatto, come dir
+per essere ingiuftiflimo» ¢ col
+tro ogni raggione » menita d’efsere abolito affatto, come dir
 gia é ftato fatto in molti luoghly
-perche. ogni volta » che refti Ie-
-vato quefto abufo maggiore, al
+perche. ogni volta » che refti Ievato questo abuso maggiore, al
 
 Jora refta ancora levato ogni
 
-altro abufo,.che da quello pro~
+altro abuso,.che da quello pro~
 viene. we
 Si ftilava prima, ¢ ftila ane
 cora in alcune converfazionls
 che quello:s. che fa le carte fe 1
-yelle poche carte ,che reftane
-all’ultimo. non avefle trovata+
+yelle poche carte,che reftane
+all’ultimo. non avesse trovata+
 carta d’onore » doveffe nece#4"
-fiamente pagare afliem¢ 6 |
+siamente pagare afliem¢ 6 |
 
  
 
  
 37
-{uo Compagno. un refto all’
-avverfarijse ficcome fuccede's
+suo Compagno. un refto all’
+avverfarijse ficcome succede's
 che alle volte: in quelle poches
 carte non vi fi ritrova che il
 folo 29. cosi volevano, che fe if
-detto. 2g. non faceva attual-
-mente verzicola,non fi fofle po-
-tuto prendere, ¢ foffe allora fta-
-to neceffitato pagare ilrefto. ©
-‘Ma perche if far pagare il re-
-fto a chi non trova ¢arta di
+detto. 2g. non faceva attualmente verzicola,non fi fofle potuto prendere, ¢ fosse allora ftato neceffitato pagare ilrefto. ©
+‘Ma perche if far pagare il refto a chi non trova ¢arta di
 onore nel monte era una legge
-troppo: barbara , e troppo in-
-giufta » cosie gia ftata commu-
-nemente levata-;-e fi: {pera , che
+troppo: barbara, e troppo ingiufta » cosie gia ftata communemente levata-;-e fi: spera, che
 in breve fi levera da per tutto $
 poko poiche chi-fa le carte non
-fia foggetto a pagare quefta pe-~
-na ».allora non vi fara pin difii-
-colta per il 29. perche compira
+sia foggetto a pagare questa pe-~
+na ».allora non vi fara pin difiicolta per il 29. perche compira
 ancora alla parte avverfa,che il
-detto.29. fiain gioco, perche in
+detto.29. siain gioco, perche in
 guel.cafo.puole avere lei fola la
-—— dpe-
-
+—— dpe
  
 
  
@@ -1207,26 +1040,23 @@ guel.cafo.puole avere lei fola la
  
 
 | | 38
- fperanza, che li pofla far gioco
-_| per avere il 39,€ cosi vorra,che
+ fperanza, che li possa far gioco
+| per avere il 39,e cosi vorra,che
 ( fenz’altro refti in gioco .
-Hl Che poi non fia obligato @
+Hl Che poi non sia obligato @
 pagare ilrefia, quello che nel
 far le carte non trovaalcuna»
 cartad@’onore., in quelle poche
 | carte, che le reftano in mano
-| | fembra_ giuftiflimo , perche il
-pagamento del refto in quefto
+| | fembra giuftiflimo, perche il
+pagamento del refto in questo
 cafo fi prefuppone in pene di
 non haver trovata carta d’ono-)
 re; ma non fie mai trovata lege
-cosi barbara, che oblighi a pa-
--garela penad'un atto , che dir
-pende puramenté dal acciden-
-te, anche in pregiudizio pro~
+cosi barbara, che oblighi a pa-garela penad'un atto, che dir
+pende puramenté dal accidente, anche in pregiudizio pro~
 prio,la pena deve folamente pa~
-garfi per quelli fatti, che poflo-
-no effere maliziofi , € ridondana
+garfi per quelli fatti, che possono essere maliziofi, e ridondana
 in vantaggio di. chi fi commete
 te, ancorche alle volte ne fie
 
@@ -1244,33 +1074,22 @@ chit
 ee
 oy ee
 
-che ridondano folo in pregindi-
-zio dichili commette, ¢ hon»
-poffono effere maliziofi,non de-
-vono condannarfi a pena alcu-
-na; mentre.bafta in quel cafo il
-folo pregiudizio , che fi prova
+che ridondano folo in pregindizio dichili commette, ¢ hon»
+poffono essere maliziofi,non devono condannarfi a pena alcuna; mentre.basta in quel cafo il
+folo pregiudizio, che fi prova
 fenzaaggravarlo con maggior
-pena, perche fe fi doveffe con-
-dannare alla pena del refto quel-
-lo, che non trova carta d@’onore
-in quelle poche carte , che fono
-rimafte al monte , con maggior
-giuftizia dovrebbe effere con-
-dannato a pena maggiore colui,
-che in 21. carta non havra tal-
-volta carta d’onore ,e pure non
-fitrova legge,che poffa obligar-
-lo a pagarne la pena , baftando+
+pena, perche fe fi doveffe condannare alla pena del refto quello, che non trova carta d@’onore
+in quelle poche carte, che fono
+rimaste al monte, con maggior
+giuftizia dovrebbe essere condannato a pena maggiore colui,
+che in 21. carta non havra talvolta carta d’onore,e pure non
+fitrova legge,che poffa obligarlo a pagarne la pena, bastando+
 le per fola pena la neceffita del
 perdere.
 
-Oltre di quefti abufi ve n’é un’
-altro forfi di non minor confi-
-derazione, quale deve onnina-
-
-men-
-
+Oltre di questi abusi ve n’é un’
+altro forfi di non minor confiderazione, quale deve onnina
+men
  
 
  
@@ -1280,61 +1099,54 @@ men-
 
 Q
 
-mente levarfi , perche & contto
+mente levarfi, perche & contto
 Jaraggione, ¢ la giuftizia del
 
-| gioco , come diremo adeffo «
-_ _ ~Digidavete intefo di fopta,che:
+| gioco, come diremo adeffo «
+  ~Digidavete intefo di fopta,che:
 
-| il giocare con fola ,. porta {eco
+| il giocare con fola,. porta seco
 per neceffaria confeguenza, che:
 tutte le carte d’onore, oche
-pofiono far gioco ,devono.cie=
+pofiono far gioco,devono.cie=
 re in gioco », perche quella ¢ la
 yera definizione della fola; dt
 piti.avete intefo,.che tanto ques
 to, che alza, quanto quello: che:
-fale carte, hala facolta. di:pi-
-gliare per fe tutte. le carte di
-onote, con tuttbli fopraventi ,
-che trova, fia nell’alzata,fia nel~
-lafcoperta; ora abbiamo ave-
-dere, che cofa‘fi abbia 4 fare di
-quelle carte prefe in quel mo-
-do.
+fale carte, hala facolta. di:pigliare per fe tutte. le carte di
+onote, con tuttbli fopraventi,
+che trova, sia nell’alzata,sia nel~
+lafcoperta; ora abbiamo avedere, che cofa‘fi abbia 4 fare di
+quelle carte prefe in quel modo.
 Dovete prima fapere che
 juno de’Giocatort puole gioca”
-re gon pit, O meno cartes a ”
+re gon più, O meno cartes a ”
 
  
 ar,
 tregl’é ato pofto per pena il
 non contare alla fine del gioco
-li fuoi cnori,fia comunque fi vo-
-glia, non potende-contare che
+li fuoi cnori,sia comunque fi voglia, non potende-contare che
 Pultima fela fa » e le carte fer
 pure ne vince, © laraggione fi
 eperche il giocare-con pil, o
-meno carte puole eflere fatto
+meno carte puole essere fatto
 con frode,come faremo vederes
-ed a quefta pena refta ancora»
+ed a questa pena refta ancora»
 foggetto il proprio compagno 5
 perche prima che cominci a gio~
 care puole,e deve avvertitlo che
 
-conti le fue carte , accid abbia. a
+conti le fue carte, acciò abbia. a
 
 ‘ giocare'con carte giufte, ¢ per
 
 cid refta ancora lui foggetto alla
 pena in cafodi contravenziones
-mentre chi ha pit carte del fue
+mentre chi ha più carte del fue
 dovere prima di cominciare @
-giocare deve fcartarle, ¢ gettar-
-Je al monte, reftando in fuo ar-
-bitrio fcartare quelle carte che
-pitile parera, e le piacera,pur-
-
+giocare deve fcartarle, ¢ gettarJe al monte, reftando in fuo arbitrio fcartare quelle carte che
+pitile parera, e le piacera,pur
 che
  
 
@@ -1343,71 +1155,51 @@ che
  
 
 42
-che non fiano carte d’onore,do-
-
+che non siano carte d’onore,do
 one nelle reftare tutte ins
 
-510CO cotro l’opinione mal fon-
-
+510CO cotro l’opinione mal fon
 data d’alcuni, li quali pretende~
 
-vano, € pretendono ancora che.
-fi poflano fcartare le carte d’o-
-
+vano, e pretendono ancora che.
+fi possano fcartare le carte d’o
 nore, Con la raggione, che chi
 
-{carta , cerca fempre di fare ik
+scarta, cerca fempre di fare ik
 
 fuo maggior vantaggio, si che
 
-quando {carta una carta d’ono-
+quando scarta una carta d’ono
+rc, la scarta folamente, perches
 
-rc, la {carta folamente, perches
+crecde,che la carta fscartata pofJa essere di suo maggior vantag
+gio fuori di gioco, perche fe re
+sia in gioco teme di perderla
 
-crecde,che la carta f{cartata pof-
-Ja effere di {uo maggior vantag-
+con suo pregiudizio.
 
-gio fuori di gioco, perche fe re-
-
-fia in gioco teme di perderla
-
-con {uo pregiudizio.
-
-Ma (e militaffe quefta raggio-
-ne, dovrebbe altresi effere in
-{ua facolta il dire di non voler
-giocar quando uno ha carte cat-
-tive in mano, perche in quel ca-
-fo cercarebbe ancora Iui il fro
+Ma (e militasse questa raggione, dovrebbe altresi essere in
+sua facolta il dire di non voler
+giocar quando uno ha carte cattive in mano, perche in quel cafo cercarebbe ancora Iui il fro
 
 maggior vantaggio,mentre HP
 4:
-lafciarebbe di giocare,folamen-
-te quando aveile timore di per-
-deresma ficcome non é giuftizia
+lafciarebbe di giocare,folamente quando aveile timore di perderesma ficcome non é giuftizia
 che uno,che abbia cattive carte
-poifa lafciar di giocare con tut-
-to che tema di perdere aflai, per
+poifa lafciar di giocare con tutto che tema di perdere aflai, per
 che altrimenti non farebbe piti«
-gioco , fe folo fi voleffe giocare
+gioco, fe folo fi voleffe giocare
 sii la certezza della vincita,
-mentre il Giocatore deve effe-
-re foggetto alla perdita, e al-
-la vincita, cosinon é ginftizia
+mentre il Giocatore deve essere foggetto alla perdita, e alla vincita, cosinon é ginftizia
 che uno che rubbi una cartas
-poffa {cartare 4 fuo arbitrio lé
-carte d’onore , perche col {car-
-tare carta d’onore viene 4 pre-
-Ziudicare alla rettitudine del
+poffa scartare 4 fuo arbitrio lé
+carte d’onore, perche col scartare carta d’onore viene 4 preZiudicare alla rettitudine del
 Bioco. Deve bene il Giocatore
-procurare il {ao minor male,ma
-pero fenza pregiudizio del Zio-
-co, € fenza inganno ; 11 {cartare
-cartad onore,oltre diche é pre-
-Biudicale al gioco ,'¢ ancora
+procurare il sao minor male,ma
+pero fenza pregiudizio del Zioco, e fenza inganno ; 11 scartare
+cartad onore,oltre diche é preBiudicale al gioco,'¢ ancora
 
-frau-
-
+frau
  
  
 
@@ -1424,57 +1216,48 @@ frau-
 44 :
 trandolento 9 perche chi fcarta
 carta d onore fa contro la natus
-ra del gioco, quale deve effere
-fatto con tutte le carte d’ono-
-¥e, come habbiamo detto di fo-
-pra, né deve eflere in arbitriod’
+ra del gioco, quale deve essere
+fatto con tutte le carte d’ono¥e, come habbiamo detto di fopra, né deve essere in arbitriod’
 un tolo il levare dal Bioco carta
 che conti, perche quello che
-{carta carta che conti ,la fcanta
+scarta carta che conti,la fcanta
 Jolo pertimore, che ha di per
-derla , cosila fcarta 4 folo fine
+derla, cosila fcarta 4 folo fine
 che non faccia gioco contro di
-fe medefimo, e quefto.¢ trop.
-po pregiudiciale alla parte con-
-traria, quale fi trova di fare me-
-no gioco diquello che farebbe
+fe medefimo, e questo.¢ trop.
+po pregiudiciale alla parte contraria, quale fi trova di fare meno gioco diquello che farebbe
 fe la detta carta d’onore fofie
 rimatfta in gioco.
 
 E poi fe confideriamo bene
-il cafo , due folo fono quelli che
+il cafo, due folo fono quelli che
 poffono naturalmente fcartares
 cioé quello che alza, 6 quello
 
-che fale carte ,. fe ¢ quello ehe
+che fale carte,. fe ¢ quello ehe
 a “
  
 
 4
 alza deve feartare’ per avere
 rubata qualche ca#ti-d’onore,
-0 fopraventi , onde per il van-
-tageio’ che ha avuto di tubba-
-re non puole caufare pregiudi-
-Zio al gioco; ma deve rigorofa-
-mente fervirfene in vantaggio
+0 fopraventi, onde per il vantageio’ che ha avuto di tubbare non puole caufare pregiudiZio al gioco; ma deve rigorofamente fervirfene in vantaggio
 del medefimo gioco » Maflime
 petche col rubare ha tolto i]
 ‘vantaggio 4 quello che fale car~
-te, ed in quefto cafo verrebbe
-4 caggionare due pregiudizij ,
-UNO ioe a quello che fa le car-
-te, € altro al gioco, il che non
-€ ginfto, née permiftibile .
+te, ed in questo cafo verrebbe
+4 caggionare due pregiudizij,
+UNO ioe a quello che fa le carte, e altro al gioco, il che non
+e ginfto, née permiftibile .
 
-S€ poi ¢quello che {4 le carte,
+Se poi ¢quello che s4 le carte,
 
-che deve {cartare é nemeno Inj
+che deve scartare é nemeno Inj
 ha facolta difcartare carta che
-conti,perche nella ftefla confor.
-_mita verrebbe a caufare previu.
+conti,perche nella ftesta confor.
+mita verrebbe a caufare previu.
 
-dizio al gioco, ¢ non Puole , na
+dizio al gioco, ¢ non Puole, na
 deve fervirfi del Vantageio qi
 prendere per fe tutte le Carte
 
@@ -1496,93 +1279,80 @@ i
 
 46
 donore che trova nel monte
-per poi {Cartarne altre d’onore
-a {uo arbitrio. Stimarei forte
-meno male il fcartare Piftefle
-che trova nel monte, ma quefte
+per poi sCartarne altre d’onore
+a suo arbitrio. Stimarei forte
+meno male il fcartare Piftesse
+che trova nel monte, ma queste
 ne meno fi puol permettere 5
 perche farebbe un permettere
 fervirfi della fola folamente 4
-proprio beneficio, ¢ non a be-
-neficio publico; e poi allora non
+proprio beneficio, ¢ non a beneficio publico; e poi allora non
 fi potrebbe pil dire gioco, ¢né
-fola, perche Ia fola nefluno 1a
+fola, perche Ia fola nessuno 1a
 farebbe fe non in cafo, che yi
-conofceffe il proprio vantag-
-gio. Ecosi fi direbbe fola ad
+conofceffe il proprio vantaggio. Ecosi fi direbbe fola ad
 arbitrio; ma ficome pare che la
-giuftizia del gioco voglia , che
+giuftizia del gioco voglia, che
 chi gode il vantaggio. di pren=
-derfi per fe tutte le carte d’ono-
+derfi per fe tutte le carte d’ono
+. xe, che fono rimaste al monte »
 
-. xe, che fono rimafte al monte »
-
-debba ancora foggiacere al pe-
-ricolo di perderle , altrimenti tl
+debba ancora foggiacere al pericolo di perderle, altrimenti tl
 
 Sloco non farebbe ne giufto » NC
 : egua~
  
 
-eguale,cosi per togliere da mez-
-20 queft’abufo contro tutta 'e=
-quita del gioco, é neceflarid
-confeffare , che quando fi gioca
-con la fola non fi poflino mai
-{cartare carte d’onore,
+eguale,cosi per togliere da mez20 quest’abuso contro tutta 'e=
+quita del gioco, é necessarid
+confeffare, che quando fi gioca
+con la fola non fi possino mai
+scartare carte d’onore,
 
 - E’vero,che a principio il gio~
 co fi introdotto con la liberta
-di fcartare quelle carte, che pitt
+di fcartare quelle carte, che più
 placevano, ancorche foflero d?
 onore, ma ealtresivero, che
 queito gioco a principio non fu
 inventato con la fola » @ ficco~
-me in quel cafo potevano refta-
-re nel monte altre carte d’ono~
-Te , Cosi non fi faceva ingiuria &
-nefluno il {cartare carta d’ono=
+me in quel cafo potevano reftare nel monte altre carte d’ono~
+Te, Cosi non fi faceva ingiuria &
+nessuno il scartare carta d’ono=
 te. Ma al contrario quando fi
-$10ca con la fola fi sa di certo ,
+$10ca con la fola fi sa di certo,
 che nel monte non vi poffong
-eflere rimatte carte d’onore , «
+essere rimatte carte d’onore, «
 fe pure ven’é rimafa qualche.
-duna , quella deve neceflaria.
+duna, quella deve necessaria.
 
 MER
 48
-mente effere di quello, che fa
+mente essere di quello, che fa
 
-- le carte , cosi non deve poi effe-
-
-re lecito.ad alcuno il voler met-
-tere nel monte, ¢ fuori del gio-
-co una carta d’onore, perche
-quella carta d’onore , che non
-gioca, deve fenza dubbio eflere
+- le carte, cosi non deve poi esse
+re lecito.ad alcuno il voler mettere nel monte, ¢ fuori del gioco una carta d’onore, perche
+quella carta d’onore, che non
+gioca, deve fenza dubbio essere
 pregiudiciale a qualcheduno
-de’ Giocatori, il che non & de-
-ve permettere in conto alcuno,
+de’ Giocatori, il che non & deve permettere in conto alcuno,
 
-Quefto difcorfa ¢ bello, .e
+Questo difcorfa ¢ bello, .e
 
  
 
 buono, par difentirmirifpon. —
 
 dere;ma quella cofa di non con.
-tare quando fi gioca.con pid, 6
+tare quando fi gioca.con più, 6
 meno carte fembra pena troppo
-rigorofa , ¢ forfe anche ingiufta,
-perche dal {cartare , 6 non fcar=
-tare, non ne nafce altro pregiu-
-dizio , che quello prova chi
+rigorofa, ¢ forfe anche ingiufta,
+perche dal scartare, 6 non fcar=
+tare, non ne nafce altro pregiudizio, che quello prova chi
 gioca. con pil, 6 meno carte, e
-Poi il non {cartare proviene fo-
-lamente da unpuro accidente
-di dimenticanza , non effendo
-cre-
-
+Poi il non scartare proviene folamente da unpuro accidente
+di dimenticanza, non essendo
+cre
 be
 aa eee
 credibile che uno voglia gioca«
@@ -1590,31 +1360,27 @@ credibile che uno voglia gioca«
 recon pill, © meno carte .
 
 Ma io vi rifpondo, che tutte
-le pene nel gioco’ fono ftate in-
-ventate per oviare le frodi, che
-fi poffono fare , ¢ per effere ob=
-bligato alla pena non énecef-
-fario, che fia fatta la frode, ma
-bafta, che vi pofla effere, e quel
+le pene nel gioco’ fono ftate inventate per oviare le frodi, che
+fi poffono fare, ¢ per essere ob=
+bligato alla pena non éneceffario, che sia fatta la frode, ma
+basta, che vi possa essere, e quel
 
-male, che per accidente € acca~.
-duto bafta che fi poffa argumen-:
+male, che per accidente e acca~.
+duto basta che fi poffa argumen-:
 
-tare, che poflaeffere fatto con
+tare, che possaeffere fatto con
 frode; perche in quel cafo fi
 
-prefuppone fempre la malizia ,.
+prefuppone fempre la malizia,.
 
-€ ficcome il giocare con pit, 0
+e ficcome il giocare con più, 0
 
-meno carte puole eflere fatto:
+meno carte puole essere fatto:
 
 con frode,cosi ancorche accada
-per accidente deve eflervi las
-fua peva, quale deve effere af-
-fai maggiore di quella , che de-
-ve pagare quello che fa le carte
-in cafo disbaglio, e quefta pena
+per accidente deve esservi las
+fua peva, quale deve essere affai maggiore di quella, che deve pagare quello che fa le carte
+in cafo disbaglio, e questa pena
 
 ferye per tenere attenti,ed ap-,
 
@@ -1624,32 +1390,24 @@ pli; 4
 50
 
 plicati i Giocatori,accioche per
-laloro diftrazzione non fuece-
-da ognimanounsbaglio, ede
--ancora dovere che fia aflai rigo-
-rofa, perche fe fi accorge d’ave-
-re carta di pit,oltrediche hail
+laloro diftrazzione non fueceda ognimanounsbaglio, ede
+-ancora dovere che sia aflai rigorofa, perche fe fi accorge d’avere carta di più,oltrediche hail
 vantaggio di fcartare a fuo ar~
-bitrio fa pagare di pit lapenaa
+bitrio fa pagare di più lapenaa
 quello, che da le carte, cosiin~—
 cafo di non fcartare pernon ef
-ferfi fervito del fuo privilegio ,
-deve eflere obligato ad una pe-
-na di gran longa maggiore,qua-
-le é’quella di non contare ,
+ferfi fervito del fuo privilegio,
+deve essere obligato ad una pena di gran longa maggiore,quale é’quella di non contare,
 
 Che poi il giocare con pill, 6
-meno carte poffa eflere fatto
+meno carte poffa essere fatto
 con malizia evidentemente fi
-conofce, perche fe tal’uno avet-
-fe da farfi qualche carta d’ono-
-re ,‘che li premeffe » ¢ dubitaffe
+conofce, perche fe tal’uno avetfe da farfi qualche carta d’onore,‘che li premeffe » ¢ dubitasse
 dinon aver forma di poterlas
-fare, potrebbe fcartare una , 0 —
+fare, potrebbe fcartare una, 0 —
 due carte per farfiun faglio, © |
 
-cQ-
-
+cQ
 Z
  
 
@@ -1660,53 +1418,45 @@ I
 cosi ¢fimerfi, dal pericolo di
 perderla,6 pure col gettare con:
 bello ftudio in terra una delle
-fue carti prendere poi all’avver-
-farij qualche carta di gran con-
-feguenza , € fe non vi fofle pena
+fue carti prendere poi all’avverfarij qualche carta di gran confeguenza, e fe non vi fofle pena
 verupa potrebbe con tutta faci-=
-lita fuccedere {pefliffimo. _
+lita succedere spessiffimo. 
 
-Col non {cartare poi fi puole.
+Col non scartare poi fi puole.
 falyare qualche carta d’onore,la
 quale dovrebbe necefsariamen-.
-te perderfi, mentre puol tener-
-la per Ja fua ultima cartas e per
+te perderfi, mentre puol tenerla per Ja fua ultima cartas e per
 confeguenza fuori del gioco, e.
-cosi farebbe ficuro di poterla fa-
-re, Oalmeno dinon potérlas
-perdere, € ficcome quefto fa-
-rebbe un giocare con vantag-
-gio, econ malizia, cosinon,
+cosi farebbe ficuro di poterla fare, Oalmeno dinon potérlas
+perdere, e ficcome questo farebbe un giocare con vantaggio, econ malizia, cosinon,
 deve permetterfi.
 
 Inoltreé obligato alla pena
-quello che da pit’, o meno car-
-te, ¢ poi tutto il vantaggio ¢
+quello che da più’, o meno carte, ¢ poi tutto il vantaggio ¢
 
 C3 di
 52
-{| di chi la riceve, perche in quels
-| lacarta di pid. puole aver avis
+s| di chi la riceve, perche in quels
+| lacarta di più. puole aver avis
 | | to una carta donore, e dip *
-ada facolta di feartate a {uo
-, ‘modo, cosie dovere che fia ob"
+ada facolta di feartate a suo
+, ‘modo, cosie dovere che sia ob"
 | Tgato ad una pena maggiore
 | chiégioca con una catta di pills:
 odi meno, folo per nod efserfi
 a fervito del fuoivantaggio=
-Chi da pit, meno carte ©
+Chi da più, meno carte ©
 obligato alla pena » perche nel
 dare le carte puol conofcer
 qualche carta » © cosi darne ula
 itl, O MEN, fecondo che |i tor
 Li | na a conto; onde per oviate?
-| | quefta frode e€ ftato nece flat!
+| | questa frode ee ftato nece flat!
 e per eller
-non nece!-
-i le carte con
+non nece!i le carte con
 che vi pol
 
-eflere .
+essere .
 La pena di chi sbaglia le cat
 
 te fono 20. punti, pet Ja primé@
@@ -1724,27 +1474,24 @@ ge
 53
 carta,e:dieci per ogni altra,fino
 alla fomma d’un refto ; ma fe lo
-sbaglio foffe in tutti, allora ft
+sbaglio fosse in tutti, allora ft
 deve pagare la pena per tutti,
 e fi puole arrivare @ pagare un
 refto per ogni sbaglio di carte:s
-A quefta pena e ancora foggetto
-il compagno , perche ancora lui
+A questa pena e ancora foggetto
+il compagno, perche ancora lui
 deve fare attento, ed avertire
-il (uo compagno, quando fi ac-
-corge dello sbaglio.
+il (uo compagno, quando fi accorge dello sbaglio.
 
-Chiha carte. di pit datele per
+Chiha carte. di più datele per
 sbaglio, ha facolta difcartare
-a fuo arbitrio, prima che co-
-minci agiocare, purche con lo
-fcarto non fi faccia faglio , per=
+a fuo arbitrio, prima che cominci agiocare, purche con lo
+fcarto non fi faccia faglio, per=
 che non deve fervirfi di quel
 -valtaggio per ammiazzare. ul
 RéalPaverfarij, fe poi ne ha di
 meno, deve patimente prima
-di cominciare a giocare do-
-mandare a quello, che fa le car
+di cominciare a giocare domandare a quello, che fa le car
 te tante carte » quante ne ha
 
 C 3 di
@@ -1770,26 +1517,24 @@ C 3 di
 
 54
 di meno, equefti dovra darlé
-diquelle del monte ; pero pri-
-ma di far la fola mefcolan 0
+diquelle del monte ; pero prima di far la fola mefcolan 0
 ben bene il monte, ¢ poi quello
 a cui mancano domandera fer”
 za vederle quelle carte » che
-pitt le piacera 5 purche non G0”
-mandi pit del fuo dovere -
-Puole di pid darfi lo sbaglio
+più le piacera 5 purche non G0”
+mandi più del fuo dovere Puole di più darfi lo sbaglio
 dicarte inuno, che avefie le
 fue carte ginfte, ed obligare Mt
 nel cafo quello, che fale carte
 alla pena dello sbaglio» perche
-fe quello , che fa le carte fi foor~
-daffe di dare la carta {coperta
-adalcuno,¢ quello , cid non
-oftante , avelte le fue carte gil”
-fe , none per quefto , che quer
+fe quello, che fa le carte fi foor~
+dasse di dare la carta scoperta
+adalcuno,¢ quello, cid non
+oftante, avelte le fue carte gil”
+fe, none per questo, che quer
 lo, che fale carte » non abbiv
 sbagliato ; mentre deve oh
-dere, che lo sbaglio fia fucc®
+dere, che lo sbaglio sia succ®
 duto nelle prime ‘carte, ee
 
 gol non dare la carta con
@@ -1799,26 +1544,23 @@ ona
 ha privato quello del vantaggio
 
 di fegnare a fuo favore tanti
-punti, quanti ne poteva impot-
-tare la carta {coperta, efe non
-foife obligato 4 pena veruna ,
-verrebbe in quel cafoad efimer-
-fi con inganno dalla pena dello
+punti, quanti ne poteva impottare la carta scoperta, efe non
+foife obligato 4 pena veruna,
+verrebbe in quel cafoad efimerfi con inganno dalla pena dello
 Sbagho ..
 
-Se poi il Giocatore incomin-
-ciaffe a giocare fenza aver pris
+Se poi il Giocatore incominciasse a giocare fenza aver pris
 macontate le fue carte, il che
 é contro ogni buona regola di
-gioco, efi trovaffe 4 giocares
-con pitt, Omeno carte; allora
+gioco, efi trovasse 4 giocares
+con più, Omeno carte; allora
 non é pi intempo di rimediare |
 al male; ma deve pagare las
-pena di non contare , perche
+pena di non contare, perche
 quando uno ha incominciato a
 giocare, non é pil padrone di
 ritirarfi la carta giocata per
-non eflere quella pit fua, mas
+non essere quella più fua, mas
 del gioco; Onde in quel cafo
 non potendo rimediare all’erros
 
@@ -1835,35 +1577,34 @@ C4 Ie,
  
 $6
 
-Te, dovra foggiacere alla pe-
-oo
+Te, dovra foggiacere alla peoo
 
 2 Siuftamente dovuta a chi
-$10¢a Con pitt, oO meno carte .
-© quefta pena puole dirfi
+$10¢a Con più, oO meno carte .
+© questa pena puole dirfi
 troppo tigorofa rifpetto . al
-ompagne , perche trattandofi
-Mel fuo interefle , deve avertire
+ompagne, perche trattandofi
+Mel fuo interesse, deve avertire
 “/40 Compagno, prima ches
 Slochi, che conti le fue carte,
-© che {cart} » fe ha.dafcartare;
-€ liccome Jyi gode del vantag.
+© che scartl » fe ha.dafcartare;
+e liccome Jyi gode del vantag.
 810 della pena di quello., che fq
-le carte, {e le conta in tempo ,
-Cosi deve effere ancora lui foo.
-Setto a quefta pena, fe pér faa
+le carte, se le conta in tempo,
+Cosi deve essere ancora lui foo.
+Setto a questa pena, fe pér faa
 trafchragsine il fuo Compagna
 Sioca fenza aver contato. ley
 fue carte.
 
 Se fofle nel cafo.d’avere una
-Carta di pit; allora, ancorches
+Carta di più; allora, ancorches
 aveffe giocata la prima carta,
-€ fiaccorge dellosbaglio, prima
+e siaccorge dellosbaglio, prima
 
 quel
 
-Che foffe copertala mano, in i
+Che fosse copertala mano, in i
 quel cafo puole tintediars’ af
 male, con dire che la carta’.
 ehe ha pofta. ful tavolino- deb
@@ -1872,79 +1613,65 @@ di fcartare,.e cosi-fe li. deve bo-.
 nificare lofearto., e rifcuotere
 la penada quello, che ha-fatte
 le carte, fe la carta che ha di
-pid elie ftata data per sbaglio.
+più elie ftata data per sbaglio.
 
-Ma fe per accidente nel ri-
-fpondere la prima volta daffe un
+Ma fe per accidente nel rifpondere la prima volta dasse un
 Re, 0 pure altra carta d’onore
-come che quellencn fi poffo-
-no {cartare ; allora non é pid in
+come che quellencn fi poffono scartare ; allora non é più in
 tempo a rimediare al male, con
-tutto che foffe la prima giocata:
-il fimile puol parimente fucce-
-dere in qualfifia altra carta ,,
-che non fiad’onore’; mentre fe,
-avefle per accidente una carta
-di pit , la quale le fofle ftata da.
+tutto che fosse la prima giocata:
+il fimile puol parimente succedere in qualfifia altra carta,,
+che non siad’onore’; mentre fe,
+avesse per accidente una carta
+di più, la quale le fofle ftata da.
 tada chi fa le carte, e fi trovaf=
 fe una fola carta di fpada,- o.al.
 
 C 5 tra
 58
 tra cartadidiverfa fpecie, efi
-giocaffe la prima volta fpada, a
-dove quello avetle una fola car-
-tase dopo di aver giocato fiac-
-corgefie d’aver una carta di pitty
+giocasse la prima volta fpada, a
+dove quello avetle una fola cartase dopo di aver giocato siaccorgefie d’aver una carta di pitty
 in quel cafo non potendodir che
-{carta la carta giocata per non
-poterfi far faglio,cosi non ha pit
-facolta di poter {cartare; macs
+scarta la carta giocata per non
+poterfi far faglio,cosi non ha più
+facolta di poter scartare; macs
 deve continuare il gioco fing
 alPultimo con la fua carta dj
-pil, € poinoncontare.
+pil, e poinoncontare.
 
 Hora che abbiamo veduto jj
-modo, che deve tener uno ,'che
-aveffe pil, Omenocarte ,& dge
-vere veder il modo, che dove-
-ra tenere chi fa le carte, in cafo
-che fi accorgefle dello sbaglio
+modo, che deve tener uno,'che
+aveffe pil, Omenocarte,& dge
+vere veder il modo, che dovera tenere chi fa le carte, in cafo
+che fi accorgesse dello sbaglio
 in tempo di poterlo rimediare.
 Pertanto fi devefapere, ches
 quello, che fa le carte deve»
 flar molto attento 4 non sba=
-gliare;ma fe mai fi accorgefle@?
+gliare;ma fe mai fi accorgesse@?
 
 aver
 59
 aver data qualche carta dipia,
-o dimeno ad alcuno , deve pro-.
-curar dirimediare al male, pri-
-ma che quello fi volti le carte.
+o dimeno ad alcuno, deve pro-.
+curar dirimediare al male, prima che quello fi volti le carte.
 alla faccia,perche dopo lui-non
 é piu padrone di quelle carte,né
-giova il dire, che fi contino,per-
-che l’obligo di contarle compe-
-te folamente.a quello , che fa Ie
+giova il dire, che fi contino,perche l’obligo di contarle compete folamente.a quello, che fa Ie
 carte fino a tanto che lecarte
-fono coperte , e non fono vedu-
-te ;ma una volta, che le carte
-fono vedute , 0 ha data la carta
+fono coperte, e non fono vedute ;ma una volta, che le carte
+fono vedute, 0 ha data la carta
 
-fcoperta, allora non puole pit -
-
+fcoperta, allora non puole più 
 in conto alcuno difporre di
 quelle carte; ma deve lafciar
 correre, e pagarne la pena, fe vi
-ésbaglio, fe laparte fene ac-
-corge,enonfare , come fi lu-
-fingano molti, li quali quando
-{coprono all’avverfarij qualche
-carta d’onore, dicono fubito ,
+ésbaglio, fe laparte fene accorge,enonfare, come fi lufingano molti, li quali quando
+scoprono all’avverfarij qualche
+carta d’onore, dicono fubito,
 contate le carte, credendofi dj
-C 6 po-
- 
+C 6 po 
 
  
 
@@ -1955,27 +1682,25 @@ C 6 po-
 60
 poterli levate quella carta di
 onore, con lo sbaglio da loro
-fatto, € non fiavvedono, che
+fatto, e non siavvedono, che
 oltre if non potere aver quell’
-onore y farebbero ci pit obliga-
-tia pagar la pena detta di foptay
+onore y farebbero ci più obligatia pagar la pena detta di foptay
 ogni qual volta pero la cartes
 fofle fcoperta, ¢ veduta dali
 
 -.Giocatori; mentre Pavvifano»
-che conti le carte , dove al cone
+che conti le carte, dove al cone
 
-trario fe non fi raccordaffe ‘il
-contare le carte , potrebbe darfi
-Vaccidente , che fi dimenticafte
+trario fe non fi raccordasse ‘il
+contare le carte, potrebbe darfi
+Vaccidente, che fi dimenticafte
 dicontarle, ¢ giocafle con una
-carta di pil fe maiglic lavefle
+carta di pil fe maiglic lavesse
 data in sbaglio.
 
-Refta ora a vederfi, che re-
-gola deve tenerfi in cafo che |
+Refta ora a vederfi, che regola deve tenerfi in cafo che |
 le carte foflero giufte di nus
-mero, € non di qualita, € che Ht
+mero, e non di qualita, e che Ht
 Giocatori non fe ne accorse 10a
 to che alla fine. del primo ge
 co, ¢ fe bene in alcune ee
@@ -1983,29 +1708,24 @@ co, ¢ fe bene in alcune ee
 
 61
 fazioni f prattica di non manda
-re mai il gioco 4 monte’ col pre-
-tefto, chealgidco delle Min-
-chiate mai devono rifarfi les
+re mai il gioco 4 monte’ col pretefto, chealgidco delle Minchiate mai devono rifarfi les
 carte: Io pero fono di diverfo
-fentimento, prima perche queft
-affioma non & fondata fopra al-
-cuna ragione’, € poi perche me
+fentimento, prima perche quest
+affioma non & fondata fopra alcuna ragione’, e poi perche me
 lo perfuade la ragione ; mentre
-ficcome il giocar con fola , por=
-ta feco per neceflaria confe-
-guenza, che tutte le carte di
-Onore fiano: in gioco 5 comes
+ficcome il giocar con fola, por=
+ta feco per necessaria confeguenza, che tutte le carte di
+Onore siano: in gioco 5 comes
 habbiamo detto di fopra, cosk
 mancando qualche earta d’ono-~
 
 re il gioco fi deve avere per hul-:
 
-lo, e per non fatto’, perche tut-
-te le carte d’onoré hot erano
+lo, e per non fatto’, perche tutte le carte d’onoré hot erano
 in gioco, come e*doveresne
-occorre, che fi dida, che {e'qiiel=
+occorre, che fi dida, che se'qiiel=
 lo, che fa le carte, fe ne accor?
-fe prima di €omiliciare aeiocas
+fe prima di eomiliciare aeiocas
 re puol far giconoftere da” ears
 - ta 9.
 
@@ -2036,61 +1756,45 @@ iN
  
 62
 ta, che manca, e prenderfela
-per fe, come rimafta nella fola ,
-ancorche foffe cafcata in terra,
+per fe, come rimasta nella fola,
+ancorche fosse cafcata in terra,
 
-© rimafta fuori del gioco per.
+© rimasta fuori del gioco per.
 
-accidente , perche io le rifpon-
-do, che il gioco deve effere fat-
-to fenza frode, ¢ dove vi poffa
-effer la frode, fe ne deve pagar
+accidente, perche io le rifpondo, che il gioco deve essere fatto fenza frode, ¢ dove vi poffa
+esser la frode, fe ne deve pagar
 Ja pena, e ficcome. in quettas
 forma potrebbero commetterfi
 moltiffimi inganni, quali non
-devono permetterfi , cosi in.
+devono permetterfi, cosi in.
 quel cafo il gioco fi deve avere
-fempre per non fatto; altrimen-
-ti fpeffo fuccederebbe,che quel-
-Io, che fa le carte con deftrezza
-di mano, econ malizia getta-
-rebbe in terra, 0 lafcierebbes
-fuori del gioco le migliori car-
-te, fe non tutte, almeno qualche
-dona , con la certezza , che fen-
-2a pagarne pena, quelle tocca-
-rebbero a luineceflariamente ;
+fempre per non fatto; altrimenti fpeffo succederebbe,che quelIo, che fa le carte con deftrezza
+di mano, econ malizia gettarebbe in terra, 0 lafcierebbes
+fuori del gioco le migliori carte, fe non tutte, almeno qualche
+dona, con la certezza, che fen2a pagarne pena, quelle toccarebbero a luinecessariamente ;
 ; on-=
 
 ee ee ee ee ee ee ee ee ee. ee. ae. ae
 
 ge ee. ot ce ie a ee Se ae
 63
-nde pet oviare quefti inganni
-“neceffario confeflare , ches
+nde pet oviare questi inganni
+“neceffario confessare, ches
 nivolta, che nelle carte del
 r1Ioco mMalica alcuna carta di
-ynore , Overo ve ne fara alcuna
-Ji pid per non far nafcere un in-
-sonveniente maggiore; allora
+ynore, Overo ve ne fara alcuna
+Ji più per non far nafcere un insonveniente maggiore; allora
 ynel gioco sintendera fempre>»
 yer hon fatto, fe poi le carte,
--he mancaffero , 6 che crefcef-
-ero, non fofsero d’onore; al-
-ora il gioco s’avera fempre per
-yen fatto ,e validiffimo.
+-he mancaffero, 6 che crefcefero, non fofsero d’onore; alora il gioco s’avera fempre per
+yen fatto,e validiffimo.
 
-Nafce un’ altrodubbio in ma-
-éria di fcarto, anche fra primi
+Nafce un’ altrodubbio in maéria di fcarto, anche fra primi
 Ziocatori di non poco rilievo,la
 -efoluzione del quale io per me
-timo affaichiara,ma la raggio-
-1e pero é quella, che deve con-
-yincerci; fupponiamo adunque,
+timo affaichiara,ma la raggio1e pero é quella, che deve conyincerci; fupponiamo adunque,
 che uno de’Giocatori abbia,al-~
--ando, rubate due carte, e que-
-te Pabbia pofte da parte ful ta-
-
+-ando, rubate due carte, e quete Pabbia pofte da parte ful ta
 yor
  
 
@@ -2107,88 +1811,73 @@ yor
  
 
 G4.
-volino per doverne {cartareo
+volino per doverne scartareo
 
-due altre a {uo tempo ; quefto
+due altre a suo tempo ; questo
 
-fenza punto piu ritlettere 4 quel-
-le due carte ha incominciato 4
-giocare fenza f{cartare; fi do-
-manda adeflo come debba an;
-dare quefto gioco, non parendo
+fenza punto piu ritlettere 4 quelle due carte ha incominciato 4
+giocare fenza fscartare; fi domanda adesso come debba an;
+dare questo gioco, non parendo
 giuftitia il condannare a4 pena
 veruna quello,,.che ha rubato le
-due carte, e non ha f{cartato,
+due carte, e non ha fscartato,
 perche alla fine gioca con le fue
-€arte giufte,e fe poi vie qual]-
-che pregiudizio in quel-cafo @
-tutto di quello, che non ha {car-
-tato,, non potendofi negare, che
-Jo fcartare non fia di gran yan-
-tageio.
+earte giufte,e fe poi vie qual]che pregiudizio in quel-cafo @
+tutto di quello, che non ha scartato,, non potendofi negare, che
+Jo fcartare non sia di gran yantageio.
 
 Dovete prima avvertire-co-.
 
 Me fi gioca, perche dal modo
 
-del giocare ne nafce una refolu-
-Zione diverfa fe fi gioca all’an-
-_tica, e fenza fola, alloranoné
+del giocare ne nafce una refoluZione diverfa fe fi gioca all’antica, e fenza fola, alloranoné
 fogectto a pena veruna, e deve
-ti-
-«=
+ti«=
 
 tirarfi tananzi il gioco, come fe
 quelle due carte non foffero in
 gioco; fe pot fi gioca con la
 fola caminando. fempre con.
 Vifteffo principio, che tutte le
-earte d’onore debbano effere in
+earte d’onore debbano essere in
 gioco, dico che le carte, che ha
-rubate» 0 fono d’onore , Onon
+rubate» 0 fono d’onore, Onon
 Jo fono, fe non fono d’onore
-allora deve prenderfele in ma-
-no, € giocare con pit carte ,e
+allora deve prenderfele in mano, e giocare con più carte,e
 poi foggiacere alla pena di chi
-gioca con pitt, Omeno carte,
-fe non fono d’onore fenza efle-
-re obligato a penaalcuna puol
+gioca con più, Omeno carte,
+fe non fono d’onore fenza essere obligato a penaalcuna puol
 dire d' avere feartate quelles
-- ftefle, che ha rubato , né occor-
-re dire, che il pregiudizio in
-quefto cafo é tutto di chi non
-{cazta, perche fi deve riflettere,
+- fteste, che ha rubato, né occorre dire, che il pregiudizio in
+questo cafo é tutto di chi non
+scazta, perche fi deve riflettere,
 che il gioco nome fatto per li
-ftorditi; onde puol eflere, che
-non abbia voluto {cartare per:
-timo-
-  
+ftorditi; onde puol essere, che
+non abbia voluto scartare per:
+timo  
 
 66
 
 | timore che aveva di perderes
-i | quell’onore; econ fare lo ftor-
-A dito efimerfi dal pericolo di
+i | quell’onore; econ fare lo ftorA dito efimerfi dal pericolo di
 | perderlo, il che fe bene di rare
-aa accade, nulladimeno puole ac-
-
-a cadere, eper quefto giufto deve
-efler foggetto alla pena del non
-contare, non effendo neceflario
+aa accade, nulladimeno puole ac
+a cadere, eper questo giufto deve
+esser foggetto alla pena del non
+contare, non essendo necessario
 il commettere la malizia per ef
-fer obligato alla pena, ma baftay
+fer obligato alla pena, ma bastay
 
-che vi pofla eflere ._
+che vi possa essere .
 In oltre fupponiamo, ches
 
-fi uello che fa le carte abbia pre-
-ih te nella fola tre carte d’onore »
+fi uello che fa le carte abbia preih te nella fola tre carte d’onore »
 ) ~~ enon ne fcarti folamente che
-i due, € poi cominci a giocare +
+i due, e poi cominci a giocare +
 | dopo d’aver giocato gl’avver™
-} farij pretendono che debba 107
+l farij pretendono che debba 107
 i care con una carta di piu pee
-| avere {cartato una carta meno
+| avere scartato una carta meno
 | del fao dovere ; ficerca aden?
 Mh come debba regolarfi quelte, es
 
@@ -2210,31 +1899,29 @@ Mh come debba regolarfi quelte, es
 
 Gy
 obligato if delinquente, non
-effendo dubio, che quefto cafo
+essendo dubio, che questo cafo
 ‘merita qualche pena. . t
 
 Primadidover venire allare~
 foluzione della condanna, fi de~ .
-ve riilettere quale fia ftata las
+ve riilettere quale sia ftata las
 carta fcoperta di quello, che ha |
 fatta la fola, perche quando |
 Pavverfario fi ricorda precifa~ |
 mente di quella carta, allora |
 puole riconofcere fe quell’ifter i
 
-“fa carta é rimaftanel monte, & |
-incafo'che non fia carta d’ono- — |
-te, che fia rimafta nel morite, |
+“fa carta é rimastanel monte, & |
+incafo'che non sia carta d’ono- — |
+te, che sia rimasta nel morite, |
 ogni qualvolta quello sioca con |
 le fue carte ciufte’, allora noné
-obligato 4 veruna pena , perche
+obligato 4 veruna pena, perche
 puol dire, che per terza carta
 ha fcartata la fua feoperta, & |
-Ogni volta , che non fi poffa re-
-convenire di fatto , con avvers
-. Urlo , che Ja fua carta {coperta
-Ron e nel monte, allora {e ]j de-
-
+Ogni volta, che non fi poffa reconvenire di fatto, con avvers
+. Urlo, che Ja fua carta scoperta
+Ron e nel monte, allora se ]j de
 ve
 
  
@@ -2246,27 +1933,25 @@ ve
  
  
 
-Lt ve abonare lo {carto fenza per
+Lt ve abonare lo scarto fenza per
 iy na veruna, ma fe poi alcuno de’
 i || Giocatori fapendo di certo la
-I fua carta {coperta lo reconye-
-+ nifle di fatto per non trovare la
+I fua carta scoperta lo reconye+ nifle di fatto per non trovare la
 ty detta carta nel monte, allora
-|| dev’eflere obligato alla pepe
-| dello sbaglio per efferii prefa
-i il ‘una carta meno, mentre ogt}
+|| dev’essere obligato alla pepe
+| dello sbaglio per esserii prefa
+i il ‘una carta meno, mentre ogtl
 al qualvolta gioca con le fue cats
-| te giuftc , enon ha lafciato fuctt
+| te giuftc, enon ha lafciato fuctt
 | del gioco carta d’onore non
 | ‘puoleffere obligatoa pik.
 i ~ Daquefte giufte .¢ veridiche
-| refoluzioni ne deriva per necel-
-i fita unaltra, non meno degia
-| da faperfi da chi defidera ben
-imparar agiocare a quefto 10"
+| refoluzioni ne deriva per neceli fita unaltra, non meno degia
+| da faperfi da chi desidera ben
+imparar agiocare a questo 10"
 co per tutti glaccidentt > C
 
-Mi poteflero accadere 1n un ca y
+Mi potessero accadere 1n un ca y
 | quafi incredibile, qual que!
 |
 
@@ -2286,23 +1971,21 @@ iq ta d’onore nel monte, eral
 
  
 69
-del gioco, {pettando quefta ne-
-ceflariamenre a quello, che ha
+del gioco, spettando questa necessariamenre a quello, che ha
 fatto le carte, di modo tale che
-dovera fempre efler confiderata
-in gioco quella carta , come {es
-fofle in mano di quello , che ha
-fatte le carte,per non poter efler |
+dovera fempre esser confiderata
+in gioco quella carta, come ses
+fofle in mano di quello, che ha
+fatte le carte,per non poter esser |
 ladetta carta fuori del gioco; e |
 fe quello, che ha fatte le carte |
 con ladetta carta avera‘giocato
-con una carta di pid, fara necef- |
+con una carta di più, fara necef- |
 fariamente obligato avoggiacer |
 alla pena di non contare,perche |
 puol aver lafciato 4 bella pofta |
 fuori del gioco quella carta;che: |
-noi fupponiamo lafciata per ac-
-
+noi fupponiamo lafciata per ac
 :
 
  
@@ -2314,13 +1997,13 @@ noi fupponiamo lafciata per ac-
 accidente, per timore che aveva |
 di perderla pigliandofela. |
 
-Giache fiamo nella. materia \
+Giache siamo nella. materia \
 dello feartu, e delPalzata, vi di.
 ro alcune cofe circa Palzata nes
 
  
 
-ceflariiffime a faperfi, & & che’
+cessariiffime a faperfi, & & che’
 
 . fe quello, che alza nellalzare
 las |
@@ -2330,86 +2013,67 @@ las |
  
 40.
 
-lafcia cadere una carta in tavo-
-Ja, quella ancorche non fia ve-
-duta dev’effere la fua alzata, ne
-& lecito a quello , che ha alzato
+lafcia cadere una carta in tavoJa, quella ancorche non sia veduta dev’essere la fua alzata, ne
+& lecito a quello, che ha alzato
 il dire non la voglio, come fan...
-no moltiflimi, perche per effer
+no moltiflimi, perche per esser
 feparata dall’altre fi puol cono~
-{cere cosi,O fia buona; fia cat.
-tiva quella dev’eflere necefla-
-riamente?}lalzata,. ancorches
+scere cosi,O sia buona; sia cat.
+tiva quella dev’essere necessariamente?llalzata,. ancorches
 quella carta caduta ful tavolino
-veramente non foffe Pultimas.
+veramente non fosse Pultimas.
 carta alzata. Taluni ancora
 ufano dopo aver alzato di dare.
 alcune carte di quellalzate al
-fuo compagno, afpettando a pi-
-gliare per fe quella carta, che.
-pill gli piace per fua alzata , ma
-queftoné meno fi puol fare,per-
-che col tatto fi poflono facil-
-mente conofcere le carte; cost’
-per ovviare ofn’inganno ¢ne-
-ceffario prima di venir all’alza-
-
+fuo compagno, afpettando a pigliare per fe quella carta, che.
+pill gli piace per fua alzata, ma
+questoné meno fi puol fare,perche col tatto fi possono facilmente conofcere le carte; cost’
+per ovviare ofn’inganno ¢neceffario prima di venir all’alza
 tay
 k—
 
 wt
-ta, che fi {pieghi fe vuol lafcia-
-re carte di fotto al fuo compa-~
+ta, che fi spieghi fe vuol lafciare carte di sotto al fuo compa-~
 gna, e che dica quante ce ney
-vuol lafciare , accioche quello,
-che fa le carte non abbia occa-
-fione di dolerfi, che le carte
-poffono efler conofciute in quel-
-la conformita , che fi prattica
-appunto quando fi vuol prende-
-re per fua alzata , ola prima, 6
+vuol lafciare, accioche quello,
+che fa le carte non abbia occafione di dolerfi, che le carte
+poffono esser conofciute in quella conformita, che fi prattica
+appunto quando fi vuol prendere per fua alzata, ola prima, 6
 Pultima carta, le quali perche fi
-poffono conofcere non fi poffo-
-no pigliar mai fe non fi dice pri-
-ma in tempo, che fi mefcolano
+poffono conofcere non fi poffono pigliar mai fe non fi dice prima in tempo, che fi mefcolano
 affieme le carte, perche unas
 volta ch’abbia fpiegato anima
 fuo non puol pil recedere da
-quefta {ua deliberatione,ma de-
-
-ve neceflariamente efeguirla.
-Se poi nell’alzare cadeflero
+questa sua deliberatione,ma de
+ve necessariamente efeguirla.
+Se poi nell’alzare cadessero
 di mano tré, O quattro carte
 alanes allora per non met.
 terfi in difputa quale fofle Ia
 
 pris
 72,
-syima, foflero comunque fi fia
+syima, foflero comunque fi sia
 ! q
 
 le carte fcoperte, allora fi deve
-di nuovo rifar le carte,e di nuo-
-vo alzarle, ma fe delle carte,
+di nuovo rifar le carte,e di nuovo alzarle, ma fe delle carte,
 che cafcaffero ful tavolino una
-folo foffe la fcoperta, e Valtre
+folo fosse la fcoperta, e Valtre
 tutte coperte,allora la fcoperta
 fara la prima carta dell’alzata,
-e poi fuccederanno Valtre carte
+e poi succederanno Valtre carte
 coperte.
 
-Dopo che avrete bene impa-
-rate 4a memoria tutte quefte re-
-gole, non per quefto avretes
+Dopo che avrete bene imparate 4a memoria tutte queste regole, non per questo avretes
 imparato 4 giocare, mentre fin?
 ora non fi e difcorfo d’altro,
-che delli accidenti,che poflone
+che delli accidenti,che possone
 accadere nel fare le carte ; ora
 @ dovere cominciar un poco a
-difcorrere del gioco, e del mo-
-do di pratticarlo.
+difcorrere del gioco, e del modo di pratticarlo.
 
-Dovete dunque fapere , che
+Dovete dunque fapere, che
 il Giocatore ¢ fempre obligato
 arifpondere di quella Pee >
 
@@ -2423,21 +2087,16 @@ Ss mA A = WH.
  
 
 73
-she fi gioca, a fegno'tale , ‘che
+she fi gioca, a fegno'tale, ‘che
 e uno de’Giocatori giocafle una
-arta di denaro,e l’altro rifpon-
-lefle tarocco, fe poi aveffe in
+arta di denaro,e l’altro rifponlesse tarocco, fe poi aveffe in
 nafio carta didenaro farebbe
-ybligato a pagare agl’avverfa-
-ii, fe quefti fe ne accorgeflero,
+ybligato a pagare agl’avverfaii, fe questi fe ne accorgessero,
 in refto per ogn’uno.
 
-Ma ficcome quefti non fe ne
-oflone accorgere, fe non quan-
-loviene giocata quella carta,
-er Ia quale deve pagarfi la pe-
-a, & allora per lo pitt il delin-
-uente fuol negare il fatto, che
+Ma ficcome questi non fe ne
+oflone accorgere, fe non quanloviene giocata quella carta,
+er Ia quale deve pagarfi la pea, & allora per lo più il delinuente fuol negare il fatto, che
 on: puol ‘provarfi in altras
 orma, che col riconofcere lo
 baglio, quale fe veramente fi
@@ -2446,8 +2105,7 @@ rova nelle carte giocate, non
 
 ffendo credibile, che uno nel
 ‘ioco voglia accufare un altro
-’un delitto falfo , quando que-
-to fi ha da provare con la pura
+’un delitto falfo, quando queto fi ha da provare con la pura
 erita del fatto, col veder tut:
 D te
  
@@ -2459,31 +2117,28 @@ D te
  
 
 74
-‘te le carte giocate, allora fi de-
-ye prefupporre , che lo sbaglio
+‘te le carte giocate, allora fi deye prefupporre, che lo sbaglio
 VP abbia commeffo V accufatos
-non baftando mai in alcun fatto
+non bastando mai in alcun fatto
 la fola negativa del delinguenté
 a provare il contrario, altrt
 menti non fi darebbe mai cafo:
-che li delinquenti foflero obli-
-gati A penaveruna, © cosi po
+che li delinquenti foflero obligati A penaveruna, © cosi po
 trebbonfi commettere a mane
-falva delle frodi, ¢ dell’ i-
-
+falva delle frodi, ¢ dell’ i
 gan. |
-Pofto dunque, che refli pro
+Pofto dunque, che resti pro
 
 yato ildelitto non vie dubi0:
 che deve pagarfi la pena» Ja
-quale dev'eflere tutta a carict
+quale dev'essere tutta a carict
 del delinquente » al contrarit
 ditutte le altre,cbe fi pagano if
 compagnia, ela raggione I
 perche nell’altri cafi i1 comps
 gno puole, e deve avvertines?
-in quefto per non faper a f
-carte pofla aver in mano?
+in questo per non faper a f
+carte possa aver in mano?
 come
 
  
@@ -2492,27 +2147,23 @@ come
 7
 Coy.) i
 compagno non puolavvertirlo; |
-onde lui non dev’efler foggetto !
+onde lui non dev’esser foggetto !
 » aduna pena per un fatto di cui |
 lui @ affatto innocente, fe poi |
 in vece di denaro dafle coppe, 6
-qualche altra cartiglia , alloras
-pare, che la convenienza vo-
-glia Payvertirlo, perche non
+qualche altra cartiglia, alloras
+pare, che la convenienza voglia Payvertirlo, perche non
 fe glipuole fupporre malizia, |
 come probabilmente fi puole |
 fupporre in uno, che fi faccia |
-una carta d’onore, € percon- =|
+una carta d’onore, e percon- =|
 feguenza non fembradegnodi |
 pena, |
-Il non rifpondere adequata-
-mente diquella fpecie, che fi
-gioca fi chiama rifiuto, eflen-
-dofi fempre obligato a rifpon-
-dere di quella {pecie,che fi gio- |
+Il non rifpondere adequatamente diquella fpecie, che fi
+gioca fi chiama rifiuto, essendofi fempre obligato a rifpondere di quella specie,che fi gio- |
 ca, fino che fe ne ha in mano, fe
 poi di quella fpecie,che fi gioca |
-non fene ha pid, allora é obli- |
+non fene ha più, allora é obli- |
 gato 4 rifpondere Tarocco per ‘|
 D2 fine, |
 
@@ -2534,31 +2185,30 @@ Tecate dis baineel cae ad cis eat Se Se ES
  
 
 76 .
-fino , che ne ha, e quando no
-ne ha pitt puole dare che carta
+fino, che ne ha, e quando no
+ne ha più puole dare che carta
 vuole a fuo arbitrio, quando fi
 gioca di qualche fpecie, che lui
 non abbia, ma fene ha deve cid
-non oftante rifpondere adequa-
-tamente per non effere pol obli
+non oftante rifpondere adequatamente per non essere pol obli
 
 gato alla pena del rifiuto; pe!
 
 efimerfi pero dal pericolo de
 rifiuto, puole gettare in tavol.
-le fue carte {coperte, lafciand'
+le fue carte scoperte, lafciand'
 in arbitrio de’Giocatori il pre”
 derfi che carta vogliono; ™
 in quel cafo le fue carte piu no!
 giocano in quella data di carte
 enon puole pill prendere
-alcuna, effendo quelle carte tub
+alcuna, essendo quelle carte tub
 
 te perdute .
 
 Dovra pero avvertire que!
 lo, che vorra gettare in favo"
-le fue carte di non gettat €
+le fue carte di non gettat e
 
 quando avra ancora un Re
 Je mani, perche ancot AN
@@ -2575,20 +2225,15 @@ Sa
  
 
 a
-ha per perduto,e fe gli avverfa-
-riinon haveflero da poter pren~
-dere, che una fola volta,e di pid
+ha per perduto,e fe gli avverfariinon havessero da poter pren~
+dere, che una fola volta,e di più
 
-fi giocaffe d’una {pecie diverfa - .
+fi giocasse d’una specie diverfa - .
 
-della quale quello che ha get-
-tate in tavola le fue carte ne
-avetle,cio non oftante deve da-
-re il Re in quella mano, perche
-non effendo obligato 4 rifpon-
-dere adequatamente poffono eli
-avverfarij prenderfelo libera-
-mente.
+della quale quello che ha gettate in tavola le fue carte ne
+avetle,cio non oftante deve dare il Re in quella mano, perche
+non essendo obligato 4 rifpondere adequatamente poffono eli
+avverfarij prenderfelo liberamente.
 
 Se qualcheduno rifiuta per
 prender qualche carta d’onoré
@@ -2597,13 +2242,10 @@ delli due refti, che deve pagare,
 deve altresi alla fine del gioco
 reftituire all’avverfarii la carta,
 
-che li ha prefo, anzi deve refti- -
-
+che li ha prefo, anzi deve refti- 
 tuirgli tutte laltre carte ad ef.
-clufione della fua , perche altri-
-menti farebbe un far vantaggio
-al {uo compagno con pregiudi-
-
+clufione della fua, perche altrimenti farebbe un far vantaggio
+al suo compagno con pregiudi
 3 Z10
 
  
@@ -2629,35 +2271,27 @@ al {uo compagno con pregiudi-
 
  
 
-zio degl’altri , e ficome il gioco
-non permette , che con frode f
-pregiudichi a neffuno,cosi ¢ do-
-vere direftituirla fempre;quefa
+zio degl’altri, e ficome il gioco
+non permette, che con frode f
+pregiudichi a neffuno,cosi ¢ dovere direftituirla fempre;quefa
 regola pero non milita a favore
 del refintante, perche fe quello,
 che rifiuta petde una carta di
-onore non puole alla fine do-
-mandar la fua carta, tutto che
+onore non puole alla fine domandar la fua carta, tutto che
 fii obligato alla pena, perche
 
--_doveva non rifiutare, e poi puol
+-doveva non rifiutare, e poi puol
 
-effere, che abbia impedito alla
-parte il farfi una carta di mag-
-gior importanza, la quale ab-
-bia poi neceflariamente da per-
-derla, ¢ cosi fe ha perduto una
-carta @onore ne incolpi fe ftef-
-fo ,¢ per la fua trafcuragine ne
-naghi la pena . ,
+essere, che abbia impedito alla
+parte il farfi una carta di maggior importanza, la quale abbia poi necessariamente da perderla, ¢ cosi fe ha perduto una
+carta @onore ne incolpi fe fteffo,¢ per la fua trafcuragine ne
+naghi la pena .,
 
 ii hte, accioche pofta dir ft
-tale,é neceffario , che quello»
-che lo commette abbia rigioca-
-
-to , ne bafta, che la bafe {ia 60”
-pet-
-
+tale,é neceffario, che quello»
+che lo commette abbia rigioca
+to, ne basta, che la bafe sia 60”
+pet
 ee
    
  
@@ -2677,32 +2311,26 @@ ee
 
 . 79
 
-perta, come vogliono alchni ,
-perche ficome non fi puol tene-
-re le mani ad alcuno, cosi puol
-effere, che alcuno pid follecito
+perta, come vogliono alchni,
+perche ficome non fi puol tenere le mani ad alcuno, cosi puol
+essere, che alcuno più follecito
 degValtri copra prefto la bafe ;
 fe poi la bafe fi cuopriffe da chi
-commette il rifiuto,allora bafta
+commette il rifiuto,allora basta
 anzi ancorche la bafe non foffle
-coperta , ma avefle giocato im-
-mediatamente lacarta, per la
+coperta, ma avesse giocato immediatamente lacarta, per la
 quale ha commeffo il rifiuto y
 fe Ini non avvertifce il rifluto da
-{e prima di rigiocare quella car-
-ta tanto ¢ obligato alla pena del
-rifiuto , fe perd Pavertifce da fe
+se prima di rigiocare quella carta tanto ¢ obligato alla pena del
+rifiuto, fe perd Pavertifce da fe
 prima di giocare Ja carta,allora
 puol rimediare al male fenza
 pena veruna, ma per rimediar-~
-lo fenza penaé neceflario pri-
-ma di rimettere in tavola la»
-catta, per laqual’e fucceffo i}
+lo fenza penaé necessario prima di rimettere in tavola la»
+catta, per laqual’e succeffo il
 tifiuto, che firipigliin mano il
-fuoTarocco,altrimenti fe lui la-
-
-D 4 {cie-
-
+fuoTarocco,altrimenti fe lui la
+D 4 scie
  
  
 
@@ -2716,10 +2344,10 @@ D 4 {cie-
 
  
 
-{ciera in tavola il Tarocco,e 1a”
+sciera in tavola il Tarocco,e 1a”
 
-{ciera parimente iu tavola la
-carta del rifiuto , non fi dev
+sciera parimente iu tavola la
+carta del rifiuto, non fi dev
 credere, ch’abbia pofta in tav®
 la la carta del rifiuto con idé:
 di riagiuftare il rifiuto, ma be™
@@ -2731,19 +2359,19 @@ carta é in tavola fcoperta i1Gi0
 catore non é pil padrone
 quella carta, ma quella fi dev!
 
-intendere giocata , fe pero toe
+intendere giocata, fe pero toe
 ca giocare a vi, in quella guili
-appunto , che fuceederebbe §
-quel Giocatore , che ave fie la.
-mano, & avefle una carta di pl!
+appunto, che fuceederebbe §
+quel Giocatore, che ave fie la.
+mano, & avesse una carta di pl!
 fe nella prima carta gioca
 una cartaccia di fpada fcoperté
 enon avefe di fpada altro ©
 
 quella fola carta, ¢ prima chi
-tutti liGiocatori aveflero rifp
+tutti liGiocatori avessero rifp
 
-fto s’accorgefle d’aver una a
+fto s’accorgesse d’aver una a
 a
 
  
@@ -2752,31 +2380,27 @@ a
 ach, Svat i pink > eerie ln aa eh ee aa ite = ene aS ND WS | EN << st chil CAM ky
 
 oy
-ta di pid, tutto che la bafe non
-fofle coperta, non per quefto
+ta di più, tutto che la bafe non
+fofle coperta, non per questo
 puol piu fcartare, e la ragione
-fié , perche dopo che fi ¢ inco-
-minciato & giocare non ¢ pitt
+fié, perche dopo che fi ¢ incominciato & giocare non ¢ più
 luogo allo fcarto, ed intanto fi
 ammette lo fearto nella prima
 mano, perche quello che deve
-{cartare puol dire, che la carta
+scartare puol dire, che la carta
 potta ful tavolino del gioco elie
 FP ha pofta con intenzione di
-{cartarla, ma quando quellas
-earta ¢ tale , che non puol effer
-{cartata, allora non fi ammette
+scartarla, ma quando quellas
+earta ¢ tale, che non puol esser
+scartata, allora non fi ammette
 piu fearto, perche quando la
-€arta ¢ in tavola fcoperta Ini
-non € pit padrone di ripigtiar-
-
+earta ¢ in tavola fcoperta Ini
+non e più padrone di ripigtiar
 fela in mano, e dire non ho gio-~
-“eato fe non incafo divoler ri-
-
-mediare ad un rifiuto,ma per ri-
-mediarlo deve prima ripigliarg
+“eato fe non incafo divoler ri
+mediare ad un rifiuto,ma per rimediarlo deve prima ripigliarg
 in mano la fua carta, che fa ful
-tavolino , alfrimenti fe toccara
+tavolino, alfrimenti fe toccara
 
 D 5 a S10
 
@@ -2800,24 +2424,24 @@ D 5 a S10
 & giocare 4 lui,e fenza ripiglial
 prima Valtra carta, ¢ lafciera 0
 tavolala feconda carta, allor4
-sintendera rigiocato , ¢ rifiuta:
+sintendera rigiocato, ¢ rifiuta:
 to,ed oltre il pagare la pena de
 rifiuto dovra raggiuftare 1a ba
 fe obligando il rifiutante a 1%
 pondere adequatamente » eth
-pigliarfi in mano il {uo Taroc
+pigliarfi in mano il suo Taroc
 co: fe poi dopo il rifiuto folls
-paflato pil d’una mano , alloré
+paflato pil d’una mano, alloré
 fenza pil agiuftarfi la bafe, !
 continuara il gioco fino alle
 fine. i
-fed é ben ginfta quefta rage
-ne , perche con il riftuto alcunt
+fed é ben ginfta questa rage
+ne, perche con il riftuto alcunt
 yolte fi puol caufare il preg
-dizio dipit ditré refti, com
-diremo appreflo, coftando
-refto di fali feflanta punt on7)
-non ¢ maraviglia, che chi 1}
+dizio dipiù ditré refti, com
+diremo appresso, coftando
+refto di fali fessanta punt on7)
+non ¢ maraviglia, che chi 1l
 ta fii obligato alla pena © 7
 
 folirefti per ogni volta. ae
@@ -2827,30 +2451,22 @@ folirefti per ogni volta. ae
 
 83
 
-fiuta, edi pit fii obligato a ré-
-tituire la carta d’onore prefa
+fiuta, edi più fii obligato a rétituire la carta d’onore prefa
 aglavverfarii conil rifiuto, ma
 deve perd avvertirfi, che non
 puol dirfi rifiutato piu di una
 fol volta quando uno comincia
-Arifiutare, ¢ continua rifiu-
-tare fine allultimo, tutto che
+Arifiutare, ¢ continua rifiutare fine allultimo, tutto che
 i rigiocafle di quella fpecie per
-la qual’é fuccefloil rifiuto quat-
-tro,  cinque volte, poiche non
+la qual’é successoil rifiuto quattro,  cinque volte, poiche non
 fi puol mai dire atto confumata
 fino a tanta, che non fi fcopra
-e ficome il rifiutante non é obli-
-gato a pena veruna, fe primas
-non fi {copre i rifiuto, cosi con
-la fperanza, che non debba {co-
-prirfi puot continuar a rifiutare
-fino all’ ultimo; Se pot fi {co-
-priffe prima che finitca il gioco, -
-¢ fi rimediafe nell atto ifteffo,
+e ficome il rifiutante non é obligato a pena veruna, fe primas
+non fi scopre i rifiuto, cosi con
+la fperanza, che non debba scoprirfi puot continuar a rifiutare
+fino all’ ultimo; Se pot fi scopriffe prima che finitca il gioco, ¢ fi rimediafe nell atto ifteffo,
 che fi fcopre, e quello cid non
-oftante rifiutaife la feconda vol-
-
+oftante rifiutaife la feconda vol
 D 6 ta
 
  
@@ -2876,14 +2492,14 @@ D 6 ta
 
 84
 ta fopra l'ifteffa fpecie » alfora
-deve di nuovo pagar la pena, {e
-viene {coperto, perche eflendo
-il fecondo rifiuto atto nuovo s€
-diverfo dal primo , dev’ancor4
+deve di nuovo pagar la pena, se
+viene scoperto, perche essendo
+il fecondo rifiuto atto nuovo se
+diverfo dal primo, dev’ancor4
 Ini avere la fua pena come i
 primo.
 
-$9 bene , che a prima vitta vi
+$9 bene, che a prima vitta vi
 fembrara troppo rigore il dovet
 
 pagare la pena, ¢ reftituire 14
@@ -2892,47 +2508,39 @@ carta d’onore, quafi che per um
 folodelitto fi abbiano a pagaté
 due pene; ma fe confiderareté
 al pregindizio, che puol caufare
-fon certo, che direte , che ¢
+fon certo, che direte, che ¢
 
 -fomma'giuftizia, perche la pe
 
 na pofta al rifiuto é per punile
 la malizia di chi lo commettes
 ed ilreftituire Ja carta donore
-fi deve fare , perche non fi pue
+fi deve fare, perche non fi pue
 con frode rabar quella cart
-aglavverfaril, € poi col rifiuta-
-
--re alle volte fi poflono aver
-p}
+aglavverfaril, e poi col rifiuta
+-re alle volte fi possono aver
+pl
 
  
  
 
 5; —
 
-pid di tré refti, e fe il contrario
-non fe ne accorge , quel che ri-
-fiuta non é foggetto 4 pena al-
-cunas onde in quel cafo torna-
-rebbe a conto il rifiutare, poi-
-che alla fine non pagharebbe
+più di tré refti, e fe il contrario
+non fe ne accorge, quel che rifiuta non é foggetto 4 pena alcunas onde in quel cafo tornarebbe a conto il rifiutare, poiche alla fine non pagharebbe
 che dui foli refti.
 
-_ Figuratevi d’avere in mano
-da cinque, 0 fei carte folamen-
-te fra” quali abbiate li Re @
-oro, la Tromba, quattro al-
-tri piccioli Tarochi , ¢ che toc
+ Figuratevi d’avere in mano
+da cinque, 0 fei carte folamente fra” quali abbiate li Re @
+oro, la Tromba, quattro altri piccioli Tarochi, ¢ che toc
 chi agiocare 4 voi. Voi gioca<
-rete il R¢ d’oro , il fecondo che
+rete il R¢ d’oro, il fecondo che
 fi trova avere il 30, in mano
 fenza averlo mai potuto fares
-‘per dubbio di non poterlo pit
-fare, Oper altro fine,non hayen-
-dodenari gioca il 30. ilterzo
+‘per dubbio di non poterlo più
+fare, Oper altro fine,non hayendodenari gioca il 30. ilterzo
 che ha il Sole, col motivo, che
-il 30. € una grancarta, per il
+il 30. e una grancarta, per il
 troppo gioco che puol fare yj
 mette ilSole, Pultimo poiche
 
@@ -2953,29 +2561,27 @@ ha
 
  
 
-ha il Mando,tutto che abbia de-
-naro per non perdere iltrenta»
+ha il Mando,tutto che abbia denaro per non perdere iltrenta»
 e prendere il Sole gioca il Moan
 do, ¢ rifiuta,quale per altro non
-farebbe pit in ftato di poterfele
-fare. Hora con quefto rifiuto ha
+farebbe più in ftato di poterfele
+fare. Hora con questo rifiuto ha
 jmpedito la verzicola di Trom
 ba, Mondo, ¢ Sole,di dieci, ve
-ti, trenta , ¢ quaranta, ¢ di tren
+ti, trenta, ¢ quaranta, ¢ di tren
 ta, trentuno, ¢ trentadue, ed 10
 vece ha fatto verzicola di Mot
 do, Sole, ¢ Luna,. dt yentiott
 velitinove, ¢ trenta, edi tre
 Re; ora ditemiun poco quante
-importa quefto rifiuto , ¢ fe fa
+importa questo rifiuto, ¢ fe fa
 rete bene il conto,trovarete che
-importa il fuo conto giufto.Du-
-cento ottanta quattro punti che
+importa il fuo conto giufto.Ducento ottanta quattro punti che
 yo! dire quattro reftis quaral
-taquattro punti; ora non Vv} pat
+taquattro punti; ora non Vvl pat
 egli giuftizia che chi rifiuta > 0”
 tre la pena delli due refti,debhs
-sacora effere. obligato or :
+sacora essere. obligato or :
 ae
 
 hia
@@ -2983,31 +2589,22 @@ hia
  
 1 OW
 tuire le carte d’onore prefe col
-il rifiuto,baftandole folo Vaver-
-vi impedita. 1a- verzicola di
-Tromba Mondo, e Sole, altri-
-menti bifognarebbe confeffare
-che il rifiuto portafle pit tofto
-vantaggio, che pena al rifiutan-
-te,quando per altro la pena fta.
-ta pofta per caftigo, enon per
+il rifiuto,bastandole folo Vavervi impedita. 1a- verzicola di
+Tromba Mondo, e Sole, altrimenti bifognarebbe confeffare
+che il rifiuto portafle più tosto
+vantaggio, che pena al rifiutante,quando per altro la pena fta.
+ta pofta per castigo, enon per
 utile del delinquente; e ficcome
-in quefto cafo andarebbe necef-
-fariameate reftituito il Sole af-
-fieme con tutte fe altre carte ad
+in questo cafo andarebbe neceffariameate reftituito il Sole affieme con tutte fe altre carte ad
 efclufione del Mondo, cosi ad
-effetto che nan fuccedano {con-
-certi, é fi abbia ogni volta
+essetto che nan succedano sconcerti, é fi abbia ogni volta
 confiderare il pregiudizio che
-puol portare il rifiuto é ne-
-ceffario ftabilire per regola cer-
-ta ,ed infallibile, che ogni volta
+puol portare il rifiuto é neceffario ftabilire per regola certa,ed infallibile, che ogni volta
 che fi rifiuta, e col rifiuto
 prende qualche carta d’onore)
 dalla parte contraria quella con
 
-tut-
-
+tut
  
 
  
@@ -3025,73 +2622,57 @@ tut-
 
  
 
-tutte Paltre carte debbano fem-
-pre reftituirfi, edi pit pagarfi
+tutte Paltre carte debbano fempre reftituirfi, edi più pagarfi
 fa pena,mentre non fi deve ma!
-permettere cofa che con ffo-
-de pofla efler’in vantaggio di
+permettere cofa che con ffode possa esser’in vantaggio di
 chi ka commette. |
 
-Avvertite perd che nel gieca-
-re il Matto mai fi puol rifiuta-
-re per parte di chilo gioca, al
+Avvertite perd che nel giecare il Matto mai fi puol rifiutare per parte di chilo gioca, al
 corche aveffe in mano altre
 carte di quella fpecie che fi glo
 ca, perche quella ¢ una cart
-che deve eflere giocata da mat:
+che deve essere giocata da mat:
 to, cioé quando fi vuole, c fi
 tutte le figure che vuole chi J
-gioca,con quefta fola diftinzion®
-che mai puol prendere , anco™
+gioca,con questa fola diftinzion®
+che mai puol prendere, anco™
 che vi foffera in tavola le catté
-pitt inferiori del gioco, 4 fegn?
+più inferiori del gioco, 4 fegn?
 tale che fe tutti foflero cafoat!»
 cioe havefsero potto le fue cart
 in tavola, e chi ha il Matte
 tenefse per ultima carta, ee j
-tie fecatte intavola pit hon»
-giocano, in quel cafo non po-
-
-tendo il Matto far bafe, s'inten-
-
+tie fecatte intavola più hon»
+giocano, in quel cafo non po
+tendo il Matto far bafe, s'inten
 derebbe che Pultima 1a facefse
 
 uno di quelli che hanno gettate
 le fue carte in Tavola .
 
-Quefta carta del Matto non S
+Questa carta del Matto non S
 vero che debba fempre giocarit:
-per Tarocco , come commune=
-mente s'ingannano molti, per-
-che fe cosi fofse bifognarebbe
-dirloTarocco,ed efsendo Faroc-
-co dovrebbe efsere nécefsaria-
-mente a tutta la Cartiglia fupe-
-riore almeno; il che non € ve-
-ro; onde fe non éyero che fia
+per Tarocco, come commune=
+mente s'ingannano molti, perche fe cosi fofse bifognarebbe
+dirloTarocco,ed efsendo Farocco dovrebbe efsere nécefsariamente a tutta la Cartiglia fuperiore almeno; il che non e vero; onde fe non éyero che sia
 fuperiore alla Cartiglia, non»
-puol dirfi Tarocco, € non pote-
-ndofi direTarocco,deve poterfi
+puol dirfi Tarocco, e non potendofi direTarocco,deve poterfi
 giocare quando fi vuole .
 
-Puole 4 quefte gioco darfi P
+Puole 4 queste gioco darfi P
 accidente, che quello che ha il
-Matto in mano mon abbia occa-
-
-fio-
-
+Matto in mano mon abbia occa
+fio
  
 
  
  
 
 go
-fione di pigliarmi , e fi trovi al-
-la tine del gioco fenza carta da
+fione di pigliarmi, e fi trovi alla tine del gioco fenza carta da
 poter dare in vece del Mattos
-ed in quel eafo deve dare il Mat-
-to iftefso, e tutto che fia carta
-donore, non per quefto fi fegua
+ed in quel eafo deve dare il Matto iftefso, e tutto che sia carta
+donore, non per questo fi fegua
 1a Mortespercheé carta che non
 puol mai morire, fe poi fofse
 obbligato. a dare in vece del
@@ -3103,34 +2684,28 @@ ache quello che aveva il Matto
 aveva ancora le Trombe gi0-.
 candofiin tré ad ognuno per fe,
 non fece altrabafe,; che quella
-della Tromba, con la quale pre-
-fe i] Sole, ed il Mondo; doman-
-dava allora Pavverfario la carta
-del Matto, e quello voleva dar-
-le Piftefo Matto » come meno
+della Tromba, con la quale prefe i] Sole, ed il Mondo; domandava allora Pavverfario la carta
+del Matto, e quello voleva darle Piftefo Matto » come meno
 Pregiudiciale a fe ftelso » per lo.
 
 che
 1
 che poftofi al dubbio in diteuta
-i communemente da’Giocato-
-ri pid periti,e piu efperti rifolu-
-to, che fofse obligato a dare una
+i communemente da’Giocatori più periti,e piu efperti rifoluto, che fofse obligato a dare una
 carta a fuo arbitrio,ad efclufion
 Jel Matto, e della Tromba, con
-‘1 folo motivo che quefte dues
+‘1 folo motivo che queste dues
 carte fono imperdibili; onde
 non puole alcuno privarfi d’una
 di efse a fuo arbitrio per fuo
-maggior vantaggio, e pregiu-
-dizio dell’altrt .
+maggior vantaggio, e pregiudizio dell’altrt .
 
 Dovete pero avertire, che in
 un folo cafo non ¢ lecito giocar
 4 fuo arbitrio il Matto,perche fi
 tratta di dover rifpondere carta
-neceflariamente obbligata, e»
-quefto fuccede quando uno de’
+necessariamente obbligata, e»
+questo succede quando uno de’
 Giocatori giocafle per la prima
 volta d’una Cartiglia, e quel
 che viene appreffo non avendo
@@ -3152,22 +2727,22 @@ ha
 
  
 
-- teffe effer’fagliato il {uo Rey
+- teffe esser’fagliato il suo Rey
 
 92
 ha il Re,fe non ha ancora g10¢
-to, neceflitato a darlo, anco
+to, necessitato a darlo, anco
 che aveile altre carte di que
-{pecie, 6 pure avefle il Matt
-ma quefta neceffita non obblig
+specie, 6 pure avesse il Matt
+ma questa neceffita non obblig
 fe non chela prima volta che
-gio ca di quella fpecie , ¢ prit
-che fia in tavola ilRe, fia ven!
+gio ca di quella fpecie, ¢ prit
+che sia in tavola ilRe, sia ven!
 to unaltro che habbia rifpo
 Tarocco,fe poi o per inaverte!
 za, © per genio quello che ha
 Ré non lo ha voluto gioca
-ma ha voluto pit tofto gioc#!
+ma ha voluto più tosto gioc#!
 
 un altra Cartiglia della mee
 ma fpecie col dubbio che lipt
@@ -3177,40 +2752,36 @@ a
 lora non é pitiobbligato #
 
 Jo, fe non quando non have
-pit di quella {pecie, € fi trovall
+più di quella specie, e fi trovall
 fenza Matto; mentre fe fig!
 cafse di quella fpecie per no
-rifiutare , allora deva dare iB
-per neceflita . Pit-
-
+rifiutare, allora deva dare iB
+per necessita . Più
 a,
-Parmi che tutte quefte fiano 1]
-regole generali pil neceflarie |
+Parmi che tutte queste siano 1]
+regole generali pil necessarie |
 ad impararfi per ben appren- |)
-a dere quefto gioco , ¢ ficcome 10 |
+a dere questo gioco, ¢ ficcome 10 |
 i 4 principio mi fono ideato di i
 4 defcrivervi folamente le regole |
-~ generali , Cosi crederei d avere |
-M Abaftanza fodisfatto al mio obli- |
-" go, e€ fe voi imparerete bene a |
-0 memoria tutte quefte regolen |
+~ generali, Cosi crederei d avere |
+M Abastanza fodisfatto al mio obli- |
+" go, ee fe voi imparerete bene a |
+0 memoria tutte queste regolen |
 “ potretedire converita,chein- =|
-i tendete il gioco , febbene non.
-> faprete giocarlo a perfettione ,
+i tendete il gioco, sebbene non
+ saprete giocarlo a perfettione,
 mentre il pretendere d’impa- |
-rarvi quefto gioco a perfettione 1
-fenza una ben efatta prattica , |
-“  farebbe temerita, effendo le re-
-~ gole del giocare diverfe das
-¢ quelle del gioco, nafcende que-
-¢ = fte dalli continul, e varii acci-
-1
+rarvi questo gioco a perfettione 1
+fenza una ben efatta prattica, |
+“  farebbe temerita, essendo le re~ gole del giocare diverfe das
+¢ quelle del gioco, nafcende que¢ = fte dalli continul, e varii acci1
 
  
 
 denti, che accadono, e ficcome
-di quefte ne @ fola maeftra la
-prattica , cosi ne hd lafciato la
+di queste ne @ fola maeftra la
+prattica, cosi ne hd lafciato la
 cus
 
  
@@ -3218,27 +2789,26 @@ cus
 
 |
 
-Ha cura ad effa per ben impata
+Ha cura ad essa per ben impata
 a vele; Le regole da me fino
 | defcritte, come che apparte
 Lei gonoal puro gioco, fono inv
-a) riabili , ma quelle del giocaté
+a) riabili, ma quelle del giocaté
 | poffono,anzi fi devono alle Vv!
 Vt ei te variare fecondo le covtl
-‘aia genze de’giochi , che accado?
+‘aia genze de’giochi, che accado?
 Lil ii Dird bene peronon per mo!
 | i vodi regola generale, maP
 ai raggione del modo di giocat
 Hh che &fempre meglio di farf
-onori alla mano, fe fia poflibil
+onori alla mano, fe sia possibil
 | maflime lipiu gelofi, ma
-|| yolte é pit efpediente il git
+|| yolte é più efpediente il git
 HHI verfo del compagno, tutto ©
-rn _ fia quafi ficuro di perderne 4
+rn  sia quafi ficuro di perderne 4
 Lh tl cuno,quando per altro con qu¢
-Hi la perdita fifpera di fare mag
-
-| gior vantaggio a fe fteflo, 4
+Hi la perdita fifpera di fare maggior
+vantaggio a se stesso, 4
 it volte ancora potendofeli fa
 i alla mano, ne meno¢ dove
 i farfeli, perche con no? far
@@ -3254,94 +2824,71 @@ i puo
 
  
 95
-puo fperare di far un gioco mi-
-eliore » ma tutto quefto dipen-
-de da quelli accidenti , de’ quali
-ne puole effere fola maeftra la
-prattica, & il pretendere di de-
-{criverli farebbe pazzia .
+puo fperare di far un gioco mieliore » ma tutto questo dipende da quelli accidenti, de’ quali
+ne puole essere fola maeftra la
+prattica, & il pretendere di descriverli farebbe pazzia .
 
-Le carte pid gelofe da farfi
-fono quelle, che poflono fare
-maggior gioco, per quefto uno
-30.35, S0le;€ Papa tutte tre fo-
-no gelofiflime, perche quefte
-fono le chiayi di molte verzico-
-le, cioé a dire, che poflono fare
+Le carte più gelofe da farfi
+fono quelle, che possono fare
+maggior gioco, per questo uno
+30.35, S0le;e Papa tutte tre fono gelofiflime, perche queste
+fono le chiayi di molte verzicole, cioé a dire, che possono fare
 delle verzicole aflai, pero bifo~
-gna cuftodirle pit dell’altre , ¢
+gna cuftodirle più dell’altre, ¢
 procurare fempre di farfele. |
 
-Ad un faglio , & una feconda
+Ad un faglio, & una feconda
 fi puol paflare qualfifia carta»
-gelofa,quando pero non vi fiano
-{carti, ¢ non vi fia forma di po-
-terli fare con pil commodits
+gelofa,quando pero non vi siano
+scarti, ¢ non vi sia forma di poterli fare con pil commodits
 
 alla mano, ad una terza di raro
-fi pafla, ma quando foffe fopra
-Ta-
-
+fi pafla, ma quando fosse fopra
+Ta
  
 
  
 96 /
-Tarocco,con piii giuftizia fi puo-
-le arrifchiare , e fe poi la necef-
-fita del gioco Vobligafle a pat -
-fare,quaniunque non foffe fopra
-Tarocco, fi deve fempre pro-
-curare , fe fi pud, di paflare una
-carta dVonore grofla , accioche
-per pigliarla ce ne yoglia un’al-
-tra, ma fi deve pero ayvertire »
-che non fia carta troppo gelofas
-perche fe é carta gelofa l’avver-
-fario, fe puole, ci va ficuro ; {e2
-poi non € gelofa-per tema di
-non perder Ini, forfe non ci an-
-dara , enon lacoprira , e quefta
-diverfita di regola V’ha da im-
-parare dal modo digiocar deg!’
+Tarocco,con piii giuftizia fi puole arrifchiare, e fe poi la neceffita del gioco Vobligafle a pat fare,quaniunque non fosse fopra
+Tarocco, fi deve fempre procurare, fe fi pud, di paflare una
+carta dVonore grofla, accioche
+per pigliarla ce ne yoglia un’altra, ma fi deve pero ayvertire »
+che non sia carta troppo gelofas
+perche fe é carta gelofa l’avverfario, fe puole, ci va ficuro ; se2
+poi non e gelofa-per tema di
+non perder Ini, forfe non ci andara, enon lacoprira, e questa
+diverfita di regola V’ha da imparare dal modo digiocar deg!’
 altri, e la difpofizione delles
-carte , che fi hanno in mano »
-mentre da quelle devefi cono-
-{cer il modo di contenerfi. |
+carte, che fi hanno in mano »
+mentre da quelle devefi conoscer il modo di contenerfi. |
 
-Se poi il gioco andaffe in fac~
+Se poi il gioco andasse in fac~
 
-cia al {uo compagno, ¢ fofle,
+cia al suo compagno, ¢ fofle,
 
-ficu-
-ec
+ficuec
 
 =e
 
 ; 97
-ficuro , che lui deve rifpondere
-Tarocco , allora fi puo girare
-a lui qual fi fia carta d’onore ,
-anche delle pit gelofe , fe perd
-hon fi potefle dubitare,che gio-
-cando quella carta poteffe poi
+ficuro, che lui deve rifpondere
+Tarocco, allora fi puo girare
+a lui qual fi sia carta d’onore,
+anche delle più gelofe, fe perd
+hon fi potesse dubitare,che giocando quella carta poteffe poi
 impedir 4 Jui qualch’altra carta
 di maggior confeguenza, per~
-che in quel cafo verrefte a per-
-der tutti due, come per ragio-
-ne defempio fe voi girafte il
+che in quel cafo verrefte a perder tutti due, come per ragione defempio fe voi girafte il
 trenta, & il voftro avverfario
 giocafle il Mondo, & il voftro
-compagno aveffe in mano il So-
-le, ecco che voi perderefte il
+compagno aveffe in mano il Sole, ecco che voi perderefte il
 trenta, & il voftro compagno
 non puol fare il Sole, mettendo
-a rifchio di perderlo,come pro-
-babilmente puol accadere, e»
+a rifchio di perderlo,come probabilmente puol accadere, e»
 cosi vi mette a rifchio di perder
 tutti due, due carte gelofiffime;
 pero nel girare bifogna ancora
-andar guardingo, ¢ prima di gi-
-
+andar guardingo, ¢ prima di gi
 | rare
  
 
@@ -3356,23 +2903,23 @@ andar guardingo, ¢ prima di gi-
  
 
 98
-rare le carte pid gelofe bifogna
+rare le carte più gelofe bifogna
 procurare di girar carte gelole
-si, ma meno gelofe,ad effetto di
-{coprit il gioco » poiche fe aves
+si, ma meno gelofe,ad essetto di
+scoprit il gioco » poiche fe aves
 fe da farvi una verzicolas © di
 pir aveffivo il trenta » & il Sole
 prima deve girare qualch¢
 carta della yerzicola,e tutta all
 
-cora fe fia di bifogno» © quana¢
-yedete , che non va sula carte
+cora fe sia di bifogno» © quana¢
+yedete, che non va sula carte
 di mezzo della verzicol e fe
 gno, che non ci puoles ed allo
 ra fi puol girare il trenta, fe p?
 la voftra verzicola fofle di Sole
 Luna, ¢ Stella, allora 100 mm)
-lita pit quefta regola, pete
+lita più questa regola, pete
 vor avverfario cercara femp!
 
 di rompere 4 voi la yerzicola
@@ -3380,12 +2927,10 @@ farla lui; cosi in quel cafo 1
 di fat.
 
 vra fempre procurats
-Sole , ¢ la Stella» ¢ perderé p
+Sole, ¢ la Stella» ¢ perderé p
 
-tofto la Luna -
-"Nel girarle carte » che fare
-3 ¥ yvert-
-
+tosto la Luna "Nel girarle carte » che fare
+3 ¥ yvert
 ————
 aS Od =— 1 wv geet, OF OS ee a ie
 
@@ -3399,26 +2944,18 @@ tofto la Luna -
 verzicola bifogna andar molto
 guardingo; ma quando non fi
 potefiero far alla mano, e che
-bifognaffe girarle fi deve procu-
-rare di girar quelle per le pri-
-me, che non poffono far agl’av~
-verfarj, e quelle, che poflono
-far verzicola agl’avverfarj ave-
-te da procurare di farvela alla
+bifognasse girarle fi deve procurare di girar quelle per le prime, che non poffono far agl’av~
+verfarj, e quelle, che possono
+far verzicola agl’avverfarj avete da procurare di farvela alla
 mano, o'pure di farle con meno
-rifchio , che fia poffibile .
+rifchio, che sia poffibile .
 
-Quando voi a principio ave-
-rete verzicola dovrete procura-
-re giocando di farvi prima le»
+Quando voi a principio averete verzicola dovrete procurare giocando di farvi prima le»
 carte pili gelofe, e le carte pil
 gelofe delle verzicole fono le
 carte di mezzo, ad efclufione
-dell’uno , ch’é gelofiflimo , per-
-che fatte le carte di mezzo , al-
-Jora non fi puol pit. perder la
-verzicola fe fofle di quattro car-
-te, perche col perderne una
+dell’uno, ch’é gelofiflimo, perche fatte le carte di mezzo, alJora non fi puol più. perder la
+verzicola fe fofle di quattro carte, perche col perderne una
 fa altra alla mano; ma prima
 
 E 2 pero
@@ -3438,45 +2975,44 @@ E 2 pero
 pero di girar la carta di verzic
 la fideve procurar di toglier ¢
 mano al fopra mano tutta [a
-cattiglia, ad effetto, che gio
-cando effo non fiate obligato |
-rifponder cartiglia, ma pofliat
+cattiglia, ad essetto, che gio
+cando esso non siate obligato |
+rifponder cartiglia, ma possiat
 farvi le carte a voftr’arbitrio
-perche altrimenti correrefte }
+perche altrimenti correrefte l
 rifchio di perdere due carte
 verzicola; onde prima e nece!
-fario, anzineceflariiffimo d’im
+fario, anzinecessariiffimo d’im
 parar a giocare Ia cartiglia; ©
 per ben giocarla fideve proc
 rare di giocar prima tutta que”
 la cartiglia, che fi pud fuppor!®™
-che quello , che fa fopra ma?
+che quello, che fa fopra ma?
 abbia in mano, e fe viaccotg™
 fte, che di qualche fpeci¢ 90?
-ne havefle pit , tutto che vol #
+ne havesse più, tutto che vol #
 avefte affai, dovete fempre pt
 curar digiocarla per Pultim??
 accioche voi giocando quel
 
 gartiglia oblighiate il voftro 1”
 e pra
-}“
+l“
 
 a eral SS
 
-eoT_ rw
+eoT rw
 
 Pultima mano, la
 
 10f
 Pra mano a giocarvi in faccia,
-€ voi farvi quelle carte d’onore,
-che pid vi piaceranno.
+e voi farvi quelle carte d’onore,
+che più vi piaceranno.
 
-Quefta regola perd non é
+Questa regola perd non é
 
-¢mpre certa ye non deve prat-
-ticarfi ognivolta, ma deve,
+¢mpre certa ye non deve pratticarfi ognivolta, ma deve,
 pratticar folamente in cafo,che
 Voi avette degl’onorj aflai da
 farvi, enon pefte la forma dj
@@ -3490,11 +3026,10 @@ te procurare prima di glocare
 tutta la cartiglia, della quale ne
 fofle faglio jj voftro fopra mas
 NO, accioche non Poteffe poj
-farfi g?onorj alla Mano, ma do-
-vefle farli tutti col {uo rif.
+farfi g?onorj alla Mano, ma dovesse farli tutti col suo rif.
 chio,
 
-Di pit fe voi avefte Ja Trom.
+Di più fe voi avefte Ja Trom.
 ba vi fervira ancora Per potey
 con pill facilitg artivare a far
 
@@ -3513,95 +3048,80 @@ dieci punti, pero bifogna diftin |
 16
 
 guer prima il gioco per faper .
-ben giocare la cartiglia, poiche ,
+ben giocare la cartiglia, poiche,
 
-alle volte é pit efpediente i]
+alle volte é più efpediente i]
 
-iocare prima di quella carti-
-glia, della quale fe n’ha pitin
-mano, « alle voltee piu efpe-
-djente ilgiocar diquelle, che
+iocare prima di quella cartiglia, della quale fe n’ha pitin
+mano, « alle voltee piu efpedjente ilgiocar diquelle, che
 fe ne hameno.
 
-Tutto il maggior ftudio , che
-fi deve fare in quefto gioco é
+Tutto il maggior ftudio, che
+fi deve fare in questo gioco é
 @ impedir agravverfaij it pos
 terfi far gVonori, fi che dovete
 fempre ptocurare di non la~
-{ciarglieli fare alla mano, e>
-quefto lo farete col procurare
-fempre di giocar quella carti-
-glia, che lui poffa aver in ma-
-no, e quando fofte ficuro di non
+sciarglieli fare alla mano, e>
+questo lo farete col procurare
+fempre di giocar quella cartiglia, che lui poffa aver in mano, e quando fofte ficuro di non
 poter giocare cattiglia, allora
-dovete procurar di non effere
-piu obligato a giocare , fe perd
+dovete procurar di non essere
+piu obligato a giocare, fe perd
 non vi ci obligafle qualche car—
 , ta)
 
  
 
-ang} Saal © Pais; ell tte eS ee Bete Lee ee kp
+angl Saal © Pais; ell tte eS ee Bete Lee ee kp
 
  
  
 
 103
-ta gelofa , la quale vi obligaffe
+ta gelofa, la quale vi obligasse
 a prendere per farvela; poiche
-tutta la bellezza di quefto gioco
+tutta la bellezza di questo gioco
 é il procurare di far la caccia
-all’avverfario, e per farla al-
-cune volte torna a conto i! per-
-dere qualch’onore , per pren~
+all’avverfario, e per farla alcune volte torna a conto i! perdere qualch’onore, per pren~
 derne delli maggiori .
 
 Ma prima di procurare di far
-caccia all’altri,¢ pitt neceflario il
-difendere fe fteflo , ‘pero dovete
-fempre procurare, che la gioca-
-fa vada in faccia al voftro com-
-pagno, accio pofla farfi alla ma-
-no quelli onori, che fono piti ge-
-lofi, e che li poflono portares
-pitt pregiudizio,e maggior van=
-raggio all’ Avverfarj , mentre in
+caccia all’altri,¢ più necessario il
+difendere se stesso, ‘pero dovete
+fempre procurare, che la giocafa vada in faccia al voftro compagno, accio possa farfi alla mano quelli onori, che fono piti gelofi, e che li possono portares
+più pregiudizio,e maggior van=
+raggio all’ Avverfarj, mentre in
 juefta forma provarefte dues
 rantagei, uno di tenere in fog«
 rettione linimico, e l’altro,che
 | voftro compagno fara quelehe
 
 ruole .
-Eq Quan-
-
+Eq Quan
  
 104
-Quando avete Ja tromba,tut-
-
+Quando avete Ja tromba,tut
 tala vofira maggiore attézione |
 
-deve eflere ditenere in fogeet-
+deve essere ditenere in fogeet
+tione l’inimico, e fe potete far—
 
-tione l’inimico , e fe potete far—_
+lo, dovete far in modo, che Iui
 
-lo, dovete far in modo , che Iui
-
-non pofla accorgerfene; perd _
+non possa accorgerfene; perd 
 
 non fta bene il fequeftrarfi 4
 
-principio un Re nelle mani, ma_
+principio un Re nelle mani, ma
 
 dovete veramente giocarlo, fe
 perd non potefte credere di po~
 terlo falvare col mezzo del vo~
-firo compagno nel progreflo
+firo compagno nel progresso
 del gioco; fe poi il faglio vi fof=
 fe fopra mano, allora potete poi
 tenerlo con pill giuftizia, ma fe
-é fottomano., allora e cofa mol-
-to pericolofa a riufcir bene,per-
-che date campo alPinimico di
+é sottomano., allora e cofa molto pericolofa a riufcir bene,perche date campo alPinimico di
 
  
 
@@ -3618,49 +3138,41 @@ da
 10g
 
 da prendere con Tarocco doves
-te procurare fempre di prende-
-re con li Farocchi pit grofti,ma
-dovete farlo in modo di non da-
-re ammirazione all’Avverfario;
-altrimenti vi ridurrefte alPultj-
-* mo con tutti li Tarocchi grofii ,
-e farefte per confeguenza gb]j-
-gato a prendere , e mandare las
+te procurare fempre di prendere con li Farocchi più grofti,ma
+dovete farlo in modo di non dare ammirazione all’Avverfario;
+altrimenti vi ridurrefte alPultj* mo con tutti li Tarocchi grofii,
+e farefte per confeguenza gb]jgato a prendere, e mandare las
 giocata in faccia all’ Avverfario
-il che € un’errore folenniffimo «
+il che e un’errore folenniffimo «
 mentre alle volte non folo nop,
-fi deve prendere con Tarocchi ,.
-ma ne meno con onori, effendo
-pit efpediente il perdere un?
-onore , che prendere , perche in
+fi deve prendere con Tarocchi,.
+ma ne meno con onori, essendo
+più efpediente il perdere un?
+onore, che prendere, perche in
 quel cafo fivicne 4 guadagnar
-pitt di quello nea fi puol perde-
-re, ma di guetta regola Ia fola
-attenzione ve ne puol efferes
+più di quello nea fi puol perdere, ma di guetta regola Ia fola
+attenzione ve ne puol esseres
 maeftia .
 
-Se con la Tromba avefte an-
-cora della gran cartiglia,¢ nom
+Se con la Tromba avefte ancora della gran cartiglia,¢ nom
 
 : ES avele
 106
 avefte forma di poterla fcarta~
-re , allora dovete fare if conto,¢
+re, allora dovete fare if conto,¢
 vedere, fe vi puole riufcire dt
 giocarla tutta con fperanza dt
-arrivare all’ultimo con la trom-
-ba, € inquelcafo dovete pro~
-curare, e far tutto ik poflibile di
+arrivare all’ultimo con la tromba, e inquelcafo dovete pro~
+curare, e far tutto ik possibile di
 giocare prima tutta quella,della
 quale ne havete maggior quan=
-tita,ancorche foffe certo di fare:
-il giocodellinimico, ¢ NOD fa-
-xe, come fanno alcuni, f quali
+tita,ancorche fosse certo di fare:
+il giocodellinimico, ¢ NOD faxe, come fanno alcuni, f quali
 non la vogliono giocare fino all*
 ultimo per tema di fare il gioco
-dell’ Avverfario , e non rifletto~ _
+dell’ Avverfario, e non rifletto~ 
 na, che fe non la giocano.a prin
-cipio , bifogna giocarla in fine 5
+cipio, bifogna giocarla in fine 5
 & alloraé peggio, perche oltre
 di che ficorre il rifico di cafca—
 xe con la Tromba 4 mezzo gio—
@@ -3673,113 +3185,85 @@ Gi 5
  
 
 10
-cipio , € Cosi fi toglia l’occafione
+cipio, e Cosi fi toglia l’occafione
 di poterli prendere qualch’ono=
-re, che neceflariamente have-
-rebbe perduto..
+re, che necessariamente haverebbe perduto..
 
-Con. la tromba é€ fempre bene
+Con. la tromba ée fempre bene
 tenere ancora un Tarocco gro&
-fo , perche in cafo che fofte obli«
+fo, perche in cafo che fofte obli«
 gato a giocare la Tromba per
 motivo di prendere qualch’ono.
 re, potete ancora avere la fpe=
 ranza di fare Pultima mano, la
-quale conta dieci ponti, ma av-
-Vertite 4nontenerne pid d’uno.
-per non effere obligato a pren-
-dere , € quando non aveftte al-.
-tro, che un’onore di carte grof-
-fe, quello ancora dovete tenere,.
-ma. dovete pero procurare , che
-quel’onore non vi faccia verzi-
-cola, 6 non la faccia all’Avver-=
-fario, perche in quel cafo é be-
-ne farfela prima.
+quale conta dieci ponti, ma avVertite 4nontenerne più d’uno.
+per non essere obligato a prendere, e quando non aveftte al-.
+tro, che un’onore di carte groffe, quello ancora dovete tenere,.
+ma. dovete pero procurare, che
+quel’onore non vi faccia verzicola, 6 non la faccia all’Avver-=
+fario, perche in quel cafo é bene farfela prima.
 
-Di piu fe avefte la Tromba ,.¢
+Di piu fe avefte la Tromba,.¢
 
 E 6 avet-.
 Bi ‘708
-avefte da f{cartare, dovete rego-
-lare lo fcarto in modo, che vi
-torni pit acconcio, e dovetes
+avefte da fscartare, dovete regolare lo fcarto in modo, che vi
+torni più acconcio, e dovetes
 prima riflettere alla quantita, &
-alla qualita del?onori , che ha-
-vete nelle mani, & ilmodo di
-farli, e poi regolare lo {carto it
+alla qualita del?onori, che havete nelle mani, & ilmodo di
+farli, e poi regolare lo scarto it
 modo di potervi fare li voftri
 onori,e dare foggettione all’ ini-~
 mico; ma prima di ogni cofas
-havete da riflettere al danno vo-
-| ftro , e fe conofcete , che vi pof-
-fa tornare in acconcio il (carta-
-| - ge di quella cartiglia della qua-
-| | il le ne havete piv, lo farete, altri-
-| Hl menti {carterete di quella, del-
-Ha la quale havete meno , e que-
-Hal ftaregola ha piitofto per fuo
+havete da riflettere al danno vo| ftro, e fe conofcete, che vi poffa tornare in acconcio il (carta| - ge di quella cartiglia della qua| | il le ne havete piv, lo farete, altri| Hl menti scarterete di quella, delHa la quale havete meno, e queHal ftaregola ha piitosto per fuo
 | fandamento la prudenza, ches
 ogni altra cofa .
-| kl Mondo poi vi da Vifteffa re-
-gola della Tromba tanto nello
-fcartare , quanto nel modo def
+| kl Mondo poi vi da Vifteffa regola della Tromba tanto nello
+fcartare, quanto nel modo def
 
 gl0~
 
 .
 k————e
 199
-giocare con quefta fola differen:
-za, che il Mondo é inferiore al-
-la Tromba, e per quefto fi dice
+giocare con questa fola differen:
+za, che il Mondo é inferiore alla Tromba, e per questo fi dice
 per proverbio, che il Mondoe
 fatto per perderfi tutto, che fi
 debba procurare di perderlo
-meno che fia poffibile; e fe bene
-fi fuole per il pit portare quefto
+meno che sia poffibile; e fe bene
+fi fuole per il più portare questo
 fino alla fine del gioco, cid non
-oftante quefta regola non é fem-
-prevera; petche fi deve fola-
-giente tenere fino atanto, che
+oftante questa regola non é femprevera; petche fi deve folagiente tenere fino atanto, che
 uno ha fperanza di fare con il
 medefimo un gran gioco cok
 prendere qualche carta gelofas
-all’inimico , 0 pure per difefa
-del fuo compagno , il quale ha
-| qualche carta da farfi, € non.
-puol farla, che col girarla fo-
-lamente , ma quando man¢ano
-quefti due motivi , allora non e
-pid raggionevole il tenere il
-Mondo fino all’ultimo , e per
+all’inimico, 0 pure per difefa
+del fuo compagno, il quale ha
+| qualche carta da farfi, e non.
+puol farla, che col girarla folamente, ma quando man¢ano
+questi due motivi, allora non e
+più raggionevole il tenere il
+Mondo fino all’ultimo, e per
 gue-=
 
  
  
 
 10
-quefto vi € neceffario oltre l’at-
-tentione per ben faper giocare
-una buona memoria , perche bi-
-fogna ftar attenti 4 tutte le car-
-te d’onore , che fifono giocates
-€ ricordarfi di quelle, che fi han-
-ho ancora da fare per vedere ,
-fe torni il conto iltenere a rifi-
-co il Mondo ; perche la fperanza
-delPonore , la quale puole obli-
-Gare a tenere il Mondo, deve»
-eflere tale , che eguagii il rifico
+questo vi e neceffario oltre l’attentione per ben faper giocare
+una buona memoria, perche bifogna ftar attenti 4 tutte le carte d’onore, che fifono giocates
+e ricordarfi di quelle, che fi hanho ancora da fare per vedere,
+fe torni il conto iltenere a rifico il Mondo ; perche la fperanza
+delPonore, la quale puole obliGare a tenere il Mondo, deve»
+essere tale, che eguagii il rifico
 della perdita, fe non intutto,,
 almeno nella maggior parte, al.
-trimenti non torna conto il te-
-nerlo col timore di perderlo.
-Ad effetto che il rifico paris
-gli deve effer tale, che fi {peri
+trimenti non torna conto il tenerlo col timore di perderlo.
+Ad essetto che il rifico paris
+gli deve esser tale, che fi speri
 di poter togliere all’inimico
-qualche carta di gran confe-
-Suenza, la quale quantunques
+qualche carta di gran confeSuenza, la quale quantunques
 bon importi tanto, quanto pud
 le portare il Mondo, importi
 
@@ -3789,28 +3273,22 @@ PS"
 perd affai, 6 pure per tema
 -che il compagno fuo non abbia
 da perdere qualch’altra carta,la
-quale pofla fare un gran gioco »
+quale possa fare un gran gioco »
 6 pure che abbia Ia probabilita
 di potere co! Mondo fare per fe
 qualche verzicola, col prendere
-qualche cofa d’onore all’inimi-
-co; altrimenti fenza quefti mo-
-tivi nop torna mai conto 1 te-
-nere-il Mondo finoal fine, fes
-non in cafo che foffe certo: di
+qualche cofa d’onore all’inimico; altrimenti fenza questi motivi nop torna mai conto 1 tenere-il Mondo finoal fine, fes
+non in cafo che fosse certo: di
 non poterlo perdere, che per
-un qualche accidente impenfa-
-to; &alle volte é pit efpedien-:
+un qualche accidente impenfato; &alle volte é più efpedien-:
 te di farfi il Mondo, ancorche fi.
 abbino inmano altre carte di
 onore da farfi, perche ¢ aflat
-piu quello, che fi perde, perden-
-dofi il Mondo di quello, che»
+piu quello, che fi perde, perdendofi il Mondo di quello, che»
 nole guadagnarfi, prendendo
 ancora qualche onore all’ inimi-.
 co; Jaonde perche il-rifico nom:
-e egua-
- 
+e egua 
 
  
 
@@ -3830,23 +3308,22 @@ e egua-
 éeguale, né meno deve eller
 eguale il pericolo.
 
-{lSole, che é carta affai p!
-gelofa del Mondo. deve effere
+slSole, che é carta affai p!
+gelofa del Mondo. deve essere
 anche giocato con pili giudiai¢
-prima perche a lui crefce up-
-inimico , eflendo foggetto.4
+prima perche a lui crefce upinimico, essendo foggetto.4
 Mondo, & alla Tromba » ¢ P°
 perche é carta, che puol fare
 piu d’una verzicola,& ognl yer
 zicola ove entra il Sole cont
 il doppio delaltre, perche que
-fia non puol contare meno
-trenta ponti, e Paltre poflom
+sia non puol contare meno
+trenta ponti, e Paltre possom
 contare folamente quindeciso"
-de con quefto motivo deve elle
+de con questo motivo deve elle
 re giocato con molta attene
 me, & alle volte fara bene il 4
-felo fubito , alle volte fara be |
+felo fubito, alle volte fara be |
 il tenerlo fin’ all’ultumo 5 be
 bifogna fempre faper diftungtt
 re il gioco, e fecondo le con
@@ -3874,31 +3351,25 @@ RIES PP
 
 IT?
 
-Se voi avefte 1] Sole, & ave-
-fte ancora pochi Farocchi con
-una cartiglia malamente diftri-
-buita ,e dubitafte di potere alla
+Se voi avefte 1] Sole, & avefte ancora pochi Farocchi con
+una cartiglia malamente diftribuita,e dubitafte di potere alla
 fine perdere il Sole’, allora alla
 ptima congiontura, che vi ca~
 
 piti dovete farvelo, ma prima:
 
-peréd dovete riflettere , fe quel-
-lo, che vi fta fopramano fia pia
+peréd dovete riflettere, fe quello, che vi fta fopramano sia pia
 capace a giocare cartiglia, las
 quale voi abbiate ancora, per=
-che fe fofte certo, che non po-
-tefle pit: giocare cartiglia, allo-
-ta potrefte tenere il Sole un po-
-co piu, perche potrete {perare,
+che fe fofte certo, che non potesse più: giocare cartiglia, allota potrefte tenere il Sole un poco piu, perche potrete sperare,
 che la gioeata v’abbia a venire
 injfaccia, e fare il Sole a voftro
-arbitrio, € poi potrefte ancora.»
+arbitrio, e poi potrefte ancora.»
 difendere il voftro compagno
-in cafo, che vi giraffe qualche
+in cafo, che vi girasse qualche
 carta d’onore, ma fe poi non
-avefte quefta probabilita » allo~
-ta dovete neceflariamente farvi
+avefte questa probabilita » allo~
+ta dovete necessariamente farvi
 
 il
 
@@ -3926,9 +3397,9 @@ il
 114.
 
 i] Sole tutto che il voftro com
-pagno avefle una verzicola
+pagno avesse una verzicola
 farfi, perche dovete confidera
-re, che puol effere maggiore i
+re, che puol essere maggiore i
 danno,che vi caufarebbe la po
 dita del Sole, del vantaggior’
 vi potrebbe portare il fare de
@@ -3939,9 +3410,9 @@ gagione, Xe, che il yoftro in
 mico vedendovi fare il Sole,
 fapendo, che i] voftro compé
 gno hala yerzicola da far fi»
-ye neceflariamente dubitate
+ye necessariamente dubitate
 
-Ja Lu}
+Ja Lul
 
 che vol abbiate almeno
 
@@ -3950,13 +3421,13 @@ che vol abbiate almeno
 si non fi azarda con tanta ac
 tia venire su la verzicola»
 non in cafo che abbiate und de
-Ie carte {uperioti a tutte «
+Ie carte superioti a tutte «
 
 Se poi avefte con il Sole U
 Cartiglia ben diftribul
 una mediocrita
 
-altri onor! , allora
+altri onor!, allora
 
  
 = & No
@@ -3969,29 +3440,23 @@ Cf
 11g
 
 re il Sole un poco pill, ancorche
-il voftro compagno non avefle
-verzicola, e dovete con pru-
-denza deftregiarmi in modo che
+il voftro compagno non avesse
+verzicola, e dovete con prudenza deftregiarmi in modo che
 vi capitila congiontura Gi pote:
 
-- prendere qualche onore all’ini-
-
+- prendere qualche onore all’ini
 mico, edevete riflettere, che
-{€ vicapita la congiontura di
+se vicapita la congiontura di
 prendere qualche aria inferiore
-ai Sole , li dovete tirare , fe pe-
-ro non fofte ficuro di perderlo,
-6 pure vi accorgefte , che il
+ai Sole, li dovete tirare, fe pero non fofte ficuro di perderlo,
+6 pure vi accorgefte, che il
 rifico non é eguale ; ma quando
-il rifico foffe eguale, Odiverfi-
-ficafse folo in cinque punti tan
+il rifico fosse eguale, Odiverfificafse folo in cinque punti tan
 to ci dovete ritirare,perch’ aria
 per aria fempre deve rificarfi, e
-fe poi vi fuccede male non per
-quefto averete giocato male,
-perche il male folo fara proce-
-duto da un accidente, ed al con-
-trario il giocar bene procedes
+fe poi vi succede male non per
+questo averete giocato male,
+perche il male folo fara proceduto da un accidente, ed al contrario il giocar bene procedes
 dattenzione.
 
 s Als
@@ -4009,34 +3474,25 @@ s Als
 
 116
 
-Alle volté per provare an-
-cora fe il voftro fopramano
-habbia carta fuperiore al] Sole ,
-dovete prima girare al fuo com-
-pagno qualche carta gelofa, in
-tempo perd,che quello fia obbli-
-
-“ gato a Biocare Taroco,e febbene
+Alle volté per provare ancora fe il voftro fopramano
+habbia carta fuperiore al] Sole,
+dovete prima girare al fuo compagno qualche carta gelofa, in
+tempo però, che quello sia obbligato
+a Biocare Taroco,e sebbene
 
 avetti avutg,tempo di potervela
-fare,dovete non farl4 per afpet-
-tare a girarla, perche feil {ua
-fopramano ha carta fuperiore ,
-allora deve tirarci neceflaria-
-mente, e fe non vitira é fegua
+fare,dovete non farl4 per afpettare a girarla, perche feil sua
+fopramano ha carta fuperiore,
+allora deve tirarci necessariamente, e fe non vitira é fegua
 che non ci puole, ma fe poi vi
-tiraffe con qualche altra carta
-inferiore,la quale il voftro com-
-pagno non potefle coprire allo-
-ra potendo dubitare che poteffe
-ancora su il Sole , dovete {ubi-
-tamente farvelo, ¢€ cos} potrete
-ancora regolarvi rifpetto all’al-
-trionori dopo il Sole. _ ,
+tirasse con qualche altra carta
+inferiore,la quale il voftro compagno non potesse coprire allora potendo dubitare che poteffe
+ancora su il Sole, dovete subitamente farvelo, ¢e cosl potrete
+ancora regolarvi rifpetto all’altrionori dopo il Sole. ,
 
 Doverete pero avvertire che
 
-{c
+sc
  
 
 114
@@ -4045,22 +3501,15 @@ fe per voftra Magesior carta non
 avefte che un folo trentadue 59
 trentatre, © altra carta poco
 gelofa, tutto che avefti un taglio
-no per quefto ve la dovrete fubj-
-to fare ; ma dovete tenerla , an-
-corche potete forfi dubitare di
-perderla, perche dovete feryir-
-vene per potere ricuperares
-qualche picciolo onore del vo-
-{tro compagno, in cafo che non
-haveffe potuto farfelo sq Ja car-
-tiglia, ecosi fino atanto che
+no per questo ve la dovrete fubjto fare ; ma dovete tenerla, ancorche potete forfi dubitare di
+perderla, perche dovete feryirvene per potere ricuperares
+qualche picciolo onore del vostro compagno, in cafo che non
+haveffe potuto farfelo sq Ja cartiglia, ecosi fino atanto che
 non conofcete, che il yoftro
 compagno non ha in mano pia
 onori piccioli da farfi dovete
-fempre tenere la forma di po-
-terli ricuperare , fe poi quel
-voftro onore potefle fare ver-
-zicola agl’avverfarj , 6 pures
+fempre tenere la forma di poterli ricuperare, fe poi quel
+voftro onore potesse fare verzicola agl’avverfarj, 6 pures
 a voi potete procurar di far.
 velo.
 
@@ -4069,93 +3518,76 @@ velo.
 coms
 ty i
 118
-compagno abbia pit: in mano
+compagno abbia più: in mano
 onori piccioli fi é il riflettere fe
 gli abbia potuti fare alla mano »
 enon li ha fatti,o pur fe li abbia
 potuti girare a voi, enon li ha
 
-girati, quefto fara fegno eviden—
+girati, questo fara fegno eviden—
 
-te che non li ha , perche lPonort
-piccioli che premono , non po-
-tendo pit farli fenza l’ajuto del
-compagno deve neceffariamen-
-te girarli fe puole .
+te che non li ha, perche lPonort
+piccioli che premono, non potendo più farli fenza l’ajuto del
+compagno deve neceffariamente girarli fe puole .
 
 Chi haveffe Mondo, e Sole in
 mano non deve mai farfeli tutto
-che fofle ficuro che fotto mano
-vi foffe la Tromba, fe non in
+che fofle ficuro che sotto mano
+vi fosse la Tromba, fe non in
 
-‘cafo pero che li faceflero verzi-
-
+‘cafo pero che li facessero verzi
 cola, petche la perdita @una di
 quelle carte importa fubito un
-refto , altrimenti deve afpettare
+refto, altrimenti deve afpettare
 che licapiti la congiontura di
-tirare 4 qualche onore, e dove-
-ra tirarli con il Mondo; mentre
+tirare 4 qualche onore, e dovera tirarli con il Mondo; mentre
 allora é ficuro di pigliar quello
-ono-
-  
+ono  
 
 It
 onore all'inimico, 6 di fark ik
-Sole, con la {peranza di poter
+Sole, con la speranza di poter
 prendere qualche altro onore
-alPinimico , e di far Pultima.
+alPinimico, e di far Pultima.
 
 . Alle volte voi non avretes
-in mano alcuno onore » € pure
+in mano alcuno onore » e pure
 dovete tenere il gioco in tanta
 ftima che havete da procurare
 @ingannare Pavverfarij, e non
 fare come tal’uno che fubita
 fanno conofcere di non aver
-niente,perche con {coprire il lo=
+niente,perche con scoprire il lo=
 To gioco danno campo all’av=
 
 verfarij di fare quel che voglio-.
 
-no ; al contrario fe voi procura-
-te di far credere al voftro inimi-
-mico d’ayer un gran gioco lo
-lotenete in tal foggezione , che
-procura di farfi tutti Ponori al-
-Ja mano, e voi con bella manie=
-racol moftrare di fare un gio-
-co di Tromba dovete procurare
+no ; al contrario fe voi procurate di far credere al voftro inimimico d’ayer un gran gioco lo
+lotenete in tal foggezione, che
+procura di farfi tutti Ponori alJa mano, e voi con bella manie=
+racol moftrare di fare un gioco di Tromba dovete procurare
 qi farglieli fare ; ma in modo
 pen
 
  
 320
 
-pero che non fi accorga che voi-
-
+pero che non fi accorga che voi
 lo -facciate per debolezza col
-procurare fempre di allenta-
-re, ed in tanto prendere pct
+procurare fempre di allentare, ed in tanto prendere pct
 mandarle il gioco alla mano col
 far moftra di prendere per for—
-za ,perche in quella forma fare-
-te ancora il gioco del vouro
-compagno con abbligare il vo-
-tro inimico a giocarle in fac-
-cia, ¢cosi lui havera campo di
+za,perche in quella forma farete ancora il gioco del vouro
+compagno con abbligare il votro inimico a giocarle in faccia, ¢cosi lui havera campo di
 poterfi fare quelli onori che
 yora .
 Ma col procutar d’ingannare
-Pinimico , non dovete pero iD-
-gannare il compagno >» perche
+Pinimico, non dovete pero iDgannare il compagno >» perche
 potrebbe apportarvi up grave
 pregiudizio, percio quando non
-averete niente, edaverete pro-
-curato d@ingannare il compa
-gno quando fiamo vicipi alla»
-fine del gioco dovete far cono-
-fcere al voftro compagno ,, che
+averete niente, edaverete procurato d@ingannare il compa
+gno quando siamo vicipi alla»
+fine del gioco dovete far conofcere al voftro compagno,, che
 vol
 
  
@@ -4166,7 +3598,7 @@ et
 
 pr
 qu
-{a1
+sa1
 V
 
 in,
@@ -4174,36 +3606,30 @@ in,
 Ct
 
 re
-1non havete gioco, ¢ lo fa-
-
+1non havete gioco, ¢ lo fa
 f¢ col prendere alcune volte,
 
 arli vedere che potevate non’
--ndere , perche fe prendete
+-ndere, perche fe prendete
 
 ando potevate non prendere
 
 ‘a fegno evidente,che voinon
 
-lete pitt dare foggezzione all?
+lete più dare foggezzione all?
 
-imico 5 € cosi dovra cono-
-sre che non avete carta da fa-
-
+imico 5 e cosi dovra conosre che non avete carta da fa
 la caccia.
 
-Di pit fe vi pareffe dal modo
-giocare che il voftro compa-
-10 poteffe avere la Tromba, 6
+Di più fe vi pareffe dal modo
+giocare che il voftro compa10 poteffe avere la Tromba, 6
 Mondo, allora voi dovete»
-mpre girarlili Tarocchi pit
+mpre girarlili Tarocchi più
 ‘offi ancorche foffero onori, ¢
-‘ocurare dinon lafciarlo pi-
-iar mai, accio non foffe obbli-
-ato a giocare in faccia al fuo
+‘ocurare dinon lafciarlo piiar mai, accio non fosse obbliato a giocare in faccia al fuo
 imico; maficcome potrebbe
 arfi il cafo che faceffe il gioco
-i Tromba, e€ veramente non
+i Tromba, ee veramente non
 aveffe,allora pet ben coup ieee
 ae
 
@@ -4227,7 +3653,7 @@ ae
  
 
 viet
-“0 5 }
+“0 5 l
 yy
 
  
@@ -4238,19 +3664,19 @@ yy
 
 We SI ee
 
-{22
+s22
 lodovete fempre oflervare I
-carta che rifponde , perche £
+carta che rifponde, perche £
 principio comincia a darvi qué
-che Papa , quando per altro Pp
+che Papa, quando per altro Pp
 
 -trebbe darvi carta maggiore,
 
-il Papa non vi facefle yerzico
+il Papa non vi facesse yerzico
 potete fortemente dubitaré, ¢
-effo non Pabbia; ma fe po%
+esso non Pabbia; ma fe po%
 daffle qualche Tarocco picciol
-che non. contaffe porendovel
+che non. contasse porendovel
 dare qualch’ altro maggiore,
 lora é fegno certo, che nor Vk
 ma folo fi ¢ pofto in caccia P
@@ -4258,7 +3684,7 @@ ma folo fi ¢ pofto in caccia P
 “qngannare [inimico;onde vol
 
 lora dovrete fare il voftro 810
-€ non pit quello del compagh
+e non più quello del compagh
 fe poi fofte quafi certo, ch’ave!
 la Tromba il voftro compag”
 e fuflimo all’ultimo in tres
@@ -4276,30 +3702,26 @@ eae
   
 
 pee
-pit che onore gelofo,¢ toccafle
+più che onore gelofo,¢ toccafle
 giocare &voi per fare il gioco
 del voftro compagno,dovete pia
-tofto giocar Ponore, € non mar
+tosto giocar Ponore, e non mar
 la cartiglia, fepoi fofte certo
-che avelfe il Matto in mano, al-
-lora potete non giocar Tarocco,
+che avelfe il Matto in mano, allora potete non giocar Tarocco,
 e giocare la cartiglia perche
 il Matto @ lui gli gioca come
 vuole, e potete non arrifchiare
 il voftro onore .
-Se viaccorgefte ancora , che
-il voftro compagno avefle in»
+Se viaccorgefte ancora, che
+il voftro compagno avesse in»
 mano qualche picciolo onore »
-il quale non avefle mai potuto
+il quale non avesse mai potuto
 fari, allora dovete procurare di
-andatle incontro con li Taroc-
-chi pitt grofli, ancorche foflero
+andatle incontro con li Tarocchi più grofli, ancorche foflero
 onori, ma fe dubitate d'un gran
-gioco negl’ avverfarii , dovete
-andarle incontro folo con Ta-
-cocchi grofii, e non @onore per
-non obbligare Pinimico, ad im-
-Fa pes
+gioco negl’ avverfarii, dovete
+andarle incontro folo con Tacocchi grofii, e non @onore per
+non obbligare Pinimico, ad imFa pes
 
  
 
@@ -4336,21 +3758,21 @@ Fa pes
 pedire al voftro compagno ¢
 qualche onore fuperiore il da
 vi quel piccolo onore,e cosi vé
-reflivo a perdere il voftro 0?
+restivo a perdere il voftro 0?
 re per averlo girato al comp
 eno, & il voftro compagno Vé
 rebbe a perder un’altro on0!
 per non averfelo potuto fare
-alla mano, e quefto fuccede 4!
-coratalvolta {enza che pailia
-alcun onore , perche quan Q
+alla mano, e questo succede 4!
+coratalvolta senza che pailia
+alcun onore, perche quan Q
 yoftro inimico pud creder » cl
 voi non abbiate piu carta done
 re gelofa,ma credendo che ‘al
 bia il voftro compagno, ¢ fapen
 do, che ilfuo compagnoh i
-Tromba,allora,ancorche {j g10
-chi cartiglia, ¢ 200 yj fia onor
+Tromba,allora,ancorche sj g10
+chi cartiglia, ¢ 200 yj sia onor
 alcuno, gioca il Mondo, no
 peraltro fine, folo perche il vo
 ftro compagno non pola fare
@@ -4359,15 +3781,14 @@ carta donore ; Onde in quelt
 bifogna ftare affai avyertito P
 . no
 
-ee —«€,,
+ee —«e,,
   
 
 125
-non effere. obligatia perderes
+non essere. obligatia perderes
 tutti due.
 
-Abbiamo veduto di fopra co-
-me alle volte é neceflario it
+Abbiamo veduto di fopra come alle volte é necessario it
 gannare Vinimico col moftrare
 @aver un gran gioco, fe bene
 non avefte niente, ma a folo
@@ -4375,21 +3796,19 @@ motivo ditener in fogettiones
 
 | Pinimico; ora dobbiamo vedere,
 
-come alle volte ¢ neceflario di
-far vedere all inimico dinon_.,
+come alle volte ¢ necessario di
+far vedere all inimico dinon.,
 avere ne Tromba, ne Mondo,
-tutto che l’abbiate, ¢ queftolo
-potete fare,o con lo {carto quan.
-do dovete {cartare , ocol modo
-di giocarey col giocare total-
-mente diverfo daquello, ches
+tutto che l’abbiate, ¢ questolo
+potete fare,o con lo scarto quan.
+do dovete scartare, ocol modo
+di giocarey col giocare totalmente diverfo daquello, ches
 giocarefte-fe volefte fare il gioca
 della Tromba, ma doyete pero
-avvertire , che quefto gioco lo
+avvertire, che questo gioco lo
 dovete fare a principio, ma
-quando fiamo nello ftringere del
-gioco dovete procurare di met-
-F 3 ters
+quando siamo nello ftringere del
+gioco dovete procurare di metF 3 ters
 
  
 
@@ -4397,23 +3816,23 @@ F 3 ters
 
  
 126
-tervi a fegno dinon effere |
-obligato 4 prendere , ma met
+tervi a fegno dinon essere |
+obligato 4 prendere, ma met
 S allora il voftro avverfario
 ogettione tale, che non po
 piu farfi carta d’onore alla 2
 no, maflimamente fe fofte ficu
 che aveffe in mano delle cal
-gelofe affai, e quefto lo dove
-fare , {pecialmente quando h
+gelofe affai, e questo lo dove
+fare, specialmente quando h
 vete eran quantita de Tarocel
-edubitate di dover eflere P
-in neceflita di prender molt
-| __ fime volte, ¢ per confeguel
-ie obligato 4 giocare {peffo in 4
+edubitate di dover essere P
+in necessita di prender molt
+|  fime volte, ¢ per confeguel
+ie obligato 4 giocare speffo in 4
 [| cia al voftro inimico.
 In oltre fe avefte una cart
-glia perfida , cioe moltiflimé
+glia perfida, cioe moltiflimé
 qualche fpecie,¢ fofte ficuro,¢!
 afl C45 tocar
 glaltri non la poteffero gioc
@@ -4454,27 +3873,24 @@ fla
 a".
 
 cia, ancorche fofte ficure ; che
-lui nom ne haveffe , perche: fe
+lui nom ne haveffe, perche: fe
 non la.giocate voi fiete: ficuro ;
 di nom arrivare all’ultima*con
-la Tromba , € cosi vi togliete la |
-{peranza di poter far caccia, ¢
+la Tromba, e cosi vi togliete la |
+speranza di poter far caccia, ¢
 vi bifognaabbandonare ikvofiro :
 Compagno in mezzo al gioco ; |
 ~ Tu fomma tutta la maggiog - |
-difficolta di quefto gioco con= |
-fifte in faper ben giocare la car-
-tglia , nel farfi Ponori a tem Pos
-€ girare verfo del compagno 3
+difficolta di questo gioco con= |
+fifte in faper ben giocare la cartglia, nel farfi Ponori a tem Pos
+e girare verfo del compagno 3
 Tpetto: al modo di giocare be.
-ne 4a cartiglia parmi davery}
+ne 4a cartiglia parmi daveryl
 detto tanto, che'batti, it refto lo
-dovete Imparare da voi mede-
-fimi per mezzo d’una bei efatta
-Pratticas circa del farvi Ponor}
+dovete Imparare da voi medefimi per mezzo d’una bei efatta
+Pratticas circa del farvi Ponorl
 a tempo confe(to il vero, che io
-Per me non sddarvilume mag-
-lore. Refta ora folo 4 vedere jl
+Per me non sddarvilume maglore. Refta ora folo 4 vedere jl
 
 modo, che fi deve teneze nel gin
 FE 4, Tada
@@ -4496,25 +3912,25 @@ aver memoria fifla dituttil’o
 
 tare Yonori al compagna; Ed io
 per me vi dico., che dovete pri
-ma, riflettere a tutti Ponori ,,che
-avete In Mano , € poi girare ptir
+ma, riflettere a tutti Ponori,,che
+avete In Mano, e poi girare ptir
 ma quelli, che fonomeno gelofi,
 e dopo li pil gelofi, e fe vedeté
 che il voftro inimico.non ci tira
-quello fara feeno evidente , che
-non cipuole, fe perd. non folle ,
+quello fara feeno evidente, che
+non cipuole, fe perd. non folle,
 ficuro, che il voftro compagn?
 aveffe un onore fuperiore al fos
 perche fe non sa dicerto, che it
 compagno. ha/una carta fuper!o> |
 re alla fua fopra Ponori gelott
-deve andar neceflariamente
+deve andar necessariamente
 puole, efe non civa efegnos
 che non ha, carta d’onore groflar
 onde allora vi potete mettere 1?
-caccia al voftro fottomano co”
+caccia al voftro sottomano co”
 una carta d’onore, anche me" |
-diocre ,, ma fopra tutto cont
+diocre,, ma fopra tutto cont
 we re
 fens
 
@@ -4525,38 +3941,34 @@ ti, che fono ftati giocati
 —
 perche fecon quella carta non
 potete prendere carta che 4 voi
-facefle. gran gioco, ma al con-
-trario’ col perderla potefte far
+facesse. gran gioco, ma al contrario’ col perderla potefte far
 fare un gran gioco aglavverfa~
 tii, allora voi dovete farvi la
 voftra carta d’onore, perche»
-puol effer maggiore il rifchio
-della perdita,che l'utiledel! gua-
-dagno ,: e cosi quando il rifchio
-noné eguale non fi deve arri-
-
-{chiare , e per quefto quando il °
+puol esser maggiore il rifchio
+della perdita,che l'utiledel! guadagno,: e cosi quando il rifchio
+noné eguale non fi deve arri
+schiare, e per questo quando il °
 
 Sioco: noné fcoperto aria per
 aria deve arrifchiarfi . 3
-Ma fe fapefte di certo , 6 pure
+Ma fe fapefte di certo, 6 pure
 
 potefte dubitare dal modo dé
 
-giocare , che il voftro.avverfa~
+giocare, che il voftro.avverfa~
 
 Tio. aveffe un aria fuperiore alla
 
-voftra , allora dovete procurare
+voftra, allora dovete procurare
 
 difarvi la voftra allamano, fe
 
-bene alle volte ¢ dovere perde-
-re
+bene alle volte ¢ dovere perdere
 
    
 
-flettere, che carta potete pitt
+flettere, che carta potete più
 prendere con quel voftro onorey .
  
 
@@ -4573,28 +3985,26 @@ prendere con quel voftro onorey .
  
 
 130
-re un aria per dover poi far mag-
-ior gioco, perche con la pel
-dita ?umaria {i puol impedire
+re un aria per dover poi far magior gioco, perche con la pel
+dita ?umaria si puol impedire
 all’avverfarii il fare altro onoré
-di maggior confeguenza , € pure
-fe fofte in ftato di non poter pit
-Zare la voftra aria , puotete,co”
+di maggior confeguenza, e pure
+fe fofte in ftato di non poter più
+Zare la voftra aria, puotete,co”
 dranchezza coprire l’aria, 6 pure
 qualfifia altro onore dell inimir
-co ,.con la certezza di farvi 14
-voftr’aria , 0 qualch’altra carta
+co,.con la certezza di farvi 14
+voftr’aria, 0 qualch’altra carta
 @onore alla mano ; mentre-c?
 perdere un aria fiete ficuro, ch¢
 al gioco vi debba venire alla m4"
-No, € poi farvi quella carta che
+No, e poi farvi quella carta che
 pili vi piace. . ;
 
-E talvolta ancora é necefla-
-
+E talvolta ancora é necessa
 vio paflare una carta d’onot? »
 
-ancorche non ve ne fia un’altras
+ancorche non ve ne sia un’altras
 per folo. motivo di poterfene po
 fare un’altra alla mano, percn®
 in quel cafo fiete ficuro» di
@@ -4603,26 +4013,21 @@ farvi quello, che girate, 2
 
  
 
-farvi quello, che vi é rimafto in
-mano , dove al contrario farete
-obligato a perderne due , fe non
-ne girate prima uno.4 tempo de-
-bite, perche col reftringerfi del
+farvi quello, che vi é rimasto in
+mano, dove al contrario farete
+obligato a perderne due, fe non
+ne girate prima uno.4 tempo debite, perche col reftringerfi del
 gioco fi rettringe a voi la forma
 di farvi le voftre carte d’onore;
 laonde ¢ meglio perderne una
 a tempo debito per poterfene
-poi fare un altra, che eflere ne
-ceffitato a perderne due in ulti-
-mo per non averne voluta gita-
-re prima una al fuo compagno.
+poi fare un altra, che essere ne
+ceffitato a perderne due in ultimo per non averne voluta gitare prima una al fuo compagno.
 
 Alle volte fi poffono, anzi fi
 devono fcartare Tarocchi, di
 quelli perd, che non contano
-per poterfi diftribuire la-carti-
-glia , in modo dinon effere obli-
-Gato agiocare in faccia al fuo
+per poterfi diftribuire la-cartiglia, in modo dinon essere obliGato agiocare in faccia al fuo
 avverfario, ma avvertite pero di
 farlo con fomma cautela, ¢ non
 mettere a rifchio li voftri onori,
@@ -4647,28 +4052,28 @@ cace
 
 caccia delli onori altrui, bifc
 gna penfare almodo di fare
-fuoi , aflicurandoyi, che quand
+fuoi, aflicurandoyi, che quand
 avrete imparato 4 falvare liv’
 Jiri onori, ed a procurare ¢
-prender quelli deg!’inimici , f
-rete un gran Giocatore , perch
-tutta la bellezza di quefto gioc
+prender quelli deg!’inimici, f
+rete un gran Giocatore, perch
+tutta la bellezza di questo gioc
 confifte nel faperfi difendere di
-{uo inimico, e procurare ne
+suo inimico, e procurare ne
 
 ifteffo tempo di vincere il f
 
 inimico. |
-Tutte quefte regole anno
+Tutte queste regole anno
 loro apendici, né fono rego"
-fempre certe , mentre fi varia”
+fempre certe, mentre fi varia”
 ogni volta fecondo la difpe:
 zione de’ giochi, onde vo! Hi
-dovrete ftar fiffo 2 quefta,
-con la voftra prudenza, € ©
+dovrete ftar fiffo 2 questa,
+con la voftra prudenza, e ©
 la voftra attenzione regolat!
 fecondo vi portera il gioco: :
-xo bene, che quefte vi po a
+xo bene, che queste vi po a
 dare up gran lume per pote! 4k
 eee prens
 
@@ -4679,136 +4084,109 @@ eee prens
 
 f)
 
-prendére con pid facilita il gio~
-co.,ma non per quefto vi poflo-
-no fare un gran Giocatore,per~
-che per effer gran Giocatore v1
-vuole la prattica, la quale vi de-
-ve imparare il modo di metter~
+prendére con più facilità il gioco,
+ma non per questo vi possono fare un gran Giocatore,per~
+che per esser gran Giocatore v1
+vuole la prattica, la quale vi deve imparare il modo di metter~
 Te in efecuzione .
 
-Onde parmi d’aver a baftanza
+Onde parmi d’aver a bastanza
 fodisfatto al mio impegno con
-defcrivervi tutti quelli acciden-
-ti, che mi fono faputi venire in
+defcrivervi tutti quelli accidenti, che mi fono faputi venire in
 memoria, e poi darvi il modo,
 di provederyi; ma ficome fong
-Infiniti g?accidenti , 'che poffa=
+Infiniti g?accidenti, 'che poffa=
 no giornalmente accadere in
-quefto gioco, cosi lafcio la cu
+questo gioco, cosi lafcio la cu
 
-faalla prattica di ammaeftraryi_
+faalla prattica di ammaeftraryi
 
-fedelmente nel refto, baftando-
-mi per-ultima mia fodisfazione,
-che in quefto gioco procuriate
+fedelmente nel refto, bastandomi per-ultima mia fodisfazione,
+che in questo gioco procuriate
 
 fempre di tener in foggettione
 
-i voftro inimico, e che riflet-
-Uate fempre ogni volta alle cay.
+i voftro inimico, e che rifletUate fempre ogni volta alle cay.
 te
 
-_— ets
+— ets
  
 
  
 
 134
 
-te giocate, e che abbiate memo-
-
+te giocate, e che abbiate memo
 tia di tutti Ponori, tanto dell
 glocati, quanto di quelli da gi
-carfi, che vi protefto , che g107
-Carete prefto beniflimo. _.
+carfi, che vi protefto, che g107
+Carete prefto beniflimo. .
 Tutti gPonori aMieme fann?
-364. € con tutte le carte fan?
+364. e con tutte le carte fan?
 496. Ora tocca a voi il fare £0”
 pta di qnefto gioco una matulé
-rifleffione , & una longa pratt!
-ca, avvertendovi, che quefto®
+rifleffione, & una longa pratt!
+ca, avvertendovi, che questo®
 il vero modo di giocare in quae
 @ro con il compagno, per allt
-3} puoi aicora giocare 10 oe
+3l puoi aicora giocare 10 oe
 & in quattro,ad ogn’uno pet 7.
 ma ficome non mi fon mal ide »
 to d’imparar agiocare ad OS 0
-uno per fe , perche in que “ 4
+uno per fe, perche in que “ 4
 non fi poffono girar gl On ter’
-compagno , main calo de he
-neceflitato a perder quale
+compagno, main calo de he
+necessitato a perder quale
 onore fi deve fempre proce
 
-« # 7} a
-il minor danno; co! qraver-
-
+« # 7l a
+il minor danno; co! qraver
 ae ere ee ae a a ee ee ee ee ee
 
 rare
+avetvi quivi brevemente decritte queste regole, acciò pofate poi imparar questo gioco
+on piti facilità .
 
- 
-
-> = A
-
-Ba
-   
-
-. 1135,
-’avetvi quivi brevemente de-
-critte quefte regole , accid pof-
-ate poi imparar quefto gioco
-on piti facilita .
-
-Se poi vi foffe qualcheduno ,
-he defideraffe @’'imparar a gio
-are ogn’uno per fe, deve faper
-he chi sa ben giocare col come
+Se poi vi fosse qualcheduno,
+che desiderasse @’'imparar a giocare ogn’uno per fe, deve faper
+che chi sa ben giocare col come
 agno sa ben giocare ad ogn’un,
 ex fe, poiche la fine del gioca
-fempre lifteffa, cioé di pro=
-urar di farfi li fuoi onori, es
+sempre l'istessa, cioé di procurar di
+farsi li fuoi onori, es
 render quelli del compagno .
 
-_ Per altro 4 me bafta per ora
-avervi ammaeftsati nella for- |
-na pit neceflaria, e pitt ufitata,,
-Jual’é quella di giocare con ik |
-“ompagno, econ la fola, e cost |
-ier adempito nella forma pitt
-offibile al mio impegno, mz
+ Per altro a me basta per ora
+avervi ammaeftsati nella forma
+più necessaria, e più ufitata,,
+Jual’é quella di giocare con ik 
+compagno, e con la fola, e così
+ier adempito nella forma più
+possibile al mio impegno, mz
 
-€ poi avefli mancato in qualche |
-arte vi prego a compatir la |
-nia temerita, ¢debolezza , affi- |
-Cll
-af
-126 <
-curandovi, che il difetto noné
-
-ftato della volonta , ma dell in- ©
-
-capacita, pero fottomettendo-
-
-mi fempre prima al ben regola~ »
-
-to, € prudente giudizio di vol
-altri Signori Giocatori, dird,
-che per giocar bene bafta gio-
-care ,€ con rifleflione , e conla
-ragione ; perche ogni qualvolta
-uno sa render la ragione pets
-che ha giocato , pi tofto; quella
-carta, che un’altra dovete n¢e-
-ceffariamente confeffare, che
+Se poi avessi mancato in qualche 
+parte vi prego a compatir la 
+mia temerita, e debolezza,
+assicurandovi, che il difetto non é
+stato della volontà, ma dell'incapacità,
+pero sottomettendomi
+sempre prima al ben regolato,
+e prudente giudizio di voi
+altri Signori Giocatori, dirò,
+che per giocar bene basta giocare, e con riflessione, e con la
+ragione; perche ogni qualvolta
+uno sa render la ragione perché
+ha giocato, più tosto; quella
+carta, che un’altra dovete n¢eceffariamente
+confessare, che
 quello ha giocato bene, tutto
-che l’evento fia fucceduto males
+che l’evento sia succeduto males
 laonde fe voi vi manterretes
-fempre con quelli primi principj
-difaper render la ragione del
-voftro modo di giocare,credete-
-mi, che giocarete fempre bene.
+sempre con quelli primi principj
+di saper render la ragione del
+vostro modo di giocare, credetemi,
+che giocarete sempre bene.
 
-IL FINE,
- 
-
+IL FINE.
+
+\end{document}
