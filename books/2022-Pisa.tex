@@ -4,6 +4,9 @@
 \usepackage[italian]{babel}
 \usepackage{changepage}
 
+\usepackage{etoolbox}
+\apptocmd{\thebibliography}{\setlength{\itemsep}{-2pt}}{}{}
+
 \usepackage{tikz}
 \usetikzlibrary{decorations.shapes,shapes.geometric}
 
