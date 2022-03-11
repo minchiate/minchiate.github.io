@@ -1,8 +1,10 @@
 \documentclass[11pt,a6paper,twoside]{article}
+%\renewcommand{\baselinestretch}{1.1}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[german]{babel}
 \usepackage{changepage}
+\nonfrenchspacing
 
 \usepackage{titlesec}
 \usepackage{array}
@@ -13,28 +15,22 @@
   {6pt}
   {\raggedleft}
 
-
 % avoid orphans and widows, allow for (a lot of) letter spacing.
 \usepackage[defaultlines=2,all]{nowidow}
 \usepackage[tracking]{microtype}
 \sloppy
 % how to format and space chapter titles
 \usepackage{titlesec}
-\titleformat{\section}[display]
-            {\huge\bfseries}
-            {\vspace{0em}}
-            {0pt}
-            {}
-\titleformat{name=\section,numberless}[display]
-            {\huge\bfseries}
-            {}
-            {0pt}
-            {}
+\titleformat{\section}[hang]% shape
+            {\centering \large\itshape}   % format
+            {\thesection{\scshape\upshape.) }}  % label
+            {0pt}              % sep
+            {} % before-code
 % I like this font!
 \usepackage{tgbonum}
 \renewcommand{\rmdefault}{qbk}
 \usepackage{lettrine}
-\usepackage[left=14mm,top=12mm,right=10mm,bottom=14mm]{geometry}
+\usepackage[left=16mm,top=12mm,right=13mm,bottom=14mm]{geometry}
 
 \newcommand{\jetton}{%
   \textbf{\textbigcircle}}
@@ -45,6 +41,8 @@
 \newcommand{\textfisch}%{\rule[1pt]{1.5em}{6pt}\kern 1pt}
 %{\pounds{}\kern -5.7pt\rule[2.8pt]{4.0pt}{0.5pt}}}
 {\rule[1pt]{18pt}{0.5pt}\kern -18pt\rule[6pt]{18pt}{0.5pt}\kern -18.1pt\rule[1.2pt]{0.5pt}{4.8pt}\kern 17.2pt\rule[1.2pt]{0.5pt}{4.8pt}\kern 1pt}
+
+\newcommand{\stacktwo}[1]{\lower 6pt\hbox{\valign{&\hbox{\hsize=1em {#\vspace{4pt}}\hfil}\cr #1\cr}}}
 
 \newcommand{\supersection}[1]{%
 \clearpage
@@ -57,20 +55,22 @@
 \newcounter{leveescnt}
 \newenvironment{leveeslist}{
   \begin{list}
-    {\arabic{leveescnt}. Levée}
+    {\arabic{leveescnt}. {\textit{Levée}}}
     {\usecounter{leveescnt}
       \setlength{\labelwidth}{2em}
       \setlength{\labelsep}{1em}
       \setlength{\itemsep}{0pt}
+      \setlength{\parsep}{0pt}
       \setlength{\leftmargin}{1.5em}
       \setlength{\itemindent}{1em} % equals \labelwidth+\labelsep
     }
 }
 
+\newcommand{\gelosemakelabel}[1]{\textsc{#1}}
 \newenvironment{gelose}
                  {\begin{list}
                      {}
-                     {\let\makelabel\textbf
+                     {\let\makelabel\textsc
                        \setlength{\labelwidth}{2em}
                        \setlength{\parindent}{0.5em}
                        \setlength{\parsep}{0em}
@@ -83,8 +83,11 @@
                  }
                  {\end{list}}
 
-\title{\fontshape{sc}\LARGE \textls[180]{Regeln des} \\ \normalsize \textls[1500]{des}\\ \fontsize{34}{34}\selectfont{Minchiatta-Spiels}}
-\date{\vfill\small Dresden, 1798, \\ \textit{in der Waltherschen Hofbuchhandlung.}}
+\newcommand{\separatingdash}{\kern 2pt {\hfill\rule[3pt]{9em}{1.3pt}\hfill} \kern 12pt}
+\newcommand{\stack}[1]{\begin{tabular}{@{}l}#1\end{tabular}}
+
+\title{\fontshape{sc}\LARGE \textls[180]{Regeln} \\ \normalsize \textls[1500]{des}\\ \fontsize{34}{34}\selectfont{Minchiatta-Spiels}}
+\date{\vfill\small DRESDEN, 1798, \\ {in der \textsc{Waltherschen} Hofbuchhandlung.}}
 \begin{document}
 \raggedbottom
 \pagenumbering{gobble}
@@ -97,112 +100,113 @@
 
 \pagenumbering{arabic}
 
-\section{I}
-\subsection{Von den Karten.}
+{\centering \fontshape{sc}\large {\textls[600]{REGELN}} \\ {\footnotesize \textls[150]{des}}\\\kern 4pt {\Large MINCHIATTA-SPIELS.}\\}
 
-Das Minchiatta-Spiel bestehet aus 97 Karten, nämlich aus den 4 Farben, eine jede zu 14 Stück, und aus 40 Tarocchi und dem Matto. Die 4 Farben sind: Coppe, Denari, Spade, Bastoni, wie im Taroc-Spiel. Eine jede dieser Farben bestehet aus 14 Karten, welche sind: Der König, die Dame oder Königin, der Reuter oder Cavallo, der Bube oder Fante, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, und ist zu merken, daß bei den Coppe und Denari die kleinen voraus, und bey den andern die großen voraus gehen, (so wie im L'Hombre, im rothen und im schwarzen,) auch nennt man Coppe und Denari: \mbox{\textit{tonde}} oder rund, und die andern zwey Farben: \mbox{textit{longhe}} oder lang. Noch ist zu bemerken, daß der Denari~1: Sole di Campagna und Denari Bube: Fantina heißt; er hat aber deswegen keinen besondern Werth, eben so wenig als alle übrigen 4 Farben, welche man auch deswegen Cartillen nennt, die 4 Könige ausgenommen, welche einen Werth haben, wie in dem 2ten Kapitel zu sehen. Tarocchi sind 40, wie vorher gesagt: selbige bestehen aus 1 Papa uno, 2 Papa due, 3 Papa tre, 4 Papa quattro, 5 Papa cinque, 6 sei, 7 sette, 8 otto, 9 nove, 10 dieci, 11 undici oder gobbo, 12 dodici oder impiccato, 13 tredici, 14 quattordici oder diavolo, 15 quindici oder casa del diavolo, 16 sedici, 17 diecisette, 18 dieciotto, 19 diecinove, 20 venti, 21 ventuno, 22 ventidue, 23 ventitre, 24 ventiquattro, 25 venticinque, 26 ventisei, 27 ventisette, 28 ventotto, 29 ventinove, 30 trenta, 31 trentuno, 32 trentadue, 33 trentatre, 34 trentaquattro, 35 trentacinque, Stella oder der Stern, Luna oder der Mond, Sole oder die Sonne, Mondo oder die Welt, Trombe oder die Trompete. Diese stechen einander ab nach der Reihe, wie sie hier stehen: also daß die Trombe die höchste ist. Die 5~höchsten Tarocchi, welche keine Ziffer haben, heißen Arie.
+\separatingdash
 
-Die 30, 31, 32, 33, 34, 35 heißen Sopratrenta, oder über dreyßig. Die 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, heißen Sopraventi, oder über zwanzig. Die 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, sind Sottoventi, oder unter zwanzig. 16, 17, 18, 19, heißt man auch Preghae. 9, 8, 7, 6, sind Tarocchini oder Papetti. Die 5, 4, 3, 2, 1, heißen Papi.
+\section{Von den Karten.}
 
-\section{II}
-\subsection{Von den Carte di Conto.}
+Das \textit{Minchiatta}-Spiel bestehet aus 97 Karten, nämlich aus den 4 Farben, eine jede zu 14 Stück, und aus 40 \textit{Tarocchi} und dem \textit{Matto}. Die 4 Farben sind: \textit{Coppe}, \textit{Denari}, \textit{Spade}, \textit{Bastoni}, wie im \textit{Taroc}-Spiel. Eine jede dieser Farben bestehet aus 14 Karten, welche sind: Der König, die Dame oder Königin, der Reuter oder \textit{Cavallo}, der Bube oder \textit{Fante}, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, und ist zu merken, daß bei den Coppe und Denari die kleinen voraus, und bey den andern die großen voraus gehen, (so wie im L'Hombre, im rothen und im schwarzen,) auch nennt man \textit{Coppe} und \textit{Denari}: \mbox{\textit{Rosse}} oder roth, und die andern zwey Farben: \mbox{textit{longhe}} oder lang. Noch ist zu bemerken, daß der \textit{Denari}~1: \textit{Sole di Campagna} und \textit{Denari} Bube: \textit{Fantina} heißt; er hat aber deswegen keinen besondern Werth, eben so wenig als alle übrigen 4 Farben, welche man auch deswegen \textit{Cartillen} nennt, die 4 Könige ausgenommen, welche einen Werth haben, wie in dem 2ten Kapitel zu sehen. \textit{Tarocchi} sind 40, wie vorher gesagt: selbige bestehen aus
+1 \textit{Papa uno}, 2 \textit{Papa due}, 3 \textit{Papa tre}, 4 \textit{Papa quattro}, 5 \textit{Papa cinque}, 6 \textit{sei}, 7 \textit{sette}, 8 \textit{otto}, 9 \textit{nove}, 10 \textit{dieci}, 11 \textit{undici} oder \textit{gobbo}, 12 \textit{dodici} oder \textit{impiccato}, 13 \textit{tredici}, 14 \textit{quattordici} oder \textit{diavolo}, 15 \textit{quindici} oder \textit{casa del diavolo}, 16 \textit{sedici}, 17 \textit{diecisette}, 18 \textit{dieciotto}, 19 \textit{diecinove}, 20 \textit{venti}, 21 \textit{ventuno}, 22 \textit{ventidue}, 23 \textit{ventitre}, 24 \textit{ventiquattro}, 25 \textit{venticinque}, 26 \textit{ventisei}, 27 \textit{ventisette}, 28 \textit{ventotto}, 29 \textit{ventinove}, 30 \textit{trenta}, 31 \textit{trentuno}, 32 \textit{trentadue}, 33 \textit{trentatre}, 34 \textit{trentaquattro}, 35 \textit{trentacinque}, \textit{Stella} oder der Stern, \textit{Luna} oder der Mond, \textit{Sole} oder die Sonne, \textit{Mondo} oder die Welt, \textit{Tromba} oder die Trompete. Diese stechen einander ab nach der Reihe, wie sie hier stehen: also daß die \textit{Tromba} die höchste ist. Die 5~höchsten \textit{Tarocchi}, welche keine Ziffer haben, heißen \textit{Arie}.
 
-Carte di Conto, oder Karten, welche einen Werth haben, sind dreyerley.
+Die 30, 31, 32, 33, 34, 35 heißen \textit{Sopratrenta}, oder über dreyßig. Die 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, heißen \textit{Sopraventi}, oder über zwanzig. Die 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, sind \textit{Sottoventi}, oder unter zwanzig. 16, 17, 18, 19, heißt man auch \textit{Preghae}. 9, 8, 7, 6, sind \textit{Tarocchini} oder \textit{Papetti}. Die 5, 4, 3, 2, 1, heißen \textit{Papi}.
 
-Einige gelten 3 Points.
+
+\section{Von den Carte di Conto.}
+
+\textit{Carte di Conto}, oder Karten, welche einen Werth haben, sind dreyerley.
+
+Einige gelten 3 \textit{Points}.
 
 Einige gelten 5.
 
 Einige gelten 10.
 
-Drey Points gelten: der Papa due, oder 2; Papa tre, oder 3; Papa quattro, oder 4; Papa cinque, oder 5. Fünf Points gelten: der Papa uno, oder 1.; der dieci, oder 10; der tredici, oder 13; der venti oder 20; der ventotto, oder 28; der trenta, oder 30, und alle übrige sopratrenta: der Matto desgleichen, und jeder der 4 Könige. Zehn Points gelten jeder der 5 Arie. Die Cartillen und alle übrigen Tarocchi gelten nichts.
+Drey \textit{Points} gelten: der \textit{Papa due}, oder 2; \textit{Papa tre}, oder 3; \textit{Papa quattro}, oder 4; \textit{Papa cinque}, oder 5. Fünf \textit{Points} gelten: der \textit{Papa uno}, oder 1.; der \textit{dieci}, oder 10; der \textit{tredici}, oder 13; der \textit{venti} oder 20; der \textit{ventotto}, oder 28; der \textit{trenta}, oder 30, und alle übrige \textit{sopratrenta}: der \textit{Matto} desgleichen, und jeder der 4 Könige. Zehn \textit{Points} gelten jeder der 5 \textit{Arie}. Die \textit{Cartillen} und alle übrige \textit{Tarocchi} gelten nichts.
 
-\section{III}
-\subsection{Von den Versicole.}
 
-Versicola heißt man gewisse Karten zusammen, welche durch ihre Zusammenkunft einen Werth erhalten, wie die Honneurs im Whist, die Matadors im L'Hombre, und die Napolitaines in Trisette; Versicole giebt e zweyerley: reguläre du irreguläre.
+\section{Von den Versicole.}
 
-Reguläre sind alle diejenigen, welche aus drey oder mehrern nach ihrem Rang auf einander folgenden Carte di Conto entstehen. Als da ist 1, 2, 3 oder 1, 2, 3, 4, oder 1, 2, 3, 4, 5, oder 2, 3, 4, oder 3, 4, 5, ingleichen alle von 28 bis Trombe einander folgende Tarocchi, zum Beyspiel: 28, 29, 30, oder 28, 29, 30, 31, oder 29, 30, 31, Stella, Luna, oder Sole, Mondo, Trombe; genug, wenn nur drey oder mehrere von allen diesen auf einander folgen.
+\textit{Versicola} heißt man gewisse Karten zusammen, welche durch ihre Zusammenkunft einen Werth erhalten, wie die \textit{Honneurs} im \textit{Whist}, die \textit{Matadors} im \textit{L'Hombre}, und die \textit{Napolitaines} in \textit{Trisette}; \textit{Versicole} giebt es zweyerley: reguläre und irreguläre.
+
+Reguläre sind alle diejenigen, welche aus drey oder mehrern nach ihrem Rang auf einander folgenden \textit{Carte di Conto} entstehen. Als da ist 1, 2, 3 oder 1, 2, 3, 4, oder 1, 2, 3, 4, 5, oder 2, 3, 4, oder 3, 4, 5, ingleichen alle von 28 bis \textit{Tromba} einander folgende \textit{Tarocchi}, zum Beyspiel: 28, 29, 30, oder 28, 29, 30, 31, oder 29, 30, 31, \textit{Stella}, \textit{Luna}, oder \textit{Sole}, \textit{Mondo}, \textit{Tromba}; genug, wenn nur drey oder mehrere von allen diesen auf einander folgen.
 
 Irreguläre Versicole sind viererley.
+\begin{enumerate}
+\item \textit{Papa uno}, \textit{Matto} und \textit{Tromba}, welches die \textit{Versicola del Matto} heißt; weil es die einzige ist, wo der \textit{Matto} dazu nöthig ist.
+\item \textit{Uno}, \textit{Tredici}, \textit{Ventotto}. Diese heißt \textit{Versicola del Tredici}.
+\item \textit{Dieci}, \textit{Venti}, \textit{Trenta}, \textit{Tromba}. Diese ist \textit{Versicola delle Diecine}: sie gilt auch, wenn der \textit{Dieci} oder die \textit{Tromba} fehlt, und in diesem letzten Falle heißt man sie die \textit{diecine vergognose}, weil sie sich gleichsam schämen, ohne der besten zu seyn.
+\item Endlich machen 3 oder 4 Könige auch eine \textit{Versicola}. Der \textit{Matto} kann zu einer jeden regulären oder irregulären \textit{Versicola} gezählt werden; kann aber nicht statt einer andern Karte eine \textit{Versicola} machen, nur in der mit dem \textit{Papa uno} und \textit{Tromba} ist er nothwendig, um eine zu machen. Jede \textit{Versicola} zählt so viel, als die Karten zusammen werth sind, aus welchen sie besteht.
+\end{enumerate}
 
-Papa uno, Matto und Trombe, welches die Versicola del Matto heißt; weil es die einzige ist, wo der Matto dazu nöthig ist.
+Zum Beyspiel: die \textit{Versicola Papa uno}, 2, 3, gilt eilf \textit{Points}, weil der \textit{Papa uno} fünf, und jeder andere \textit{Papa} drey zählt, wie im 2ten Kapitel gesagt. Die \textit{Versicola}: \textit{Uno}, \textit{Matto}, \textit{Tromba}, gilt zwanzig, weil die \textit{Tromba} zehn, und die andern beyde fünf jede werth sind.
 
-Uno, Tredici, Ventotto. Diese heißt Versicola del Tredici.
+Die \textit{Versicola}: \textit{Uno}, \textit{Tredici}, \textit{Ventotto}, gilt fünfzehn.
 
-Dieci, Venti, Trenta, Trombe. Diese ist Versicola delle Diecine: sie gilt auch, wenn der Dieci oder die Trombe fehlt, und in diesem letzten Falle heißt man sie die diecine vergognose, weil sie sich gleichsam schämen, ohne der besten zu seyn.
+Eine \textit{Versicola} von drey \textit{Sopratrenta} gilt fünfzehn, und dergleichen mehr.
 
-Endlich machen 3 oder 4 Könige auch eine Versicola. Der Matto kann zu einer jeden regulären oder irregulären Versicola gezählt werden; kann aber nicht statt einer andern Karte eine Versicola machen, nur in der mit dem Papa uno und Trombe ist er nothwendig, um eine zu machen. Jede Versicola zählt so viel, als die Karten zusammen werth sind, aus welchen sie besteht.
+Der \textit{Matto}, wenn er dabey ist, macht immer fünf \textit{Points} mehr.
+Wenn man eine \textit{Versicola} hat, und bekommt im, oder am Ende des Spiels Karten, welcher dieselbe bey der letzten Rechnung vermehrt, so heißt es: diese Karte macht \textit{accrescimento}: zum Beyspiel, man hat 28, 29, 30, und bek\"ommt 31.
 
-Zum Beyspiel: die Versicola Papa uno, 2, 3, gilt eilf Points, weil der Papa uno fünf, und jeder andere Papa drey zählt, wie im 2ten Kapitel gesagt. Die Versicola: Uno, Matto, Trombe, gilt zwanzig, weil die Trombe 10, und die andern beyde fünf jede werth sind.
 
-Die Versicola: Uno, Tredici, Ventotto, gilt fünfzehn.
+\section{Von Ventinove.}
 
-Eine Versicola von drey Sopratrenta gilt fünfzehn, und dergleichen mehr.
+Der \textit{Ventinove} verdient eine besondere Abhandlung, indem er weder \textit{Carta di Conto} ist, denn er zählt nichts an und für sich, und ist doch nicht ein indifferenter \textit{Sopraventi}, weil er mit dem 28. und 30. eine \textit{Versicola} macht, und in der \textit{Versicola} fünf zählt. Es ist also zu verhüten, mit demselben eine \textit{Fumata} zu geben, weil der Compagnon nicht recht wissen kann, was diese bedeutet, und ist noch zu bemerken, daß wenn in dem Spiel der 28 und 31 von dem Feinde schon gemacht ist, und daß ich den 30 habe, oder \textit{vice versa}, der 29. nicht mehr zu achten ist, weil er alsdann keine \textit{Versicola} machen kann, und außerdem nicht zählt.
 
-Der Matto, wenn er dabey ist, macht immer fünf Points mehr.
 
-Wenn man eine Versicola hat, und bekommt im, oder am Ende des Spiels Karten, welcher dieselben bey der letzten Rechnung vermehrt, so heißt es: dies Karte macht accrescimento: zum Beyspiel, man hat 28, 29, 30, und bekommt 31.
+\section{Von dem Matto.}
 
-\section{IV}
-\subsection{Von Ventinove.}
+Der \textit{Matto} oder \textit{Squisse} ist, wie im \textit{Taroc}-Spiel, weder Farbe noch \textit{Taroccho}; man kann ihn zugeben, wenn und auf was man will, (nur darf man ihn nicht auf die letzte \textit{Levée} aufbehalten,) man squissiret so wie im \textit{Taroc}-Spiel, du giebt dafür eine schlechte Karte aus seiner \textit{Levée}, auch kann man ihn niemals verlieren, ausgenommen wenn man keine einzige \textit{Levée} macht.
 
-Der Ventinove verdient eine besondere Abhandlung, indem er weder Carta di Conto ist, denn er zählt nichts an und für sich, und ist doch nicht ein indifferenter Sopraventi, weil er mit dem 28. und 30. Eine Versicola macht, und in der Versicola fünf zählt. Es ist also zu verhüten, mit demselben eine Fumata zu geben, weil der Compagnon nicht recht wissen kann, was diese bedeutet, und ist noch zu bemerken, daß wenn in dem Spiel der 28 und 31 von dem Feinde schon gemacht ist, und daß ich den 30 habe, oder vice versa, der 29. nicht mehr zu achten ist, weil er alsdann keine Versicola machen kann, und außerdem nichts zählt.
+Der \textit{Matto} wird niemals verloren, ausgenommen wenn gar keine \textit{Levée} gemacht, sein Verlust wird aber nicht gezählt in dem Augenblick, wo er verloren wird; aber der Gegenpart, der alle \textit{Levées} hat, bekommt ihn, und zählt ihn, als wäre er seine. In diesem Falle wird der ganze Verlust doppelt bezahlt, und ist es ein Spiel von 7~Resten, also doppelt 14, ohne das, was etwa während des Spiels anmarkirt worden, und welches auch zuletzt mit doppelt gerechnet wird, (nicht aber der ganze Rest, der etwa im Spiel selbst schon bezahlt worden.) Hat man keine Karten in den \textit{Levées}, als \textit{Carte di Conto}, und man mattirt, so muß man am Ende des Spiels, wenn man keine schlechte Karte noch nicht hat, die schlechteste \textit{Carta di Conto} geben.
 
-\section{V}
-\subsection{Von dem Matto.}
 
-Der Matto oder Squisse ist, wie im Taroc-Spiel, weder Farbe noch Taroccho; man kann ihn zugeben, wenn und auf was man will, (nur darf man ihn nicht auf die letzte Levée aufbehalten,) man squissiret so wie im Taroc-Spiel, du giebt dafür eine schlechte Karte aus seiner Levée, auch kann man ihn niemals verlieren, ausgenommen wenn man keine einzige Levée macht.
+\section{Von den Resten \\oder Werth des Spiels.}
 
-Der Matto wird niemals verloren, ausgenommen wenn gar keine Levée gemacht, sein Verlust wird aber nicht gezählt in dem Augenblick, wo er verloren wird; aber der Gegenpart, der alle Levées hat, bekommt ihn, und zählt ihn, als wäre er seine. In diesem Falle wird der ganze Verlust doppelt bezahlt, und ist es ein Spiel von 7~Resten, also doppelt 14, ohne das, was etwa während des Spiels anmarkirt worden, und welches auch zuletzt mit doppelt gerechnet wird, (nicht aber der ganze Rest, der eeta im spiel selbst schon bezahlt worden.) Hat man keine Karten in den Levées, als Carte di Conto, und man mattirt, so muß man am Ende des Spiels, wenn man keine schlechte Karte noch nicht hat, die schlechteste Carta di Conto geben.
+Ein Rest bestehet aus 60 \textit{Points}; sobald man 60 volle \textit{Points} anmarkirt hat, bekömmt man eine Parthie oder einen Rest bezahlt. Diesen Rest muß man festsetzen, wie theuer man ihn haben will, wie im \textit{Trisette} die Parthie; man kann aber in einem Spiel mehrere Reste gewinnen, wie folgendes zeigen wird: sobald am Ende eines Spiels man von 1 bis auf 60 \textit{Points} gewinnt, bekömmt man einen Rest bezahlt, wenn auch nur 1~\textit{Point} oder mehrere sind: 61 machen 2~Reste bis mit 120, 121 bis 180 sind 3~Reste, 181 bis 240 4 Reste, 241 bis 300 5~Reste, 301 bis 360 6~Reste und so weiter.
 
-\section{VI}
-\subsection{Von den Resten \\oder Werth des Spiels.}
 
-Ein Rest bestehet aus 60 Points; sobald man 60 volle Points anmarkirt hat, bekömmt man eine Parthie oder einen Rest bezahlt. Diesen Rest muß man festsetzen, wie theuer man ihn haben will, wie im Trisette die Parthie; man kann aber in einem Spiel mehrere Reste gewinnen, wie folgendes zeigen wird: sobald am Ende eines Spiels man von 1 bis auf 60 Points gewinnt, bekömmt man einen Rest bezahlt, wenn auch nur 1~Point oder mehrere sind: 61 machen 2~Reste bis mit 120, 121 bis 180 sind 3~Reste, 187 bis 240 4 Reste, 241 bis 300 5~Reste, 301 bis 360 6~Reste und so weiter.
+\section{Von dem Anfange des Spiels.}
 
-\section{VII}
-\subsection{Von dem Anfange des Spiels.}
+Das \textit{Minchiatta}-Spiel wird nicht anders als unter 4~Personen gespielt; sobald man anfangen will, hebt jede der 4~Personen ab, und sehen die Karten an, welche sie abheben. Derjenige, der die höchste hat, muß Karten geben, der nach ihm die höchste hat, setzt sich ihm gegenüber, und sie sind zusammen. Die andern beyden sind auch zusammen, so wie im \textit{Whist}. Das Kartengeben heißt: die \textit{Folla} machen. Nun hat jeder die \textit{Folla}, oder deutsch zu reden, jeder giebt nach seiner Reihe; derjenige, der die höchste Karte gehoben hat, am ersten; im zweyten Spiel, der zu seiner Rechten sitzt; im dritten der gegenüber, im vierten der vierte Spieler; wenn 4~Spiele vorbey sind, heißt man es einen \textit{Giro}. Alsdann wechseln die Spieler; derjenige, der die dritte Karte am Werth im anfange coupirt hat, kommt mit dem, der die erste \textit{Folla} gehabt, und nun wird wieder ein \textit{Giro} gespielt; derjenige aber, der die erste \textit{Folla} gehabt, fängt bey jedem \textit{Giro} an, die erste zu geben, und wechselt niemals den Sitz, und von ihm an geht es wieder Rechts herum. Im dritten \textit{Giro} kommt derjenige, der die kleinste Karte coupirt hat, mit dem, der die erste \textit{Folla} gehabt hat. Dieser giebt wieder am ersten, und so gehts wieder Rechts herum. Drey \textit{Giro} machen eine complete Parthie. Nur ist zu merken, daß wenn bey dem Coupiren zwey Karten von gleicher Größe etwa coupiren, sie noch einmal coupiren müssen, desgleichen wenn einer den \textit{Matto} coupirt, weil dieser keinen Werth hat.
 
-Das Minchiatta-Spiel wird nicht anders als unter 4~Personen gespielt; sobald man anfangen will, hebt jede der 4~Personen ab, und sehen die Karten an, welche sie abheben. Derjenige, der die höchste hat, muß Karten geben, der nach ihm die höchste hat, setzt sich ihm gegenüber, und sie sind zusammen. Die andern beyden sind auch zusammen, so wie im Whist. Das Kartengeben heißt: die Folla machen. Nun hat jeder die Folla, oder deutsch zu reden, jeder giebt nach seiner Reihe; derjenige, der die höchste Karte gehoben hat, am ersten; im zweyten Spiel, der zu seyner Rechten sitzt; im dritten der gegenüber, im vierten der vierte Spieler; wenn 4~Spiele vorbey sind, heißt man es einen Giro. Alsdann wechseln die Spieler; derjenige, der die dritte Karte am Werth im anfange coupirt hat, kommt mit dem, der die erste Folla gehabt, und nun wird wieder ein Giro gespielt; derjenige aber, der die erste Folla gehabt, fängt bey jedem Giro an, die erste zu geben, und wechselt niemals den Sitz, und von ihm an geht es wieder Rechts herum. Im dritten Giro kommt derjenige, der die kleinste Karte coupirt hat, mit dem, der die erste Folla gehabt hat. Dieser giebt wieder am ersten, und so gehts wieder Rechts herum. Drey Giro machen eine complete Parthie. Nur ist zu merken, daß wenn bey dem Coupiren zwey Karten von gleicher Größe etwa coupiren, sie noch einmal coupiren müssen, desgleichen wenn einer den Matto coupirt, weil dieser keinen Werth hat.
 
-\section{VIII}
-\subsection{Von dem Kartengeben.}
+\section{Von dem Kartengeben.}
 
-Nun fängt derjenige, der die erste Folla haben soll, an zu geben; aber vor allem sieht er die unterste Karte an, und ist sie di Conto, mischt er sie ein, so lange, bis eine schlechte unten ist, (denn sonst könnte derjenige, welcher abhebt, sie auch sehen, und sehr niedrig abheben, auf daß diese gute Karte seinem Compagnon zukomme). Dann läßt er denjenigen, der ihm zur Linken sitzt, abheben; dieser hebt nach Belieben ab, (nur nicht bis auf die vorletzte Karte,) und sieht die unterste Karte, die er abhebt, an; ist diese eine Carta di Conto, oder ein Sopraventi, so darf er sie nehmen, und so fort alle die, welche derselben folgen und von dieser Sorte sind; sobald er aber an eine trifft, die weder Carta di Conto, noch sopraventi ist, so muß er anhalten, und darf keine weiter nehmen, als die er schon genommen hat; er darf sie aber bis auf dreyzehn an der Zahl (die, die er schon genommen hat, mit inbegriffen,) ansehen, und muß, wie in andern Spielen, das abgehobene Paket dem Kartengeber hinlegen, der alsdann das andere Paket darauf legt.
+Nun fängt derjenige, der die erste \textit{Folla} haben soll, an zu geben; aber vor allem sieht er die unterste Karte an, und ist sie \textit{di Conto}, mischt er sie ein, so lange, bis eine schlechte unten ist, (denn sonst könnte derjenige, welcher abhebt, sie auch sehen, und sehr niedrig abheben, auf daß diese gute Karte seinem Compagnon zukomme). Dann läßt er denjenigen, der ihm zur Linken sitzt, abheben; dieser hebt nach Belieben ab, (nur nicht bis auf die vorletzte Karte,) und sieht die unterste Karte, die er abhebt, an; ist diese eine \textit{Carta di Conto}, oder ein \textit{Sopraventi}, so darf er sie nehmen, und so fort alle die, welche derselben folgen und von dieser Sorte sind; sobald er aber an eine trifft, die weder \textit{Carta di Conto}, noch \textit{Sopraventi} ist, so muß er anhalten, und darf keine weiter nehmen, als die er schon genommen hat; er darf sie aber bis auf dreyzehn an der Zahl (die, die er schon genommen hat, mit inbegriffen,) ansehen, und muß, wie in andern Spielen, das abgehobene Paket dem Kartengeber hinlegen, der alsdann das andere Paket darauf legt.
 
-Dieses heißt man rubare, oder rauben; für die geraubten Carte di Conto markirt er deren Werth für sich an.
+Dieses heißt man \textit{rubare}, oder rauben; für die geraubten \textit{Carte di Conto} markirt er deren Werth für sich an.
 
-Die Karten werden sodann ausgegeben, wie folgt: derjenige, der die Folla hat, giebt erstlich 10 Karten einem jeden nach der Reihe, fünf und fünf dem rechter Hand, alsdann dem gegenüber, hernach dem dritten, endlich sich selbst. Nun wieder 10 Karten, fünf und fünf dem rechter Hand, und alsdann die 11te schlägt er um. Diese gehört auch dem rechter Hand; ist sie eine Carta di Conto, so zählt derjenige, der sie bekommt, so viel sie werth ist. So giebt er gleichfalls 10, und die 11te umgeschlagen den beyden andern nach der Reihe. Endlich giebt er sich wieder zehne, alsdann zählt er den Talon, der übrig bleint, und dieser muß aus 14~Karten bestehen, (e sversteht sich, daß wenn derjenige, der aufgehoben hat, einige geraubt hat, dieselben in dem Talon fehlen müssen; falls der Coupirende mehr als dreyzehn Karten rubiret hat, so fehlen sie auch noch, was über diese Anzahl ist, in den Karten, welche derjenige, der giebt, bekommen soll,) und wenn nun der Talon richtig ist, so schlägt sich derjenige, der giebt, die 11te Karte gleichfalls um; nun bleibt der Talon, welcher Folla heißt: von dieser Folla schlägt er sich die oberste um; ist sie eine Carta di Conto, oder Sopraventi, so behält er sie, und läßt sie vor sich öffentlich liegen; nun schlägt er die folgenden um, eine nach der andern, so lange sie Carte di Conto oder Sopraventi sind; trifft er auf eine, die keine dergleichen ist, so hält er inne, legt sie wieder auf den Talon, sieht den Talon oder die Folla an, und nimmt alle Carte di Conto heraus, aber nicht die Sopraventi, die darinnen sind, und legt sie gleichfalls öffentlich vor sich; dieses heißet man Pigliare, (oder nehmen.) Er markirt alsdann den Werth der Carte di Conto, die er umgeschlagen hat, aber nicht derjenigen, die er blos aus der Folla genommen hat. Nun giebt er die übrigen Karten der Folla, welche in Cartillen und Tarocchi besteht, seinem Freund, dieser legt die Tarocchi auf ein Paket, jede von den 4 Farben zusammen, alle öffentlich seinem Freunde gegenüber, und sagt zugleich an, wie viel von einer jeden Farbe sind; zum Beyspiel: 2~Coppe, 2~Bastoni, 1~Spade ohne Denari; die Tarocchi nennt er nicht. Jetzo zählt ein jeder seine Karten, und muß 21 haben. Hat derjenige, welcher coupirt, Karten rubirt, so écartirt er so viele Karten, als er deren rubirt hat, um sich in den 4 Farben Renoncen zu machen. Desgleichen écartirt derjenige, welcher die Folla hat, so viel Karten, als er sich umgeschlagen, oder aus der Folla genommen. Die Karten, die man écartirt, behält man zugedeckt vor sich; alsdann nimmt man die Karten, die man rubirt oder scopirt, und aus der Folla genommen hat, und zählt nochmals seine Karten, um zu sehen, ob man auch richtig 21 Karten hat. Wenn alles dieses bereit ist, so sagt man es demjenigen, der die Hand hat, und dieser spielt eine Karte aus.
+Die Karten werden sodann ausgegeben, wie folgt: derjenige, der die \textit{Folla} hat, giebt erstlich 10 Karten einem jeden nach der Reihe, fünf und fünf dem rechter Hand, alsdann dem gegenüber, hernach dem dritten, endlich sich selbst. Nun wieder 10 Karten, fünf und fünf dem rechter Hand, und alsdann die 11te schlägt er um. Diese gehört auch dem rechter Hand; ist sie eine \textit{Carta di Conto}, so zählt derjenige, der sie bekommt, so viel sie werth ist. So giebt er gleichfalls 10, und die 11te umgeschlagen den beyden andern nach der Reihe. Endlich giebt er sich wieder zehne, alsdann zählt er den \textit{Talon}, der übrig bleibt, und dieser muß aus 14~Karten bestehen, (es versteht sich, daß wenn derjenige, der aufgehoben hat, einige geraubt hat, dieselben in dem \textit{Talon} fehlen müssen; falls der Coupirende mehr als dreyzehn Karten rubiret hat, so fehlen sie auch noch, was über diese Anzahl ist, in den Karten, welche derjenige, der giebt, bekommen soll,) und wenn nun der \textit{Talon} richtig ist, so schlägt sich derjenige, der giebt, die 11te Karte gleichfalls um; nun bleibt der \textit{Talon}, welcher \textit{Folla} heißt: von dieser \textit{Folla} schlägt er sich die oberste um; ist sie eine \textit{Carta di Conto}, oder Sopraventi, so behält er sie, und läßt sie vor sich öffentlich liegen; nun schlägt er die folgenden um, eine nach der andern, so lange sie \textit{Carte di Conto} oder Sopraventi sind; trifft er auf eine, die keine dergleichen ist, so hält er inne, legt sie wieder auf den \textit{Talon}, sieht den \textit{Talon} oder die \textit{Folla} an, und nimmt alle \textit{Carte di Conto} heraus, aber nicht die \textit{Sopraventi}, die darinnen sind, und legt sie gleichfalls öffentlich vor sich; dieses heißet man \textit{Pigliare}, (oder nehmen.) Er markirt alsdann den Werth der \textit{Carte di Conto}, die er umgeschlagen hat, aber nicht derjenigen, die er blos aus der \textit{Folla} genommen hat. Nun giebt er die übrigen Karten der \textit{Folla}, welche in \textit{Cartillen} und \textit{Tarocchi} besteht, seinem Freund, dieser legt die \textit{Tarocchi} auf ein Paket, jede von den 4 Farben zusammen, alle öffentlich seinem Freunde gegenüber, und sagt zugleich an, wie viel von einer jeden Farbe sind; zum Beyspiel: 2~\textit{Coppe}, 2~\textit{Bastoni}, 1~\textit{Spade} ohne \textit{Denari}; die \textit{Tarocchi} nennt er nicht. Jetzo zählt ein jeder seine Karten, und muß 21 haben. Hat derjenige, welcher coupirt, Karten rubirt, so écartirt er so viele Karten, als er deren rubirt hat, um sich in den 4 Farben Renoncen zu machen. Desgleichen écartirt derjenige, welcher die \textit{Folla} hat, so viel Karten, als er sich umgeschlagen, oder aus der \textit{Folla} genommen. Die Karten, die man écartirt, behält man zugedeckt vor sich; alsdann nimmt man die Karten, die man rubirt oder scopirt, und aus der \textit{Folla} genommen hat, und zählt nochmals seine Karten, um zu sehen, ob man auch richtig 21 Karten hat. Wenn alles dieses bereit ist, so sagt man es demjenigen, der die Hand hat, und dieser spielt eine Karte aus.
 
-Wenn der Geber einen König scoperto oder pigliaro hat; so ist es das Spiel dessen, der die Hand hat, diese Farben zu spielen, weil er sicher ist, dessen Renonce nicht zu treffen; manchmal aber ist es, das Spiel zu impiciren, wie im 16ten Kapitel gesagt werden wird. Wenn einer écartirt, weil er rubirt hat, so ist es das Spiel, sich eine Renonce zu machen, in der Farbe, wo bey dem König durch die Folla oder Scoperta bekannt ist, diesen zu fangen; im Gegentheil soll man sich nicht Renonce von dem König seines Freundes machen.
+Wenn der Geber einen König \textit{scoperto} oder \textit{pigliato} hat; so ist es das Spiel dessen, der die Hand hat, diese Farben zu spielen, weil er sicher ist, dessen \textit{Renonce} nicht zu treffen; manchmal aber ist es, das Spiel zu \textit{impiciren}, wie im 16ten Kapitel gesagt werden wird. Wenn einer écartirt, weil er rubirt hat, so ist es das Spiel, sich eine \textit{Renonce} zu machen, in der Farbe, wo bey dem König durch die \textit{Folla} oder \textit{Scoperta} bekannt ist, diesen zu fangen; im Gegentheil soll man sich nicht \textit{Renonce} von dem König seines Freundes machen.
 
-\section{IX}
-\subsection{Von der Folla.}
 
-Die Folla liegt, wie im 10ten Kapitel gesagt werden wird, an der rechten Hand des Kartengebers, und ein jeder ist berechtiget, während des Spiels zu fragen, was für Karten darinnen sind; sobald man begehrt, selbige zu wissen, ist der Kartengeber schuldig, sie jedesmal laut auszurufen. Das Ausrufen geschiehet, wie im 8ten Kapitel gesagt worden; hier ist aber zu merken, daß derjenige, der sie ausruft, immer das meiste am ersten nennt. Z.\ B.\ 4~Coppe, 3~Denari, 1~Spade, ohne Bastoni; wenn zweye gleicher Anzahl sind, so heißt es per sortes (oder von jeder), z. B. 4~Coppe, 1 per sorte, das heißt: daß 1~Denari, 1~Spade, 1~Bastoni darinnen sind.
+\section{Von der Folla.}
 
-Auch benennet man die \mbox{\textit{Tonde}} und \mbox{\textit{Longhe}}, der Kürze wegen, also: z.\ B.\ 4~\mbox{\textit{Tonde}}, 1~\mbox{\textit{Longa}}, das heißt: 4~Coppe, 4~Denari, 1~Spade, 1~Bastone. Wenn sie immer steigend sich folgen, kann man auch sagen, wie folgt: z.\ B.\ Coppe, Bastoni, Spade, Denari, diese heißt: 1~Coppe, 2~Bastoni, 3~Spade, 4~Denari. Derjenige, der giebt, kann die Folla ansehen, so oft er will, auch kann jeder seine eigenen Levées ansehen, so oft er will. Wenn jemand, der écartirt, von jeder Farbe eins écartirt, heißt man das: Scarto delle Trombe, weil zu vermuthen ist, daß er die Trombe hat, und mit Fleiß sich keine Renonce machen will, um bis zu Ende des Spiels mit den Tarocchi auszuhalten. Man darf auch Tarocchi écartiren; dieses wird aber nie das Spiel seyn, man müßte denn weniger Cartillen in Händen haben, als man Karten zu écartiren hat; alsdann aber écartirt man doch nie Carte di Conto.
+Die \textit{Folla} liegt, wie im 10ten Kapitel gesagt werden wird, an der rechten Hand des Kartengebers, und ein jeder ist berechtiget, während des Spiels zu fragen, was für Karten darinnen sind; sobald man begehrt, selbige zu wissen, ist der Kartengeber schuldig, sie jedesmal laut auszurufen. Das Ausrufen geschiehet, wie im 8ten Kapitel gesagt worden; hier ist aber zu merken, daß derjenige, der sie ausruft, immer das meiste am ersten nennt. Z.\ B.\ 4~\textit{Coppe}, 3~\textit{Denari}, 1~\textit{Spade}, ohne \textit{Bastoni}; wenn zweye gleicher Anzahl sind, so heißt es per sortes (oder von jeder), z. B. 4~\textit{Coppe}, 1 per sorte, das heißt: daß 1~\textit{Denari}, 1~\textit{Spade}, 1~\textit{Bastoni} darinnen sind.
 
-Wenn das Spiel aufhören muß, wegen Kürze der Zeit, und man hat nicht können den Giro ausspielen, so wird diesen, welche noch zu geben hätten, für eine Folla 2~Reste bezahlt.
+Auch benennet man die \mbox{\textit{Rosse}} und \mbox{\textit{Longhe}}, der Kürze wegen, also: z.\ B.\ 4~\mbox{\textit{Rosse}}, 1~\mbox{\textit{Longa}}, das heißt: 4~\textit{Coppe}, 4~\textit{Denari}, 1~\textit{Spade}, 1~\textit{Bastone}. Wenn sie immer steigend sich folgen, kann man auch sagen, wie folgt: z.\ B.\ \textit{Coppe}, \textit{Bastoni}, \textit{Spade}, \textit{Denari}, diese heißt: 1~\textit{Coppe}, 2~\textit{Bastoni}, 3~\textit{Spade}, 4~\textit{Denari}. Derjenige, der giebt, kann die \textit{Folla} ansehen, so oft er will, auch kann jeder seine eigenen \textit{Levées} ansehen, so oft er will. Wenn jemand, der écartirt, von jeder Farbe eins écartirt, heißt man das: \textit{Scarto delle Trombe}, weil zu vermuthen ist, daß er die \textit{Tromba} hat, und mit Fleiß sich keine \textit{Renonce} machen will, um bis zu Ende des Spiels mit den \textit{Tarocchi} auszuhalten. Man darf auch \textit{Tarocchi} écartiren; dieses wird aber nie das Spiel seyn, man müßte denn weniger \textit{Cartillen} in Händen haben, als man Karten zu écartiren hat; alsdann aber écartirt man doch nie \textit{Carte di Conto}.
 
-\section{X}
-\subsection{Vom Spiele selbst.}
+Wenn das Spiel aufhören muß, wegen Kürze der Zeit, und man hat nicht können den \textit{Giro} ausspielen, so wird diesen, welche noch zu geben hätten, für eine \textit{Folla} 2~Reste bezahlt.
 
-Sobald ausgespielt worden ist, müssen diejenigen Spieler, welche eine oder mehrere Versicola in Händen haben, dieselben ansagen, zeigen und alsdann ihren Werth markiren; haben sie sie vor dem Einnehmen der ersten Levée nicht gezeigt, so dürfen sie es nicht mehr. Diejenigen, welche etwas zu écartiren gehabt haben, müssen alsdann die Karten zeigen, welche sie écartirt; derjenige, der dem Geber gegenüber sitzt, sagt sie laut; sagt auch, wer sie écartirt hat, rangirt sie unter die Karten der Folla, und sagt wieder laut, wie viel nun von einer jeden Farbe in der Folla sind, giebt die Folla dem Geber, und dieser legt sie Rechts, sich zur Seite, zugedeckt.
 
-Nun spielt man Rechts herum, wie im Trisette, in den 4 Farben, sticht nach dem Rang, und die Tarocchi stechen die 4 Farben, und diese unter sich nach ihrer Zahl.
+\section{Vom Spiele selbst.}
 
-Wenn im Spiel eine Carta di Conto von dem Feinde gestochen wird, oder man muß sie ihm zugeben, so zählt derjenige, der sticht, so viel, als die Karte werth ist, und das heißt man: muore; da spricht man: muore, (oder es stirbt,) 5 oder 3, oder 10, nachdem die Karte werth ist; auch können zugleich 2 Carte di Conto sterben, wenn einer und der andere Spieler, die mit einander sind, jeder eine verliert. Hier ist zu bemerken, daß eine jede Carta di Conto, welche muorirt, dreymal so viel macht, als sie werth ist; nämlich zum Beyspiel: gilt sie 10, so verliert man 10, die man gezählt hätte, 10, die der Feind zählt, und 10 di morte, mithin 30. Sticht der Freund meine Carta di Conto, so heißt es muore in casa, und zählt nichts deswegen. Wenn die 4 Spieler herum gespielt haben, so nimmt derjenige den Stich zu sich, wie in andern Spielen, der überstochen hat, und spielt alsdann wieder aus, u.~s.~w.
+Sobald ausgespielt worden ist, müssen diejenigen Spieler, welche eine oder mehrere \textit{Versicola} in Händen haben, dieselben ansagen, zeigen und alsdann ihren Werth markiren; haben sie sie vor dem Einnehmen der ersten \textit{Levée} nicht gezeigt, so dürfen sie es nicht mehr. Diejenigen, welche etwas zu écartiren gehabt haben, müssen alsdann die Karten zeigen, welche sie écartirt; derjenige, der dem Geber gegenüber sitzt, sagt sie laut; sagt auch, wer sie écartirt hat, rangirt sie unter die Karten der \textit{Folla}, und sagt wieder laut, wie viel nun von einer jeden Farbe in der \textit{Folla} sind, giebt die \textit{Folla} dem Geber, und dieser legt sie Rechts, sich zur Seite, zugedeckt.
 
-Man muß bekennen, sobald man von der Farbe hat; wo nicht, muß man Tarocco zugeben und stechen; auf Tarocco darf auch nicht renoncirt werden, nur darf man in alle Fälle, sowohl bey Farben als Tarocco, mit dem Matto squissiren.
+Nun spielt man Rechts herum, wie im \textit{Trisette}, in den 4 Farben, sticht nach dem Rang, und die \textit{Tarocchi} stechen die 4 Farben, und diese unter sich nach ihrer Zahl.
 
-Ein jeder legt seine Levées vor sich, wie in andern Spielen, aber nicht jeder Levée àpart, sondern was mir und meinem Freunde gehört, lege ich, oder er, zusammen vor mir.
+Wenn im Spiel eine \textit{Carta di Conto} von dem Feinde gestochen wird, oder man muß sie ihm zugeben, so zählt derjenige, der sticht, so viel, als die Karte werth ist, und das heißt man: \textit{muore}; da spricht man: \textit{muore}, (oder es stirbt,) 5 oder 3, oder 10, nachdem die Karte werth ist; auch können zugleich 2 \textit{Carte di Conto} sterben, wenn einer und der andere Spieler, die mit einander sind, jeder eine verliert. Hier ist zu bemerken, daß eine jede \textit{Carta di Conto}, welche \textit{muorirt}, dreymal so viel macht, als sie werth ist; nämlich zum Beyspiel: gilt sie 10, so verliert man 10, die man gezählt hätte, 10, die der Feind zählt, und 10 \textit{di morte}, mithin 30. Sticht der Freund meine \textit{Carta di Conto}, so heißt es \textit{muore in casa}, und zählt nichts deswegen. Wenn die 4 Spieler herum gespielt haben, so nimmt derjenige den Stich zu sich, wie in andern Spielen, der überstochen hat, und spielt alsdann wieder aus, u.s.w.
 
-\section{XI}
-\subsection{Von der Rechnung.}
+Man muß bekennen, sobald man von der Farbe hat; wo nicht, muß man \textit{Tarocco} zugeben und stechen; auf \textit{Tarocco} darf auch nicht renoncirt werden, nur darf man in alle Fälle, sowohl bey Farben als \textit{Tarocco}, mit dem \textit{Matto} squissiren.
 
-Ein jeder Spieler bekömmt zum Markiren fünf \textit{Fiches}~\textfisch{} und fünf runde \textit{Jettons}~\jetton{}; mit diesen markiret man während des Spiels, was zu markiren vorkommt, und zwar 1, 2, 3, 4 mit so viel \textit{Jettons}, wie im Whist, 5 markirt man mit zwey \textit{Jettons} auf einander gelegt:~\jettons{}.
+Ein jeder legt seine \textit{Levées} vor sich, wie in andern Spielen, aber nicht jeder \textit{Levée} àpart, sondern was mir und meinem Freunde gehört, lege ich, oder er, zusammen vor mir.
+
+
+\section{Von der Rechnung.}
+
+Ein jeder Spieler bekömmt zum Markiren fünf \textit{Fiches} und fünf runde \textit{Jettons} mit diesen markiret man während des Spiels, was zu markiren vorkommt, und zwar 1, 2, 3, 4 mit so viel \textit{Jettons}, wie im Whist, 5 markirt man mit zwey \textit{Jettons} auf einander gelegt.
 
 6 markirt man mit zwey \textit{Jettons} auf einander, und einen vor, wie hier gezeichnet: \jetton{}\jettons{}.
 
@@ -233,236 +237,248 @@ Bey 18 oder 19 aber kann man lieber hinter markiren, wie zum Beyspiel:
 
 39, \textfisch{} \textfisch{} \textfisch{} \textfisch{}\jetton{}
 
-Beyde Theile, welche gegen einander streiten, markiren nicht zugleich jeder seine Points, sondern derjenige, der weniger hat, wird von dem andern abgezogen, und was übrig bleibt, zählt der andere. Zum Beyspiel: ein Theil hat 15 anmarkirt, der andere hat nun 32 zu markiren, so markirt der erste nichts, und der andere markirt 17.
+Beyde Theile, welche gegen einander streiten, markiren nicht zugleich jeder seine \textit{Points}, sondern derjenige, der weniger hat, wird von dem andern abgezogen, und was übrig bleibt, zählt der andere. Zum Beyspiel: ein Theil hat 15 anmarkirt, der andere hat nun 32 zu markiren, so markirt der erste nichts, und der andere markirt 17.
 
 Auf diese Weise, wenn ein Theil während eines Spiels bis auf 60 über den andern markirt hat, bekommt er gleich einen Rest bezahlt.
 
-Wenn ein Spiel aus ist, (da heißt, eins von den 4 Spielen, welche einen Giro ausmachen,) wird auf folgende Art die Rechnung gemacht: Ein jeder Theil nimmt aus seiner Levée alle Carte di Conto, die er während des Spiels darinnen theils gemacht, theils dem Feinde genommen hat, und legt unter jede zwey schlechte Karten, (das heißt: Cartillen, Tarocchini oder Sopraventi, die nichts gelten,) dieses heißt Mazzetti, oder Häufgen machen. - Nun rangirt derselbe diese Mazzetti nach dem Werth dieser Carte di Conto und die Versicole, jede zusammen. Alsdann zählt er 14 Mazzetti, (so viel muß ein jeder Theil haben,) was darüber an einzelnen Karten ist, wird gezählt als Gewinnst, nämlich also, daß die übrigen Mazzetti drey Karten jedes ausmachen, und alsdann rechnet man dazu die übrigen Karten seiner Levée, welche man nicht zu Mazzetti unter den Carte di Conto gebraucht hat. Zum Beyspiel: ich habe in meinen Levées 64 Karten, darunter sind 17 Carte di Conto, ich mache also 17 Mazzetti, und jedes von drey Karten; nun rechne ich von 1 bis 14 Mazzetti, da bleiben derer drey übrig, also ist sicher fort zu zählen, drey, sechse, neun, und in den übrigen Levées sind noch 13, also 13 und 9, so gewinne ich 22 Karten; man kann nur folgende Anzahl Karten gewinnen, weil die Levées aus 4 Karten bestehen, also: 2, 6, 10, 14, 18, 22, 26, 30, 34, 38, 42.
+Wenn ein Spiel aus ist, (da heißt, eins von den 4 Spielen, welche einen \textit{Giro} ausmachen,) wird auf folgende Art die Rechnung gemacht: Ein jeder Theil nimmt aus seiner \textit{Levée} alle \textit{Carte di Conto}, die er während des Spieles darinnen theils gemacht, theils dem Feinde genommen hat, und legt unter jede zwey schlechte Karten, (das heißt: \textit{Cartillen}, \textit{Tarocchini} oder \textit{Sopraventi}, die nichts gelten,) dieses heißt \textit{Mazzetti}, oder Häufgen machen. --- Nun rangirt derselbe diese \textit{Mazzetti} nach dem Werth dieser \textit{Carte di Conto} und die \textit{Versicole}, jede zusammen. Alsdann zählt er 14 \textit{Mazzetti}, (so viel muß ein jeder Theil haben,) was darüber an einzelnen Karten ist, wird gezählt als Gewinnst, nämlich also, daß die übrigen \textit{Mazzetti} drey Karten jedes ausmachen, und alsdann rechnet man dazu die übrigen Karten seiner \textit{Levées}, welche man nicht zu \textit{Mazzetti} unter den \textit{Carte di Conto} gebraucht hat. Zum Beyspiel: ich habe in meinen \textit{Levées} 64 Karten, darunter sind 17 \textit{Carte di Conto}, ich mache also 17 \textit{Mazzetti}, und jedes von drey Karten; nun rechne ich von 1 bis 14 \textit{Mazzetti}, da bleiben derer drey übrig, also ist sicher fort zu zählen, drey, sechse, neun, und in den übrigen \textit{Levées} sind noch 13, also 13 und 9, so gewinne ich 22 Karten; man kann nur folgende Anzahl Karten gewinnen, weil die \textit{Levées} aus 4 Karten bestehen, also: 2, 6, 10, 14, 18, 22, 26, 30, 34, 38, 42.
 
-Wenn die Karten zusammen gerechnet sind, so rechnet man den Werth aller Versicole, die man hat, und der den Matto hat, zählt ihn zu jeder Versicola àpart; alsdann zählet derjenige, der den letzten Stich hat, 10; dieses heißet man ultima; hernach zählt man noch einmal jede Carta di Conto, die man hat, nach ihrem Werth, und den Matto auch; man fängt gemeiniglich bey den Papi und Könige an, nun rechnet man zu dem allem die Points, die man während des Spiels anmarkirt hat, und wenn beyde Theile ihre Levées also gerechnet haben, so zieht der geringere sich von den meisten ab, und bezahlt, so viel übrig bleibt, nach dem Maaße der Reste, wie im 6ten Kapitel gesagt worden ist.
+Wenn die Karten zusammen gerechnet sind, so rechnet man den Werth aller \textit{Versicole}, die man hat, und der den \textit{Matto} hat, zählt ihn zu jeder \textit{Versicola} àpart; alsdann zählet derjenige, der den letzten Stich hat, 10; dieses heißet man \textit{ultima}; hernach zählt man noch einmal jede \textit{Carta di Conto}, die man hat, nach ihrem Werth, und den \textit{Matto} auch; man fängt gemeiniglich bey den \textit{Papi} und Könige an, nun rechnet man zu dem allem die \textit{Points}, die man während des Spiels anmarkirt hat, und wenn beyde Theile ihre \textit{Levées} also gerechnet haben, so zieht der geringere sich von den meisten ab, und bezahlt, so viel übrig bleibt, nach dem Maaße der Reste, wie im 6ten Kapitel gesagt worden ist.
 
-Zu mehrerer Bequemlichkeit im Zählen ist anzumerken, daß wenn am Ende des Spiels eine Part alle drey Versicole hat, wo der Papa uno dabey nöthig ist, nämlich Uno, Matto, Trombe; Uno, Tredici, Ventotto und die fünf Papi, so zählt man 74 dell'Uno; (dabey sind aber die Papi 2, 3, 4, 5 schon als Versicola und auch einzeln gezählt;) denn Uno, Matto, Trombe macht zwanzig, Uno, Tredici, Ventotto mit dem Matto wieder zwanzig, die vier geringen Papi jeder zweymal, zusammen 24, und der Uno und Matto wieder zehn, mithin alles zusammen 74; fehlt die Versicola: Uno, Matto, Trombe, oder die Versicola: Uno, 13, e Ventotto, so machen die andern zwey zusammen 54 dell'Uno; fehlt nur der Papa 5; so ist 68 dell'Uno; fehlen die Papi 5 und 4, so ists 62 dell'Uno: fehlt endlich die Versicola di Papi, so sind nur 40 dell'Uno. Es ist möglich, daß man über 700 Points, oder 12~Reste erhalten kann, (auch ohne alle Levées zu machen,) dieses aber ist nicht ganz wahrscheinlich, weil hierzu die Karten besonders eingetheilt seyn müßten, welches zufälliger Weise wohl nicht erreicht wird; nichts desto weniger ist es möglich, auch kommt man bisweilen dieser Summe sehr nahe. Wenn am Ende bey der Rechnung jede Part zwey Könige oder zwey Papi hat, welches keine Versicola macht, so zählt keiner die seinigen, und man sagt: senza Re, oder senza Papi, (der Papa uno ist nicht in diesem Fall); hat jeder 2 Papi und 2 Könige, sagt man: senza questi, senza quelli. Zu mehrerer Erläuterung alles dessen soll das Exempel eines Spiels am Ende der Regeln folgen.
+Zu mehrerer Bequemlichkeit im Zählen ist anzumerken, daß wenn am Ende des Spiels eine Part alle drey \textit{Versicole} hat, wo der \textit{Papa uno} dabey nöthig ist, nämlich \textit{Uno, Matto, Tromba}; \textit{Uno, Tredici, Ventotto} und die fünf \textit{Papi}, so zählt man \textit{74 dell'Uno}; (dabey sind aber die \textit{Papi} 2, 3, 4, 5 schon als \textit{Versicola} und auch einzeln gezählt;) denn \textit{Uno, Matto, Tromba} macht zwanzig, \textit{Uno, Tredici, Ventotto} mit dem \textit{Matto} wieder zwanzig, die vier geringen \textit{Papi} jeder zweymal, zusammen 24, und der \textit{Uno} und \textit{Matto} wieder zehn, mithin alles zusammen 74; fehlt die \textit{Versicola}: \textit{Uno, Matto, Tromba}, oder die \textit{Versicola}: \textit{Uno, 13, e Ventotto}, so machen die andern zwey zusammen \textit{54 dell'Uno}; fehlt nur der \textit{Papa} 5; so ist \textit{68 dell'Uno}; fehlen die \textit{Papi} 5 und 4, so ists \textit{62 dell'Uno}: fehlt endlich die \textit{Versicola di Papi}, so sind nur \textit{40 dell'Uno}. Es ist möglich, daß man über 700 \textit{Points}, oder 12~Reste erhalten kann, (auch ohne alle \textit{Levées} zu machen,) dieses aber ist nicht ganz wahrscheinlich, weil hierzu die Karten besonders eingetheilt seyn müßten, welches zufälliger Weise wohl nicht erreicht wird; nichts desto weniger ist es möglich, auch kommt man bisweilen dieser Summe sehr nahe. Wenn am Ende bey der Rechnung jede Part zwey Könige oder zwey \textit{Papi} hat, welches keine \textit{Versicola} macht, so zählt keiner die seinigen, und man sagt: \textit{senza Re}, oder \textit{senza Papi}, (der \textit{Papa uno} ist nicht in diesem Fall); hat jeder 2 \textit{Papi} und 2 Könige, sagt man: \textit{senza questi, senza quelli}. Zu mehrerer Erläuterung alles dessen soll das Exempel eines Spieles am Ende der Regeln folgen.
 
-\section{XII}
-\subsection{Von den Farben.}
 
-Man sucht, so viel als möglich, sich seiner Cartillen zu entladen, und solche seinem Compagnon aus den Händen zu spielen; derowegen pflegt man selten Tarocchi zu spielen, wenn man noch Cartillen in Händen hat, es sey denn, daß es gewisse Umstände erfordern, wie hin und wieder bey Gelegenheit angemerkt worden ist.
+\section{Von den Farben.}
 
-Wenn Farbe gespielt wird, und man hat gleich vom Anfang Fallio, welches dann eine Prima heißt, so kann man mit Recht die wichtigste Karte, welche man in Händen hat, darauf setzen, auch kann man auf das zweytemal, wo dieselbe Farbe ausgespielt wird, einen wichtigen Tarocco darauf setzen, zumal wenn die Farbe von dem Compagnon angespielt wird; zum drittenmal aber, das heißt, auf eine Terza, pflegt man nicht mehr als einen Papa, oder den 29 zu wagen, und besonders, wenn die Farbe von dem Feinde ausgespielt worden, und viele davon in der Folla sind. Wenn von dem Compagnon eine Farbe ausgespielt wird, welche von meinem Vordermann mit Tarocco gestochen, so kann ich sicher mit der allerschlechtesten Karte überstechen, denn mein Compagnon kann aus seinen noch in Händen habenden Karten, aus denen, welche von dieser Farbe schon gespielt worden, und aus denen, welche in der Folla liegen, wissen, wie viel von dieser Farbe noch im Spiel sind. Wenn nun der vor mir sitzende Feind die Renonce hat, so müssen die übrigen, welche mein Freund nicht hat, in den Händen meines Hintermannes seyn, mithin kann mein Freund diese Farbe mir zuspielen, und ich bin sicher, nicht überstochen zu werden. Daher siehet man, wieviel daran liegt, die Cartillen zu zählen, um seinen Freund nicht zu betrügen. Nur ist der einzige Fall, daß wenn in einer Farbe ich nur eins mehr habe, kann ich es spielen, ohne zu zählen, indem mein Freund auch rechnen kann, ob es die 14te von der Farbe ist, mithin überstochen werden muß, weil schon 13 davon heraus sind. Die vorhergesetzte Art die Farben seinem Freunde zuzuspielen, ist ohnstreitig die sicherste Art, die Carte di Conto zu salviren, maßen der Compagnon keine Farbe niemals spielen sollte, welche er nicht vorausgezählt, und wenn solchergestalt die Sicherheit meiner Farbe bekannt worden ist, so muß der Freund unaufhörlich hinter einander dieselbe Farbe spielen, nämlich so lange er weiß, daß der mir hinter der Hand sitzende Freund noch davon in Händen hat. Wenn endlich die Farbe dem Feinde ganz aus den Händen gespielt worden, und mein Compagnon hat noch einige davon, so soll er, ehe er wieder diese Farbe spielt, einen schlechten Tarocco, oder eine andere Farbe ausspielen, welches mir zur Warnung dienen soll, daß ich dieser Farbe nicht mehr trauen kann. Wenn der Freund von einer Farbe viel in Händen hat, so spielt er diese Farbe nicht zwey- oder dreymal hinter einander, sondern variiert die Farben; welches eine Warnung ist, daß man einer solchen Farbe zum zweytenmal wenig, zum drittenmal gar nicht trauen soll.
+Man sucht, so viel als möglich, sich seiner \textit{Cartillen} zu entladen, und solche seinem Compagnon aus den Händen zu spielen; derowegen pflegt man selten \textit{Tarocchi} zu spielen, wenn man noch \textit{Cartillen} in Händen hat, es sey denn, daß es gewisse Umstände erfordern, wie hin und wieder bey Gelegenheit angemerkt worden ist.
 
-Das allerwichtigste in diesem Spiel ist, daß man suche hinter der Hand zu bleiben, um seine guten Karten sicher machen zu können, und wenn man selbst keine guten Karten mehr hat, so befleiße man sich, der nämlichen Ursache wegen, die Hand dem Compagnon zu verschaffen. Darum man, so viel möglich ist, die kleinen Tarocchi, selbst die Papi, und sogar den Papa tre, am allermeisten aber den Matto, bis auf die letzt zu erhalten suche, damit man in allen Fällen dem Feinde lachiren könne; doch behält man gerne den höchsten Sopraventi, um auf alle Fälle damit den letzten Stich zu machen.
+Wenn Farbe gespielt wird, und man hat gleich vom Anfang \textit{Fallio}, welches dann eine \textit{Prima} heißt, so kann man mit Recht die wichtigste Karte, welche man in Händen hat, darauf setzen, auch kann man auf das zweytemal, wo dieselbe Farbe ausgespielt wird, einen wichtigen \textit{Tarocco} darauf setzen, zumal wenn die Farbe von dem Compagnon angespielt wird; zum drittenmal aber, das heißt, auf eine \textit{Terza}, pflegt man nicht mehr als einen \textit{Papa}, oder den 29 zu wagen, und besonders, wenn die Farbe von dem Feinde ausgespielt worden, und viele davon in der \textit{Folla} sind. Wenn von dem Compagnon eine Farbe ausgespielt wird, welche von meinem Vordermann mit \textit{Tarocco} gestochen, so kann ich sicher mit der allerschlechtesten Karte überstechen, denn mein Compagnon kann aus seinen noch in Händen habenden Karten, aus denen, welche von dieser Farbe schon gespielt worden, und aus denen, welche in der \textit{Folla} liegen, wissen, wie viel von dieser Farbe noch im Spiel sind. Wenn nun der vor mir sitzende Feind die \textit{Renonce} hat, so müssen die übrigen, welche mein Freund nicht hat, in den Händen meines Hintermannes seyn, mithin kann mein Freund diese Farbe mir zuspielen, und ich bin sicher, nicht überstochen zu werden. Daher siehet man, wieviel daran liegt, die \textit{Cartillen} zu zählen, um seinen Freund nicht zu betrügen. Nur ist der einzige Fall, daß wenn in einer Farbe ich nur eins mehr habe, kann ich es spielen, ohne zu zählen, indem mein Freund auch rechnen kann, ob es die 14te von der Farbe ist, mithin überstochen werden muß, weil schon 13 davon heraus sind. Die vorhergesetzte Art die Farben seinem Freunde zuzuspielen, ist ohnstreitig die sicherste Art, die \textit{Carte di Conto} zu salviren, maßen der Compagnon keine Farbe niemals spielen sollte, welche er nicht vorausgezählt, und wenn solchergestalt die Sicherheit meiner Farbe bekannt worden ist, so muß der Freund unaufhörlich hinter einander dieselbe Farbe spielen, nämlich so lange er weiß, daß der mir hinter der Hand sitzende Freund noch davon in Händen hat. Wenn endlich die Farbe dem Feinde ganz aus den Händen gespielt worden, und mein Compagnon hat noch einige davon, so soll er, ehe er wieder diese Farbe spielt, einen schlechten \textit{Tarocco}, oder eine andere Farbe ausspielen, welches mir zur Warnung dienen soll, daß ich dieser Farbe nicht mehr trauen kann. Wenn der Freund von einer Farbe viel in Händen hat, so spielt er diese Farbe nicht zwey- oder dreymal hinter einander, sondern variiert die Farben; welches eine Warnung ist, daß man einer solchen Farbe zum zweytenmal wenig, zum drittenmal gar nicht trauen soll.
 
-Wenn man einen König scopirt bekommt, oder einen rubirt oder piglirt, so ist es das Spiel, ihn sobald als möglich in seine Karten zu stecken, auf daß der Feind ihn nicht bemerkt, und sich etwa darinnen ein Fallio macht; wenn er aber rubirt, oder aus der Folla ist, so ist es nützlich, eine andere Karte vor sich zu legen, um bey dem Écartiren sich nicht zu irren; begehrt aber der Feind den König zu sehen, so ist man schuldig ihn zu zeigen.
+Das allerwichtigste in diesem Spiel ist, daß man suche hinter der Hand zu bleiben, um seine guten Karten sicher machen zu können, und wenn man selbst keine guten Karten mehr hat, so befleiße man sich, der nämlichen Ursache wegen, die Hand dem Compagnon zu verschaffen. Darum man, so viel möglich ist, die kleinen \textit{Tarocchi}, selbst die \textit{Papi}, und sogar den \textit{Papa tre}, am allermeisten aber den \textit{Matto}, bis auf die letzt zu erhalten suche, damit man in allen Fällen dem Feinde \textit{lachiren} könne; doch behält man gerne den höchsten \textit{Sopraventi}, um auf alle Fälle damit den letzten Stich zu machen.
 
-\section{XIII}
-\subsection{Von den Fallii.}
+Wenn man einen König scopirt bekommt, oder einen rubirt oder piglirt, so ist es das Spiel, ihn sobald als möglich in seine Karten zu stecken, auf daß der Feind ihn nicht bemerkt, und sich etwa darinnen ein \textit{Fallio} macht; wenn er aber rubirt, oder aus der \textit{Folla} ist, so ist es nützlich, eine andere Karte vor sich zu legen, um bey dem Écartiren sich nicht zu irren; begehrt aber der Feind den König zu sehen, so ist man schuldig ihn zu zeigen.
 
-Fallio heißt eine Renonce, dieses ist: kein Blatt von einer Farbe haben.
 
-Fallien giebt es zweyerley: die, welche durch Écartiren gemacht werden, und die, welche man von sich aus hat; diese letzteren heißt man: Fallio naturale in dieser oder jener Farbe haben.
+\section{Von den Fallii.}
 
-Weil man im Spiele schuldig ist, wie vorher gesagt worden, Farbe auf Farbe, Tarocco auf Tarocco zu geben, oder bey ermangelnder Farbe Tarocco zuzugeben, so dienen die Fallien, um die Carte gelose und di Conto in Sicherheit zu bringen, deswegen sucht man im Écartiren sich so viel Fallii als möglich zu machen.
+\textit{Fallio} heißt eine \textit{Renonce}, dieses ist: kein Blatt von einer Farbe haben.
 
-Wenn man nur eines von einer Farbe gehabt hat, und selbiges écartirt hat, so heißt man dieses: sich eine Prima machen; wenn man noch eine von einer Farbe, wovon man écartirt, behält, heißt es eine Seconda, wenn eine Farbe zum drittenmale gespielt wird, heißt es eine Terza; es ist nicht das Spiel, sich eine Terza zu machen, indem man leicht surcoupirt werden kann; daher sagt man gewöhnlich: kein guter Spieler mache sich eine Terza, jedoch geschieht es eben deswegen, um den Feind zu betrügen.
+\textit{Fallien} giebt es zweyerley: die, welche durch Écartiren gemacht werden, und die, welche man von sich aus hat; diese letzteren heißt man: \textit{Fallio naturale} in dieser oder jener Farbe haben.
 
-Man muß aber eben auch im Écartiren behutsam seyn, daß man nicht sobald in eine Fallio des Feindes gerathe. Deshalb macht man sich nicht gerne ein Fallio in einer Farbe, in welcher viele in der Folla liegen, weil zu vermuthen, daß die Feinde auch bald darinn renonciren werden.
+Weil man im Spiele schuldig ist, wie vorher gesagt worden, Farbe auf Farbe, \textit{Tarocco} auf \textit{Tarocco} zu geben, oder bey ermangelnder Farbe \textit{Tarocco} zuzugeben, so dienen die \textit{Fallien}, um die \textit{Carte gelose} und \textit{di Conto} in Sicherheit zu bringen, deswegen sucht man im Écartiren sich so viel \textit{Fallii} als möglich zu machen.
 
-Wenn man nicht gar zu gelose Karten hat, und man hat 6 bis 7 Karten, oder noch mehr von einer Farbe, in der Hand, so ist es besser, man verwerfe von dieser Farbe, als daß man sich sonst eine Renonce macht; denn man brächte sonst, durch vieles Spielen dieser Farbe, den Compagnon um seine Tarocchi, und setzt ihn beständig in Verlegenheit, einer Surcoupe wegen. Auch verhindert man sich dadurch das Cascare, welches später wird beschrieben werden.
+Wenn man nur eines von einer Farbe gehabt hat, und selbiges écartirt hat, so heißt man dieses: sich eine \textit{Prima} machen; wenn man noch eine von einer Farbe, wovon man écartirt, behält, heißt es eine \textit{Seconda}, wenn eine Farbe zum drittenmale gespielt wird, heißt es eine \textit{Terza}; es ist nicht das Spiel, sich eine \textit{Terza} zu machen, indem man leicht surcoupirt werden kann; daher sagt man gewöhnlich: kein guter Spieler mache sich eine \textit{Terza}, jedoch geschieht es eben deswegen, um den Feind zu betrügen.
 
-Weil man sich auch Fallii macht, um Könige zu coupiren, so kann man deren auch entrathen, wenn man 3 Könige hat. Wenn man nur wenige Tarocchi hat, ist es auch wegen des Cascare nicht rathsam, sich Fallii zu machen, (ausgenommen man hätte Carte gelose,) besonders wenn man eine hohe Arie hat; wie zum Beyspiel Trombe, oder auch Mondo, muß man suchen bis zu Ende des Spiels auszuhalten mit seinen Tarocchi, und also muß man sich da besonders für Fallii hüten. Cascare heißt, wenn man kein Tarocco mehr hat; in diesem Falle legt man seine Karten offen auf den Tisch, und derjenige, welcher eine Levée macht, nimmt davon jedesmal eine, um die Levée zu ergänzen; er muß aber, wenn Farbe gespielt würde, aus selbiger nehmen: auch ist es nicht rathsam, wenn man einen König oder den Matto in Händen hat, und man caschirt ist, seine Karten hinzulegen, weil man öfters den König seinem Freund zugeben kann, auch zuweilen mit Vortheil mattiren oder squissiren.
+Man muß aber eben auch im Écartiren behutsam seyn, daß man nicht sobald in eine \textit{Fallio} des Feindes gerathe. Deshalb macht man sich nicht gerne ein \textit{Fallio} in einer Farbe, in welcher viele in der \textit{Folla} liegen, weil zu vermuthen, daß die Feinde auch bald darinn renonciren werden.
 
-\section{XIV}
-\subsection{Von den Fehlern und deren Strafen.}
+Wenn man nicht gar zu \textit{gelose} Karten hat, und man hat 6 bis 7 Karten, oder noch mehr von einer Farbe, in der Hand, so ist es besser, man verwerfe von dieser Farbe, als daß man sich sonst eine \textit{Renonce} macht; denn man brächte sonst, durch vieles Spielen dieser Farbe, den Compagnon um seine \textit{Tarocchi}, und setzt ihn beständig in Verlegenheit, einer \textit{Surcoupe} wegen. Auch verhindert man sich dadurch das \textit{Cascare}, welches später wird beschrieben werden.
 
-Wenn derjenige, der giebt, im Geben vergiebt, und die nachsitzenden Spieler ihre Karten noch nicht vermengt haben, so ist der Fehler zu redressiren, so lange die 21ste Karte demjenigen, wo gefehlt worden ist, noch nicht umgeschlagen, alsdann aber ist es zu späte. Dann zieht derjenige, der eine oder mehrere Karten zu wenig hat, nach Belieben eben so viel aus der Folla, (bevor der Kartengeber einige daraus weder scoprire, noch pigliare kann,) jedoch ohne sie zu zeigen, und ohne sie im Ziehen anzusehen.
+Weil man sich auch \textit{Fallii} macht, um Könige zu coupiren, so kann man deren auch entrathen, wenn man 3 Könige hat. Wenn man nur wenige \textit{Tarocchi} hat, ist es auch wegen des \textit{Cascare} nicht rathsam, sich \textit{Fallii} zu machen, (ausgenommen man hätte \textit{Carte gelose},) besonders wenn man eine hohe \textit{Arie} hat; wie zum Beyspiel \textit{Tromba}, oder auch \textit{Mondo}, muß man suchen bis zu Ende des Spiels auszuhalten mit seinen \textit{Tarocchi}, und also muß man sich da besonders für \textit{Fallii} hüten. \textit{Cascare} heißt, wenn man kein \textit{Tarocco} mehr hat; in diesem Falle legt man seine Karten offen auf den Tisch, und derjenige, welcher eine \textit{Levée} macht, nimmt davon jedesmal eine, um die \textit{Levée} zu ergänzen; er muß aber, wenn Farbe gespielt würde, aus selbiger nehmen: auch ist es nicht rathsam, wenn man einen König oder den \textit{Matto} in Händen hat, und man \textit{caschirt} ist, seine Karten hinzulegen, weil man öfters den König seinem Freund zugeben kann, auch zuweilen mit Vortheil \textit{mattiren} oder \textit{squissiren}.
 
-Wenn aber ein Spieler zu viel Karten empfangen, écartirt er aus der Hand eben so viele nach Belieben, jedoch ohne sich eine Prima machen zu dürfen; die Strafe für dieses Vergeben ist, daß der Feind für eine jede Karte, die zu viel oder zu wenig, es sey bey dem Feinde oder dem Freunde, 20 Points für eine marquirt, und sind derer mehr, noch 10 Points für eine jede; mithin für zwey Karten 30, für drey Karten 40 und so weiter.
 
-Sollten einige Karten, aus Unvorsichtigkeit, auf dem Tische seyn vergessen worden, oder unter dem Tische liegen, so gehören solche zu der Folla, sie mögen gut oder schlecht seyn, und sollten sie mehr betragen, als die Anzahl der Folla ausmacht, so muß sie der Geber zu seinen Karten meliren, und sich davon bedienen; für diesen Fehler ist aber weiter keine Strafe. Die Folla verlieren, heißt: wenn der Geber eine Karte weder aus der Folla scoprirt, noch eine piglirt; (in einigen Fällen muß er alsdann noch einen Rest Strafe geben, welches aber zu hart scheinet.) Wenn einer eine Karte zu viel oder zu wenig hat, und daß man es erst während des Spieles bemerkt, so darf er und sein Compagnon am Ende des Spiels gar nichts zählen, als die Karten und die Ultima, wenn er eins von beyden gewinnt, oder was er während des Spiels anmarkirt hat; es muß aber eine Karte in der Folla fehlen, oder zu viel seyn: denn wenn die Folla und die Karten seines Compagnons richtig sind, und nicht etwa einer zu viel und der andere zu wenig hätte, so hat er keine Strafe; denn alsdann muß er in die Levées zwey Karten zugleich, oder einmal nicht zugegeben haben: vergißt er aber zu écartiren, oder écartirt zu wenig oder zu viel, wenn er etwas zu écartieren hat, so ist er schuldig; sogar wenn er durch das Vergeben eine oder mehrere Karten zu viel oder zu wenig hätte, und nicht richtig écartirt; sobald man in allen diesen Fällen den Fehler während des Spieles bemerkt, so zählt er und sein Compagnon nichts als die Karten , oder Ultima, wenn er diese hätte, und was er markirt hat.
+\section{Von den Fehlern und deren Strafen.}
+
+Wenn derjenige, der giebt, im Geben vergiebt, und die nachsitzenden Spieler ihre Karten noch nicht vermengt haben, so ist der Fehler zu redressiren, so lange die 21ste Karte demjenigen, wo gefehlt worden ist, noch nicht umgeschlagen, alsdann ist es aber zu späte. Dann zieht derjenige, der eine oder mehrere Karten zu wenig hat, nach Belieben eben so viel aus der \textit{Folla}, (bevor der Kartengeber einige daraus weder \textit{scoprire}, noch \textit{pigliare} kann,) jedoch ohne sie zu zeigen, und ohne sie im Ziehen anzusehen.
+
+Wenn aber ein Spieler zu viel Karten empfangen, écartirt er aus der Hand eben so viele nach Belieben, jedoch ohne sich eine \textit{Prima} machen zu dürfen; die Strafe für dieses Vergeben ist, daß der Feind für eine jede Karte, die zu viel oder zu wenig, es sey bey dem Feinde oder dem Freunde, 20 \textit{Points} für eine marquirt, und sind derer mehr, noch 10 \textit{Points} für eine jede; mithin für zwey Karten 30, für drey Karten 40 und so weiter.
+
+Sollten einige Karten, aus Unvorsichtigkeit, auf dem Tische seyn vergessen worden, oder unter dem Tische liegen, so gehören solche zu der \textit{Folla}, sie mögen gut oder schlecht seyn, und sollten sie mehr betragen, als die Anzahl der \textit{Folla} ausmacht, so muß sie der Geber zu seinen Karten meliren, und sich davon bedienen; für diesen Fehler ist aber weiter keine Strafe. Die \textit{Folla} verlieren, heißt: wenn der Geber eine Karte weder aus der \textit{Folla scoprirt}, noch eine \textit{piglirt}; (in einigen Fällen muß er alsdann noch einen Rest Strafe geben, welches aber zu hart scheinet.) Wenn einer eine Karte zu viel oder zu wenig hat, und daß man es erst während des Spieles bemerkt, so darf er und sein Compagnon am Ende des Spiels gar nichts zählen, als die Karten und die Ultima, wenn er eins von beyden gewinnt, oder was er während des Spiels anmarkirt hat; es muß aber eine Karte in der \textit{Folla} fehlen, oder zu viel seyn: denn wenn die \textit{Folla} und die Karten seines Compagnons richtig sind, und nicht etwa einer zu viel und der andere zu wenig hätte, so hat er keine Strafe; denn alsdann muß er in die \textit{Levées} zwey Karten zugleich, oder einmal nicht zugegeben haben: vergißt er aber zu écartiren, oder écartirt zu wenig oder zu viel, wenn er etwas zu écartieren hat, so ist er schuldig; sogar wenn er durch das Vergeben eine oder mehrere Karten zu viel oder zu wenig hätte, und nicht richtig écartirt; sobald man in allen diesen Fällen den Fehler während des Spieles bemerkt, so zählt er und sein Compagnon nichts als die Karten, oder \textit{Ultima}, wenn er diese hätte, und was er markirt hat.
 
 Weil nun der unschuldige Compagnon alle diese Strafen auch mit empfindet, so sieht man, wie nothwendig es ist, seinen Compagnon zu erinnern: daß er ja nicht vergebe, richtig écartire und seine Karten zähle. Bis ausgespielt wird, ist es erlaubt, seinen Compagnon von allem zu avertiren.
 
-Wenn einer renoncirt, das heißt: falsch zugiebt, zum Beyspiel: er giebt Tarocco auf eine Farbe, die er noch hat, und man bemerkt es, nachdem diese Levée umgedreht ist, (vorher kann er es verbessern,) so muß er einem jeden seiner zwey Gegner so viel Reste bezahlen, als oft er renoncirthat; die Levées aber, wobey er renoncirt hat, werden nicht geändert. Dieses ist der einzige Fall, wo ein Fehler dem Compagnon nicht zum Schaden, ja manchmal zum Vortheil gereichen kann; wenn nämlich durch dieses Renonciren gute Karten genommen oder gerettet worden sind. Die Levée, wo man das Renonciren merkt, kann noch reparirt werden.
+Wenn einer renoncirt, das heißt: falsch zugiebt, zum Beyspiel: er giebt \textit{Tarocco} auf eine Farbe, die er noch hat, und man bemerkt es, nachdem diese \textit{Levée} umgedreht ist, (vorher kann er es verbessern,) so muß er einem jeden seiner zwey Gegner so viel Reste bezahlen, als oft er renoncirthat; die \textit{Levées} aber, wobey er renoncirt hat, werden nicht geändert. Dieses ist der einzige Fall, wo ein Fehler dem Compagnon nicht zum Schaden, ja manchmal zum Vortheil gereichen kann; wenn nämlich durch dieses \textit{Renonciren} gute Karten genommen oder gerettet worden sind. Die \textit{Levée}, wo man das \textit{Renonciren} merkt, kann noch reparirt werden.
 
-\section{XV}
-\subsection{Von den Karten, welche \\Gelose genannt werden.}
 
-Karten, welche Gelose genannt werden, sind diejenigen, welche wichtig sind. (Dieses kommt von dem italiänischen Wort, welches Eifersucht bedeutet, weil man diese Karten mit Eifersucht bewahren muß.)
+\section{Von den Karten, welche \\Gelose genannt werden.}
 
-Carte Gelose sind folgende:
+Karten, welche \textit{Gelose} genannt werden, sind diejenigen, welche wichtig sind. (Dieses kommt von dem italiänischen Wort, welches Eifersucht bedeutet, weil man diese Karten mit Eifersucht bewahren muß.)
+
+Carte \textit{Gelose} sind folgende:
 \begin{gelose}
-\item[Papa uno] weil er der kleinste Tarocco, mithin leicht überstochen werden kann, und er auch zu vielen Versicole gebraucht wird.
-\item[Papa tre] weil er die Mitte der Papi ist; mithin ohne ihm keine Versicola von Papi gemacht werden kann, auch sehr klein ist.
-\item[Venti] weil er die Mitte der Versicola der Diecine, auch sehr klein ist.
-\item[Tredici] weil ohne ihm die Versicola des Tredici nicht bestehen kann.
-\item[Trenta] weil er sowohl in den Diecine, als Sopratrenta, Versicola macht.
-\item[Sole] weil ohne diese Karte die Versicola der Arie zerrissen ist.
+\item[Papa uno] weil er der kleinste \textit{Tarocco}, mithin leicht überstochen werden kann, und er auch zu vielen \textit{Versicole} gebraucht wird.
+\item[Papa tre] weil er die Mitte der \textit{Papi} ist; mithin ohne ihm keine \textit{Versicola} von \textit{Papi} gemacht werden kann, auch sehr klein ist.
+\item[Venti] weil er die Mitte der \textit{Versicola} der \textit{Diecine}, auch sehr klein ist.
+\item[Tredici] weil ohne ihm die \textit{Versicola} des \textit{Tredici} nicht bestehen kann.
+\item[Trenta] weil er sowohl in den \textit{Diecine}, als \textit{Sopratrenta}, \textit{Versicola} macht.
+\item[Sole] weil ohne diese Karte die \textit{Versicola} der \textit{Arie} zerrissen ist.
 \end{gelose}
 
-Ueberhaupt ist eine jede Karte gelosa, welche in der Mitte einer Versicola ist, so zwar, daß wenn man sie verliert, man nicht mehr Hoffnung hat, dieselbe Versicola zu machen; man pflegt die Carte gelose nur alsdann zu nehmen, wenn man hinter der Hand ist, und fängt bey den niedrigsten unter ihnen an, weil sie am schwersten zu retten, darum wird Papa uno stets zum ersten genommen.
+Ueberhaupt ist eine jede Karte \textit{gelosa}, welche in der Mitte einer \textit{Versicola} ist, so zwar, daß wenn man sie verliert, man nicht mehr Hoffnung hat, dieselbe \textit{Versicola} zu machen; man pflegt die \textit{Carte gelose} nur alsdann zu nehmen, wenn man hinter der Hand ist, und fängt bey den niedrigsten unter ihnen an, weil sie am schwersten zu retten, darum wird \textit{Papa uno} stets zum ersten genommen.
 
-\section{XVI}
-\subsection{Von dem Impiciren.}
 
-Impiciren heißt: wenn man einen König hat, und daß man diese Farbe mit einer kleinen Karte zu spielen anfängt.
+\section{Von dem Impiciren.}
 
-Wenn eine Farbe zum erstenmal gespielt wird, und diese Farbe wird vor der Hand mit Tarocco gestochen, so muß der König, wenn er hinter der Hand ist, zugegeben werden; wenn man also einen König hat, und man befürchtet, daß derselbe coupirt wird, entweder weil viel derselben in der Folla sind, oder man derer viel in der Hand hat, so impiciret man; denn bey einem zweytenmale ist der König nicht mehr schuldig zu fallen, so lange man Farbe hat, oder mattiren kann.
+\textit{Impiciren} heißt: wenn man einen König hat, und daß man diese Farbe mit einer kleinen Karte zu spielen anfängt.
 
-Man muß sich aber dieses Vortheils des Impicirens nicht bedienen, wenn man nicht wenigstens 5 oder 6 von der Farbe hat, denn mit wenigern ist es schwer den König zu retten, und man verräth sein Spiel, indem die Feinde sicher auf diese Farbe die beßten Karten setzen, so lange sie wissen, daß der König noch hinter der Hand steckt. Es ist auch schwer, auf diese Art den König zu retten, wenn man viele Tarocchi hat; denn man wird ihn am Ende selbst aussspielen müssen, und wenn der Freund eher als ich caschirt, so ist ohnedem keine Rettung, indem ich nur hoffen kann, ihn zu retten, wenn ich ihn auf einen Tarocco meines Freundes zugeben könnte.
+Wenn eine Farbe zum erstenmal gespielt wird, und diese Farbe wird vor der Hand mit \textit{Tarocco} gestochen, so muß der König, wenn er hinter der Hand ist, zugegeben werden; wenn man also einen König hat, und man befürchtet, daß derselbe coupirt wird, entweder weil viel derselben in der \textit{Folla} sind, oder man derer viel in der Hand hat, so \textit{impiciret} man; denn bey einem zweytenmale ist der König nicht mehr schuldig zu fallen, so lange man Farbe hat, oder mattiren kann.
+
+Man muß sich aber dieses Vortheils des \textit{Impicirens} nicht bedienen, wenn man nicht wenigstens 5 oder 6 von der Farbe hat, denn mit wenigern ist es schwer den König zu retten, und man verräth sein Spiel, indem die Feinde sicher auf diese Farbe die beßten Karten setzen, so lange sie wissen, daß der König noch hinter der Hand steckt. Es ist auch schwer, auf diese Art den König zu retten, wenn man viele \textit{Tarocchi} hat; denn man wird ihn am Ende selbst aussspielen müssen, und wenn der Freund eher als ich \textit{caschirt}, so ist ohnedem keine Rettung, indem ich nur hoffen kann, ihn zu retten, wenn ich ihn auf einen \textit{Tarocco} meines Freundes zugeben könnte.
 
 Wenn man eine Farbe spielt, davon ich den König habe, und ich vermuthe, daß mein Hintermann sie coupirt, bin ich nicht schuldig, ihn zuzugeben.
 
-\subsection{Vom Giriren.}
+\section{Vom Giriren.}
 
-Giriren heißt: wenn man dem Compagnon eine Karte zuspielt. Man soll keine Carta gelosa giriren, ausgenommen wenn man weiß, daß der Compagnon die höchste Karte besitzt; in diesem Falle, oder wenn man es vermuthen kann, ist es das Spiel, denn der Feind wird sich nie getrauen zu stechen, und sticht er, so übersticht mein Compagnon, und fängt seine Karte, indem er die meinige rettet. Wenn mein Freund hinter der Hand ist, kann ich ihm Carte di Conto giriren, wenn ich nicht weiß, daß der Feind nach mir die höchsten hat. Eine Arie girirt man nie, ohne bey seinem Compagnon die höchste Sicherheit zu haben.
+\textit{Giriren} heißt: wenn man dem Compagnon eine Karte zuspielt. Man soll keine \textit{Carta gelosa} giriren, ausgenommen wenn man weiß, daß der Compagnon die höchste Karte besitzt; in diesem Falle, oder wenn man es vermuthen kann, ist es das Spiel, denn der Feind wird sich nie getrauen zu stechen, und sticht er, so übersticht mein Compagnon, und fängt seine Karte, indem er die meinige rettet. Wenn mein Freund hinter der Hand ist, kann ich ihm \textit{Carte di Conto} giriren, wenn ich nicht weiß, daß der Feind nach mir die höchsten hat. Eine \textit{Arie} girirt man nie, ohne bey seinem Compagnon die höchste Sicherheit zu haben.
 
-\section{XVII}
-\subsection{Von der Tenuta.}
+\section{Von der Tenuta.}
 
-Tenuta machen, heißt: eine Karte vorsetzen, damit der Feind eine seiner Karten nicht retten kann.
+\textit{Tenuta} machen, heißt: eine Karte vorsetzen, damit der Feind eine seiner Karten nicht retten kann.
 
-Wenn zum Beyspiel der Papa uno oder Papa tre noch im Spiel ist, und ich setze einen kleinen Tarocco vor, um den Feind zu hindern, den Papa zu machen, heißt man das: Tenuta al Papa machen. Desgleichen kann man Tenuta al Tredici mit einem Sottoventi, und Tenuta al Venti mit einem Sopraventi machen. Tenuta al Trenta macht man nicht leicht, weil es nur mit einem Sopratrenta geschehen kann, und man dieselben doch nicht gerne verlieren will; man macht aber sogar in manchen Fällen Tenuta al Sole, oder einer anderen Arie; in diesem Falle aber, wo man den Mondo vorsetzt, muß man sicher seyn, daß mein Compagnon die Trombe hat, oder vice versa. Tenuta al Compagno machen, heißt: wenn man Sopraventi oder auch Sopratrenta vorsetzt, um dem Compagnon Gelegenheit zu geben, seine guten Karten darauf zuzugeben, um sie zu retten. Man macht auch Tenuta, wenn man den Sole und Mondo hat; nämlich: man braucht mit diesen nicht zu eilen, und kann eher etwas wagen, wenn man dadurch etwas vom Feind zu fangen hofft; daher pflegt man zu sagen: Sole e Mondo fa tenazza, das heißt: Sole mit Mondo halten aus. Es ist aber dieses nicht rathsam, wenn der Verlust einer dieser Arie zu groß wäre; wie zum Beyspiel: wenn sie uns oder dem Feinde Versicola machen.
+Wenn zum Beyspiel der \textit{Papa uno} oder \textit{Papa tre} noch im Spiel ist, und ich setze einen kleinen \textit{Tarocco} vor, um den Feind zu hindern, den \textit{Papa} zu machen, heißt man das: \textit{Tenuta al Papa} machen. Desgleichen kann man \textit{Tenuta al Tredici} mit einem \textit{Sottoventi}, und \textit{Tenuta al Venti} mit einem \textit{Sopraventi} machen. \textit{Tenuta al Trenta} macht man nicht leicht, weil es nur mit einem \textit{Sopratrenta} geschehen kann, und man dieselben doch nicht gerne verlieren will; man macht aber sogar in manchen Fällen \textit{Tenuta al Sole}, oder einer anderen \textit{Arie}; in diesem Falle aber, wo man den \textit{Mondo} vorsetzt, muß man sicher seyn, daß mein Compagnon die \textit{Tromba} hat, oder \textit{vice versa}. \textit{Tenuta al Compagno} machen, heißt: wenn man \textit{Sopraventi} oder auch \textit{Sopratrenta} vorsetzt, um dem Compagnon Gelegenheit zu geben, seine guten Karten darauf zuzugeben, um sie zu retten. Man macht auch \textit{Tenuta}, wenn man den \textit{Sole} und \textit{Mondo} hat; nämlich: man braucht mit diesen nicht zu eilen, und kann eher etwas wagen, wenn man dadurch etwas vom Feind zu fangen hofft; daher pflegt man zu sagen: \textit{Sole e Mondo fa tenazza}, das heißt: \textit{Sole} mit \textit{Mondo} halten aus. Es ist aber dieses nicht rathsam, wenn der Verlust einer dieser \textit{Arie} zu groß wäre; wie zum Beyspiel: wenn sie uns oder dem Feinde \textit{Versicola} machen.
 
-Wenn einer von den Feinden caschirt ist; so muß derjenige, welcher zur rechten Hand sitzt, seinem Compagnon gleich die Tenuta machen, das ist: er muß seinem Freunde niemals die Levée überlassen; sondern allemal überstechen, und dann immerfort seine höchsten Tarocchi ausspielen, dadurch hält er den noch agirenden Feind unter der Hand des Freundes. Eben auf diese Art muß der Freund denselben Feind nie überstechen, (wofern er nicht selbst Carte di Conto zu retten hat,) damit er immer dem Feinde hinter der Hand bleibe.
+Wenn einer von den Feinden \textit{caschirt} ist; so muß derjenige, welcher zur rechten Hand sitzt, seinem Compagnon gleich die \textit{Tenuta} machen, das ist: er muß seinem Freunde niemals die \textit{Levée} überlassen; sondern allemal überstechen, und dann immerfort seine höchsten \textit{Tarocchi} ausspielen, dadurch hält er den noch agirenden Feind unter der Hand des Freundes. Eben auf diese Art muß der Freund denselben Feind nie überstechen, (wofern er nicht selbst \textit{Carte di Conto} zu retten hat,) damit er immer dem Feinde hinter der Hand bleibe.
 
-Es kommt in dem ganzen Spiele sehr viel darauf an, die Tenuta zu rechter Zeit zu machen, um die Hand zu gewinnen.
+Es kommt in dem ganzen Spiele sehr viel darauf an, die \textit{Tenuta} zu rechter Zeit zu machen, um die Hand zu gewinnen.
 
-\section{XVIII}
-\subsection{Von der Fumata.}
 
-Fumata ist, wenn man durch Ausspielen eines Tarocco seinem Compagnon die Umstände seines Spiels zu erkennen giebt.
+\section{Von der Fumata.}
+
+\textit{Fumata} ist, wenn man durch Ausspielen eines \textit{Tarocco} seinem Compagnon die Umstände seines Spiels zu erkennen giebt.
 
 Es giebt deren viererley.
 
-Fumata di sopraventi ist, wenn man einen Sopraventi ausspielt, und dieses ist ein Zeichen, daß man die Trombe hat, (oder, so dieses schon bekannt, den Mondo, oder sofern diese bekannt, den Sole hat,) u.~s.~w. Dieser Sopraventi muß aber der erste Tarocco seyn, den derselbe in diesem Spiel ausspielet; denn hat er schon einmal andere Tarocchi gespielt, so ist dieses keine Fumata mehr. Man macht so eine Fumata, um dem Freunde einen Muth zu machen, daß er mit seinen nächstfolgenden hohen Arien oder Tarocchi nicht gleich flüchtig werde, oder daß er seine guten Karten dem Freunde beherzt zugirire und entgegen spiele, oder wenn man eine Gegen-Fumata erwartet.
+\textit{Fumata di sopraventi} ist, wenn man einen \textit{Sopraventi} ausspielt, und dieses ist ein Zeichen, daß man die \textit{Tromba} hat, (oder, so dieses schon bekannt, den \textit{Mondo}, oder sofern diese bekannt, den \textit{Sole} hat,) u.~s.~w. Dieser \textit{Sopraventi} muß aber der erste \textit{Tarocco} seyn, den derselbe in diesem Spiel ausspielet; denn hat er schon einmal andere \textit{Tarocchi} gespielt, so ist dieses keine \textit{Fumata} mehr. Man macht so eine Fumata, um dem Freunde einen Muth zu machen, daß er mit seinen nächstfolgenden hohen \textit{Arien} oder \textit{Tarocchi} nicht gleich flüchtig werde, oder daß er seine guten Karten dem Freunde beherzt zugirire und entgegen spiele, oder wenn man eine Gegen-\textit{Fumata} erwartet.
 
-In manchen Orten giebt man eine versteckte Fumata, wie folgt: Bey der ersten Levée, wo man mit Tarocco stechen muß, sticht man mit dem 10, ob man schon bessere Carte di Conto in Händen hat; dadurch avertirt man dem Freund, daß man Trombe oder den höchsten Tarocco hat. Es ist aaber nicht überall gebräuchlich, daß der 10, also gestochen, die Trombe in Händen bedeute.
+In manchen Orten giebt man eine versteckte \textit{Fumata}, wie folgt: Bey der ersten \textit{Levée}, wo man mit \textit{Tarocco} stechen muß, sticht man mit dem 10, ob man schon bessere \textit{Carte di Conto} in Händen hat; dadurch avertirt man den Freund, daß man \textit{Tromba} oder den höchsten \textit{Tarocco} hat. Es ist aber nicht überall gebräuchlich, daß der 10, also gestochen, die \textit{Tromba} in Händen bedeute.
 
-In manchen Orten macht man auch einen Unterschied zwischen der Fumata von Sopraventi, und da bedeutet der 27, 26 und 25 zwey Arien oder höchste Tarocchi, und 24, 23, 22, 21 nur eine Fumata, welche 3 Arien oder höchste Tarocchi bedeuten soll; macht man sie mit einem Papa, oder einer kleinen Carta di Conto, muß in diesem Fall der Compagnon, wenn er gut spielt, und den höchsten Tarocco hat, mit selbigem nehmen, und gleich fortfahren, seine höchsten übrigen Tarocchi hinter einander auszuspielen, und dieses so oft und so lange zu continuiren, als er im Stich bleibt, und der Compagnon noch bey Kräften ist. Derjenige, welcher die Fumata gegeben, muß wissen, ob die von dem Freunde gespielte Karte von Wichtigkeit ist, und nach dessen Befinden lässet er den Stich passiren, und decket ihn.
+In manchen Orten macht man auch einen Unterschied zwischen der \textit{Fumata} von \textit{Sopraventi}, und da bedeutet der 27, 26 und 25 zwey \textit{Arien} oder höchste \textit{Tarocchi}, und 24, 23, 22, 21 nur eine \textit{Fumata}, welche 3 \textit{Arien} oder höchste \textit{Tarocchi} bedeuten soll; macht man sie mit einem \textit{Papa}, oder einer kleinen \textit{Carta di Conto}, muß in diesem Fall der Compagnon, wenn er gut spielt, und den höchsten \textit{Tarocco} hat, mit selbigem nehmen, und gleich fortfahren, seine höchsten übrigen \textit{Tarocchi} hinter einander auszuspielen, und dieses so oft und so lange zu continuiren, als er im Stich bleibt, und der Compagnon noch bey Kräften ist. Derjenige, welcher die \textit{Fumata} gegeben, muß wissen, ob die von dem Freunde gespielte Karte von Wichtigkeit ist, und nach dessen Befinden lässet er den Stich passiren, und decket ihn.
 
-Es versteht sich von selbst, daß man keine Fumata auf eine kleinere Arie giebt; zum Beyspiel: auf Sole, Luna oder Stella, wenn man nicht bey dem Compagnon alle höhere Arien weiß.
+Es versteht sich von selbst, daß man keine \textit{Fumata} auf eine kleinere \textit{Arie} giebt; zum Beyspiel: auf \textit{Sole}, \textit{Luna} oder \textit{Stella}, wenn man nicht bey dem Compagnon alle höhere \textit{Arien} weiß.
 
-Man macht ferner eine Fumata, wenn man einen Tarocco sopratrenta ausspielt, in welchem Fall derjenige, welcher sie gethan, ein sehr starkes Spiel haben, dergleichen bey dem Compagnon wissen oder urtheilen muß. Wenn diese ausgespielte Sopratrenta der erste Feind passiren läßt, so läßt sie der Freund auch passiren, wenn er es für gut befindet; wird sie aber gestochen, so kann sie der Freund, wenn er es für gut befindet, auch wieder überstechen.
+Man macht ferner eine \textit{Fumata}, wenn man einen \textit{Tarocco sopratrenta} ausspielt, in welchem Fall derjenige, welcher sie gethan, ein sehr starkes Spiel haben, dergleichen bey dem Compagnon wissen oder urtheilen muß. Wenn diese ausgespielte \textit{Sopratrenta} der erste Feind passiren läßt, so läßt sie der Freund auch passiren, wenn er es für gut befindet; wird sie aber gestochen, so kann sie der Freund, wenn er es für gut befindet, auch wieder überstechen.
 
-Man unternimmt dieses Spiel, entweder den größten Theil der Carte di Conto den Feinden abzujagen, oder man richtet sein Augenmerk nur auf eine oder die andere Karte, welche die Feinde besitzen, und die von größter Wichtigkeit ist. Deswegen muß derjenige, welcher schon einmal angefangen hat, Sopratrenta auszuspielen, beständig fortfahren, seine höchsten Tarocchi nachzuspielen, so oft er wieder zum Stich kommt, und dieses so lange continuiren, bis der Endzweck erlangt ist, das ist: bis die gesuchte Karte erobert, oder die Feinde gar zum Caschiren gebracht worden sind.
+Man unternimmt dieses Spiel, entweder den größten Theil der \textit{Carte di Conto} den Feinden abzujagen, oder man richtet sein Augenmerk nur auf eine oder die andere Karte, welche die Feinde besitzen, und die von größter Wichtigkeit ist. Deswegen muß derjenige, welcher schon einmal angefangen hat, \textit{Sopratrenta} auszuspielen, beständig fortfahren, seine höchsten \textit{Tarocchi} nachzuspielen, so oft er wieder zum Stich kommt, und dieses so lange continuiren, bis der Endzweck erlangt ist, das ist: bis die gesuchte Karte erobert, oder die Feinde gar zum Caschiren gebracht worden sind.
 
 Es ist an sich klar, daß dieses Spiel wider denjenigen Feind muß dirigirt werden, bey welchem man die verlangte Karte zu seyn judicirt.
 
-Man heißt ein solches Spiel: un giuoco di giro, welches das stärkste Spiel ist, so im Minchiatta vorkommt; es müssen aber beyde Compagnons mit vielen hohen Tarocchi versehen seyn, sonst richten sie nichts aus. Wenn bey einem solchen Spiel einer von den Feinden zu fallen anfängt, welches man wahrnimmt, wenn er Tarocchi di Conto zuwirft, so strengt man sich noch besser an, und fordert unabläßich mit den höchsten Tarocchi, die man hat, bis man diesem schwachen Feinde alles das Seinige abgenommen hat. Man sieht aus allem diesen, daß es nicht rathsam ist, Fumata zu geben, oder ein giuoco di giro machen zu wollen, wenn man wenig Tarocchi hat, weil man nicht lange das Spiel souteniren kann, und bald caschirt.
+Man heißt ein solches Spiel: \textit{un giuoco di giro}, welches das stärkste Spiel ist, so im \textit{Minchiatta} vorkommt; es müssen aber beyde Compagnons mit vielen hohen \textit{Tarocchi} versehen seyn, sonst richten sie nichts aus. Wenn bey einem solchen Spiel einer von den Feinden zu fallen anfängt, welches man wahrnimmt, wenn er \textit{Tarocchi di Conto} zuwirft, so strengt man sich noch besser an, und fordert unabläßich mit den höchsten \textit{Tarocchi}, die man hat, bis man diesem schwachen Feinde alles das Seinige abgenommen hat. Man sieht aus allem diesen, daß es nicht rathsam ist, \textit{Fumata} zu geben, oder ein \textit{giuoco di giro} machen zu wollen, wenn man wenig \textit{Tarocchi} hat, weil man nicht lange das Spiel souteniren kann, und bald \textit{caschirt}.
 
-\section{XIX}
-\subsection{Von einigen Redensarten.}
 
-Um nichts bey dieser Beschreibung zu vergessen, werden hier einige Redensarten gesetzt, welche aus Spas in Italien gebräuchlich sind; wie zum Beyspiel: wenn einer den Sole di Campagna aufgewiesen, oder in der Folla hat, so sagt man: Sole di Campagna predice il Sole della Citta, oder: die Landsonne verkündigt die Stadtsonne. Desgleichen wenn in der Folla, oder umgeschlagen der 34 ist, welcher einen Ochsen vorstellet, so spricht man: cum bove nihil; es bedeutet: man wird schlechte Karten, oder nichts in der Folla haben. Eben so sagt man, wenn der 11 in der Folla ist.
+\section{Von einigen Redensarten.}
 
-Gobbo in Folla; das heißt: der Bucklige in der Folla. (wegen dessen Bild.) Alle diese Scherze sind nur Sprüchwörter, welche zum Spiel selbst nichts thun.
+Um nichts bey dieser Beschreibung zu vergessen, werden hier einige Redensarten gesetzt, welche aus Spas in Italien gebräuchlich sind; wie zum Beyspiel: wenn einer den \textit{Sole di Campagna} aufgewiesen, oder in der \textit{Folla} hat, so sagt man: \textit{Sole di Campagna predice il Sole della Citta}, oder: die Landsonne verkündigt die Stadtsonne. Desgleichen wenn in der \textit{Folla}, oder umgeschlagen der 34 ist, welcher einen Ochsen vorstellet, so spricht man: \textit{cum bove nihil}; es bedeutet: man wird schlechte Karten, oder nichts in der \textit{Folla} haben. Eben so sagt man, wenn der 11 in der \textit{Folla} ist.
 
-\kern 2pt \hrule \kern 12pt
+\textit{Gobbo in Folla}; das heißt: der Bucklige in der \textit{Folla}. (wegen dessen Bild.) Alle diese Scherze sind nur Sprüchwörter, welche zum Spiel selbst nichts thun.
+
+\separatingdash
 
 Alles dieses sind die nothwendigen Regeln, so in diesem Spiel vorkommen. Weil aber das Spiel gar zu vielen Veränderungen ausgesetzt ist, so muß man bey vorkommenden Fällen selbst sehen, in wie weit diese Regeln zu appliciren sind. Uebrigens muß man wissen, daß in diesem Spiele alle Vortheile erlaubt sind, indem es niemals wieder aufgemischt werden kann. Es ist also ein jeder, der eine Karte zu wenig oder zu viel hat, berechtiget, diesen Fehler, so gut er kann, zu verbessern oder zu verstecken.
 
-\section{XX}
-\subsection{Exempel eines Minchiatta-Spiels\\ mit Anmerkungen.}
+
+\section*{{\scshape\upshape EXEMPEL}\\eines Minchiatta-Spiels\\ mit Anmerkungen.}
 
 Die vier Spieler sollen A, B, C, D, genennt werden.
 
-A giebt die Karten. B hat die Hand. C ist der Compagnon des A. D hebt ab.
+A giebt die Karten.
 
-A mischt die Karten; er sieht die unterste an, diese ist die Sole, also mischt er, bis eine schlechte unten ist.
+B hat die Hand.
 
-A präsentiert die Karte zum Abheben an D,
-D hebt ab, sieht die unterste Karte an von dem Haufen, den er abhebt, und da es ein Sopraventi, nämlich der 21 ist, so nimmt er sie. Die nachfolgende Karte ist der 33, (eine Carta di Conto,) die nimmt er auch, und markirt 5 Points; die darauf folgende ist der Spada 2, also nimmt er sie nicht, und legt das Häufchen auf den Tisch, behält aber den 21 und 33 vor sich offen liegen.
+C ist der Compagnon des A.
+
+D hebt ab.
+
+A mischt die Karten; er sieht die unterste an, diese ist die \textit{Sole}, also mischt er, bis eine schlechte unten ist.
+
+A präsentiert die Karte zum Abheben an D.
+
+D hebt ab, sieht die unterste Karte an von dem Haufen, den er abhebt, und da es ein \textit{Sopraventi}, nämlich der 21 ist, so nimmt er sie. Die nachfolgende Karte ist der 33, (eine \textit{Carta di Conto},) die nimmt er auch, und markirt 5 \textit{Points}; die darauf folgende ist der Spada 2, also nimmt er sie nicht, und legt das Häufchen auf den Tisch, behält aber den 21 und 33 vor sich offen liegen.
 
 A nimmt das abgehobene Häufchen, legt das andere darauf, und fängt an zu geben; er giebt
 
-An B folgende Karten: Bastoni~5, Spade~3, Coppe~10, Spade~1, Spade~4, und wieder Trombe, Spade~5, Spade~6, Spade~7, Spade~2.
+An B folgende Karten: \textit{Bastoni}~5, \textit{Spade}~3, \textit{Coppe}~10, \textit{Spade}~1, \textit{Spade}~4, und wieder \textit{Tromba}, \textit{Spade}~5, \textit{Spade}~6, \textit{Spade}~7, \textit{Spade}~2.
 
-An C, Tarocco 12, Bastoni~3, Bastoni~1, Bastoni~2, Coppe~9, und wieder Coppe~8, Bastoni~8, Tarocco 14, Tarocco 15, Bastoni~7.
+An C, \textit{Tarocco} 12, \textit{Bastoni}~3, \textit{Bastoni}~1, \textit{Bastoni}~2, \textit{Coppe}~9, und wieder \textit{Coppe}~8, \textit{Bastoni}~8, \textit{Tarocco} 14, \textit{Tarocco} 15, \textit{Bastoni}~7.
 
-An D, Luna, Denari Fantina, Tarocco 23, Tarocco 26, Coppe~5, und wieder Coppe~4, Coppe~3, Tarocco 34, Denari Cavallo, Denari Dama.
+An D, \textit{Luna}, \textit{Denari Fantina}, \textit{Tarocco} 23, \textit{Tarocco} 26, \textit{Coppe}~5, und wieder \textit{Coppe}~4, \textit{Coppe}~3, \textit{Tarocco} 34, \textit{Denari Cavallo}, \textit{Denari Dama}.
 
-An sich selbst: Denari König, Tarocco 16, Bastoni~9, Bastoni~10, Coppe~2, und wieder Papa 2, Papa 3, Tarocco 24, Mondo, Sole.
+An sich selbst: \textit{Denari} König, \textit{Tarocco} 16, \textit{Bastoni}~9, \textit{Bastoni}~10, \textit{Coppe}~2, und wieder \textit{Papa} 2, \textit{Papa} 3, \textit{Tarocco} 24, \textit{Mondo}, \textit{Sole}.
 
-Zum zweytenmal an B, Matto, Tarocco 13, Tarocco 27, Tarocco 28, Tarocco 29, und wieder Tarocco 30, Tarocco 31, Spade Bube, Spade Cavallo, Coppe Bube und Tarocco 32 Scoperto. (Für diesen markirt B 5 Points, mithin mit den vorigen in allem 10 Points.)
+Zum zweytenmal an B, \textit{Matto}, \textit{Tarocco} 13, \textit{Tarocco} 27, \textit{Tarocco} 28, \textit{Tarocco} 29, und wieder \textit{Tarocco} 30, \textit{Tarocco} 31, \textit{Spade} Bube, \textit{Spade Cavallo}, \textit{Coppe} Bube und \textit{Tarocco} 32 \textit{Scoperto}. (Für diesen markirt B 5 \textit{Points}, mithin mit den vorigen in allem 10 \textit{Points}.)
 
-An C Coppe Cavallo, Coppe Königin, Tarocco 11, Papa 4, Papa 5, und wieder Tarocco 6, Tarocco 7, Tarocco 8, Tarocco 9, Coppe~1 und Denari~4 scoperto.
+An C \textit{Coppe Cavallo}, \textit{Coppe} Königin, \textit{Tarocco} 11, \textit{Papa} 4, \textit{Papa} 5, und wieder \textit{Tarocco} 6, \textit{Tarocco} 7, \textit{Tarocco} 8, \textit{Tarocco} 9, \textit{Coppe}~1 und \textit{Denari}~4 \textit{scoperto}.
 
-An D Denari~5, Denari~6, Denari~7, Denari~8, Spade~9, und wieder Bastoni~4, Spade~10, Bastoni~6, Papa uno, Denari~3, und Re di Coppe scoperto. (Dieser gilt 5 Points, zu den 10 Points gerechnet, macht 15 Points.)
+An D \textit{Denari}~5, \textit{Denari}~6, \textit{Denari}~7, \textit{Denari}~8, \textit{Spade}~9, und wieder \textit{Bastoni}~4, \textit{Spade}~10, \textit{Bastoni}~6, \textit{Papa uno}, \textit{Denari}~3, und \textit{Re di Coppe scoperto}. (Dieser gilt 5 \textit{Points}, zu den 10 \textit{Points} gerechnet, macht 15 \textit{Points}.)
 
-An sich selbst endlich: Denari~2, Denari~1, Denari~9, Coppe~7, Spade Dama, und wieder: Coppe~6, Stella, Tarocco 10, Tarocco 35, Bastoni Bube.
+An sich selbst endlich: \textit{Denari}~2, \textit{Denari}~1, \textit{Denari}~9, \textit{Coppe}~7, \textit{Spade Dama}, und wieder: \textit{Coppe}~6, \textit{Stella}, \textit{Tarocco} 10, Tarocco 35, \textit{Bastoni} Bube.
 
-Nun zählt A die Folla, und findet 12 Karten, 2 sind rubirt worden, mithin ist die Folla richtig. Jetzt giebt er sich Cavallo di Bastoni Scoperto, alsdann ist Scoperto aus der Folla: Tarocco 17, diese gilt nichts, also legt er sie wieder in die Folla.
+Nun zählt A die \textit{Folla}, und findet 12 Karten, 2 sind rubirt worden, mithin ist die \textit{Folla} richtig. Jetzt giebt er sich \textit{Cavallo di Bastoni Scoperto}, alsdann ist \textit{Scoperto} aus der \textit{Folla}: \textit{Tarocco} 17, diese gilt nichts, also legt er sie wieder in die \textit{Folla}.
 
-Nun sieht er die Folla an, und nimmt die Carte di Conto heraus; diese sind: Bastoni König, Spade König, Tarocco 20.
+Nun sieht er die \textit{Folla} an, und nimmt die \textit{Carte di Conto} heraus; diese sind: \textit{Bastoni} König, \textit{Spade} König, \textit{Tarocco} 20.
 
-C sagt die Folla an una per Sorte, ohne Coppe, das heißt: 1 Denari, 1 Bastoni, 1 Spade, kein Coppe; er legt diese Karten offen vor sich, und die fünf übrigen Karten (welche Tarocchi 17, 18, 19, 22 und 25 sind,) bedeckt darneben. A muß also 3 verlegen, und D 2.
+C sagt die \textit{Folla} an \textit{una per Sorte}, ohne \textit{Coppe}, das heißt: 1 \textit{Denari}, 1 \textit{Bastoni}, 1 \textit{Spade}, kein \textit{Coppe}; er legt diese Karten offen vor sich, und die fünf übrigen Karten (welche \textit{Tarocchi} 17, 18, 19, 22 und 25 sind,) bedeckt darneben. A muß also 3 verlegen, und D 2.
 
-A verlegt 3 Coppe.
+A verlegt 3 \textit{Coppe}.
 
-D verlegt 2 Spade.
+D verlegt 2 \textit{Spade}.
 
-Es sind also nun in der Folla 3 Coppe, 3 Spade, 1 per sorte (oder 1 Bastoni, 1 Denari,) und 5 Tarocchi, mithin ist die Folla richtig. Jetzo also
+Es sind also nun in der \textit{Folla} 3 \textit{Coppe}, 3 \textit{Spade}, 1 \textit{per sorte} (oder 1 \textit{Bastoni}, 1 \textit{Denari},) und 5 \textit{Tarocchi}, mithin ist die \textit{Folla} richtig. Jetzo also
 
 
 
-B spielet Bastoni~5, weil der Bastoni König in der Folla gewesen ist.
+B spielet \textit{Bastoni}~5, weil der \textit{Bastoni} König in der \textit{Folla} gewesen ist.
 
-Nun weiset C die Folla, mit deren Écartirungen von A und D, und A legt die Folla sich zur Rechten.
+Nun weiset C die \textit{Folla}, mit deren Écartirungen von A und D, und A legt die \textit{Folla} sich zur Rechten.
 
-Jetzt sagt man die Versicola an:
+Jetzt sagt man die \textit{Versicola} an:
 
-B hat die Versicola 28, 29, 30, 31, 32, und Matto. (Dieses macht 30 Points.)
+B hat die \textit{Versicola} 28, 29, 30, 31, 32, und \textit{Matto}. (Dieses macht 30 \textit{Points}.)
 
-C hat keine Versicola.
+C hat keine \textit{Versicola}.
 
-D hat keine Versicola.
+D hat keine \textit{Versicola}.
 
-A hat die Versicola von 3 Königen, nämlich von Bastoni, Denari, Spade.
-Diese macht, 15 Points, von 30 Points abgerechnet, bleiben 15 Points für B, D, und dazu die schon markirten 15 Points, macht 30 für B, D.
+A hat die \textit{Versicola} von 3 Königen, nämlich von \textit{Bastoni}, \textit{Denari}, \textit{Spade}.
 
-Nun folgen die 21 Levées, B spielet also aus Bastoni~5,
+Diese macht, 15 \textit{Points}, von 30 \textit{Points} abgerechnet, bleiben 15 \textit{Points} für B, D, und dazu die schon markirten 15 \textit{Points}, macht 30 für B, D.
+
+Nun folgen die 21 \textit{Levées}, B spielet also aus \textit{Bastoni}~5,
 
 \begin{leveeslist}
-  \item B Bastoni~5, C Bastoni~8, D Bastoni~6; A Bastoni König, \\A sollte Spade König impiciren, weil D Spade écartirt hat; er hat aber nur 2 Spade, also spielt er nicht Spade, sondern
-\item A Denari König, B Tarocco 30, C Denari~4, D Denari~8, \\hier muore Denari König, weil B Fallio naturale in Denari hat, mithin markirt B, D 5 Points, und hat also 35 Points.
-\item B Spade~1, C Tarocco 14, D Tarocco 33, A Spade König. \\B hat Spada gespielt, weil sein Compagnon es écartirt hat, und der König in der Folla bey A war. C hat Fallio naturale, weil aber D Spade écartirt hat, traut er nicht, einen Papa zu setzen, viel weniger eine bessere Karte di Conto, wenn er sie auch hätte, sondern macht Tenuta all'Uno e al Tredici. D kann also den Papa uno nicht hinsetzen, nimmt also mit dem 33, und A verliert seinen König, also muore 5, und B, D markirt wieder 5 Points, also in allem 40.
-\item D Denari~7, A Denari~2, B Tarocco 13, C Tarocco 15. \\B verliert durch Unglück den 13, weil so wenig Denari in der Folla sind, mithin muore 5, von 40 abgerechnet, bleibt 35.
-\item C Coppe~9, D Coppe~5, A Tarocco 20, B Coppe~10. \\C spielet Coppe, weil es der Écart von A ist, und eben darum giebt D den König nicht zu.
-\item A Denari~9, B Tarocco 29, C Tarocco 8, D Denari~6.\\ B hat den 29 darauf gesetzt, um zu probiren, denn, geht er verloren, os ist das Unglück nicht groß; denn es bleibt noch 31 und 32 zur Versicola, und da C vorher mit dem 15 gestochen, ist zu vermuthen, daß er nicht viel hat.
-\item B Spade~3, C Tarocco 11, D Luna. A Spade Dama. \\B spielt Spade, weil es die Renonce seines Compagnons ist; da nun vollends C gestochen, kann D sicher eine gute Karte darauf setzen.
-\item D Denari~5, A Denari~1, B Tarocco 32, C Tarocco 6. \\D spielt es, weil es die Renonce des Compagnons ist, und das, obwohl es auch C sticht, der schon scheint nichts Gutes zu haben; deswegen riskirt auch B eine Carta di Conto, und da diese geht, glaubt er sich auf die Zukunft sicher.
-\item B Coppe Bube, C Coppe Dama, D Coppe~4, A Stella.\\ B spielt nicht mehr Spade, weil davon 3 in der Folla, 4 in den Levées, und er noch 6 in Händen hat, mithin der Compagnon überstochen würde.
-\item A Bastoni~9, B Tarocco 28, C Bastoni~1, D Bastoni~4.\\ B sticht mit einer guten, weil es eine Seconda ist.
-\item B Spade~4, C Papa 4, D Tarocco 26, A Tarocco 35. \\Da B etwas dazwischen gespielt hat, traut sein Compagnon mit Recht nicht mehr; C girirt auch dahero einen Papa, hätte er eine bessere, wäre es noch besser.
-\item A Bastoni~10, B Tarocco 27, C Bastoni~2, D Papa uno. \\B macht Tenuta al Papa uno, und sein Compagnon giebt ihm auch zu.
-\item B Spade~5, C Papa 5, D Tarocco 23, A Tarocco 16. \\Da der Papa 5 nicht important ist, läßt ihn A verlieren, um mit seiner Aria im Hinterhalt zu bleiben, und etwas zu fangen, weil Sole e Mondo tenazza macht. Muore 3 vom Papa, also markirt B, D 38.
-\item D Denari~3, A Tarocco 24, B Tarocco 31, C Tarocco 7.
-\item B Spade~6, C Tarocco 9, D Tarocco 21, A Papa 2 \\Muore 3 vom Papa, also markirt B, D 41.
-\item D Denari Dama, A Tarocco 10, B Matto, C Tarocco 12. \\B mattirt, weil er hofft, noch etwas von A zu fangen, indem dieser schon Papi zugegeben. C ist gefallen, weiset aber seine Karten nicht, um seinen Freund nicht blos zu geben; statt dem Matto giebt B aus seinen Levées eine schlechte Karte, z.\ B.\ Spade~6
-\item C Coppe~8, D Coppe~3, A Papa 3, B Trombe. \\Muore 3 vom Papa, also markirt B, D 44. B ist gefallen, und zeigt auf, um seinen Freund davon zu benachrichtigen; C zeigt auch auf, um seinem Compagnon es zu zeigen
-\item B Spade~7, C Coppe~1, D Tarocco 34, A Sole. \\D ist gefallen, und zeigt es, muore 5 von 34, also bleibt für B, D 39 Points; NB. Der 34 macht auch eine Versicola, und verdirbt Accrescimento.
-\end{leveeslist}
+  \item B \textit{Bastoni}~5, C \textit{Bastoni}~8, D \textit{Bastoni}~6; A \textit{Bastoni} König, \\A sollte \textit{Spade} König \textit{impiciren}, weil D \textit{Spade} écartirt hat; er hat aber nur 2 \textit{Spade}, also spielt er nicht \textit{Spade}, sondern
+\item A \textit{Denari} König, B \textit{Tarocco} 30, C \textit{Denari}~4, D \textit{Denari}~8, \\hier muore \textit{Denari} König, weil B \textit{Fallio naturale} in \textit{Denari} hat, mithin markirt B, D 5 \textit{Points}, und hat also 35 \textit{Points}.
+\item B \textit{Spade}~1, C \textit{Tarocco} 14, D \textit{Tarocco} 33, A \textit{Spade} König.
 
-\noindent Da nun alle gefallen sind, ausgenommen A, und niemand höhere Bastoni hat, so gehören alle übrigen Levées an A, mithin\\
-21. Levée, hat A die Ultima und Muore 5 vom Coppe König, so bleibt für B, D 34 Points.
+  B hat \textit{Spada} gespielt, weil sein Compagnon es écartirt hat, und der König in der \textit{Folla} bey A war.
+
+  C hat \textit{Fallio naturale}, weil aber D \textit{Spade} écartirt hat, traut er nicht, einen \textit{Papa} zu setzen, viel weniger eine bessere \textit{Carta di Conto}, wenn er sie auch hätte, sondern macht \textit{Tenuta all'Uno e al Tredici}.
+
+  D kann also den \textit{Papa uno} nicht hinsetzen, nimmt also mit dem 33, und A verliert seinen König, also \textit{muore} 5, und B, D markirt wieder 5 \textit{Points}, also in allem 40.
+\item D \textit{Denari}~7, A \textit{Denari}~2, B \textit{Tarocco} 13, C \textit{Tarocco} 15. \\B verliert durch Unglück den 13, weil so wenig \textit{Denari} in der \textit{Folla} sind, mithin \textit{muore} 5, von 40 abgerechnet, bleibt 35.
+\item C \textit{Coppe}~9, D \textit{Coppe}~5, A \textit{Tarocco} 20, B \textit{Coppe}~10. \\C spielet \textit{Coppe}, weil es der Écart von A ist, und eben darum giebt D den König nicht zu.
+\item A \textit{Denari}~9, B \textit{Tarocco} 29, C \textit{Tarocco} 8, D \textit{Denari}~6.\\ B hat den 29 darauf gesetzt, um zu probiren, denn, geht er verloren, os ist das Unglück nicht groß; denn es bleibt noch 31 und 32 zur \textit{Versicola}, und da C vorhero mit dem 15 gestochen, ist zu vermuthen, daß er nicht viel hat.
+\item B \textit{Spade}~3, C \textit{Tarocco} 11, D \textit{Luna}. A \textit{Spade Dama}. \\B spielt \textit{Spade}, weil es die \textit{Renonce} seines Compagnons ist; da nun vollends C gestochen, kann D sicher eine gute Karte darauf setzen.
+\item D \textit{Denari}~5, A \textit{Denari}~1, B \textit{Tarocco} 32, C \textit{Tarocco} 6. \\D spielt es, weil es die \textit{Renonce} des Compagnons ist, und das, obwohl es auch C sticht, der schon scheint nichts Gutes zu haben; deswegen riskirt auch B eine \textit{Carta di Conto}, und da diese geht, glaubt er sich auf die Zukunft sicher.
+\item B \textit{Coppe} Bube, C \textit{Coppe Dama}, D \textit{Coppe}~4, A \textit{Stella}.\\ B spielt nicht mehr \textit{Spade}, weil davon 3 in der \textit{Folla}, 4 in den \textit{Levées}, und er noch 6 in Händen hat, mithin der Compagnon überstochen würde.
+\item A \textit{Bastoni}~9, B \textit{Tarocco} 28, C \textit{Bastoni}~1, D \textit{Bastoni}~4.\\ B sticht mit einer guten, weil es eine \textit{Seconda} ist.
+\item B \textit{Spade}~4, C Papa 4, D \textit{Tarocco} 26, A \textit{Tarocco} 35. \\Da B etwas dazwischen gespielt hat, traut sein Compagnon mit Recht nicht mehr; C \textit{girirt} auch dahero einen \textit{Papa}, hätte er eine bessere, wäre es noch besser.
+\item A \textit{Bastoni}~10, B \textit{Tarocco} 27, C \textit{Bastoni}~2, D \textit{Papa uno}. \\B macht \textit{Tenuta al Papa uno}, und sein Compagnon giebt ihm auch zu.
+\item B \textit{Spade}~5, C \textit{Papa} 5, D \textit{Tarocco} 23, A \textit{Tarocco} 16. \\Da der \textit{Papa} 5 nicht important ist, läßt ihn A verlieren, um mit seiner \textit{Aria} im Hinterhalt zu bleiben, und etwas zu fangen, weil \textit{Sole e Mondo tenazza} macht. \textit{Muore} 3 vom \textit{Papa}, also markirt B, D 38.
+\item D \textit{Denari}~3, A \textit{Tarocco} 24, B \textit{Tarocco} 31, C \textit{Tarocco} 7.
+\item B \textit{Spade}~6, C \textit{Tarocco} 9, D \textit{Tarocco} 21, A \textit{Papa} 2 \\\textit{Muore} 3 vom \textit{Papa}, also markirt B, D 41.
+\item D \textit{Denari Dama}, A \textit{Tarocco} 10, B \textit{Matto}, C \textit{Tarocco} 12. \\B \textit{mattirt}, weil er hofft, noch etwas von A zu fangen, indem dieser schon \textit{Papi} zugegeben. C ist gefallen, weiset aber seine Karten nicht, um seinen Freund nicht blos zu geben; statt dem \textit{Matto} giebt B aus seinen \textit{Levées} eine schlechte Karte, z.\ B.\ \textit{Spade}~6.
+\item C \textit{Coppe}~8, D \textit{Coppe}~3, A \textit{Papa} 3, B \textit{Tromba}. \\\textit{Muore} 3 vom \textit{Papa}, also markirt B, D 44. B ist gefallen, und zeigt auf, um seinen Freund davon zu benachrichtigen; C zeigt auch auf, um seinem Compagnon es zu zeigen.
+\item B \textit{Spade}~7, C \textit{Coppe}~1, D \textit{Tarocco} 34, A \textit{Sole}. \\D ist gefallen, und zeigt es, \textit{muore} 5 von 34, also bleibt für B, D 39 \textit{Points}; NB. Der 34 macht auch eine \textit{Versicola}, und verdirbt \textit{Accrescimento}.
+Da nun alle gefallen sind, ausgenommen A, und niemand höhere \textit{Bastoni} hat, so gehören alle übrigen \textit{Levées} an A, mithin
+\item[\lower 16pt\hbox{\valign{&\hbox{\hsize=1em {#\vspace{4pt}}\hfil}\cr 19.& 20.& 21.\cr}} \textit{Levée}]\-\\ hat A die \textit{Ultima} und \textit{Muore} 5 vom \textit{Coppe} König, so bleibt für B, D 34 \textit{Points}.
+\end{leveeslist}
 
 \subsection{Nun zur Rechnung.}
 
 Rechnung von A, C.\\
 \begin{tabular}{@{}b{6.5cm}@{\hspace{2em}}r}
-Sie haben nur 12 Mazzetti mithin verlieren sie 6 Karten&-\\
-nur 2 Könige also gehen die Könige auf: senza Re.&-\\
+Sie haben nur 12 \textit{Mazzetti} mithin verlieren sie 6 Karten&-\\
+nur 2 Könige also gehen die Könige auf: \textit{senza Re}.&-\\
 \end{tabular}
 \begin{tabular}{@{}b{6.5cm}r}
-An Versicola haben Sie
-34, 35, Stella: macht 20 Points.& 20\\
-Ultima& 10\\
+An \textit{Versicola} haben Sie
+34, 35, Stella: macht 20 \textit{Points}.& 20\\
+\textit{Ultima}& 10\\
 \end{tabular}
 \begin{tabular}{@{}b{6.5cm}r}
-An Carte di Conto\\
+An \textit{Carte di Conto}\\
 13, 10, 20, 34, 35& 25\\
-Stella, Sole, Mondo & 30\\
-Papa 4 &3 \\
+\textit{Stella}, \textit{Sole}, \textit{Mondo} & 30\\
+\textit{Papa} 4 &3 \\
 Summa &88
 \end{tabular}
 
@@ -470,18 +486,18 @@ Summa &88
 
 Rechnung von B, D.\\
 \begin{tabular}{@{}b{6.5cm}r}
-An Mazzetti 14, und 6 Karten,
+An \textit{Mazzetti} 14, und 6 Karten,
 mithin gewinnt an Karten & 6\\
-An Versicola:
-Uno, Matto, Trombe& 20\\
-Uno, Due, Tre col Matto& 16\\
-macht 42 dell'Uno\\
-28, 29, 30, 31, 32, 33 col Matto& 35\\
-An Carte di Conto:
-Uno, Matto, 28, 30, 31, 32, 33& 35\\
-Papa 3& 3\\
-Luna, Trombe& 20\\
-Dann markirte Points& 34\\
+An \textit{Versicola}:
+\textit{Uno, Matto, Tromba}& 20\\
+\textit{Uno, Due, Tre col Matto}& 16\\
+macht 42 \textit{dell'Uno}\\
+28, 29, 30, 31, 32, 33 \textit{col Matto}& 35\\
+An \textit{Carte di Conto}:
+\textit{Uno}, \textit{Matto}, 28, 30, 31, 32, 33& 35\\
+\textit{Papa} 3& 3\\
+\textit{Luna}, \textit{Tromba}& 20\\
+Dann markirte \textit{Points}& 34\\
 Summa& 169
 \end{tabular}
 \subsection{Abgerechnet den Gewinnst}
@@ -493,43 +509,43 @@ bleibt für B, D &81\\
 
 mithin 2 Resten Gewinnst für B, D.
 
-\subsection{Anderes Exempel eines Giuoco di Giro mit Anmerkungen.}
+\section*{Anderes Exempel eines\\ Giuoco di Giro mit Anmerkungen.}
 
 A giebt, B hat die Hand, C ist mit A, und D hebt ab.
 
-A mischt, D hebt ab; es ist aber der Coppe~2, also nimmt er nichts aus der Folla.
+A mischt, D hebt ab; es ist aber der \textit{Coppe}~2, also nimmt er nichts aus der \textit{Folla}.
 
-B bekömmt in Händen Tarocco 30, 28, 10, Papa cinque; Bastoni~6 und 1; Coppe König, Cavallo, 1, 8, 9; Spade Dama, Bube, 5, 3; Denari Cavallo, 3, 6, 7, 10, und Scoperto Denari~4.
+B bekömmt in Händen \textit{Tarocco} 30, 28, 10, \textit{Papa cinque}; \textit{Bastoni}~6 und 1; \textit{Coppe} König, \textit{Cavallo}, 1, 8, 9; \textit{Spade Dama}, Bube, 5, 3; \textit{Denari Cavallo}, 3, 6, 7, 10, und \textit{Scoperto Denari}~4.
 
-C bekömmt in Händen Trombe, 34, 33, 32, 31, 27, 26, 25, 24, 23, 5, 14, 7, Papa 3, Papa 2; Denari~2; Bastoni Bube; Coppe~7, Spade~2, 1, und Scoperto Denari~1.
+C bekömmt in Händen \textit{Tromba}, 34, 33, 32, 31, 27, 26, 25, 24, 23, 5, 14, 7, \textit{Papa} 3, \textit{Papa} 2; \textit{Denari}~2; \textit{Bastoni} Bube; \textit{Coppe}~7, \textit{Spade}~2, 1, und \textit{Scoperto Denari}~1.
 
-D bekömmt in Händen: Stella, 20, 13, Papa 4, Matto; Bastoni~7, 8; Coppe Dama, Bube, 3, 10; Denari König, Dama, Bube, 8, 9; Spade König, Cavallo, 8, 6, und Scoperto 29.
+D bekömmt in Händen: \textit{Stella}, 20, 13, \textit{Papa} 4, \textit{Matto}; \textit{Bastoni}~7, 8; \textit{Coppe Dama}, Bube, 3, 10; \textit{Denari} König, \textit{Dama}, Bube, 8, 9; \textit{Spade} König, \textit{Cavallo}, 8, 6, und \textit{Scoperto} 29.
 
-A bekömmt in Händen Sole, 22, 21, 19, 18, 17, 16, 12, 11, 9, 8, 6; Spade~10, 7, 4; Bastoni Dama, Cavallo, 9, 10; Denari~5, und Scoperto Coppe~6; dann scoprirt er aus der Folla den Denari~3, mithin nimmt er ihn nicht, piglirt aber aus der Folla: Bastoni König, Mondo, Luna, 35, Papa uno, écartirt dafür Denari~5, Coppe, Spade~4, 7, 10; in der Folla ist gewesen: Bastoni~2, 3, 4, 5; Spade~9, Coppe~2, 4, 5, kein Denari.
+A bekömmt in Händen \textit{Sole}, 22, 21, 19, 18, 17, 16, 12, 11, 9, 8, 6; \textit{Spade}~10, 7, 4; \textit{Bastoni Dama}, \textit{Cavallo}, 9, 10; \textit{Denari}~5, und \textit{Scoperto Coppe}~6; dann scoprirt er aus der \textit{Folla} den \textit{Denari}~3, mithin nimmt er ihn nicht, piglirt aber aus der \textit{Folla}: \textit{Bastoni} König, \textit{Mondo}, \textit{Luna}, 35, \textit{Papa uno}, écartirt dafür \textit{Denari}~5, \textit{Coppe}, \textit{Spade}~4, 7, 10; in der \textit{Folla} ist gewesen: \textit{Bastoni}~2, 3, 4, 5; \textit{Spade}~9, \textit{Coppe}~2, 4, 5, kein \textit{Denari}.
 
-B spielt aus Bastoni~1. (Er könnte auch seinen Coppe König impiciren.)
+B spielt aus \textit{Bastoni}~1. (Er könnte auch seinen \textit{Coppe} König impiciren.)
 
-Nun ist in der Folla 4, Bastoni~4, Spade~4, Coppe, oder 4 per sorte und 1 Denari.
+Nun ist in der \textit{Folla} 4, \textit{Bastoni}~4, \textit{Spade}~4, \textit{Coppe}, oder 4 per sorte und 1 \textit{Denari}.
 
 B sagt nichts an.
 
-A sagt an: Mondo, Sole, Luna, (mithin markirt A, C 50 Points).
+A sagt an: \textit{Mondo}, \textit{Sole}, \textit{Luna}, (mithin markirt A, C 50 \textit{Points}).
 
 \begin{leveeslist}
-\item B Bastoni~1, C Bastoni Bube, D Bastoni~7, A Bastoni König.
-\item A Bastoni Dama, B Bastoni~6, C Papa 3, D Bastoni~3. \\C nimmt nur mit dem Papa 3, um Carte sopra trenta zu behalten, weil er Trombe hat, die die große Versicola bey seinem Compagnon weiß, und ein Giuoco di Giro anfangen will.
-\item C Tarocco 23, D Papa 4, A 35, B Papa 5. \\C giebt Fumata, also weiß A, daß nichts wider ihn ist, als Stella, er riskirt also den 35, der ihm just nichts macht; hat B die Stella, so wird sie B darauf setzen; weil es aber nicht geschieht, so ist man sicher, daß D sie haben muß, und nun haben auf beyde Fälle A, C freyes Spiel; es ist auch muore 6, wegen des Papa 4 und 5, also markirt A, C 56 Points.
-\item A Papa uno, B 10, C Trombe, D Matto. \\A spielt Papa uno, um C zu zwingen zu nehmen, und D, der die Stella hat, zwischen sich beyde zu kriegen; da auch B schon eine Carta di Conto zugiebt, und D mattirt, ist es ein Zeichen, daß beyde wenig Tarocchi haben, und bald caschiren werden. D legt den Matto vor sich, und wartet, bis er etwa eine Levée bekömmt, um eine Karte statt dem Matto zu geben. Muore 5 für den Zehner; also hat A, C 61 Points bekommen, also einen Rest bezahlt, und markiren 1 Point.
-\item C Tarocco 34, D 29, A 6, B 28. \\C fordert nun, daß die Carte di Conto beyder Feinde fallen, und um die Stella von D zu forciren, muore 5, wegen den 28, also markirt A, C 6 Points.
-\item C Tarocco 33, D 13, A 8, B 30. \\muore 10, wegen 13 und 30, also markirt A, C 16 Points.
-\item C Tarocco 32, D 20, A 9, B Denari~10. \\B ist caschirt, zeiget aber nicht auf, weil er den Coppe König noch zu retten hofft. Muore 5, wegen den 20, also markirt A, C 21 Points.
-\item C Tarocco 31, D Stella, A Mondo, B Denari~7. \\Muore 10, wegen der Stella, also markirt A, C 31.
+\item B \textit{Bastoni}~1, C \textit{Bastoni} Bube, D \textit{Bastoni}~7, A \textit{Bastoni} König.
+\item A \textit{Bastoni Dama}, B \textit{Bastoni}~6, C \textit{Papa} 3, D \textit{Bastoni}~3. \\C nimmt nur mit dem \textit{Papa} 3, um Carte sopra trenta zu behalten, weil er \textit{Tromba} hat, die die große \textit{Versicola} bey seinem Compagnon weiß, und ein \textit{\mbox{Giuoco} di \mbox{Giro}} anfangen will.
+\item C \textit{Tarocco} 23, D \textit{Papa} 4, A 35, B \textit{Papa\textit{} 5. \\C giebt Fumata, also weiß A, daß nichts wider ihn ist, als \textit{Stella}, er riskirt also den 35, der ihm just nichts macht; hat B die \textit{Stella}, so wird sie B darauf setzen; weil es aber nicht geschieht, so ist man sicher, daß D sie haben muß, und nun haben auf beyde Fälle A, C freyes Spiel; es ist auch muore 6, wegen des }Papa 4 und 5, also markirt A, C 56 \textit{Points}.
+\item A \textit{Papa uno}, B 10, C \textit{Tromba}, D \textit{Matto}. \\A spielt \textit{Papa uno}, um C zu zwingen zu nehmen, und D, der die \textit{Stella} hat, zwischen sich beyde zu kriegen; da auch B schon eine \textit{Carta di Conto} zugiebt, und D \textit{mattirt}, ist es ein Zeichen, daß beyde wenig \textit{Tarocchi} haben, und bald caschiren werden. D legt den \textit{Matto} vor sich, und wartet, bis er etwa eine \textit{Levée} bekömmt, um eine Karte statt dem \textit{Matto} zu geben. Muore 5 für den Zehner; also hat A, C 61 \textit{Points} bekommen, also einen Rest bezahlt, und markiren 1 \textit{Point}.
+\item C \textit{Tarocco} 34, D 29, A 6, B 28. \\C fordert nun, daß die \textit{Carte di Conto} beyder Feinde fallen, und um die \textit{Stella} von D zu forciren, muore 5, wegen den 28, also markirt A, C 6 \textit{Points}.
+\item C \textit{Tarocco} 33, D 13, A 8, B 30. \\muore 10, wegen 13 und 30, also markirt A, C 16 \textit{Points}.
+\item C \textit{Tarocco} 32, D 20, A 9, B \textit{Denari}~10. \\B ist caschirt, zeiget aber nicht auf, weil er den \textit{Coppe} König noch zu retten hofft. \textit{Muore} 5, wegen den 20, also markirt A, C 21 \textit{Points}.
+\item C \textit{Tarocco} 31, D \textit{Stella}, A \textit{Mondo}, B \textit{Denari}~7. \\\textit{Muore} 10, wegen der \textit{Stella}, also markirt A, C 31.
 \end{leveeslist}
-Nun ist D auch gefallen, und da A und C lauter Tarocchi haben, und A die höchsten Bastoni, so können B, D keine Levée mehr machen, mithin macht A, C alle Levées, und markiren noch Muore 15 für die Könige von Coppe, Denari, Spade. Auch verliert D den Matto; also markirt A, C 51 Points.
+Nun ist D auch gefallen, und da A und C lauter \textit{Tarocchi} haben, und A die höchsten \textit{Bastoni}, so können B, D keine \textit{Levée} mehr machen, mithin macht A, C alle \textit{Levées}, und markiren noch \textit{Muore} 15 für die Könige von \textit{Coppe}, \textit{Denari}, \textit{Spade}. Auch verliert D den \textit{Matto}; also markirt A, C 51 \textit{Points}.
 
 \subsection{Nun die Rechnung.}
 
-Die Rechnung ist kurz gemacht; es sind, wie in den Regeln im 5ten Kapitel stehet, 396 Points, dazu 51 anmarkirte, und dieses doppelt, macht 894 Points, oder 15 Reste, welche A, C gewinnen, ohne den im Spiel gewonnenen zu rechnen.
+Die Rechnung ist kurz gemacht; es sind, wie in den Regeln im 5ten Kapitel stehet, 396 \textit{Points}, dazu 51 anmarkirte, und dieses doppelt, macht 894 \textit{Points}, oder 15 Reste, welche A, C gewinnen, ohne den im Spiel gewonnenen zu rechnen.
 
 
 \end{document}
