@@ -1,10 +1,8 @@
 \documentclass[11pt,a6paper,twoside]{article}
-%\renewcommand{\baselinestretch}{1.1}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[german]{babel}
 \usepackage{changepage}
-\nonfrenchspacing
 
 \usepackage{titlesec}
 \usepackage{array}
@@ -42,8 +40,6 @@
 %{\pounds{}\kern -5.7pt\rule[2.8pt]{4.0pt}{0.5pt}}}
 {\rule[1pt]{18pt}{0.5pt}\kern -18pt\rule[6pt]{18pt}{0.5pt}\kern -18.1pt\rule[1.2pt]{0.5pt}{4.8pt}\kern 17.2pt\rule[1.2pt]{0.5pt}{4.8pt}\kern 1pt}
 
-\newcommand{\stacktwo}[1]{\lower 6pt\hbox{\valign{&\hbox{\hsize=1em {#\vspace{4pt}}\hfil}\cr #1\cr}}}
-
 \newcommand{\supersection}[1]{%
 \clearpage
     {\scshape \centering \huge #1\\}
@@ -64,7 +60,7 @@
       \setlength{\leftmargin}{1.5em}
       \setlength{\itemindent}{1em} % equals \labelwidth+\labelsep
     }
-}
+}{\end{list}}
 
 \newcommand{\gelosemakelabel}[1]{\textsc{#1}}
 \newenvironment{gelose}
@@ -86,8 +82,9 @@
 \newcommand{\separatingdash}{\kern 2pt {\hfill\rule[3pt]{9em}{1.3pt}\hfill} \kern 12pt}
 \newcommand{\stack}[1]{\begin{tabular}{@{}l}#1\end{tabular}}
 
-\title{\fontshape{sc}\LARGE \textls[180]{Regeln} \\ \normalsize \textls[1500]{des}\\ \fontsize{34}{34}\selectfont{Minchiatta-Spiels}}
+\title{\fontshape{sc}\LARGE \textls[180]{Regeln} \\ \normalsize \textls[1000]{des}\\ \fontsize{34}{34}\selectfont{Minchiatta-Spiels}}
 \date{\vfill\small DRESDEN, 1798, \\ {in der \textsc{Waltherschen} Hofbuchhandlung.}}
+\author{}
 \begin{document}
 \raggedbottom
 \pagenumbering{gobble}
@@ -337,7 +334,7 @@ Es kommt in dem ganzen Spiele sehr viel darauf an, die \textit{Tenuta} zu rechte
 
 Es giebt deren viererley.
 
-\textit{Fumata di sopraventi} ist, wenn man einen \textit{Sopraventi} ausspielt, und dieses ist ein Zeichen, daß man die \textit{Tromba} hat, (oder, so dieses schon bekannt, den \textit{Mondo}, oder sofern diese bekannt, den \textit{Sole} hat,) u.~s.~w. Dieser \textit{Sopraventi} muß aber der erste \textit{Tarocco} seyn, den derselbe in diesem Spiel ausspielet; denn hat er schon einmal andere \textit{Tarocchi} gespielt, so ist dieses keine \textit{Fumata} mehr. Man macht so eine Fumata, um dem Freunde einen Muth zu machen, daß er mit seinen nächstfolgenden hohen \textit{Arien} oder \textit{Tarocchi} nicht gleich flüchtig werde, oder daß er seine guten Karten dem Freunde beherzt zugirire und entgegen spiele, oder wenn man eine Gegen-\textit{Fumata} erwartet.
+\textit{Fumata di sopraventi} ist, wenn man einen \textit{Sopraventi} ausspielt, und dieses ist ein Zeichen, daß man die \textit{Tromba} hat, (oder, so dieses schon bekannt, den \textit{Mondo}, oder sofern diese bekannt, den \textit{Sole} hat,) u.~s.~w. Dieser \textit{Sopraventi} muß aber der erste \textit{Tarocco} seyn, den derselbe in diesem Spiel ausspielet; denn hat er schon einmal andere \textit{Tarocchi} gespielt, so ist dieses keine \textit{Fumata} mehr. Man macht so eine \textit{Fumata}, um dem Freunde einen Muth zu machen, daß er mit seinen nächstfolgenden hohen \textit{Arien} oder \textit{Tarocchi} nicht gleich flüchtig werde, oder daß er seine guten Karten dem Freunde beherzt zugirire und entgegen spiele, oder wenn man eine Gegen-\textit{Fumata} erwartet.
 
 In manchen Orten giebt man eine versteckte \textit{Fumata}, wie folgt: Bey der ersten \textit{Levée}, wo man mit \textit{Tarocco} stechen muß, sticht man mit dem 10, ob man schon bessere \textit{Carte di Conto} in Händen hat; dadurch avertirt man den Freund, daß man \textit{Tromba} oder den höchsten \textit{Tarocco} hat. Es ist aber nicht überall gebräuchlich, daß der 10, also gestochen, die \textit{Tromba} in Händen bedeute.
 
@@ -435,7 +432,7 @@ Nun folgen die 21 \textit{Levées}, B spielet also aus \textit{Bastoni}~5,
 
 \begin{leveeslist}
   \item B \textit{Bastoni}~5, C \textit{Bastoni}~8, D \textit{Bastoni}~6; A \textit{Bastoni} König, \\A sollte \textit{Spade} König \textit{impiciren}, weil D \textit{Spade} écartirt hat; er hat aber nur 2 \textit{Spade}, also spielt er nicht \textit{Spade}, sondern
-\item A \textit{Denari} König, B \textit{Tarocco} 30, C \textit{Denari}~4, D \textit{Denari}~8, \\hier muore \textit{Denari} König, weil B \textit{Fallio naturale} in \textit{Denari} hat, mithin markirt B, D 5 \textit{Points}, und hat also 35 \textit{Points}.
+\item A \textit{Denari} König, B \textit{Tarocco} 30, C \textit{Denari}~4, D \textit{Denari}~8, \\hier \textit{muore} \textit{Denari} König, weil B \textit{Fallio naturale} in \textit{Denari} hat, mithin markirt B, D 5 \textit{Points}, und hat also 35 \textit{Points}.
 \item B \textit{Spade}~1, C \textit{Tarocco} 14, D \textit{Tarocco} 33, A \textit{Spade} König.
 
   B hat \textit{Spada} gespielt, weil sein Compagnon es écartirt hat, und der König in der \textit{Folla} bey A war.
@@ -534,10 +531,10 @@ A sagt an: \textit{Mondo}, \textit{Sole}, \textit{Luna}, (mithin markirt A, C 50
 \begin{leveeslist}
 \item B \textit{Bastoni}~1, C \textit{Bastoni} Bube, D \textit{Bastoni}~7, A \textit{Bastoni} König.
 \item A \textit{Bastoni Dama}, B \textit{Bastoni}~6, C \textit{Papa} 3, D \textit{Bastoni}~3. \\C nimmt nur mit dem \textit{Papa} 3, um Carte sopra trenta zu behalten, weil er \textit{Tromba} hat, die die große \textit{Versicola} bey seinem Compagnon weiß, und ein \textit{\mbox{Giuoco} di \mbox{Giro}} anfangen will.
-\item C \textit{Tarocco} 23, D \textit{Papa} 4, A 35, B \textit{Papa\textit{} 5. \\C giebt Fumata, also weiß A, daß nichts wider ihn ist, als \textit{Stella}, er riskirt also den 35, der ihm just nichts macht; hat B die \textit{Stella}, so wird sie B darauf setzen; weil es aber nicht geschieht, so ist man sicher, daß D sie haben muß, und nun haben auf beyde Fälle A, C freyes Spiel; es ist auch muore 6, wegen des }Papa 4 und 5, also markirt A, C 56 \textit{Points}.
-\item A \textit{Papa uno}, B 10, C \textit{Tromba}, D \textit{Matto}. \\A spielt \textit{Papa uno}, um C zu zwingen zu nehmen, und D, der die \textit{Stella} hat, zwischen sich beyde zu kriegen; da auch B schon eine \textit{Carta di Conto} zugiebt, und D \textit{mattirt}, ist es ein Zeichen, daß beyde wenig \textit{Tarocchi} haben, und bald caschiren werden. D legt den \textit{Matto} vor sich, und wartet, bis er etwa eine \textit{Levée} bekömmt, um eine Karte statt dem \textit{Matto} zu geben. Muore 5 für den Zehner; also hat A, C 61 \textit{Points} bekommen, also einen Rest bezahlt, und markiren 1 \textit{Point}.
-\item C \textit{Tarocco} 34, D 29, A 6, B 28. \\C fordert nun, daß die \textit{Carte di Conto} beyder Feinde fallen, und um die \textit{Stella} von D zu forciren, muore 5, wegen den 28, also markirt A, C 6 \textit{Points}.
-\item C \textit{Tarocco} 33, D 13, A 8, B 30. \\muore 10, wegen 13 und 30, also markirt A, C 16 \textit{Points}.
+\item C \textit{Tarocco} 23, D \textit{Papa} 4, A 35, B \textit{Papa} 5. \\C giebt \textit{Fumata}, also weiß A, daß nichts wider ihn ist, als \textit{Stella}, er riskirt also den 35, der ihm just nichts macht; hat B die \textit{Stella}, so wird sie B darauf setzen; weil es aber nicht geschieht, so ist man sicher, daß D sie haben muß, und nun haben auf beyde Fälle A, C freyes Spiel; es ist auch \textit{muore} 6, wegen des \textit{Papa} 4 und 5, also markirt A, C 56 \textit{Points}.
+\item A \textit{Papa uno}, B 10, C \textit{Tromba}, D \textit{Matto}. \\A spielt \textit{Papa uno}, um C zu zwingen zu nehmen, und D, der die \textit{Stella} hat, zwischen sich beyde zu kriegen; da auch B schon eine \textit{Carta di Conto} zugiebt, und D \textit{mattirt}, ist es ein Zeichen, daß beyde wenig \textit{Tarocchi} haben, und bald caschiren werden. D legt den \textit{Matto} vor sich, und wartet, bis er etwa eine \textit{Levée} bekömmt, um eine Karte statt dem \textit{Matto} zu geben. \textit{Muore} 5 für den Zehner; also hat A, C 61 \textit{Points} bekommen, also einen Rest bezahlt, und markiren 1 \textit{Point}.
+\item C \textit{Tarocco} 34, D 29, A 6, B 28. \\C fordert nun, daß die \textit{Carte di Conto} beyder Feinde fallen, und um die \textit{Stella} von D zu forciren, \textit{muore} 5, wegen den 28, also markirt A, C 6 \textit{Points}.
+\item C \textit{Tarocco} 33, D 13, A 8, B 30. \\\textit{muore} 10, wegen 13 und 30, also markirt A, C 16 \textit{Points}.
 \item C \textit{Tarocco} 32, D 20, A 9, B \textit{Denari}~10. \\B ist caschirt, zeiget aber nicht auf, weil er den \textit{Coppe} König noch zu retten hofft. \textit{Muore} 5, wegen den 20, also markirt A, C 21 \textit{Points}.
 \item C \textit{Tarocco} 31, D \textit{Stella}, A \textit{Mondo}, B \textit{Denari}~7. \\\textit{Muore} 10, wegen der \textit{Stella}, also markirt A, C 31.
 \end{leveeslist}
