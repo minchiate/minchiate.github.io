@@ -23,7 +23,7 @@
 \usepackage{titlesec}
 \titleformat{\section}[hang]% shape
             {\centering \normalfont\fontsize{13}{14}\itshape}   % format
-            {\thesection{\scshape\upshape.) }}  % label
+            {\textsc{\thesection}{\scshape\upshape.) }}  % label
             {0pt}              % sep
             {} % before-code
 % I like this font!
@@ -50,6 +50,19 @@
     \vspace{12pt}
 }
 
+\renewenvironment{enumerate}{
+  \begin{list}
+    {\textsc{\arabic{enumi}}.)}
+    {\usecounter{enumi}
+      \setlength{\labelwidth}{2em}
+      \setlength{\labelsep}{0.5em}
+      \setlength{\itemsep}{0pt}
+      \setlength{\parsep}{0pt}
+      \setlength{\leftmargin}{1.5em}
+      \setlength{\itemindent}{0em} % equals \labelwidth+\labelsep
+    }
+}{\end{list}}
+
 \newcounter{leveescnt}
 \newenvironment{leveeslist}{
   \begin{list}
@@ -63,6 +76,8 @@
       \setlength{\itemindent}{1em} % equals \labelwidth+\labelsep
     }
 }{\end{list}}
+
+\setlength{\parsep}{6pt}
 
 \newcommand{\gelosemakelabel}[1]{\textsc{#1}}
 \newenvironment{gelose}
@@ -85,13 +100,14 @@
 \newcommand{\stack}[1]{\begin{tabular}{@{}l}#1\end{tabular}}
 
 \title{\fontshape{sc}\LARGE \textls[180]{Regeln} \\ \normalsize \textls[1000]{des}\\ \fontsize{34}{34}\selectfont{Minchiatta-Spiels}}
-\date{\vfill\\{\hfill\rule[7pt]{13em}{1.3pt}\hfill\-} \\ \kern -6pt \small DRESDEN, 1798.\\  {in der \textsc{Waltherschen} Hofbuchhandlung.}}
+\date{\vfill{\hfill\rule[7pt]{13em}{1.3pt}\hfill\-} \\ \kern -6pt \small DRESDEN, 1798.\\  {in der \textsc{Waltherschen} Hofbuchhandlung.}}
 \author{}
 \begin{document}
 \raggedbottom
 \pagenumbering{arabic}
 
 \maketitle
+
 \thispagestyle{empty}
 
 \clearpage
