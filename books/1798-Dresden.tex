@@ -4,6 +4,8 @@
 \usepackage[german]{babel}
 \usepackage{changepage}
 
+\pagestyle{myheadings}
+
 \usepackage{titlesec}
 \usepackage{array}
 
@@ -28,7 +30,7 @@
 \usepackage{tgbonum}
 \renewcommand{\rmdefault}{qbk}
 \usepackage{lettrine}
-\usepackage[left=16mm,top=12mm,right=13mm,bottom=14mm]{geometry}
+\usepackage[left=16mm,top=13mm,right=13mm,bottom=15mm]{geometry}
 
 \newcommand{\jetton}{%
   \textbf{\textbigcircle}}
@@ -79,23 +81,20 @@
                  }
                  {\end{list}}
 
-\newcommand{\separatingdash}{\kern 2pt {\hfill\rule[3pt]{9em}{1.3pt}\hfill} \kern 12pt}
+\newcommand{\separatingdash}{\kern 2pt {\hfill\rule[3pt]{9em}{1.3pt}\hfill\-} \kern 12pt}
 \newcommand{\stack}[1]{\begin{tabular}{@{}l}#1\end{tabular}}
 
 \title{\fontshape{sc}\LARGE \textls[180]{Regeln} \\ \normalsize \textls[1000]{des}\\ \fontsize{34}{34}\selectfont{Minchiatta-Spiels}}
-\date{\vfill\small DRESDEN, 1798, \\ {in der \textsc{Waltherschen} Hofbuchhandlung.}}
+\date{\vfill\\{\hfill\rule[7pt]{13em}{1.3pt}\hfill\-} \\ \kern -6pt \small DRESDEN, 1798.\\  {in der \textsc{Waltherschen} Hofbuchhandlung.}}
 \author{}
 \begin{document}
 \raggedbottom
-\pagenumbering{gobble}
+\pagenumbering{arabic}
 
 \maketitle
+\thispagestyle{empty}
 
 \clearpage
-
-
-
-\pagenumbering{arabic}
 
 {\centering \fontshape{sc}\large {\textls[600]{REGELN}} \\ {\footnotesize \textls[150]{des}}\\\kern 4pt {\Large MINCHIATTA-SPIELS.}\\}
 
@@ -119,7 +118,7 @@ Einige gelten 5.
 
 Einige gelten 10.
 
-Drey \textit{Points} gelten: der \textit{Papa due}, oder 2; \textit{Papa tre}, oder 3; \textit{Papa quattro}, oder 4; \textit{Papa cinque}, oder 5. Fünf \textit{Points} gelten: der \textit{Papa uno}, oder 1.; der \textit{dieci}, oder 10; der \textit{tredici}, oder 13; der \textit{venti} oder 20; der \textit{ventotto}, oder 28; der \textit{trenta}, oder 30, und alle übrige \textit{sopratrenta}: der \textit{Matto} desgleichen, und jeder der 4 Könige. Zehn \textit{Points} gelten jeder der 5 \textit{Arie}. Die \textit{Cartillen} und alle übrige \textit{Tarocchi} gelten nichts.
+Drey \textit{Points} gelten: der \textit{Papa due}, oder 2; \textit{Papa tre}, oder 3; \textit{Papa quattro}, oder 4; \textit{Papa cinque}, oder 5. Fünf \textit{Points} gelten: der \textit{Papa uno}, oder 1; der \textit{dieci}, oder 10; der \textit{tredici}, oder 13; der \textit{venti} oder 20; der \textit{ventotto}, oder 28; der \textit{trenta}, oder 30, und alle übrige \textit{sopratrenta}: der \textit{Matto} desgleichen, und jeder der 4 Könige. Zehn \textit{Points} gelten jeder der 5 \textit{Arie}. Die \textit{Cartillen} und alle übrige \textit{Tarocchi} gelten nichts.
 
 
 \section{Von den Versicole.}
@@ -128,7 +127,7 @@ Drey \textit{Points} gelten: der \textit{Papa due}, oder 2; \textit{Papa tre}, o
 
 Reguläre sind alle diejenigen, welche aus drey oder mehrern nach ihrem Rang auf einander folgenden \textit{Carte di Conto} entstehen. Als da ist 1, 2, 3 oder 1, 2, 3, 4, oder 1, 2, 3, 4, 5, oder 2, 3, 4, oder 3, 4, 5, ingleichen alle von 28 bis \textit{Tromba} einander folgende \textit{Tarocchi}, zum Beyspiel: 28, 29, 30, oder 28, 29, 30, 31, oder 29, 30, 31, \textit{Stella}, \textit{Luna}, oder \textit{Sole}, \textit{Mondo}, \textit{Tromba}; genug, wenn nur drey oder mehrere von allen diesen auf einander folgen.
 
-Irreguläre Versicole sind viererley.
+\textit{Irreguläre Versicole} sind viererley.
 \begin{enumerate}
 \item \textit{Papa uno}, \textit{Matto} und \textit{Tromba}, welches die \textit{Versicola del Matto} heißt; weil es die einzige ist, wo der \textit{Matto} dazu nöthig ist.
 \item \textit{Uno}, \textit{Tredici}, \textit{Ventotto}. Diese heißt \textit{Versicola del Tredici}.
@@ -396,7 +395,7 @@ An C \textit{Coppe Cavallo}, \textit{Coppe} Königin, \textit{Tarocco} 11, \text
 
 An D \textit{Denari}~5, \textit{Denari}~6, \textit{Denari}~7, \textit{Denari}~8, \textit{Spade}~9, und wieder \textit{Bastoni}~4, \textit{Spade}~10, \textit{Bastoni}~6, \textit{Papa uno}, \textit{Denari}~3, und \textit{Re di Coppe scoperto}. (Dieser gilt 5 \textit{Points}, zu den 10 \textit{Points} gerechnet, macht 15 \textit{Points}.)
 
-An sich selbst endlich: \textit{Denari}~2, \textit{Denari}~1, \textit{Denari}~9, \textit{Coppe}~7, \textit{Spade Dama}, und wieder: \textit{Coppe}~6, \textit{Stella}, \textit{Tarocco} 10, Tarocco 35, \textit{Bastoni} Bube.
+An sich selbst endlich: \textit{Denari}~2, \textit{Denari}~1, \textit{Denari}~9, \textit{Coppe}~7, \textit{Spade Dama}, und wieder: \textit{Coppe}~6, \textit{Stella}, \textit{Tarocco} 10, \textit{Tarocco} 35, \textit{Bastoni} Bube.
 
 Nun zählt A die \textit{Folla}, und findet 12 Karten, 2 sind rubirt worden, mithin ist die \textit{Folla} richtig. Jetzt giebt er sich \textit{Cavallo di Bastoni Scoperto}, alsdann ist \textit{Scoperto} aus der \textit{Folla}: \textit{Tarocco} 17, diese gilt nichts, also legt er sie wieder in die \textit{Folla}.
 
@@ -459,11 +458,11 @@ Da nun alle gefallen sind, ausgenommen A, und niemand höhere \textit{Bastoni} h
 \item[\lower 16pt\hbox{\valign{&\hbox{\hsize=1em {#\vspace{4pt}}\hfil}\cr 19.& 20.& 21.\cr}} \textit{Levée}]\-\\ hat A die \textit{Ultima} und \textit{Muore} 5 vom \textit{Coppe} König, so bleibt für B, D 34 \textit{Points}.
 \end{leveeslist}
 
-\subsection{Nun zur Rechnung.}
+{\kern4pt \centering\itshape Nun zur Rechnung.\\\kern 3pt}
 
 Rechnung von A, C.\\
 \begin{tabular}{@{}b{6.5cm}@{\hspace{2em}}r}
-Sie haben nur 12 \textit{Mazzetti} mithin verlieren sie 6 Karten&-\\
+Sie haben 13 \textit{Mazzetti} und eine Karte, mithin verlieren sie 2 Karten&-\\
 nur 2 Könige also gehen die Könige auf: \textit{senza Re}.&-\\
 \end{tabular}
 \begin{tabular}{@{}b{6.5cm}r}
@@ -479,12 +478,12 @@ An \textit{Carte di Conto}\\
 Summa &88
 \end{tabular}
 
-\subsection{Ferner:}
+{\kern4pt \centering\itshape {Ferner:}\\\kern 3pt}
 
 Rechnung von B, D.\\
 \begin{tabular}{@{}b{6.5cm}r}
-An \textit{Mazzetti} 14, und 6 Karten,
-mithin gewinnt an Karten & 6\\
+An \textit{Mazzetti} 14, und 2 Karten,
+mithin gewinnt an Karten & 2\\
 An \textit{Versicola}:
 \textit{Uno, Matto, Tromba}& 20\\
 \textit{Uno, Due, Tre col Matto}& 16\\
@@ -492,21 +491,17 @@ macht 42 \textit{dell'Uno}\\
 28, 29, 30, 31, 32, 33 \textit{col Matto}& 35\\
 An \textit{Carte di Conto}:
 \textit{Uno}, \textit{Matto}, 28, 30, 31, 32, 33& 35\\
-\textit{Papa} 3& 3\\
+\textit{Papa} 2, 3, 5& 9\\
 \textit{Luna}, \textit{Tromba}& 20\\
 Dann markirte \textit{Points}& 34\\
-Summa& 169
-\end{tabular}
-\subsection{Abgerechnet den Gewinnst}
-
-\begin{tabular}{@{}b{6.5cm}r}
-  von A, C &88\\
-bleibt für B, D &81\\
+Summa \dotfill& 171\\
+  Abgerechnet den Gewinnst von A, C &88\\
+bleibt für B, D &83\\
 \end{tabular}
 
 mithin 2 Resten Gewinnst für B, D.
 
-\section*{Anderes Exempel eines\\ Giuoco di Giro mit Anmerkungen.}
+\section*{Anderes Exempel eines Giuoco di\\ Giro mit Anmerkungen.}
 
 A giebt, B hat die Hand, C ist mit A, und D hebt ab.
 
@@ -520,17 +515,21 @@ D bekömmt in Händen: \textit{Stella}, 20, 13, \textit{Papa} 4, \textit{Matto};
 
 A bekömmt in Händen \textit{Sole}, 22, 21, 19, 18, 17, 16, 12, 11, 9, 8, 6; \textit{Spade}~10, 7, 4; \textit{Bastoni Dama}, \textit{Cavallo}, 9, 10; \textit{Denari}~5, und \textit{Scoperto Coppe}~6; dann scoprirt er aus der \textit{Folla} den \textit{Denari}~3, mithin nimmt er ihn nicht, piglirt aber aus der \textit{Folla}: \textit{Bastoni} König, \textit{Mondo}, \textit{Luna}, 35, \textit{Papa uno}, écartirt dafür \textit{Denari}~5, \textit{Coppe}, \textit{Spade}~4, 7, 10; in der \textit{Folla} ist gewesen: \textit{Bastoni}~2, 3, 4, 5; \textit{Spade}~9, \textit{Coppe}~2, 4, 5, kein \textit{Denari}.
 
-B spielt aus \textit{Bastoni}~1. (Er könnte auch seinen \textit{Coppe} König impiciren.)
+B spielt aus \textit{Bastoni}~1. (Er könnte auch seinen \textit{Coppe} König \textit{impiciren}.)
 
-Nun ist in der \textit{Folla} 4, \textit{Bastoni}~4, \textit{Spade}~4, \textit{Coppe}, oder 4 per sorte und 1 \textit{Denari}.
+Nun ist in der \textit{Folla} 4, \textit{Bastoni}~4, \textit{Spade}~4, \textit{Coppe}, oder 4 \textit{per sorte} und 1 \textit{Denari}.
 
 B sagt nichts an.
+
+C sagt an: 34, 33, 32, 31.
+
+D sagt nichts an.
 
 A sagt an: \textit{Mondo}, \textit{Sole}, \textit{Luna}, (mithin markirt A, C 50 \textit{Points}).
 
 \begin{leveeslist}
 \item B \textit{Bastoni}~1, C \textit{Bastoni} Bube, D \textit{Bastoni}~7, A \textit{Bastoni} König.
-\item A \textit{Bastoni Dama}, B \textit{Bastoni}~6, C \textit{Papa} 3, D \textit{Bastoni}~3. \\C nimmt nur mit dem \textit{Papa} 3, um Carte sopra trenta zu behalten, weil er \textit{Tromba} hat, die die große \textit{Versicola} bey seinem Compagnon weiß, und ein \textit{\mbox{Giuoco} di \mbox{Giro}} anfangen will.
+\item A \textit{Bastoni Dama}, B \textit{Bastoni}~6, C \textit{Papa} 3, D \textit{Bastoni}~3. \\C nimmt nur mit dem \textit{Papa} 3, um \textit{Carte sopra trenta} zu behalten, weil er \textit{Tromba} hat, die die große \textit{Versicola} bey seinem Compagnon weiß, und ein \textit{\mbox{Giuoco} di \mbox{Giro}} anfangen will.
 \item C \textit{Tarocco} 23, D \textit{Papa} 4, A 35, B \textit{Papa} 5. \\C giebt \textit{Fumata}, also weiß A, daß nichts wider ihn ist, als \textit{Stella}, er riskirt also den 35, der ihm just nichts macht; hat B die \textit{Stella}, so wird sie B darauf setzen; weil es aber nicht geschieht, so ist man sicher, daß D sie haben muß, und nun haben auf beyde Fälle A, C freyes Spiel; es ist auch \textit{muore} 6, wegen des \textit{Papa} 4 und 5, also markirt A, C 56 \textit{Points}.
 \item A \textit{Papa uno}, B 10, C \textit{Tromba}, D \textit{Matto}. \\A spielt \textit{Papa uno}, um C zu zwingen zu nehmen, und D, der die \textit{Stella} hat, zwischen sich beyde zu kriegen; da auch B schon eine \textit{Carta di Conto} zugiebt, und D \textit{mattirt}, ist es ein Zeichen, daß beyde wenig \textit{Tarocchi} haben, und bald caschiren werden. D legt den \textit{Matto} vor sich, und wartet, bis er etwa eine \textit{Levée} bekömmt, um eine Karte statt dem \textit{Matto} zu geben. \textit{Muore} 5 für den Zehner; also hat A, C 61 \textit{Points} bekommen, also einen Rest bezahlt, und markiren 1 \textit{Point}.
 \item C \textit{Tarocco} 34, D 29, A 6, B 28. \\C fordert nun, daß die \textit{Carte di Conto} beyder Feinde fallen, und um die \textit{Stella} von D zu forciren, \textit{muore} 5, wegen den 28, also markirt A, C 6 \textit{Points}.
@@ -540,7 +539,7 @@ A sagt an: \textit{Mondo}, \textit{Sole}, \textit{Luna}, (mithin markirt A, C 50
 \end{leveeslist}
 Nun ist D auch gefallen, und da A und C lauter \textit{Tarocchi} haben, und A die höchsten \textit{Bastoni}, so können B, D keine \textit{Levée} mehr machen, mithin macht A, C alle \textit{Levées}, und markiren noch \textit{Muore} 15 für die Könige von \textit{Coppe}, \textit{Denari}, \textit{Spade}. Auch verliert D den \textit{Matto}; also markirt A, C 51 \textit{Points}.
 
-\subsection{Nun die Rechnung.}
+{\kern4pt \centering\itshape Nun die Rechnung.\\\kern 3pt}
 
 Die Rechnung ist kurz gemacht; es sind, wie in den Regeln im 5ten Kapitel stehet, 396 \textit{Points}, dazu 51 anmarkirte, und dieses doppelt, macht 894 \textit{Points}, oder 15 Reste, welche A, C gewinnen, ohne den im Spiel gewonnenen zu rechnen.
 
