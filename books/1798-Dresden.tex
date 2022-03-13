@@ -22,11 +22,11 @@
 % how to format and space chapter titles
 \usepackage{titlesec}
 \titleformat{\section}[hang]% shape
-            {\centering \normalfont\fontsize{13}{14}\itshape}   % format
+            {\vspace{-4pt}\centering \normalfont\fontsize{13}{14}\itshape}   % format
             {\textsc{\thesection}{\scshape\upshape.)}}  % label
             {12pt}              % sep
-            {\kern -4pt} % before-code
-            [\kern -4pt] % after-code
+            {} % before-code
+            [\kern -6pt] % after-code
 % I like this font!
 \usepackage{tgbonum}
 \renewcommand{\rmdefault}{qbk}
@@ -97,7 +97,7 @@
                  }
                  {\end{list}}
 
-\newcommand{\separatingdash}{\kern 2pt {\hfill\rule[3pt]{9em}{1.3pt}\hfill\-} \kern 12pt}
+\newcommand{\separatingdash}{\kern 2pt {\hfill\rule[3pt]{9em}{1.3pt}\hfill\-} \kern 8pt}
 \newcommand{\stack}[1]{\begin{tabular}{@{}l}#1\end{tabular}}
 
 \title{\fontshape{sc}\LARGE \textls[180]{Regeln} \\ \normalsize \textls[1000]{des}\\ \fontsize{34}{34}\selectfont{Minchiatta-Spiels}}
@@ -112,8 +112,12 @@
 \thispagestyle{empty}
 
 \clearpage
+\thispagestyle{empty}
+\-
+\clearpage
 
 {\centering \fontshape{sc}\large {\textls[600]{REGELN}} \\ {\footnotesize \textls[150]{des}}\\\kern 4pt {\Large MINCHIATTA-SPIELS.}\\}
+\thispagestyle{empty}
 
 \separatingdash
 
@@ -289,7 +293,7 @@ Wenn man nicht gar zu \textit{gelose} Karten hat, und man hat 6 bis 7 Karten, od
 Weil man sich auch \textit{Fallii} macht, um Könige zu coupiren, so kann man deren auch entrathen, wenn man 3 Könige hat. Wenn man nur wenige \textit{Tarocchi} hat, ist es auch wegen des \textit{Cascare} nicht rathsam, sich \textit{Fallii} zu machen, (ausgenommen man hätte \textit{Carte gelose},) besonders wenn man eine hohe \textit{Arie} hat; wie zum Beyspiel \textit{Tromba}, oder auch \textit{Mondo}, muß man suchen bis zu Ende des Spiels auszuhalten mit seinen \textit{Tarocchi}, und also muß man sich da besonders für \textit{Fallii} hüten. \textit{Cascare} heißt, wenn man kein \textit{Tarocco} mehr hat; in diesem Falle legt man seine Karten offen auf den Tisch, und derjenige, welcher eine \textit{Levée} macht, nimmt davon jedesmal eine, um die \textit{Levée} zu ergänzen; er muß aber, wenn Farbe gespielt würde, aus selbiger nehmen: auch ist es nicht rathsam, wenn man einen König oder den \textit{Matto} in Händen hat, und man \textit{caschirt} ist, seine Karten hinzulegen, weil man öfters den König seinem Freund zugeben kann, auch zuweilen mit Vortheil \textit{mattiren} oder \textit{squissiren}.
 
 
-\section{Von den Fehlern und deren Strafen.}
+\section{Von den Fehlern und \\deren Strafen.}
 
 Wenn derjenige, der giebt, im Geben vergiebt, und die nachsitzenden Spieler ihre Karten noch nicht vermengt haben, so ist der Fehler zu redressiren, so lange die 21ste Karte demjenigen, wo gefehlt worden ist, noch nicht umgeschlagen, alsdann ist es aber zu späte. Dann zieht derjenige, der eine oder mehrere Karten zu wenig hat, nach Belieben eben so viel aus der \textit{Folla}, (bevor der Kartengeber einige daraus weder \textit{scoprire}, noch \textit{pigliare} kann,) jedoch ohne sie zu zeigen, und ohne sie im Ziehen anzusehen.
 
@@ -299,7 +303,7 @@ Sollten einige Karten, aus Unvorsichtigkeit, auf dem Tische seyn vergessen worde
 
 Weil nun der unschuldige Compagnon alle diese Strafen auch mit empfindet, so sieht man, wie nothwendig es ist, seinen Compagnon zu erinnern: daß er ja nicht vergebe, richtig écartire und seine Karten zähle. Bis ausgespielt wird, ist es erlaubt, seinen Compagnon von allem zu avertiren.
 
-Wenn einer renoncirt, das heißt: falsch zugiebt, zum Beyspiel: er giebt \textit{Tarocco} auf eine Farbe, die er noch hat, und man bemerkt es, nachdem diese \textit{Levée} umgedreht ist, (vorher kann er es verbessern,) so muß er einem jeden seiner zwey Gegner so viel Reste bezahlen, als oft er renoncirthat; die \textit{Levées} aber, wobey er renoncirt hat, werden nicht geändert. Dieses ist der einzige Fall, wo ein Fehler dem Compagnon nicht zum Schaden, ja manchmal zum Vortheil gereichen kann; wenn nämlich durch dieses \textit{Renonciren} gute Karten genommen oder gerettet worden sind. Die \textit{Levée}, wo man das \textit{Renonciren} merkt, kann noch reparirt werden.
+Wenn einer renoncirt, das heißt: falsch zugiebt, zum Beyspiel: er giebt \textit{Tarocco} auf eine Farbe, die er noch hat, und man bemerkt es, nachdem diese \textit{Levée} umgedreht ist, (vorher kann er es verbessern,) so muß er einem jeden seiner zwey Gegner so viel Reste bezahlen, als oft er renoncirt hat; die \textit{Levées} aber, wobey er renoncirt hat, werden nicht geändert. Dieses ist der einzige Fall, wo ein Fehler dem Compagnon nicht zum Schaden, ja manchmal zum Vortheil gereichen kann; wenn nämlich durch dieses \textit{Renonciren} gute Karten genommen oder gerettet worden sind. Die \textit{Levée}, wo man das \textit{Renonciren} merkt, kann noch reparirt werden.
 
 
 \section{Von den Karten, welche \\Gelose genannt werden.}
@@ -350,7 +354,7 @@ Es kommt in dem ganzen Spiele sehr viel darauf an, die \textit{Tenuta} zu rechte
 
 Es giebt deren viererley.
 
-\textit{Fumata di sopraventi} ist, wenn man einen \textit{Sopraventi} ausspielt, und dieses ist ein Zeichen, daß man die \textit{Tromba} hat, (oder, so dieses schon bekannt, den \textit{Mondo}, oder sofern diese bekannt, den \textit{Sole} hat,) u.~s.~w. Dieser \textit{Sopraventi} muß aber der erste \textit{Tarocco} seyn, den derselbe in diesem Spiel ausspielet; denn hat er schon einmal andere \textit{Tarocchi} gespielt, so ist dieses keine \textit{Fumata} mehr. Man macht so eine \textit{Fumata}, um dem Freunde einen Muth zu machen, daß er mit seinen nächstfolgenden hohen \textit{Arien} oder \textit{Tarocchi} nicht gleich flüchtig werde, oder daß er seine guten Karten dem Freunde beherzt zugirire und entgegen spiele, oder wenn man eine Gegen-\textit{Fumata} erwartet.
+\textit{Fumata di sopraventi} ist, wenn man einen \textit{Sopraventi} ausspielt, und dieses ist ein Zeichen, daß man die \textit{Tromba} hat, (oder, so diese schon bekannt, den \textit{Mondo}, oder sofern diese bekannt, den \textit{Sole} hat,) u.~s.~w. Dieser \textit{Sopraventi} muß aber der erste \textit{Tarocco} seyn, den derselbe in diesem Spiel ausspielet; denn hat er schon einmal andere \textit{Tarocchi} gespielt, so ist dieses keine \textit{Fumata} mehr. Man macht so eine \textit{Fumata}, um dem Freunde einen Muth zu machen, daß er mit seinen nächstfolgenden hohen \textit{Arien} oder \textit{Tarocchi} nicht gleich flüchtig werde, oder daß er seine guten Karten dem Freunde beherzt zugirire und entgegen spiele, oder wenn man eine Gegen-\textit{Fumata} erwartet.
 
 In manchen Orten giebt man eine versteckte \textit{Fumata}, wie folgt: Bey der ersten \textit{Levée}, wo man mit \textit{Tarocco} stechen muß, sticht man mit dem 10, ob man schon bessere \textit{Carte di Conto} in Händen hat; dadurch avertirt man den Freund, daß man \textit{Tromba} oder den höchsten \textit{Tarocco} hat. Es ist aber nicht überall gebräuchlich, daß der 10, also gestochen, die \textit{Tromba} in Händen bedeute.
 
@@ -475,29 +479,24 @@ Da nun alle gefallen sind, ausgenommen A, und niemand höhere \textit{Bastoni} h
 \item[\lower 16pt\hbox{\valign{&\hbox{\hsize=1em {#\vspace{4pt}}\hfil}\cr 19.& 20.& 21.\cr}}\Bigg)\textit{Levée}]\-\\ hat A die \textit{Ultima} und \textit{Muore} 5 vom \textit{\mbox{Coppe}} König, so bleibt für B, D 34 \textit{Points}.
 \end{leveeslist}
 
-{\kern4pt \centering\itshape Nun zur Rechnung.\\\kern 3pt}
-
-Rechnung von A, C.\\
+\section*{{\normalsize Nun zur Rechnung.}\\Rechnung von A, C.}
 \begin{tabular}{@{}b{6.5cm}@{\hspace{2em}}r}
 Sie haben 13 \textit{Mazzetti} und eine Karte, mithin verlieren sie 2 Karten&-\\
 nur 2 Könige also gehen die Könige auf: \textit{senza Re}.&-\\
 \end{tabular}
-\begin{tabular}{@{}b{6.5cm}r}
+
+\noindent\begin{tabular}{@{}b{6.5cm}r}
 An \textit{Versicola} haben Sie
 34, 35, \textit{Stella}: macht 20 \textit{Points}.& 20\\
-\end{tabular}
-\begin{tabular}{@{}b{6.5cm}r}
 \textit{Ultima}& 10\\
 An \textit{Carte di Conto}\\
 13, 10, 20, 34, 35& 25\\
 \textit{Stella}, \textit{Sole}, \textit{Mondo} & 30\\
 \textit{Papa} 4 &3 \\
-Summa &88
+Summa \dotfill &88
 \end{tabular}
 
-{\kern4pt \centering\itshape {Ferner:}\\\kern 3pt}
-
-Rechnung von B, D.\\
+\section*{{\normalsize Ferner:}\\Rechnung von B, D.}
 \begin{tabular}{@{}b{6.5cm}r}
 An \textit{Mazzetti} 14, und 2 Karten,
 mithin gewinnt an Karten & 2\\
@@ -506,13 +505,16 @@ An \textit{Versicola}:
 \textit{Uno, Due, Tre col Matto}& 16\\
 macht 42 \textit{dell'Uno}\\
 28, 29, 30, 31, 32, 33 \textit{col Matto}& 35\\
+\end{tabular}
+
+\noindent\begin{tabular}{@{}b{6.5cm}r}
 An \textit{Carte di Conto}:
 \textit{Uno}, \textit{Matto}, 28, 30, 31, 32, 33& 35\\
 \textit{Papa} 2, 3, 5& 9\\
 \textit{Luna}, \textit{Tromba}& 20\\
 Dann markirte \textit{Points}& 34\\
-Summa \dotfill& 171\\
-  Abgerechnet den Gewinnst von A, C &88\\
+Summa \dotfill& 171\\\kern 4pt
+Abgerechnet den Gewinnst von A, C &88\\
 bleibt für B, D &83\\
 \end{tabular}
 
@@ -556,7 +558,7 @@ A sagt an: \textit{Mondo}, \textit{Sole}, \textit{Luna}, (mithin markirt A, C 50
 \end{leveeslist}
 Nun ist D auch gefallen, und da A und C lauter \textit{Tarocchi} haben, und A die höchsten \textit{Bastoni}, so können B, D keine \textit{Levée} mehr machen, mithin macht A, C alle \textit{Levées}, und markiren noch \textit{Muore} 15 für die Könige von \textit{Coppe}, \textit{Denari}, \textit{Spade}. Auch verliert D den \textit{Matto}; also markirt A, C 51 \textit{Points}.
 
-{\kern4pt \centering\itshape Nun die Rechnung.\\\kern 3pt}
+{\kern4pt \centering\itshape Nun die Rechnung.\\\kern 2pt}
 
 Die Rechnung ist kurz gemacht; es sind, wie in den Regeln im 5ten Kapitel stehet, 396 \textit{Points}, dazu 51 anmarkirte, und dieses doppelt, macht 894 \textit{Points}, oder 15 Reste, welche A, C gewinnen, ohne den im Spiel gewonnenen zu rechnen.
 
