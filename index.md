@@ -58,6 +58,10 @@ gioco di carte.  La successiva [edizione
 del 1750, recuperando l'apparato critico perso nell'edizione parigina del
 1768.
 
+Il proemio dell'edizione del 1688 è tanto interessante, che ho pensato di dedicare
+tutto il tempo necessario a riprodurla integralmente in formato pdf.
+[Ci sto lavorando](/books/1688-firenze-malmantile.pdf) e non so quanto tempo mi costerà.
+
 # riferimenti ad altri siti
 
 * [naibi](https://www.naibi.net/) articoli di Franco Pratesi.
