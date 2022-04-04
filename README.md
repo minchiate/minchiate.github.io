@@ -4,6 +4,8 @@ Minchiate è un gioco di carte nato in Toscana nel XV secolo, fiorito in ambient
 
 Chi voglia aiutare ad espandere questo sito è invitato a farlo attraverso l'[editore GitHub][https://github.com/minchiate/minchiate/edit/gh-pages/docs/README.md]. Il responsabile verificherà i suggerimenti, ed includerà se utili e costruttivi.
 
+il risultato è sul sito https://minchiate.github.io/
+
 ### Letteratura
 
 * [Roma 1747][]
