@@ -39,9 +39,9 @@ gioco, della famiglia dei Tarocchi, detto "Alle minchiate".
 Una delle fonti letterarie per le Minchiate sono le "eruditissime note di
 Paolo Minucci Volterrano" al testo del "Malmantile Racquistato" di Lorenzo
 Lippi, [edizione 1688](https://books.google.com.pa/books?id=atW7n2ik2aIC).
-Come già il Lippi nel 1676 aveva preferito firmarsi con lo pseudonimo
-anagrammatico Perlone Zipoli, il Minucci firma le sue note come Puccio
-Limoni.  L'edizione 1688 del Malmantile è annotata solo dal Minucci, mentre
+Come già il Lippi Lorenzo nel 1676 aveva preferito firmarsi con lo pseudonimo
+anagrammatico Perlone Zipoli, il Minucci Paolo firma le sue note come Puccio
+Lamoni.  L'edizione 1688 del Malmantile è annotata solo dal Minucci, mentre
 [nel 1768 fu ristampato](https://books.google.com.pa/books?id=3LWOaYlTRXMC)
 in Parigi il Malmantile senza annotazioni.
 
